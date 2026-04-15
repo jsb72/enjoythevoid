@@ -11,3 +11,4 @@ res://src/levels/room_blueprint.gd
 res://src/player/player.tscn
 res://src/player/player.gd
 res://src/global.gd
+res://src/bonus/bonus.tscn
