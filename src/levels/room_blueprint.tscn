@@ -1311,7 +1311,6 @@ reverse_rotate = true
 [node name="laser_trap3" parent="lvl1/Structure" unique_id=853668133 instance=ExtResource("13_f4kdv")]
 position = Vector2(5969, -2243)
 rotation = 1.5707964
-reverse_rotate = true
 
 [node name="laser_trap4" parent="lvl1/Structure" unique_id=1403545980 instance=ExtResource("13_f4kdv")]
 position = Vector2(5969, -2519)
@@ -1776,7 +1775,7 @@ offset_left = -3932.0
 offset_top = -1741.0
 offset_right = 1139.0
 offset_bottom = 2498.0
-color = Color(1, 0.30588236, 0.18431373, 1)
+color = Color(1, 0, 0, 1)
 
 [node name="Parallax2D" type="Parallax2D" parent="lvl2" unique_id=296382481]
 scroll_scale = Vector2(0.5, 0.5)
