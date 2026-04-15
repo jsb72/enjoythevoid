@@ -16,8 +16,11 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Player:
 		if !iswaken:
-			animated_sprite_2d.play("wakeup")
+			var tween2 = get_tree().create_tween()
+			tween2.tween_property(rich_text_label, "modulate:a", 1.0, 1.0)
 			
+			animated_sprite_2d.play("wakeup")
+			await get_tree().create_timer(1).timeout
 			var tween = get_tree().create_tween()
 			tween.tween_property(rich_text_label, "modulate:a", 0.0, 10.0)
 			

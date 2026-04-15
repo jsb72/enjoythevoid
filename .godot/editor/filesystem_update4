@@ -7,7 +7,5 @@ res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/fog.gdshader
 res://shaders/distorsion.gdshader
-res://src/elements/bomb.tscn
-res://src/global.gd
 res://src/vivants/sage.tscn
 res://src/vivants/sage.gd
