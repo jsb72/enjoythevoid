@@ -529,7 +529,7 @@ streams_count = 1
 stream_0/stream = ExtResource("17_k60ra")
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_phdu6"]
-random_pitch = 1.1892071
+random_pitch = 1.3348398
 streams_count = 1
 stream_0/stream = ExtResource("29_p6grl")
 
@@ -933,6 +933,7 @@ stream = SubResource("AudioStreamRandomizer_xmpm3")
 
 [node name="falling_sound" type="AudioStreamPlayer" parent="." unique_id=1781746039]
 stream = SubResource("AudioStreamRandomizer_phdu6")
+volume_db = -80.0
 
 [node name="run_sound" type="AudioStreamPlayer" parent="." unique_id=335528450]
 stream = SubResource("AudioStreamRandomizer_h0enb")

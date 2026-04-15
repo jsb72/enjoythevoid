@@ -19,6 +19,7 @@ var lvl_2_loaded:bool = false
 
 @onready var blackgroundparticle: GPUParticles2D = $lvl1/Parallax2D2/GPUParticles2D
 @onready var blackgroundparticle2: GPUParticles2D = $lvl1/Parallax2D2/GPUParticles2D2
+@onready var black_particule: Node2D = $"lvl1/black particule"
 
 @onready var fractale_ciel: RigidBody2D = $fractale_ciel
 
@@ -71,6 +72,11 @@ func _process(delta: float) -> void:
 
 	if player.is_on_floor():music_player_logic()
 	slowvoid_logic()
+	
+	"""if lvl_2_loaded:
+		black_particule.z_index=-1000
+	else:
+		black_particule.z_index=33"""
 
 
 #FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS

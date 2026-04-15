@@ -481,6 +481,7 @@ func sprite_animation() -> void:
 		
 			
 var saut_en_cours_for_sound = false
+var falling_started = false
 func sound_animation() -> void:
 	if is_on_floor() and velocity.x != 0.0:
 		if !run_sound.playing and !land_sound.playing : 
@@ -493,10 +494,19 @@ func sound_animation() -> void:
 	else :
 		slide_sound.stop()
 		
-		if velocity.y == 1000 :
-			if !falling_sound.playing and !dead_: falling_sound.play()
+		if velocity.y > 800 :
+			if !falling_sound.playing and !dead_: 
+				if !falling_started:
+					var tween = get_tree().create_tween()
+					tween.tween_property(falling_sound, "volume_db", 0.0, 1.0)
+					falling_started=true
+				
+				falling_sound.play()
 		else :
 			falling_sound.stop()
+			var tween = get_tree().create_tween()
+			tween.tween_property(falling_sound, "volume_db", -80.0, 1.0)
+			falling_started=false
 		
 	if velocity.y != 0.0 :
 		saut_en_cours_for_sound = true
