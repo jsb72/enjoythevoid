@@ -7,7 +7,3 @@ res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/fog.gdshader
 res://shaders/distorsion.gdshader
-res://src/vivants/sage.tscn
-res://src/vivants/sage.gd
-res://src/player/player.tscn
-res://src/player/player.gd

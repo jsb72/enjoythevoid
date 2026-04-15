@@ -75,9 +75,15 @@ initial_clip = 5
 
 [sub_resource type="Environment" id="Environment_vb8r4"]
 background_mode = 3
+tonemap_mode = 1
 glow_enabled = true
-glow_intensity = 0.05
-glow_bloom = 0.1
+glow_intensity = 1.14
+glow_bloom = 0.2
+fog_light_energy = 6.77
+fog_sun_scatter = 0.59
+fog_density = 0.3614
+fog_height = 1024.0
+fog_height_density = 10.6667
 
 [sub_resource type="Resource" id="Resource_7157o"]
 script = ExtResource("5_j2cwt")
@@ -545,7 +551,7 @@ volume_db = -10.0
 environment = SubResource("Environment_vb8r4")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1364036370]
-color = Color(0.8089983, 0.8089983, 0.8089982, 1)
+color = Color(0.8591504, 0.8591504, 0.8591504, 1)
 
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
