@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://dxih6l1o6qkiu"]
+
+[ext_resource type="Script" uid="uid://bcjgjvth0nf5f" path="res://src/vhs.gd" id="1_78vs0"]
+[ext_resource type="PackedScene" uid="uid://dy80i5m5jbd5" path="res://src/levels/room_blueprint.tscn" id="1_j0um4"]
+[ext_resource type="Shader" uid="uid://c22exyahuh2n4" path="res://shaders/vhs.gdshader" id="2_estqd"]
+[ext_resource type="Shader" uid="uid://chet47u8v3pes" path="res://shaders/distorsion.gdshader" id="5_doi8u"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2pu7j"]
+shader = ExtResource("5_doi8u")
+shader_parameter/strength = 0.08
+shader_parameter/center = Vector2(0.5, 0.5)
+shader_parameter/radius = 0.0
+shader_parameter/aberration = 0.425
+shader_parameter/width = 0.04
+shader_parameter/feather = 0.135
+
+[sub_resource type="Animation" id="Animation_78vs0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_doi8u"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2pu7j"]
+_data = {
+&"RESET": SubResource("Animation_78vs0"),
+&"new_animation": SubResource("Animation_doi8u")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_78vs0"]
+shader = ExtResource("2_estqd")
+shader_parameter/overlay = false
+shader_parameter/scanlines_opacity = 0.0
+shader_parameter/scanlines_width = 0.0
+shader_parameter/grille_opacity = 0.0
+shader_parameter/resolution = Vector2(1280, 720)
+shader_parameter/pixelate = false
+shader_parameter/roll = false
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 15.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/noise_opacity = 0.0
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.0
+shader_parameter/aberration = 0.00200004759499994
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 1.0
+
+[node name="VHS" type="Node2D" unique_id=1960534501]
+script = ExtResource("1_78vs0")
+
+[node name="room_blueprint" parent="." unique_id=1528742533 instance=ExtResource("1_j0um4")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1999686670]
+layer = 1000
+
+[node name="distorsion" type="ColorRect" parent="CanvasLayer" unique_id=87382997]
+material = SubResource("ShaderMaterial_2pu7j")
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/distorsion" unique_id=1887374293]
+libraries/ = SubResource("AnimationLibrary_2pu7j")
+
+[node name="vhsshader" type="ColorRect" parent="CanvasLayer" unique_id=1507170664]
+visible = false
+material = SubResource("ShaderMaterial_78vs0")
+offset_right = 1280.0
+offset_bottom = 720.0

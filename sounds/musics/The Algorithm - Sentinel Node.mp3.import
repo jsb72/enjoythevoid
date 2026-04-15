@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsvbfyapfj2q3"
+path="res://.godot/imported/The Algorithm - Sentinel Node.mp3-e961551ebb1955c7c082e63779f522f4.mp3str"
+
+[deps]
+
+source_file="res://sounds/musics/The Algorithm - Sentinel Node.mp3"
+dest_files=["res://.godot/imported/The Algorithm - Sentinel Node.mp3-e961551ebb1955c7c082e63779f522f4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

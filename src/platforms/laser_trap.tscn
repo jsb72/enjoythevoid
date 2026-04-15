@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://c00nse01mwe63"]
+
+[ext_resource type="Script" uid="uid://c0irw7svbnas1" path="res://src/platforms/laser_trap.gd" id="1_58m3p"]
+[ext_resource type="Shader" uid="uid://r5ttx5k57uqv" path="res://shaders/laser.gdshader" id="1_x0xp4"]
+[ext_resource type="Texture2D" uid="uid://dlm5ckn5uidyv" path="res://sprites/ball.png" id="2_lodqg"]
+[ext_resource type="AudioStream" uid="uid://v8884qf4a4xu" path="res://sounds/laser_sound.mp3" id="4_4fd10"]
+
+[sub_resource type="Animation" id="Animation_x0xp4"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_lodqg"]
+resource_name = "new_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.283185307179586]
+}
+
+[sub_resource type="Animation" id="Animation_4fd10"]
+resource_name = "new_animation_reverse"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -6.283185307179586]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fakmx"]
+_data = {
+&"RESET": SubResource("Animation_x0xp4"),
+&"new_animation": SubResource("Animation_lodqg"),
+&"new_animation_reverse": SubResource("Animation_4fd10")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lodqg"]
+shader = ExtResource("1_x0xp4")
+shader_parameter/beams = 3
+shader_parameter/energy = 3.0
+shader_parameter/roughness = 3
+shader_parameter/frequency = 10
+shader_parameter/speed = 1.0
+shader_parameter/thickness = 0.0130000006175
+shader_parameter/outline_thickness = 0.0410000019475
+shader_parameter/beam_difference = 0.0
+shader_parameter/glow = 3.0
+shader_parameter/outline_glow = 0.0
+shader_parameter/color = Color(1, 0, 0, 1)
+shader_parameter/outline_color = Color(1, 0, 0, 1)
+shader_parameter/progress = 0.96
+shader_parameter/y_offset = 2.3749999966682367e-08
+shader_parameter/fixed_edge_size = 0.1430000067925
+shader_parameter/noise_scale = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lodqg"]
+size = Vector2(228, 23.495766)
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_nt2fc"]
+random_pitch = 1.0293022
+streams_count = 1
+stream_0/stream = ExtResource("4_4fd10")
+
+[node name="laser_trap" type="Node2D" unique_id=853668133]
+rotation = -6.2831855
+script = ExtResource("1_58m3p")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1211070021]
+libraries/ = SubResource("AnimationLibrary_fakmx")
+speed_scale = 0.3
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=85802366]
+material = SubResource("ShaderMaterial_lodqg")
+offset_left = -124.38846
+offset_top = -91.95364
+offset_right = 125.93086
+offset_bottom = 92.93198
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1116075314]
+position = Vector2(-125.5906, 0.048401833)
+scale = Vector2(0.091078214, 0.091078214)
+texture = ExtResource("2_lodqg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=684181563]
+position = Vector2(125.59058, -0.048415184)
+scale = Vector2(0.091078214, 0.091078214)
+texture = ExtResource("2_lodqg")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=190020138]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=222596742]
+position = Vector2(-2.9802322e-08, -0.64085805)
+scale = Vector2(1.0000002, 1.0000002)
+shape = SubResource("RectangleShape2D_lodqg")
+
+[node name="Timer" type="Timer" parent="." unique_id=1178986371]
+wait_time = 0.05
+one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=915938247]
+stream = SubResource("AudioStreamRandomizer_nt2fc")
+volume_db = 4.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,15 @@
+CollisionShape2D
+Area2D
+Parallax2D
+Sprite2D
+Node2D
+ColorRect
+CollisionPolygon2D
+VideoStreamPlayer
+AnimatedSprite2D
+AudioStreamPlayer2D
+RayCast2D
+Label
+AnimationPlayer
+Control
+TextureRect

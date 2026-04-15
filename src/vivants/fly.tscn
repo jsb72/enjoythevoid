@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bj4n8g1hlaep5"]
+
+[ext_resource type="Texture2D" uid="uid://df67royhaj2fm" path="res://sprites/test_fly_bug.png" id="1_1nper"]
+[ext_resource type="Script" uid="uid://rqckvadgdnc1" path="res://src/vivants/fly.gd" id="1_wjpkc"]
+[ext_resource type="PackedScene" uid="uid://bmwyobu5l8pyt" path="res://src/elements/bomb.tscn" id="2_gpxll"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpxll"]
+atlas = ExtResource("1_1nper")
+region = Rect2(0, 0, 484, 520)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjpkc"]
+atlas = ExtResource("1_1nper")
+region = Rect2(484, 0, 484, 520)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqihm"]
+atlas = ExtResource("1_1nper")
+region = Rect2(968, 0, 484, 520)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ynmd"]
+atlas = ExtResource("1_1nper")
+region = Rect2(1452, 0, 484, 520)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wfyor"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpxll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjpkc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqihm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ynmd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evxss"]
+size = Vector2(16, 24)
+
+[node name="fly" type="CharacterBody2D" unique_id=1079513456]
+script = ExtResource("1_wjpkc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1687051031]
+position = Vector2(3.8146973e-06, -5.9604645e-08)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_wfyor")
+autoplay = "default"
+frame_progress = 0.038138397
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1597648743]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_evxss")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=1028622955]
+position = Vector2(0, 15)
+node_a = NodePath("..")
+node_b = NodePath("../bomb")
+softness = 16.0
+motor_enabled = true
+
+[node name="bomb" parent="." unique_id=1115807001 instance=ExtResource("2_gpxll")]
+position = Vector2(0, 95)
+
+[node name="Timer" type="Timer" parent="." unique_id=137943850]
+one_shot = true
+autostart = true
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=2071677612]
+target_position = Vector2(0, 2500)
+collision_mask = 2
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

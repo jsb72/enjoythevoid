@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://b5e6h64nlw1md"]
+
+[ext_resource type="Script" uid="uid://gcuikoypatk7" path="res://src/character_body_3d.gd" id="1_tdiyg"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_tdiyg"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_klbky"]
+width = 4096
+height = 4096
+noise = SubResource("FastNoiseLite_tdiyg")
+seamless = true
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_4hsn6"]
+panorama = SubResource("NoiseTexture2D_klbky")
+
+[sub_resource type="Sky" id="Sky_tdiyg"]
+sky_material = SubResource("PanoramaSkyMaterial_4hsn6")
+
+[sub_resource type="Environment" id="Environment_4hsn6"]
+background_mode = 2
+sky = SubResource("Sky_tdiyg")
+tonemap_mode = 2
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_4e8gn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tdiyg"]
+
+[node name="Node3D" type="Node3D" unique_id=50516211]
+
+[node name="Label3D" type="Label3D" parent="." unique_id=514468236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 3, -10)
+text = "L'antichambre"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=350478376]
+environment = SubResource("Environment_4hsn6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1319845194]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1916684158]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1369944309]
+shape = SubResource("WorldBoundaryShape3D_4e8gn")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1062956945]
+script = ExtResource("1_tdiyg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=2140669721]
+shape = SubResource("CapsuleShape3D_tdiyg")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D" unique_id=1384605591]

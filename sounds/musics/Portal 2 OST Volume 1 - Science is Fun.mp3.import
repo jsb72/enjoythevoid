@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cxf3owl6iun0g"
+path="res://.godot/imported/Portal 2 OST Volume 1 - Science is Fun.mp3-b83280c0e5782cf6c82cc824ea7bfa3b.mp3str"
+
+[deps]
+
+source_file="res://sounds/musics/Portal 2 OST Volume 1 - Science is Fun.mp3"
+dest_files=["res://.godot/imported/Portal 2 OST Volume 1 - Science is Fun.mp3-b83280c0e5782cf6c82cc824ea7bfa3b.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

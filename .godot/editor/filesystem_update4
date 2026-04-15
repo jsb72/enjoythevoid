@@ -1,0 +1,13 @@
+res://src/levels/room_blueprint.tscn
+res://addons/phantom_camera/themes/theme.tres
+res://shaders/damage_impact.gdshader
+res://shaders/screen_off.gdshader
+res://shaders/starfield.gdshader
+res://shaders/verticalwhiterain.gdshader
+res://shaders/vhs.gdshader
+res://shaders/fog.gdshader
+res://shaders/distorsion.gdshader
+res://src/elements/bomb.tscn
+res://src/global.gd
+res://src/vivants/sage.tscn
+res://src/vivants/sage.gd
