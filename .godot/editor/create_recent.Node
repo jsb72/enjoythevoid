@@ -1,3 +1,4 @@
+AudioStreamPlayer
 CollisionShape2D
 Area2D
 Parallax2D
@@ -12,4 +13,3 @@ RayCast2D
 Label
 AnimationPlayer
 Control
-TextureRect

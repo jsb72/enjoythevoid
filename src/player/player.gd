@@ -352,6 +352,7 @@ func apply_stretch() -> void:
 @onready var walljump_sound: AudioStreamPlayer = $walljump_sound
 @onready var dash_sound: AudioStreamPlayer = $dash_sound
 @onready var slide_sound: AudioStreamPlayer = $slide_sound
+@onready var falling_sound: AudioStreamPlayer = $falling_sound
 @onready var run_sound: AudioStreamPlayer = $run_sound
 @onready var jump_particle: CPUParticles2D = $jump_particle
 @onready var ground_particle: CPUParticles2D = $ground_particle
@@ -491,6 +492,11 @@ func sound_animation() -> void:
 		if !slide_sound.playing and !dead_: slide_sound.play()
 	else :
 		slide_sound.stop()
+		
+		if velocity.y == 1000 :
+			if !falling_sound.playing and !dead_: falling_sound.play()
+		else :
+			falling_sound.stop()
 		
 	if velocity.y != 0.0 :
 		saut_en_cours_for_sound = true
