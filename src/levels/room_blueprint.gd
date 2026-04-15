@@ -26,6 +26,7 @@ var lvl_2_loaded:bool = false
 @onready var cadavre: AnimatedSprite2D = $cadavre
 
 func _ready() -> void:
+	
 	cam.noise.positional_noise= true
 	camoffesetbottom.noise.positional_noise= true
 	zoomcam.noise.positional_noise= true
@@ -47,6 +48,9 @@ func _ready() -> void:
 	
 		
 func _process(delta: float) -> void:
+	
+	
+	
 	if player.is_on_floor():
 		var tween = get_tree().create_tween()
 		tween.tween_property(player.point_light_2d, "energy", 1.0, 10.0)
@@ -73,10 +77,6 @@ func _process(delta: float) -> void:
 	if player.is_on_floor():music_player_logic()
 	slowvoid_logic()
 	
-	"""if lvl_2_loaded:
-		black_particule.z_index=-1000
-	else:
-		black_particule.z_index=33"""
 
 
 #FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS
@@ -194,6 +194,10 @@ func _on_change_scene_whenvoid_body_entered(body: Node2D) -> void:
 			lvl_2.show()
 			lvl_2.process_mode = Node.PROCESS_MODE_INHERIT
 			
+			black_particule.layer1.hide()
+			black_particule.layer2.hide()
+			black_particule.layer3.hide()
+			
 			lvl_2_loaded = true
 func _on_change_scene_zone_body_entered(body: Node2D) -> void:
 	if body is Player:
@@ -203,6 +207,10 @@ func _on_change_scene_zone_body_entered(body: Node2D) -> void:
 			lvl_2.show()
 			lvl_2.process_mode = Node.PROCESS_MODE_INHERIT
 			
+			black_particule.layer1.hide()
+			black_particule.layer2.hide()
+			black_particule.layer3.hide()
+			
 			lvl_2_loaded = true
 func _on_change_scene_zone_2_lvl_3_body_entered(body: Node2D) -> void:
 	if body is Player:
@@ -211,6 +219,10 @@ func _on_change_scene_zone_2_lvl_3_body_entered(body: Node2D) -> void:
 			lvl_1.process_mode = Node.PROCESS_MODE_INHERIT
 			lvl_2.hide()
 			lvl_2.process_mode = Node.PROCESS_MODE_DISABLED
+			
+			black_particule.layer1.show()
+			black_particule.layer2.show()
+			black_particule.layer3.show()
 			
 			lvl_2_loaded = false
 			

@@ -556,12 +556,12 @@ color = Color(0.8591504, 0.8591504, 0.8591504, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(0, -7000)
+position = Vector2(-489, -282)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -7160)
+position = Vector2(-439, -442)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -580,7 +580,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -7160)
+position = Vector2(-539, -442)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -598,7 +598,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -7000)
+position = Vector2(-439, -282)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -614,7 +614,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -7000)
+position = Vector2(-539, -282)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -630,7 +630,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(0, -7160)
+position = Vector2(-489, -442)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -646,7 +646,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="dezoomlvl7" type="Node2D" parent="." unique_id=448208578 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(0, -2270)
+position = Vector2(-489, -282)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -660,7 +660,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(50, -7160)
+position = Vector2(-439, -442)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -811,6 +811,8 @@ rotation = -0.13962635
 scale = Vector2(0.99999994, 0.99999994)
 
 [node name="lvl1" type="Node2D" parent="." unique_id=300588503]
+
+[node name="black particule" parent="lvl1" unique_id=1541869100 instance=ExtResource("42_j4o56")]
 
 [node name="Parallax2D" type="Parallax2D" parent="lvl1" unique_id=1146148032]
 scroll_scale = Vector2(0.7, 0.7)
@@ -1467,8 +1469,6 @@ is_rotatingg = false
 position = Vector2(8398.148, -1.2554245)
 rotation = 0.6859144
 is_rotatingg = false
-
-[node name="black particule" parent="lvl1" unique_id=1541869100 instance=ExtResource("42_j4o56")]
 
 [node name="pt_blueprint" parent="lvl1" unique_id=553404117 instance=ExtResource("16_nfd4m")]
 position = Vector2(7750.7637, 97.39691)
