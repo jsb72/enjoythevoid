@@ -7,8 +7,4 @@ res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/fog.gdshader
 res://shaders/distorsion.gdshader
-res://src/levels/room_blueprint.gd
-res://src/player/player.tscn
-res://src/player/player.gd
-res://src/global.gd
-res://src/bonus/bonus.tscn
+res://src/levels/meta_room_piece.tscn

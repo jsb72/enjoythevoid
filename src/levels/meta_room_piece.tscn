@@ -628,6 +628,16 @@ text = "” Les Limites à la croissance, est un rapport commandé par le club d
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="platform5" parent="." unique_id=160471146 instance=ExtResource("11_nvtr1")]
+position = Vector2(1934, 2311)
+
+[node name="pt_blueprint" parent="." unique_id=114444560 instance=ExtResource("10_lory2")]
+position = Vector2(2861, 1848)
+rotation = 1.5707964
+
+[node name="platform6" parent="." unique_id=1569767200 instance=ExtResource("11_nvtr1")]
+position = Vector2(1740, 2228)
+
 [connection signal="body_entered" from="cam_zone" to="." method="_on_cam_zone_body_entered"]
 [connection signal="body_exited" from="cam_zone" to="." method="_on_cam_zone_body_exited"]
 [connection signal="body_entered" from="buttons/button" to="." method="_on_button_body_entered1"]

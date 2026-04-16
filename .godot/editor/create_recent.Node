@@ -1,12 +1,12 @@
+ColorRect
+Node2D
 Sprite2D
 Parallax2D
 LightOccluder2D
 PointLight2D
-ColorRect
 AudioStreamPlayer
 CollisionShape2D
 Area2D
-Node2D
 CollisionPolygon2D
 VideoStreamPlayer
 AnimatedSprite2D

@@ -1830,7 +1830,7 @@ offset_left = -3932.0
 offset_top = -1741.0
 offset_right = 1139.0
 offset_bottom = 2498.0
-color = Color(1, 0, 0, 1)
+color = Color(0.52, 0.52, 0.52, 1)
 
 [node name="Parallax2D" type="Parallax2D" parent="lvl2" unique_id=296382481]
 scroll_scale = Vector2(0.5, 0.5)
@@ -2238,11 +2238,6 @@ shape = SubResource("RectangleShape2D_7f7j5")
 [node name="escalier_blanc_room3" parent="lvl5" unique_id=274503240 instance=ExtResource("43_y6lma")]
 position = Vector2(23023, 998)
 
-[node name="ground2" type="Sprite2D" parent="lvl5" unique_id=696936317]
-position = Vector2(25817.828, 1092.4419)
-scale = Vector2(0.274, 0.274)
-texture = ExtResource("1_p0cym")
-
 [node name="StaticBody2D2" type="StaticBody2D" parent="lvl5" unique_id=1496513106]
 position = Vector2(6270.461, -203.48285)
 
@@ -2283,9 +2278,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect2" type="ColorRect" parent="lvl5/groundwall" unique_id=1534335929]
 offset_left = 27251.0
-offset_top = 1549.0
+offset_top = 1548.0
 offset_right = 28141.0
 offset_bottom = 4419.0
+
+[node name="ColorRect3" type="ColorRect" parent="lvl5/groundwall" unique_id=1681486767]
+offset_left = 27875.0
+offset_top = 1523.0
+offset_right = 28141.0
+offset_bottom = 1553.0
 
 [node name="Label" type="Label" parent="lvl5" unique_id=858967304]
 offset_left = 19636.88
@@ -2295,7 +2296,14 @@ offset_bottom = 644.69525
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "if Yog-Sothoth == True :"
 
+[node name="ground2" type="Sprite2D" parent="lvl5" unique_id=696936317]
+position = Vector2(25817.828, 1092.4419)
+scale = Vector2(0.274, 0.274)
+texture = ExtResource("1_p0cym")
+
 [node name="platformingzone" type="Node2D" parent="lvl5" unique_id=1515873731]
+process_mode = 4
+visible = false
 position = Vector2(-543, -691)
 
 [node name="platform" parent="lvl5/platformingzone" unique_id=2067364469 instance=ExtResource("8_ltygr")]
@@ -2319,276 +2327,278 @@ position = Vector2(28697, 1747)
 [node name="platform7" parent="lvl5/platformingzone" unique_id=453684620 instance=ExtResource("8_ltygr")]
 position = Vector2(28616, 1762)
 
-[node name="Node2D" type="Node2D" parent="lvl5" unique_id=837170372]
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D" unique_id=968001170]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D" unique_id=1944889557]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="Node2D2" type="Node2D" parent="lvl5" unique_id=528072587]
-position = Vector2(500, 0)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D2" unique_id=1986609414]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D2" unique_id=2143306444]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="Node2D3" type="Node2D" parent="lvl5" unique_id=737668066]
-position = Vector2(1000, 0)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D3" unique_id=1432463090]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D3" unique_id=1690799293]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="Node2D4" type="Node2D" parent="lvl5" unique_id=2015718915]
-position = Vector2(1500, 0)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D4" unique_id=975742474]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D4" unique_id=1191758870]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="Node2D5" type="Node2D" parent="lvl5" unique_id=347611104]
-position = Vector2(2000, 0)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D5" unique_id=2047862433]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D5" unique_id=2014133304]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="Node2D6" type="Node2D" parent="lvl5" unique_id=1870811010]
-position = Vector2(2500, 0)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D6" unique_id=1160138674]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D6" unique_id=2082991511]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="Node2D7" type="Node2D" parent="lvl5" unique_id=655363985]
-position = Vector2(3000, 0)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D7" unique_id=2115480240]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D7" unique_id=385146000]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="Node2D8" type="Node2D" parent="lvl5" unique_id=332182682]
-position = Vector2(5523, 525)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D8" unique_id=1172957642]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D8" unique_id=581873129]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="Node2D9" type="Node2D" parent="lvl5" unique_id=233877232]
-position = Vector2(6023, 525)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D9" unique_id=1864376820]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D9" unique_id=85813391]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="Node2D10" type="Node2D" parent="lvl5" unique_id=94772480]
-position = Vector2(6523, 525)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D10" unique_id=471488261]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D10" unique_id=1057029994]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="Node2D11" type="Node2D" parent="lvl5" unique_id=128452060]
-position = Vector2(7023, 525)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D11" unique_id=645999769]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D11" unique_id=1946729844]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="Node2D12" type="Node2D" parent="lvl5" unique_id=1291151728]
-position = Vector2(7523, 525)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D12" unique_id=975902017]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D12" unique_id=1402889570]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="Node2D13" type="Node2D" parent="lvl5" unique_id=1999028620]
-position = Vector2(8023, 525)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D13" unique_id=1346466687]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D13" unique_id=1317997147]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="Node2D14" type="Node2D" parent="lvl5" unique_id=1573322068]
-position = Vector2(8523, 525)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/Node2D14" unique_id=1796868592]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("45_1tqiw")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/Node2D14" unique_id=1895030947]
-z_index = 11
-position = Vector2(18629, 641)
-amount = 25
-texture = ExtResource("46_73yqq")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_k2shy")
-
 [node name="AAtentacle" parent="lvl5" unique_id=1566691538 node_paths=PackedStringArray("target") instance=ExtResource("56_brhbg")]
 z_index = 100
 position = Vector2(27135, 1544)
 size_multiple = 4
 target = NodePath("../../Player")
+
+[node name="partivcl" type="Node2D" parent="lvl5" unique_id=281833820]
+
+[node name="Node2D" type="Node2D" parent="lvl5/partivcl" unique_id=837170372]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D" unique_id=968001170]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D" unique_id=1944889557]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="Node2D2" type="Node2D" parent="lvl5/partivcl" unique_id=528072587]
+position = Vector2(500, 0)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D2" unique_id=1986609414]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D2" unique_id=2143306444]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="Node2D3" type="Node2D" parent="lvl5/partivcl" unique_id=737668066]
+position = Vector2(1000, 0)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D3" unique_id=1432463090]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D3" unique_id=1690799293]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="Node2D4" type="Node2D" parent="lvl5/partivcl" unique_id=2015718915]
+position = Vector2(1500, 0)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D4" unique_id=975742474]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D4" unique_id=1191758870]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="Node2D5" type="Node2D" parent="lvl5/partivcl" unique_id=347611104]
+position = Vector2(2000, 0)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D5" unique_id=2047862433]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D5" unique_id=2014133304]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="Node2D6" type="Node2D" parent="lvl5/partivcl" unique_id=1870811010]
+position = Vector2(2500, 0)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D6" unique_id=1160138674]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D6" unique_id=2082991511]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="Node2D7" type="Node2D" parent="lvl5/partivcl" unique_id=655363985]
+position = Vector2(3000, 0)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D7" unique_id=2115480240]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D7" unique_id=385146000]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="Node2D8" type="Node2D" parent="lvl5/partivcl" unique_id=332182682]
+position = Vector2(5523, 525)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D8" unique_id=1172957642]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D8" unique_id=581873129]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="Node2D9" type="Node2D" parent="lvl5/partivcl" unique_id=233877232]
+position = Vector2(6023, 525)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D9" unique_id=1864376820]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D9" unique_id=85813391]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="Node2D10" type="Node2D" parent="lvl5/partivcl" unique_id=94772480]
+position = Vector2(6523, 525)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D10" unique_id=471488261]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D10" unique_id=1057029994]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="Node2D11" type="Node2D" parent="lvl5/partivcl" unique_id=128452060]
+position = Vector2(7023, 525)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D11" unique_id=645999769]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D11" unique_id=1946729844]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="Node2D12" type="Node2D" parent="lvl5/partivcl" unique_id=1291151728]
+position = Vector2(7523, 525)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D12" unique_id=975902017]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D12" unique_id=1402889570]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="Node2D13" type="Node2D" parent="lvl5/partivcl" unique_id=1999028620]
+position = Vector2(8023, 525)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D13" unique_id=1346466687]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D13" unique_id=1317997147]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="Node2D14" type="Node2D" parent="lvl5/partivcl" unique_id=1573322068]
+position = Vector2(8523, 525)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl5/partivcl/Node2D14" unique_id=1796868592]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("45_1tqiw")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl5/partivcl/Node2D14" unique_id=1895030947]
+z_index = 11
+position = Vector2(18629, 641)
+amount = 25
+texture = ExtResource("46_73yqq")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_k2shy")
 
 [node name="DEATHZONE" type="Area2D" parent="." unique_id=265587749]
 
@@ -2736,22 +2746,22 @@ position = Vector2(27139, 547)
 
 [node name="bgcutscene" type="ColorRect" parent="red_plafond" unique_id=225723151]
 offset_left = -3741.0
-offset_top = -8970.0
+offset_top = -10920.0
 offset_right = 19683.0
-offset_bottom = -3739.0
+offset_bottom = -3024.0
 color = Color(0.18431373, 0.03529412, 0.03529412, 1)
 
 [node name="redgradientbg" type="TextureRect" parent="red_plafond" unique_id=1953395575]
 offset_left = -3696.0
-offset_top = -3739.0
+offset_top = -3024.0
 offset_right = 19748.0
-offset_bottom = -1691.0
+offset_bottom = -976.0
 texture = SubResource("GradientTexture2D_5ihcl")
 
 [node name="cutsceneparticle" type="GPUParticles2D" parent="red_plafond" unique_id=1483607889]
 z_index = 1000
 z_as_relative = false
-position = Vector2(-2, -4981)
+position = Vector2(-2, -5090)
 amount = 200
 texture = SubResource("GradientTexture2D_73yqq")
 lifetime = 5.0
