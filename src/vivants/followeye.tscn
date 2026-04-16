@@ -54,7 +54,7 @@ _data = {
 &"new_animation": SubResource("Animation_fuk5r")
 }
 
-[node name="Node2D" type="Node2D" unique_id=1318008718]
+[node name="followeye" type="Node2D" unique_id=1318008718]
 script = ExtResource("1_c6o6p")
 
 [node name="eye" type="Sprite2D" parent="." unique_id=536112874]

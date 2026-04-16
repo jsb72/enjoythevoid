@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://dxjkrv4iiepgy" path="res://src/vivants/sage.tscn" id="40_5ihcl"]
 [ext_resource type="PackedScene" uid="uid://bj4n8g1hlaep5" path="res://src/vivants/fly.tscn" id="41_5ihcl"]
 [ext_resource type="PackedScene" uid="uid://vw31d2odlcv6" path="res://src/particles/black_particule.tscn" id="42_j4o56"]
+[ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="43_73yqq"]
 [ext_resource type="PackedScene" uid="uid://cqafrfx31iqu6" path="res://src/platforms/tunnel_corner.tscn" id="43_lmpmd"]
 [ext_resource type="PackedScene" uid="uid://n80ossa7y51v" path="res://src/levels/escalier_little_black_reverse.tscn" id="43_y6lma"]
 [ext_resource type="PackedScene" uid="uid://cwmh0r3f2teg7" path="res://src/platforms/tunnel.tscn" id="44_brhbg"]
@@ -417,6 +418,24 @@ use_hdr = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmpmd"]
 size = Vector2(727, 51)
+
+[sub_resource type="Gradient" id="Gradient_6nwfb"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_1nkay"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lmpmd"]
+width = 1024
+height = 1024
+noise = SubResource("FastNoiseLite_1nkay")
+color_ramp = SubResource("Gradient_6nwfb")
+seamless = true
+normalize = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_brhbg"]
+shader = ExtResource("43_73yqq")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_lmpmd")
+shader_parameter/density = 0.25
+shader_parameter/speed = Vector2(0.02, 0.01)
 
 [sub_resource type="Gradient" id="Gradient_7rpky"]
 colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
@@ -1822,7 +1841,6 @@ position = Vector2(12174, -4646)
 texture = ExtResource("14_73yqq")
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
-visible = false
 position = Vector2(132, 0)
 
 [node name="fond_beforeburn" type="ColorRect" parent="lvl2" unique_id=1106919876]
@@ -1943,6 +1961,17 @@ is_rotatingg = false
 [node name="laser_trap11" parent="lvl2/lasers" unique_id=1887877711 instance=ExtResource("13_f4kdv")]
 position = Vector2(2997, 3380)
 is_rotatingg = false
+
+[node name="Parallax2D2" type="Parallax2D" parent="lvl2" unique_id=475892214]
+scroll_scale = Vector2(1.2, 1.2)
+
+[node name="ColorRect" type="ColorRect" parent="lvl2/Parallax2D2" unique_id=1756454471]
+z_index = 150
+material = SubResource("ShaderMaterial_brhbg")
+offset_left = -5707.0
+offset_top = -4244.0
+offset_right = 1917.0
+offset_bottom = 3380.0
 
 [node name="void" type="Node2D" parent="." unique_id=1239576127]
 

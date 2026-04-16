@@ -33,7 +33,8 @@ func track_eye(eye : Node2D):
 	
 
 func _process(time):
-	track_eye($eye)
+	if player !=null:
+		track_eye($eye)
 	
 	var random = RandomNumberGenerator.new()
 	if randi_range(0, 256)==0:

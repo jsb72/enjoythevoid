@@ -8,3 +8,7 @@ res://shaders/vhs.gdshader
 res://shaders/fog.gdshader
 res://shaders/distorsion.gdshader
 res://src/levels/meta_room_piece.tscn
+res://src/vhs.tscn
+res://shaders/glitch.gdshader
+res://src/vivants/followeye.gd
+res://src/vivants/followeye.tscn
