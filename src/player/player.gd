@@ -368,6 +368,7 @@ func apply_stretch() -> void:
 @onready var zoomcam: PhantomCamera2D = %zoomcam
 
 @onready var shakecamtimer: Timer = $shakecamtimer
+@onready var animationdistorsion: AnimationPlayer = $CanvasLayer/distorsionrect/animationdistorsion
 
 
 var inside_portal : bool = false

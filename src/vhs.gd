@@ -8,7 +8,5 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Global.distorsion_screen:
-		animation_player.play("new_animation")
-		Global.distorsion_screen=false
+	pass
 			

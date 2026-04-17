@@ -12,3 +12,9 @@ res://shaders/blur.gdshader
 res://src/vhs.tscn
 res://src/levels/meta_room_piece.tscn
 res://src/levels/meta_room_piece.gd
+res://src/player/player.tscn
+res://src/vhs.gd
+res://src/global.gd
+res://src/elements/bomb.tscn
+res://src/elements/bomb.gd
+res://src/player/player.gd

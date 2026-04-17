@@ -5,8 +5,6 @@
 [ext_resource type="Shader" uid="uid://c22exyahuh2n4" path="res://shaders/vhs.gdshader" id="2_estqd"]
 [ext_resource type="Shader" uid="uid://ncq23qfexrtu" path="res://shaders/glitch.gdshader" id="5_6y2kh"]
 [ext_resource type="Shader" uid="uid://chet47u8v3pes" path="res://shaders/distorsion.gdshader" id="5_doi8u"]
-[ext_resource type="Texture2D" uid="uid://coekpstdp8i1w" path="res://sprites/snakeeye.png" id="6_fxma3"]
-[ext_resource type="Texture2D" uid="uid://bbmf6fpif32sq" path="res://sprites/snakepupi.png" id="7_axvs8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2pu7j"]
 shader = ExtResource("5_doi8u")
@@ -92,17 +90,10 @@ script = ExtResource("1_78vs0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1999686670]
 layer = 1000
-
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1643928561]
 visible = false
-position = Vector2(653.81714, 201.10342)
-scale = Vector2(0.6406725, 0.6406725)
-texture = ExtResource("6_fxma3")
-
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Sprite2D" unique_id=353953417]
-texture = ExtResource("7_axvs8")
 
 [node name="distorsion" type="ColorRect" parent="CanvasLayer" unique_id=87382997]
+visible = false
 material = SubResource("ShaderMaterial_2pu7j")
 offset_right = 1280.0
 offset_bottom = 720.0

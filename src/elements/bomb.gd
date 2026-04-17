@@ -17,7 +17,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		audio_stream_player_2d.play()
 		#process_mode=Node.PROCESS_MODE_DISABLED
 		
-		Global.distorsion_screen=true
+		body.animationdistorsion.play("new_animation")
 		
 		var dir_ = body.global_position-global_position
 		

@@ -13,7 +13,6 @@ var doublejump_unlock:bool = false
 
 var list_des_morts: Array[Vector2]
 
-var distorsion_screen:bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
