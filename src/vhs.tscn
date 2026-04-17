@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://bcjgjvth0nf5f" path="res://src/vhs.gd" id="1_78vs0"]
 [ext_resource type="PackedScene" uid="uid://dy80i5m5jbd5" path="res://src/levels/room_blueprint.tscn" id="1_j0um4"]
 [ext_resource type="Shader" uid="uid://c22exyahuh2n4" path="res://shaders/vhs.gdshader" id="2_estqd"]
-[ext_resource type="Shader" uid="uid://ncq23qfexrtu" path="res://shaders/glitch.gdshader" id="5_6y2kh"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_78vs0"]
 shader = ExtResource("2_estqd")
@@ -29,14 +28,6 @@ shader_parameter/clip_warp = false
 shader_parameter/vignette_intensity = 0.2
 shader_parameter/vignette_opacity = 0.50000002375
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6y2kh"]
-shader = ExtResource("5_6y2kh")
-shader_parameter/shake_power = 0.03
-shader_parameter/shake_rate = 0.2
-shader_parameter/shake_speed = 5.0
-shader_parameter/shake_block_size = 30.5
-shader_parameter/shake_color_rate = 0.0
-
 [node name="VHS" type="Node2D" unique_id=1960534501]
 script = ExtResource("1_78vs0")
 
@@ -49,10 +40,3 @@ layer = 1000
 material = SubResource("ShaderMaterial_78vs0")
 offset_right = 1280.0
 offset_bottom = 720.0
-
-[node name="glitch_rect" type="ColorRect" parent="CanvasLayer" unique_id=2030013438]
-visible = false
-material = SubResource("ShaderMaterial_6y2kh")
-offset_right = 1280.0
-offset_bottom = 720.0
-color = Color(1, 1, 1, 0)

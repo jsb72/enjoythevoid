@@ -63,7 +63,10 @@ func _physics_process(delta: float) -> void:
 	elif !is_attacking():
 		
 		
-		
+		"""droitebas
+		droitehaut
+		gauchebas
+		gauchehaut"""
 		
 		if direction:
 			velocity.x = direction * SPEED

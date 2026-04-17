@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Enjoy the Void"
+config/name="develooping"
 config/description="A false story"
 run/main_scene="uid://qfht3ffettlq"
 config/features=PackedStringArray("4.6", "GL Compatibility")
