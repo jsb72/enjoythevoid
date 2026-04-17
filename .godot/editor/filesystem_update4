@@ -12,3 +12,8 @@ res://src/vhs.tscn
 res://shaders/glitch.gdshader
 res://src/vivants/followeye.gd
 res://src/vivants/followeye.tscn
+res://src/levels/room_blueprint.gd
+res://src/global.gd
+res://shaders/blur.gdshader
+res://src/player/player.tscn
+res://src/elements/bomb.tscn

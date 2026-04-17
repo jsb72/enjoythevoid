@@ -8,6 +8,8 @@ extends Node2D
 @onready var camoffesetbottom_2: PhantomCamera2D = %camoffesetbottom2
 @onready var dezoomlvl_7: PhantomCamera2D = $dezoomlvl7
 
+@onready var canvas_modulate: CanvasModulate = $CanvasModulate
+
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 @onready var ground: Sprite2D = $lvl1/ground
@@ -30,6 +32,7 @@ func _ready() -> void:
 	cam.noise.positional_noise= true
 	camoffesetbottom.noise.positional_noise= true
 	zoomcam.noise.positional_noise= true
+	
 	
 	display_list_cadavre()
 	
@@ -96,23 +99,34 @@ func music_player_logic():
 		if player.global_position.x > -3562:
 			index_music=0
 			label_music="portal"
+			
+			var tween = get_tree().create_tween()
+			tween.tween_property(canvas_modulate, "color", Color("b8b8b8"), 2.0)
 		
 	if lvl_2_loaded:		
 		if player.global_position.x > -3562 and player.global_position.x < 1310:
 			index_music=2
 			label_music="stimulation"
+			
+			var tween = get_tree().create_tween()
+			tween.tween_property(canvas_modulate, "color", Color("a6b7e6ff"), 2.0)
+			
 		if player.global_position.x > 1310:
 			index_music=1
 			label_music="noise"
 			
-	if player.global_position.x > 3485 and player.global_position.y > 3002 and player.global_position.x < 4300 and player.global_position.y < 3300:
-		index_music=0
-		label_music="portal"
+	if player.global_position.x > 6500 and player.global_position.y > 658 and player.global_position.x < 13000 and player.global_position.y < 3900:
+		var tween = get_tree().create_tween()
+		tween.tween_property(canvas_modulate, "color", Color("dbfff4ff"), 2.0)
+		
 		
 	if player.global_position.x > 14081 :
 		if player.position.y > 300:
 			index_music=3
 			label_music="intense"
+			
+			var tween = get_tree().create_tween()
+			tween.tween_property(canvas_modulate, "color", Color("ffc7c7ff"), 10.0)
 			
 			
 	if audio_stream_player.get_stream_playback().get_current_clip_index() !=index_music:

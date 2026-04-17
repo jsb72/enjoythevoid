@@ -726,6 +726,16 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_1tqiw"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e7e1q"]
+gradient = SubResource("Gradient_1tqiw")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+metadata/_snap_enabled = true
+
 [node name="Player" type="CharacterBody2D" unique_id=2070335124]
 z_index = 1
 collision_layer = 3
@@ -976,6 +986,15 @@ sprite_frames = SubResource("SpriteFrames_tjw5d")
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1683301557]
 position = Vector2(0, -32)
 target_position = Vector2(0, 80)
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=1733715955]
+visible = false
+position = Vector2(12, 19)
+energy = 0.36
+range_z_min = -4096
+range_z_max = 4096
+texture = SubResource("GradientTexture2D_e7e1q")
+texture_scale = 20.0
 
 [connection signal="wall_entered" from="." to="." method="_on_wall_entered"]
 [connection signal="wall_exited" from="." to="." method="_on_wall_exited"]

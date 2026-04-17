@@ -35,6 +35,9 @@
 [ext_resource type="Texture2D" uid="uid://c0veum6e6fh21" path="res://sprites/rooms/groundWALL.png" id="36_q5tgx"]
 [ext_resource type="PackedScene" uid="uid://dxjkrv4iiepgy" path="res://src/vivants/sage.tscn" id="40_5ihcl"]
 [ext_resource type="PackedScene" uid="uid://bj4n8g1hlaep5" path="res://src/vivants/fly.tscn" id="41_5ihcl"]
+[ext_resource type="Texture2D" uid="uid://c2uwfos340rrv" path="res://sprites/Mossy Tileset/Mossy - Decorations&HazardsFULLBLACK.png" id="41_j4o56"]
+[ext_resource type="Texture2D" uid="uid://x8hb077gci1e" path="res://sprites/Mossy Tileset/Mossy - Decorations&HazardsBLUR.png" id="41_k2shy"]
+[ext_resource type="Texture2D" uid="uid://sggt0ur5arfk" path="res://sprites/backgroundvein - Copy.png" id="41_tkwxf"]
 [ext_resource type="PackedScene" uid="uid://vw31d2odlcv6" path="res://src/particles/black_particule.tscn" id="42_j4o56"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="43_73yqq"]
 [ext_resource type="PackedScene" uid="uid://cqafrfx31iqu6" path="res://src/platforms/tunnel_corner.tscn" id="43_lmpmd"]
@@ -265,8 +268,27 @@ texture_region_size = Vector2i(128, 128)
 1:0/size_in_atlas = Vector2i(11, 7)
 1:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6nwfb"]
+texture = ExtResource("41_j4o56")
+texture_region_size = Vector2i(128, 128)
+0:16/size_in_atlas = Vector2i(2, 2)
+0:16/0 = 0
+12:21/size_in_atlas = Vector2i(4, 2)
+12:21/0 = 0
+12:23/size_in_atlas = Vector2i(4, 5)
+12:23/0 = 0
+12:28/size_in_atlas = Vector2i(4, 4)
+12:28/0 = 0
+9:28/size_in_atlas = Vector2i(2, 4)
+9:28/0 = 0
+4:27/size_in_atlas = Vector2i(4, 5)
+4:27/0 = 0
+1:28/size_in_atlas = Vector2i(2, 4)
+1:28/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_k4edk"]
 sources/0 = SubResource("TileSetAtlasSource_7rpky")
+sources/2 = SubResource("TileSetAtlasSource_6nwfb")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_514du"]
 texture = ExtResource("29_vb8r4")
@@ -307,14 +329,31 @@ texture_region_size = Vector2i(256, 256)
 8:4/size_in_atlas = Vector2i(5, 3)
 8:4/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j4o56"]
+texture = ExtResource("41_k2shy")
+texture_region_size = Vector2i(128, 128)
+0:7/size_in_atlas = Vector2i(13, 5)
+0:7/0 = 0
+16:7/size_in_atlas = Vector2i(10, 7)
+16:7/0 = 0
+3:12/size_in_atlas = Vector2i(8, 8)
+3:12/0 = 0
+12:14/size_in_atlas = Vector2i(5, 5)
+12:14/0 = 0
+18:14/size_in_atlas = Vector2i(6, 5)
+18:14/0 = 0
+24:14/size_in_atlas = Vector2i(8, 4)
+24:14/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_gw2wf"]
 sources/0 = SubResource("TileSetAtlasSource_514du")
+sources/1 = SubResource("TileSetAtlasSource_j4o56")
 
-[sub_resource type="Gradient" id="Gradient_1tqiw"]
+[sub_resource type="Gradient" id="Gradient_1nkay"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_tkwxf"]
-gradient = SubResource("Gradient_1tqiw")
+gradient = SubResource("Gradient_1nkay")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.8, 0.2)
@@ -585,12 +624,12 @@ color = Color(0.72, 0.72, 0.72, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(0, -7113)
+position = Vector2(12729, 503)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -7273)
+position = Vector2(12779, 343)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -609,7 +648,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -7273)
+position = Vector2(12679, 343)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -627,7 +666,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -7113)
+position = Vector2(12779, 503)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -643,7 +682,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -7113)
+position = Vector2(12679, 503)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -659,7 +698,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(0, -7273)
+position = Vector2(12729, 343)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -675,7 +714,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="dezoomlvl7" type="Node2D" parent="." unique_id=448208578 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(0, -2270)
+position = Vector2(12729, 503)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -689,7 +728,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(50, -7273)
+position = Vector2(12779, 343)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -1786,7 +1825,7 @@ scroll_scale = Vector2(0.9, 0.9)
 [node name="ronces_behind_speed08" type="TileMapLayer" parent="lvl1/TILES/Parallax2D3" unique_id=512305397]
 z_index = -1
 position = Vector2(3862.707, 367.35333)
-tile_map_data = PackedByteArray("AABVAUUAAAABAAYAAAAaAWAAAAAJAAcAAAA=")
+tile_map_data = PackedByteArray("AABMAToAAQADAAwAAADgAFoAAQAMAA4AAAAVAVoAAQASAA4AAAC1AGgAAQAYAA4AAAA=")
 tile_set = SubResource("TileSet_gw2wf")
 
 [node name="Parallax2D" type="Parallax2D" parent="lvl1/TILES" unique_id=1861254762]
@@ -1796,7 +1835,7 @@ scroll_scale = Vector2(1.1, 1.1)
 z_index = 15
 material = SubResource("ShaderMaterial_vb8r4")
 position = Vector2(0, -88)
-tile_map_data = PackedByteArray("AABGAoYAAAAMABwAAAASAoQAAAAEABsAAAA=")
+tile_map_data = PackedByteArray("AABFAogAAgAMABwAAAAYAoQAAgAEABsAAAA=")
 tile_set = SubResource("TileSet_k4edk")
 
 [node name="Parallax2D2" type="Parallax2D" parent="lvl1/TILES" unique_id=1526487236]
@@ -1806,10 +1845,11 @@ scroll_scale = Vector2(1.2, 1.2)
 z_index = 20
 material = SubResource("ShaderMaterial_vb8r4")
 scale = Vector2(1.25, 1.25)
-tile_map_data = PackedByteArray("AACEAjQAAAAMABUAAADbAiMAAAAEABsAAAA=")
+tile_map_data = PackedByteArray("AADZAhgAAgAEABsAAACzAjIAAgAMABUAAABpAjQAAgAMABwAAAASAmYAAgAMABUAAAA=")
 tile_set = SubResource("TileSet_k4edk")
 
 [node name="PointLight2D" type="PointLight2D" parent="lvl1" unique_id=1701893410]
+visible = false
 position = Vector2(12, 19)
 energy = 0.36
 texture = SubResource("GradientTexture2D_tkwxf")
@@ -1832,15 +1872,16 @@ z_index = 500
 scroll_scale = Vector2(1.2, 1.2)
 scroll_offset = Vector2(-2180, -69)
 
-[node name="Sprite2D" type="Sprite2D" parent="lvl1/surface_vein_paralax" unique_id=1933216935]
-position = Vector2(3627, -4646)
-texture = ExtResource("14_73yqq")
-
 [node name="Sprite2D2" type="Sprite2D" parent="lvl1/surface_vein_paralax" unique_id=415716070]
-position = Vector2(12174, -4646)
-texture = ExtResource("14_73yqq")
+position = Vector2(12611.5, -4646)
+texture = ExtResource("41_tkwxf")
+
+[node name="Sprite2D3" type="Sprite2D" parent="lvl1/surface_vein_paralax" unique_id=580592296]
+position = Vector2(4788, -4646)
+texture = ExtResource("41_tkwxf")
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
+visible = false
 position = Vector2(132, 0)
 
 [node name="fond_beforeburn" type="ColorRect" parent="lvl2" unique_id=1106919876]
@@ -1968,8 +2009,8 @@ scroll_scale = Vector2(1.2, 1.2)
 [node name="ColorRect" type="ColorRect" parent="lvl2/Parallax2D2" unique_id=1756454471]
 z_index = 150
 material = SubResource("ShaderMaterial_brhbg")
-offset_left = -5707.0
-offset_top = -4244.0
+offset_left = -4887.0
+offset_top = -3424.0
 offset_right = 1917.0
 offset_bottom = 3380.0
 
