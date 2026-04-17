@@ -12,8 +12,13 @@ extends CharacterBody2D
 @onready var right: RayCast2D = $right
 @onready var left: RayCast2D = $left
 
+@onready var droitebas: RayCast2D = $droitebas
+@onready var droitehaut: RayCast2D = $droitehaut
+@onready var gauchebas: RayCast2D = $gauchebas
+@onready var gauchehaut: RayCast2D = $gauchehaut
+
+
 const SPEED = 50.0
-const JUMP_VELOCITY = -400.0
 
 var direction : int = 0
 var rng = RandomNumberGenerator.new()
@@ -51,22 +56,15 @@ func _physics_process(delta: float) -> void:
 			spiderrendu.scale.x = -1
 			await get_tree().create_timer(0.1).timeout
 			bodycolleft.position.x -= 2
-			"""
-			if bodycolleft is Player : 
-				bodycolleft.shakecamtimer.start()
-				bodycolleft.laser_dmg = true
-				await get_tree().create_timer(1).timeout
-				bodycolleft.laser_dmg = false"""
 		if bodycolright != null and bodycolleft == null:
 			spiderrendu.scale.x = 1
 			await get_tree().create_timer(0.1).timeout
 			bodycolright.position.x += 2
-			"""if bodycolright is Player : 
-				bodycolright.shakecamtimer.start()
-				bodycolright.laser_dmg = true
-				await get_tree().create_timer(1).timeout
-				bodycolright.laser_dmg = false"""
 	elif !is_attacking():
+		
+		
+		
+		
 		if direction:
 			velocity.x = direction * SPEED
 		else:
@@ -79,6 +77,10 @@ func _physics_process(delta: float) -> void:
 			spiderrendu.scale.x = -1
 		if velocity.x > 0 :
 			spiderrendu.scale.x = 1
+			
+			
+			
+			
 			
 	# Add the gravity.
 	if not is_on_floor():

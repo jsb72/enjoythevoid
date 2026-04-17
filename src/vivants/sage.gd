@@ -22,6 +22,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			animated_sprite_2d.play("wakeup")
 			await get_tree().create_timer(1).timeout
 			var tween = get_tree().create_tween()
-			tween.tween_property(rich_text_label, "modulate:a", 0.0, 10.0)
+			tween.tween_property(rich_text_label, "modulate:a", 0.0, 60.0)
 			
 			iswaken=true

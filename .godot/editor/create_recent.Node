@@ -1,9 +1,10 @@
-Sprite2D
+ColorRect
+RayCast2D
 Parallax2D
+Sprite2D
 CanvasLayer
 CollisionShape2D
 Area2D
-ColorRect
 TextureRect
 Node2D
 LightOccluder2D
@@ -11,4 +12,3 @@ PointLight2D
 AudioStreamPlayer
 CollisionPolygon2D
 VideoStreamPlayer
-AnimatedSprite2D

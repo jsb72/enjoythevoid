@@ -221,4 +221,16 @@ target_position = Vector2(-40, 0.303)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1198711378]
 stream = SubResource("AudioStreamRandomizer_5l1ft")
 
+[node name="droitebas" type="RayCast2D" parent="." unique_id=283512235]
+target_position = Vector2(40.049545, 32.187088)
+
+[node name="droitehaut" type="RayCast2D" parent="." unique_id=1892392442]
+target_position = Vector2(46.262848, -27.493305)
+
+[node name="gauchebas" type="RayCast2D" parent="." unique_id=1537400105]
+target_position = Vector2(-42.35845, 33.495148)
+
+[node name="gauchehaut" type="RayCast2D" parent="." unique_id=783714533]
+target_position = Vector2(-44.32055, -26.348747)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

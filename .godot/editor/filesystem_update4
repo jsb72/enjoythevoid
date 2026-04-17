@@ -9,3 +9,9 @@ res://shaders/vhs.gdshader
 res://shaders/starfield.gdshader
 res://shaders/verticalwhiterain.gdshader
 res://shaders/blur.gdshader
+res://src/vivants/sage.tscn
+res://src/vivants/sage.gd
+res://src/levels/room_blueprint.gd
+res://src/global.gd
+res://src/vivants/spider.tscn
+res://src/vivants/spider.gd

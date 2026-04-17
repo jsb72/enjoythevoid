@@ -43,12 +43,14 @@
 [ext_resource type="PackedScene" uid="uid://cqafrfx31iqu6" path="res://src/platforms/tunnel_corner.tscn" id="43_lmpmd"]
 [ext_resource type="PackedScene" uid="uid://n80ossa7y51v" path="res://src/levels/escalier_little_black_reverse.tscn" id="43_y6lma"]
 [ext_resource type="PackedScene" uid="uid://cwmh0r3f2teg7" path="res://src/platforms/tunnel.tscn" id="44_brhbg"]
+[ext_resource type="Texture2D" uid="uid://dcp7ouktirxcj" path="res://sprites/kindpng_17046.png" id="45_1nkay"]
 [ext_resource type="Texture2D" uid="uid://cphr0b1w3cwq8" path="res://sprites/un.png" id="45_1tqiw"]
 [ext_resource type="PackedScene" uid="uid://bf2hbc3ucd83i" path="res://src/platforms/tunnelmid.tscn" id="45_gxno5"]
 [ext_resource type="PackedScene" uid="uid://cuuupedh70x4h" path="res://src/elements/temps.tscn" id="45_lmpmd"]
 [ext_resource type="PackedScene" uid="uid://bdd03axytgixu" path="res://src/platforms/damage_block.tscn" id="46_7f7j5"]
 [ext_resource type="Texture2D" uid="uid://dk52pj28ds5fn" path="res://sprites/zero.png" id="46_73yqq"]
 [ext_resource type="PackedScene" uid="uid://denjct5e4x1jd" path="res://src/elements/cadavre.tscn" id="47_5ihcl"]
+[ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="53_1nkay"]
 [ext_resource type="PackedScene" uid="uid://dij3e8be2nf5t" path="res://src/vivants/spider.tscn" id="53_6nwfb"]
 [ext_resource type="PackedScene" uid="uid://ufnf3lc7ewin" path="res://src/vivants/a_atentacle.tscn" id="56_brhbg"]
 [ext_resource type="PackedScene" uid="uid://dvio2nnm1fv8q" path="res://src/vivants/yog_sothoth.tscn" id="56_gxno5"]
@@ -540,9 +542,29 @@ height = 2048
 noise = SubResource("FastNoiseLite_qrlky")
 color_ramp = SubResource("Gradient_f3u0r")
 
+[sub_resource type="Gradient" id="Gradient_lmpmd"]
+offsets = PackedFloat32Array(0.5270758, 0.6967509)
+colors = PackedColorArray(0.53, 0, 0, 1, 0.18431373, 0.03529412, 0.03529412, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_brhbg"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lmpmd"]
+width = 1024
+height = 1024
+noise = SubResource("FastNoiseLite_brhbg")
+color_ramp = SubResource("Gradient_lmpmd")
+seamless = true
+normalize = false
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gxno5"]
+shader = ExtResource("53_1nkay")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_lmpmd")
+shader_parameter/density = 0.25
+shader_parameter/speed = Vector2(0.02, 0.01)
+
 [sub_resource type="Gradient" id="Gradient_7f7j5"]
-offsets = PackedFloat32Array(0, 0.45876288, 1)
-colors = PackedColorArray(0.18431373, 0.03529412, 0.03529412, 1, 0, 0, 0, 0.5412371, 0, 0, 0, 0)
+offsets = PackedFloat32Array(0, 0.45876288, 0.5566343, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.18431373, 0.03529412, 0.03529412, 1, 0.18431373, 0.03529412, 0.03529412, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_5ihcl"]
 gradient = SubResource("Gradient_7f7j5")
@@ -1405,44 +1427,53 @@ position = Vector2(10364, 1664)
 
 [node name="gravas" type="Node2D" parent="lvl1" unique_id=2043255634]
 
-[node name="block" parent="lvl1/gravas" unique_id=265533745 instance=ExtResource("27_514du")]
-position = Vector2(2921, -84)
+[node name="pt_blueprint11" parent="lvl1/gravas" unique_id=1639329764 instance=ExtResource("16_nfd4m")]
+position = Vector2(8391, 88.000244)
+rotation = 1.5707964
 
-[node name="block2" parent="lvl1/gravas" unique_id=1756351268 instance=ExtResource("27_514du")]
-position = Vector2(2976, -167)
+[node name="pt_blueprint12" parent="lvl1/gravas" unique_id=830499475 instance=ExtResource("16_nfd4m")]
+position = Vector2(8550, 98)
 
-[node name="block3" parent="lvl1/gravas" unique_id=1779895896 instance=ExtResource("27_514du")]
-position = Vector2(8339, -1053)
+[node name="pt_blueprint13" parent="lvl1/gravas" unique_id=2135977623 instance=ExtResource("16_nfd4m")]
+position = Vector2(8397, 7.999749)
+rotation = 0.28099802
 
-[node name="block4" parent="lvl1/gravas" unique_id=178825057 instance=ExtResource("27_514du")]
-position = Vector2(8260, -918)
+[node name="pt_blueprint2" parent="lvl1/gravas" unique_id=1709124219 instance=ExtResource("16_nfd4m")]
+position = Vector2(8029, 97)
 
-[node name="block5" parent="lvl1/gravas" unique_id=1697555499 instance=ExtResource("27_514du")]
-position = Vector2(8404, -836)
+[node name="pt_blueprint4" parent="lvl1/gravas" unique_id=511259193 instance=ExtResource("16_nfd4m")]
+position = Vector2(8215, 97)
 
-[node name="block6" parent="lvl1/gravas" unique_id=112619746 instance=ExtResource("27_514du")]
-position = Vector2(8342, -692)
+[node name="pt_blueprint3" parent="lvl1/gravas" unique_id=1355394741 instance=ExtResource("16_nfd4m")]
+position = Vector2(8122, 87.000244)
+rotation = 0.42062435
 
-[node name="block7" parent="lvl1/gravas" unique_id=539376635 instance=ExtResource("27_514du")]
-position = Vector2(8226, -218)
+[node name="pt_blueprint5" parent="lvl1/gravas" unique_id=317128264 instance=ExtResource("16_nfd4m")]
+position = Vector2(8314, 97)
 
-[node name="block8" parent="lvl1/gravas" unique_id=286924269 instance=ExtResource("27_514du")]
-position = Vector2(8012, -450)
+[node name="pt_blueprint6" parent="lvl1/gravas" unique_id=1021496962 instance=ExtResource("16_nfd4m")]
+position = Vector2(8246, 42)
 
-[node name="block9" parent="lvl1/gravas" unique_id=1380347961 instance=ExtResource("27_514du")]
-position = Vector2(8222, -516)
+[node name="pt_blueprint7" parent="lvl1/gravas" unique_id=486663072 instance=ExtResource("16_nfd4m")]
+position = Vector2(8319.999, 26)
+rotation = 1.1239921
 
-[node name="block10" parent="lvl1/gravas" unique_id=1285275557 instance=ExtResource("27_514du")]
-position = Vector2(8420, -491)
+[node name="pt_blueprint8" parent="lvl1/gravas" unique_id=1841253601 instance=ExtResource("16_nfd4m")]
+position = Vector2(8161, 26.999996)
+rotation = -0.5602507
 
-[node name="block11" parent="lvl1/gravas" unique_id=407538101 instance=ExtResource("27_514du")]
-position = Vector2(8166, -416)
+[node name="pt_blueprint9" parent="lvl1/gravas" unique_id=1271668626 instance=ExtResource("16_nfd4m")]
+position = Vector2(8337.001, -53.00007)
+rotation = -0.06981317
 
-[node name="block12" parent="lvl1/gravas" unique_id=1058632959 instance=ExtResource("27_514du")]
-position = Vector2(8373, -359)
+[node name="pt_blueprint" parent="lvl1/gravas" unique_id=920875960 instance=ExtResource("16_nfd4m")]
+position = Vector2(8470, 80.99979)
+rotation = -0.9826203
+scale = Vector2(0.99999994, 0.99999994)
 
-[node name="block13" parent="lvl1/gravas" unique_id=2126556825 instance=ExtResource("27_514du")]
-position = Vector2(8480, -227)
+[node name="pt_blueprint10" parent="lvl1/gravas" unique_id=2075897040 instance=ExtResource("16_nfd4m")]
+position = Vector2(8236.001, -29.00006)
+rotation = -0.06981317
 
 [node name="ouvriront" type="RichTextLabel" parent="lvl1" unique_id=1013986313]
 z_index = 1
@@ -1528,23 +1559,23 @@ rotation = -0.6126106
 is_rotatingg = false
 
 [node name="laser_trap2" parent="lvl1/lasers" unique_id=113913790 instance=ExtResource("13_f4kdv")]
-position = Vector2(7929.8535, 85.150276)
+position = Vector2(7951, 78.99986)
 rotation = -0.22863813
 is_rotatingg = false
 
 [node name="laser_trap3" parent="lvl1/lasers" unique_id=544861001 instance=ExtResource("13_f4kdv")]
-position = Vector2(8398.148, -1.2554245)
-rotation = 0.6859144
+position = Vector2(8350.999, 9.99995)
+rotation = 0.9669124
 is_rotatingg = false
 
 [node name="pt_blueprint" parent="lvl1" unique_id=553404117 instance=ExtResource("16_nfd4m")]
-position = Vector2(7750.7637, 97.39691)
+position = Vector2(7772.5254, 97.39691)
 
 [node name="pt_blueprint2" parent="lvl1" unique_id=1639643020 instance=ExtResource("16_nfd4m")]
-position = Vector2(7670.2383, 97.39691)
+position = Vector2(7692, 97.39691)
 
 [node name="pt_blueprint3" parent="lvl1" unique_id=431420207 instance=ExtResource("16_nfd4m")]
-position = Vector2(7696.0596, 49.480957)
+position = Vector2(7717.8213, 49.480957)
 
 [node name="damage_block" parent="lvl1" unique_id=487159233 instance=ExtResource("46_7f7j5")]
 position = Vector2(3480, -1417.8771)
@@ -1893,7 +1924,6 @@ scroll_offset = Vector2(-2180, -69)
 
 [node name="Sprite2D3" type="Sprite2D" parent="lvl1/surface_vein_paralax" unique_id=580592296]
 position = Vector2(2935, -2171.0166)
-scale = Vector2(0.5, 0.5)
 texture = ExtResource("41_tkwxf")
 
 [node name="Sprite2D4" type="Sprite2D" parent="lvl1/surface_vein_paralax" unique_id=1694821413]
@@ -1901,12 +1931,7 @@ position = Vector2(8887.514, -2171.0166)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("41_tkwxf")
 
-[node name="Sprite2D5" type="Sprite2D" parent="lvl1/surface_vein_paralax" unique_id=503140613]
-position = Vector2(16502.514, -2171.0166)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("41_tkwxf")
-
-[node name="pt_blueprint4" parent="lvl1" unique_id=920875960 instance=ExtResource("16_nfd4m")]
+[node name="pt_blueprint4" parent="lvl1" unique_id=1960771141 instance=ExtResource("16_nfd4m")]
 z_index = 1
 position = Vector2(10205, 1394)
 rotation = 1.43117
@@ -2118,10 +2143,8 @@ target = NodePath("../../../Player")
 [node name="lvl3" type="Node2D" parent="." unique_id=1704687252]
 
 [node name="platform" parent="lvl3" unique_id=1760977641 instance=ExtResource("8_ltygr")]
-position = Vector2(3628, 3083)
-
-[node name="platform2" parent="lvl3" unique_id=442092305 instance=ExtResource("8_ltygr")]
-position = Vector2(3763, 3021)
+position = Vector2(3638, 3045)
+rotation = 0.35081118
 
 [node name="platform3" parent="lvl3" unique_id=1518499811 instance=ExtResource("8_ltygr")]
 position = Vector2(2443, 3241)
@@ -2207,10 +2230,10 @@ rotation = -1.2409291
 scale = Vector2(2, 2)
 
 [node name="platform10" parent="lvl3" unique_id=2029132258 instance=ExtResource("8_ltygr")]
-position = Vector2(3988, 3208)
+position = Vector2(3988, 3250)
 
 [node name="platform11" parent="lvl3" unique_id=711722132 instance=ExtResource("8_ltygr")]
-position = Vector2(3725, 3159)
+position = Vector2(3773, 3168)
 
 [node name="change_scene_zone" type="Area2D" parent="lvl3" unique_id=1214581139]
 
@@ -2327,6 +2350,13 @@ offset_top = 1290.0
 offset_right = 27719.0
 offset_bottom = 4203.0
 
+[node name="ColorRect4" type="ColorRect" parent="lvl5" unique_id=1572969753]
+offset_left = 18376.0
+offset_top = 737.0
+offset_right = 22211.0
+offset_bottom = 761.0
+color = Color(0.91764706, 0.91764706, 0.91764706, 1)
+
 [node name="escalier_blanc_room2" parent="lvl5" unique_id=708231529 instance=ExtResource("43_y6lma")]
 position = Vector2(17488, 446)
 
@@ -2341,6 +2371,13 @@ position = Vector2(740, -756)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lvl5/StaticBody2D" unique_id=942082823]
 position = Vector2(19425.705, 2933.6953)
 shape = SubResource("RectangleShape2D_7f7j5")
+
+[node name="ColorRect5" type="ColorRect" parent="lvl5" unique_id=389884721]
+offset_left = 23884.0
+offset_top = 1289.0
+offset_right = 27719.0
+offset_bottom = 1313.0
+color = Color(0.91764706, 0.91764706, 0.91764706, 1)
 
 [node name="escalier_blanc_room3" parent="lvl5" unique_id=274503240 instance=ExtResource("43_y6lma")]
 position = Vector2(23023, 998)
@@ -2369,6 +2406,13 @@ type_bonus = "doublejump"
 [node name="groundwall" type="Node2D" parent="lvl5" unique_id=329093549]
 position = Vector2(-442, -233)
 
+[node name="ColorRect4" type="ColorRect" parent="lvl5/groundwall" unique_id=1486531416]
+offset_left = 28125.0
+offset_top = 1522.0
+offset_right = 28163.0
+offset_bottom = 1547.0
+color = Color(0.91764706, 0.91764706, 0.91764706, 1)
+
 [node name="ground3" type="Sprite2D" parent="lvl5/groundwall" unique_id=1993197468]
 position = Vector2(28281.002, 2473.0002)
 rotation = 1.5707963
@@ -2393,7 +2437,8 @@ offset_bottom = 4419.0
 offset_left = 27875.0
 offset_top = 1523.0
 offset_right = 28141.0
-offset_bottom = 1553.0
+offset_bottom = 1548.0
+color = Color(0.91764706, 0.91764706, 0.91764706, 1)
 
 [node name="Label" type="Label" parent="lvl5" unique_id=858967304]
 offset_left = 19636.88
@@ -2707,6 +2752,21 @@ texture = ExtResource("46_73yqq")
 lifetime = 5.0
 process_material = SubResource("ParticleProcessMaterial_k2shy")
 
+[node name="Parallax2D" type="Parallax2D" parent="lvl5" unique_id=1500976461]
+scroll_scale = Vector2(1.4, 1.4)
+
+[node name="kind" type="Sprite2D" parent="lvl5/Parallax2D" unique_id=925477769]
+z_index = 500
+position = Vector2(32762.611, 1396.3696)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("45_1nkay")
+
+[node name="kind2" type="Sprite2D" parent="lvl5/Parallax2D" unique_id=960879492]
+z_index = 500
+position = Vector2(33825.625, 1396.3696)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("45_1nkay")
+
 [node name="DEATHZONE" type="Area2D" parent="." unique_id=265587749]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DEATHZONE" unique_id=1536129664]
@@ -2858,12 +2918,20 @@ offset_right = 19683.0
 offset_bottom = -3024.0
 color = Color(0.18431373, 0.03529412, 0.03529412, 1)
 
+[node name="ColorRectFOG" type="ColorRect" parent="red_plafond" unique_id=1696217631]
+z_index = 15
+material = SubResource("ShaderMaterial_gxno5")
+offset_left = -3431.0
+offset_top = -10655.0
+offset_right = 4219.1143
+offset_bottom = -3004.8853
+
 [node name="redgradientbg" type="TextureRect" parent="red_plafond" unique_id=1953395575]
 z_index = 20
 offset_left = -3696.0
-offset_top = -3024.0
+offset_top = -4059.0
 offset_right = 19748.0
-offset_bottom = -976.0
+offset_bottom = -2011.0
 texture = SubResource("GradientTexture2D_5ihcl")
 
 [node name="cutsceneparticle" type="GPUParticles2D" parent="red_plafond" unique_id=1483607889]
