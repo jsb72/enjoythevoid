@@ -673,6 +673,7 @@ shape = SubResource("RectangleShape2D_qmf18")
 scroll_scale = Vector2(1.2, 1.2)
 
 [node name="ColorRectFOG" type="ColorRect" parent="ParallaxFOG" unique_id=2092968000]
+modulate = Color(1, 1, 1, 0)
 z_index = 150
 material = SubResource("ShaderMaterial_lompd")
 offset_left = -3082.515

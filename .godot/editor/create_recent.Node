@@ -12,4 +12,3 @@ AudioStreamPlayer
 CollisionPolygon2D
 VideoStreamPlayer
 AnimatedSprite2D
-AudioStreamPlayer2D

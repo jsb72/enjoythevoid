@@ -18,3 +18,4 @@ res://src/global.gd
 res://src/elements/bomb.tscn
 res://src/elements/bomb.gd
 res://src/player/player.gd
+res://src/levels/room_blueprint.gd

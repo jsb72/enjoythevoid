@@ -1391,7 +1391,7 @@ position = Vector2(12850, -1541)
 position = Vector2(3024, -1308)
 
 [node name="fractale3" parent="lvl1/fractals" unique_id=754536176 instance=ExtResource("17_p2ed6")]
-position = Vector2(10357, 1652)
+position = Vector2(10364, 1664)
 
 [node name="gravas" type="Node2D" parent="lvl1" unique_id=2043255634]
 
@@ -1848,6 +1848,34 @@ energy = 0.35
 texture = SubResource("GradientTexture2D_tkwxf")
 texture_scale = 20.32
 
+[node name="PointLight2D4" type="PointLight2D" parent="lvl1" unique_id=1784430213]
+position = Vector2(12881, 629)
+color = Color(1.1638972, 1.1638972, 1.1638972, 1)
+energy = 0.36
+texture = SubResource("GradientTexture2D_tkwxf")
+texture_scale = 7.82
+
+[node name="PointLight2D5" type="PointLight2D" parent="lvl1" unique_id=1321175156]
+position = Vector2(10398, 1687)
+color = Color(1.1638972, 1.1638972, 1.1638972, 1)
+energy = 0.36
+texture = SubResource("GradientTexture2D_tkwxf")
+texture_scale = 7.82
+
+[node name="PointLight2D6" type="PointLight2D" parent="lvl1" unique_id=1442861390]
+position = Vector2(12881, -1506)
+color = Color(1.1638972, 1.1638972, 1.1638972, 1)
+energy = 0.36
+texture = SubResource("GradientTexture2D_tkwxf")
+texture_scale = 7.82
+
+[node name="PointLight2D7" type="PointLight2D" parent="lvl1" unique_id=186108167]
+position = Vector2(7597, 2323)
+color = Color(1.1638972, 1.1638972, 1.1638972, 1)
+energy = 0.36
+texture = SubResource("GradientTexture2D_tkwxf")
+texture_scale = 7.82
+
 [node name="surface_vein_paralax" type="Parallax2D" parent="lvl1" unique_id=364180509]
 z_index = 500
 scroll_scale = Vector2(1.4, 1.4)
@@ -1890,6 +1918,7 @@ z_index = 1
 position = Vector2(9823, 1616)
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
+visible = false
 position = Vector2(132, 0)
 
 [node name="fond_beforeburn" type="ColorRect" parent="lvl2" unique_id=1106919876]

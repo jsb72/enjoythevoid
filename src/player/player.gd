@@ -369,6 +369,7 @@ func apply_stretch() -> void:
 
 @onready var shakecamtimer: Timer = $shakecamtimer
 @onready var animationdistorsion: AnimationPlayer = $CanvasLayer/distorsionrect/animationdistorsion
+@onready var glitch_rect: ColorRect = $CanvasLayer2/glitch_rect
 
 
 var inside_portal : bool = false

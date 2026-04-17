@@ -213,6 +213,11 @@ func _on_change_scene_whenvoid_body_entered(body: Node2D) -> void:
 			black_particule.layer3.hide()
 			
 			lvl_2_loaded = true
+			
+		body.glitch_rect.visible=true
+		await get_tree().create_timer(2).timeout
+		body.glitch_rect.visible=false
+		
 func _on_change_scene_zone_body_entered(body: Node2D) -> void:
 	if body is Player:
 		if !lvl_2_loaded:

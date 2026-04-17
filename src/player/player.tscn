@@ -34,6 +34,7 @@
 [ext_resource type="Shader" uid="uid://chycd0t8penwl" path="res://shaders/teleport.gdshader" id="26_a4vah"]
 [ext_resource type="AudioStream" uid="uid://bd2ytox8or26g" path="res://sounds/hero_falling.wav" id="29_p6grl"]
 [ext_resource type="Shader" uid="uid://chet47u8v3pes" path="res://shaders/distorsion.gdshader" id="34_xmpm3"]
+[ext_resource type="Shader" uid="uid://ncq23qfexrtu" path="res://shaders/glitch.gdshader" id="35_h0enb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_qnmj6"]
 size = Vector3(48, 64, 1)
@@ -782,6 +783,14 @@ _data = {
 &"new_animation": SubResource("Animation_doi8u")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_phdu6"]
+shader = ExtResource("35_h0enb")
+shader_parameter/shake_power = 0.03
+shader_parameter/shake_rate = 0.2
+shader_parameter/shake_speed = 5.0
+shader_parameter/shake_block_size = 30.5
+shader_parameter/shake_color_rate = 0.0
+
 [node name="Player" type="CharacterBody2D" unique_id=2070335124]
 z_index = 1
 collision_layer = 3
@@ -1052,6 +1061,15 @@ metadata/_edit_use_anchors_ = true
 
 [node name="animationdistorsion" type="AnimationPlayer" parent="CanvasLayer/distorsionrect" unique_id=1833195375]
 libraries/ = SubResource("AnimationLibrary_phdu6")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=716557329]
+
+[node name="glitch_rect" type="ColorRect" parent="CanvasLayer2" unique_id=1678420934]
+visible = false
+material = SubResource("ShaderMaterial_phdu6")
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(1, 1, 1, 0)
 
 [connection signal="wall_entered" from="." to="." method="_on_wall_entered"]
 [connection signal="wall_exited" from="." to="." method="_on_wall_exited"]

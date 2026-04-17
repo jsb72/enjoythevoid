@@ -1,5 +1,5 @@
 extends Node2D
-@onready var animation_player: AnimationPlayer = $CanvasLayer/distorsion/AnimationPlayer
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
