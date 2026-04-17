@@ -39,7 +39,6 @@
 [ext_resource type="Texture2D" uid="uid://x8hb077gci1e" path="res://sprites/Mossy Tileset/Mossy - Decorations&HazardsBLUR.png" id="41_k2shy"]
 [ext_resource type="Texture2D" uid="uid://sggt0ur5arfk" path="res://sprites/backgroundvein - Copy.png" id="41_tkwxf"]
 [ext_resource type="PackedScene" uid="uid://vw31d2odlcv6" path="res://src/particles/black_particule.tscn" id="42_j4o56"]
-[ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="43_73yqq"]
 [ext_resource type="PackedScene" uid="uid://cqafrfx31iqu6" path="res://src/platforms/tunnel_corner.tscn" id="43_lmpmd"]
 [ext_resource type="PackedScene" uid="uid://n80ossa7y51v" path="res://src/levels/escalier_little_black_reverse.tscn" id="43_y6lma"]
 [ext_resource type="PackedScene" uid="uid://cwmh0r3f2teg7" path="res://src/platforms/tunnel.tscn" id="44_brhbg"]
@@ -457,24 +456,6 @@ use_hdr = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmpmd"]
 size = Vector2(727, 51)
-
-[sub_resource type="Gradient" id="Gradient_6nwfb"]
-
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_1nkay"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_lmpmd"]
-width = 1024
-height = 1024
-noise = SubResource("FastNoiseLite_1nkay")
-color_ramp = SubResource("Gradient_6nwfb")
-seamless = true
-normalize = false
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_brhbg"]
-shader = ExtResource("43_73yqq")
-shader_parameter/noise_texture = SubResource("NoiseTexture2D_lmpmd")
-shader_parameter/density = 0.25
-shader_parameter/speed = Vector2(0.02, 0.01)
 
 [sub_resource type="Gradient" id="Gradient_7rpky"]
 colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
@@ -1410,7 +1391,7 @@ position = Vector2(12850, -1541)
 position = Vector2(3024, -1308)
 
 [node name="fractale3" parent="lvl1/fractals" unique_id=754536176 instance=ExtResource("17_p2ed6")]
-position = Vector2(1516, 2784)
+position = Vector2(10357, 1652)
 
 [node name="gravas" type="Node2D" parent="lvl1" unique_id=2043255634]
 
@@ -1796,13 +1777,13 @@ theme_override_font_sizes/normal_font_size = 72
 text = "Ceux qui savent se taisent"
 
 [node name="fly" parent="lvl1" unique_id=1079513456 instance=ExtResource("41_5ihcl")]
-position = Vector2(7611, 1839)
+position = Vector2(7247, 1839)
 
 [node name="fly2" parent="lvl1" unique_id=1455604540 instance=ExtResource("41_5ihcl")]
 position = Vector2(9754, 1263)
 
 [node name="fly3" parent="lvl1" unique_id=1686639578 instance=ExtResource("41_5ihcl")]
-position = Vector2(7922, 1605)
+position = Vector2(8382, 1605)
 
 [node name="TILES" type="Node2D" parent="lvl1" unique_id=2029442160]
 
@@ -1887,8 +1868,28 @@ position = Vector2(16502.514, -2171.0166)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("41_tkwxf")
 
+[node name="pt_blueprint4" parent="lvl1" unique_id=920875960 instance=ExtResource("16_nfd4m")]
+z_index = 1
+position = Vector2(10205, 1394)
+rotation = 1.43117
+
+[node name="platform" parent="lvl1" unique_id=387117004 instance=ExtResource("8_ltygr")]
+z_index = 1
+position = Vector2(10255, 1265)
+
+[node name="platform2" parent="lvl1" unique_id=1501586417 instance=ExtResource("8_ltygr")]
+z_index = 1
+position = Vector2(10097, 1374)
+
+[node name="platform3" parent="lvl1" unique_id=1517389640 instance=ExtResource("8_ltygr")]
+z_index = 1
+position = Vector2(9956, 1490)
+
+[node name="platform4" parent="lvl1" unique_id=290279720 instance=ExtResource("8_ltygr")]
+z_index = 1
+position = Vector2(9823, 1616)
+
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
-visible = false
 position = Vector2(132, 0)
 
 [node name="fond_beforeburn" type="ColorRect" parent="lvl2" unique_id=1106919876]
@@ -2010,30 +2011,19 @@ is_rotatingg = false
 position = Vector2(2997, 3380)
 is_rotatingg = false
 
-[node name="Parallax2D2" type="Parallax2D" parent="lvl2" unique_id=475892214]
-scroll_scale = Vector2(1.2, 1.2)
-
-[node name="ColorRect" type="ColorRect" parent="lvl2/Parallax2D2" unique_id=1756454471]
-z_index = 150
-material = SubResource("ShaderMaterial_brhbg")
-offset_left = -4887.0
-offset_top = -3424.0
-offset_right = 1917.0
-offset_bottom = 3380.0
-
 [node name="void" type="Node2D" parent="." unique_id=1239576127]
 
 [node name="ColorRect3" type="ColorRect" parent="void" unique_id=1628904168]
-offset_left = -49989.0
+offset_left = -50054.0
 offset_top = -4244.0
-offset_right = -3695.0
+offset_right = -3760.0
 offset_bottom = 5024.0
 color = Color(0, 0, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="void" unique_id=1721457541]
-offset_left = -3726.0
+offset_left = -3760.0
 offset_top = -2428.0
-offset_right = -2702.0
+offset_right = -2736.0
 offset_bottom = 6379.0
 texture = SubResource("GradientTexture2D_k4edk")
 
@@ -2053,6 +2043,7 @@ position = Vector2(-27433, 150.5)
 shape = SubResource("RectangleShape2D_f3u0r")
 
 [node name="tentacles" type="Node2D" parent="void" unique_id=709374036]
+position = Vector2(-55, 0)
 
 [node name="AAtentacle" parent="void/tentacles" unique_id=1542629903 node_paths=PackedStringArray("target") instance=ExtResource("56_brhbg")]
 position = Vector2(-3531, 63)
@@ -2120,7 +2111,7 @@ position = Vector2(2078.5308, 3732)
 [node name="pt_blueprint6" parent="lvl3" unique_id=2100320573 instance=ExtResource("16_nfd4m")]
 position = Vector2(3025, 4004)
 
-[node name="pt_blueprint15" parent="lvl3" unique_id=920875960 instance=ExtResource("16_nfd4m")]
+[node name="pt_blueprint15" parent="lvl3" unique_id=135834017 instance=ExtResource("16_nfd4m")]
 position = Vector2(3108, 4004)
 
 [node name="pt_blueprint7" parent="lvl3" unique_id=184907153 instance=ExtResource("16_nfd4m")]
@@ -2829,6 +2820,7 @@ offset_bottom = -3024.0
 color = Color(0.18431373, 0.03529412, 0.03529412, 1)
 
 [node name="redgradientbg" type="TextureRect" parent="red_plafond" unique_id=1953395575]
+z_index = 20
 offset_left = -3696.0
 offset_top = -3024.0
 offset_right = 19748.0
