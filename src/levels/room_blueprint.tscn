@@ -624,12 +624,12 @@ color = Color(0.72, 0.72, 0.72, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(12729, 503)
+position = Vector2(0, -7000)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(12779, 343)
+position = Vector2(50, -7160)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -648,7 +648,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(12679, 343)
+position = Vector2(-50, -7160)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -666,7 +666,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(12779, 503)
+position = Vector2(50, -7000)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -682,7 +682,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(12679, 503)
+position = Vector2(-50, -7000)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -698,7 +698,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(12729, 343)
+position = Vector2(0, -7160)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -714,7 +714,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="dezoomlvl7" type="Node2D" parent="." unique_id=448208578 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(12729, 503)
+position = Vector2(0, -2270)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -728,7 +728,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(12779, 343)
+position = Vector2(50, -7160)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -1869,15 +1869,22 @@ texture_scale = 20.32
 
 [node name="surface_vein_paralax" type="Parallax2D" parent="lvl1" unique_id=364180509]
 z_index = 500
-scroll_scale = Vector2(1.2, 1.2)
+scroll_scale = Vector2(1.4, 1.4)
 scroll_offset = Vector2(-2180, -69)
 
-[node name="Sprite2D2" type="Sprite2D" parent="lvl1/surface_vein_paralax" unique_id=415716070]
-position = Vector2(12611.5, -4646)
+[node name="Sprite2D3" type="Sprite2D" parent="lvl1/surface_vein_paralax" unique_id=580592296]
+position = Vector2(2935, -2171.0166)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("41_tkwxf")
 
-[node name="Sprite2D3" type="Sprite2D" parent="lvl1/surface_vein_paralax" unique_id=580592296]
-position = Vector2(4788, -4646)
+[node name="Sprite2D4" type="Sprite2D" parent="lvl1/surface_vein_paralax" unique_id=1694821413]
+position = Vector2(8887.514, -2171.0166)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("41_tkwxf")
+
+[node name="Sprite2D5" type="Sprite2D" parent="lvl1/surface_vein_paralax" unique_id=503140613]
+position = Vector2(16502.514, -2171.0166)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("41_tkwxf")
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]

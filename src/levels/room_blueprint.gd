@@ -126,7 +126,7 @@ func music_player_logic():
 			label_music="intense"
 			
 			var tween = get_tree().create_tween()
-			tween.tween_property(canvas_modulate, "color", Color("ffc7c7ff"), 10.0)
+			tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 10.0)
 			
 			
 	if audio_stream_player.get_stream_playback().get_current_clip_index() !=index_music:
