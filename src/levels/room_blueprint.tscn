@@ -550,7 +550,8 @@ use_hdr = true
 fill_to = Vector2(0, 1)
 
 [sub_resource type="Gradient" id="Gradient_j4o56"]
-colors = PackedColorArray(1, 0.30588236, 0.18431373, 1, 0, 0, 0, 0)
+offsets = PackedFloat32Array(0.37216827, 1)
+colors = PackedColorArray(1.1638972, 0.3586162, 0.2165079, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_73yqq"]
 gradient = SubResource("Gradient_j4o56")
@@ -577,13 +578,13 @@ curve = SubResource("Curve_k2shy")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_j4o56"]
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(2500, 2000, 1)
+emission_box_extents = Vector3(2500, 3000, 1)
 spread = 180.0
 initial_velocity_min = 4.0
 initial_velocity_max = 8.0
 gravity = Vector3(0, 0, 0)
-scale_min = 0.19999999
-scale_max = 2.0
+scale_min = 0.099999994
+scale_max = 0.79999995
 scale_curve = SubResource("CurveTexture_1nkay")
 color_ramp = SubResource("GradientTexture1D_6nwfb")
 
@@ -600,17 +601,16 @@ volume_db = -10.0
 environment = SubResource("Environment_vb8r4")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1364036370]
-color = Color(0.72, 0.72, 0.72, 1)
 
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(0, -7000)
+position = Vector2(0, -8500)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -7160)
+position = Vector2(50, -8660)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -629,7 +629,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -7160)
+position = Vector2(-50, -8660)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -647,7 +647,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -7000)
+position = Vector2(50, -8500)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -663,7 +663,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -7000)
+position = Vector2(-50, -8500)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -679,7 +679,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(0, -7160)
+position = Vector2(0, -8660)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -709,7 +709,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(50, -7160)
+position = Vector2(50, -8660)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -2859,12 +2859,12 @@ texture = SubResource("GradientTexture2D_5ihcl")
 [node name="cutsceneparticle" type="GPUParticles2D" parent="red_plafond" unique_id=1483607889]
 z_index = 1000
 z_as_relative = false
-position = Vector2(-2, -5090)
-amount = 200
+position = Vector2(-2, -6174)
+amount = 500
 texture = SubResource("GradientTexture2D_73yqq")
-lifetime = 5.0
-speed_scale = 5.0
-visibility_rect = Rect2(-2000, -2000, 4000, 4000)
+lifetime = 3.0
+visibility_rect = Rect2(-2000, -3000, 4000, 6000)
+draw_order = 0
 process_material = SubResource("ParticleProcessMaterial_j4o56")
 
 [connection signal="body_entered" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_entered"]
