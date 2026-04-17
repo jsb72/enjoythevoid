@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://dhihe4rrnqw3d" path="res://src/levels/transition_rooms.tscn" id="13_h1car"]
 [ext_resource type="Texture2D" uid="uid://cpqmh0fogmcki" path="res://sprites/backgroundvein.png" id="14_73yqq"]
 [ext_resource type="PackedScene" uid="uid://d2iu76n7i4seb" path="res://src/bonus/bonus.tscn" id="15_fynux"]
+[ext_resource type="Texture2D" uid="uid://cn010mcehront" path="res://sprites/anamorpheee.png" id="16_j4o56"]
 [ext_resource type="PackedScene" uid="uid://c0g2bfslm40qt" path="res://src/platforms/pt_blueprint.tscn" id="16_nfd4m"]
 [ext_resource type="PackedScene" uid="uid://dr4h3pc0jii81" path="res://src/elements/fractale.tscn" id="17_p2ed6"]
 [ext_resource type="PackedScene" uid="uid://b05muqmrcfpjp" path="res://src/levels/bouche_degout.tscn" id="19_hwdj1"]
@@ -897,6 +898,15 @@ z_index = -100
 position = Vector2(7389.9995, -1162.9395)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("14_73yqq")
+
+[node name="Parallax2D6" type="Parallax2D" parent="lvl1" unique_id=21893439]
+scroll_scale = Vector2(0.85, 0.85)
+
+[node name="Sprite2D" type="Sprite2D" parent="lvl1/Parallax2D6" unique_id=1528874525]
+z_index = -50
+position = Vector2(-1997.1277, -418.17273)
+scale = Vector2(-1, 1)
+texture = ExtResource("16_j4o56")
 
 [node name="ColorRect6" type="ColorRect" parent="lvl1" unique_id=1067914766]
 offset_left = 3519.0

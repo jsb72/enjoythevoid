@@ -1,10 +1,10 @@
+Sprite2D
+Parallax2D
 CanvasLayer
 CollisionShape2D
 Area2D
 ColorRect
-Sprite2D
 TextureRect
-Parallax2D
 Node2D
 LightOccluder2D
 PointLight2D
