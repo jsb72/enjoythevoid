@@ -95,6 +95,16 @@ shader_parameter/speed = Vector2(0.02, 0.01)
 offsets = PackedFloat32Array(0, 0.27213115)
 colors = PackedColorArray(1, 1, 1, 1, 0.25565878, 0.25565878, 0.25565878, 1)
 
+[sub_resource type="Gradient" id="Gradient_1nkay"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tkwxf"]
+gradient = SubResource("Gradient_1nkay")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+metadata/_snap_enabled = true
+
 [node name="meta_room_piece" type="Node2D" unique_id=1053535631]
 script = ExtResource("1_u6kd6")
 
@@ -907,6 +917,18 @@ position = Vector2(315, 2257)
 [node name="platform7" parent="platforming" unique_id=2077626258 instance=ExtResource("11_nvtr1")]
 position = Vector2(1272.9999, 3258.9998)
 rotation = -0.35081118
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=1563672931]
+position = Vector2(2993, 1025)
+energy = 0.36
+texture = SubResource("GradientTexture2D_tkwxf")
+texture_scale = 22.1
+
+[node name="PointLight2D4" type="PointLight2D" parent="." unique_id=1431919063]
+position = Vector2(2993, 2019)
+energy = 0.36
+texture = SubResource("GradientTexture2D_tkwxf")
+texture_scale = 22.1
 
 [connection signal="body_entered" from="cam_zone" to="." method="_on_cam_zone_body_entered"]
 [connection signal="body_exited" from="cam_zone" to="." method="_on_cam_zone_body_exited"]

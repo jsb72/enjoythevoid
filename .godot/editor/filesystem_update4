@@ -12,3 +12,4 @@ res://shaders/blur.gdshader
 res://src/levels/room_blueprint.tscn
 res://src/global.gd
 res://src/platforms/platform.tscn
+res://src/platforms/platform.gd

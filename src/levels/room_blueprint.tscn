@@ -2974,7 +2974,7 @@ visibility_rect = Rect2(-2000, -3000, 4000, 6000)
 draw_order = 0
 process_material = SubResource("ParticleProcessMaterial_j4o56")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=270908870]
+[node name="PIERREpresent" type="AnimatedSprite2D" parent="." unique_id=270908870]
 position = Vector2(12057, -2852)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_g62an")
