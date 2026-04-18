@@ -1,7 +1,6 @@
-res://addons/ropesim/RopeRendererLine2D.gd
 Node2D
-Sprite2D
 Parallax2D
+Sprite2D
 ColorRect
 RayCast2D
 CanvasLayer

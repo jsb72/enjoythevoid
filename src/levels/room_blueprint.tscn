@@ -462,7 +462,7 @@ use_hdr = true
 size = Vector2(727, 51)
 
 [sub_resource type="Gradient" id="Gradient_7rpky"]
-colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_k4edk"]
 gradient = SubResource("Gradient_7rpky")
@@ -2001,16 +2001,16 @@ position = Vector2(-1338, 514)
 shape = SubResource("RectangleShape2D_01erx")
 
 [node name="TextureRect" type="TextureRect" parent="lvl2" unique_id=126828299]
-offset_left = 147.0
+offset_left = -10.0
 offset_top = -1806.0
-offset_right = 1171.0
+offset_right = 1014.0
 offset_bottom = 7922.248
 texture = SubResource("GradientTexture2D_f3u0r")
 
 [node name="ColorRect2" type="ColorRect" parent="lvl2" unique_id=28361229]
-offset_left = 1171.0
+offset_left = 1014.0
 offset_top = -1911.0
-offset_right = 7086.0
+offset_right = 6929.0
 offset_bottom = 6513.0
 color = Color(0, 0, 0, 1)
 
@@ -2266,15 +2266,6 @@ rotation = 0.0
 position = Vector2(3151, 3835)
 rotation = 1.5707964
 reverse_rotate = true
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="lvl3" unique_id=1121925312]
-z_index = 1
-offset_left = 3561.0
-offset_top = 3833.0
-offset_right = 4294.0
-offset_bottom = 4570.0
-theme_override_font_sizes/normal_font_size = 34
-text = "” À l'origine présenté en comprimé, le produit est retiré de la vente en 1972 aux États-Unis du fait de son usage détourné. ”"
 
 [node name="lvl5" type="Node2D" parent="." unique_id=574120747]
 

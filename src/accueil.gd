@@ -12,7 +12,7 @@ func _ready() -> void:
 	if Global.debug_mod:
 		load_game()
 	
-	Fadetoblack.transition(3)
+	Fadetoblack.transition(5)
 	await Fadetoblack.on_transition_finished	
 	video_stream_player.play()
 	timer.start()
@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_timer_timeout() -> void:
-	Fadetoblack.transition(3)
+	Fadetoblack.transition(5)
 	await Fadetoblack.on_transition_finished
 	load_game()
 	
