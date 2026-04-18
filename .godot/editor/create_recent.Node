@@ -1,4 +1,4 @@
-res://addons/Rope2D/rope_2d.gd
+res://addons/ropesim/RopeRendererLine2D.gd
 Node2D
 Sprite2D
 Parallax2D
