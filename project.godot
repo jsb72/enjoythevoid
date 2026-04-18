@@ -14,11 +14,12 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="develooping"
-config/description="A false story"
+config/name="A false story"
 run/main_scene="uid://qfht3ffettlq"
 config/features=PackedStringArray("4.6", "GL Compatibility")
-boot_splash/show_image=false
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/stretch_mode=0
+boot_splash/image="uid://dm0d03kqlcm51"
 config/icon="uid://ch8u3rf8xate6"
 config/windows_native_icon="res://icons/icon.ico"
 

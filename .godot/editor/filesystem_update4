@@ -1,4 +1,4 @@
-res://src/levels/room_blueprint.tscn
+res://src/levels/meta_room_piece.tscn
 res://addons/phantom_camera/themes/theme.tres
 res://shaders/damage_impact.gdshader
 res://shaders/distorsion.gdshader
@@ -9,4 +9,5 @@ res://shaders/vhs.gdshader
 res://shaders/starfield.gdshader
 res://shaders/verticalwhiterain.gdshader
 res://shaders/blur.gdshader
-res://src/vhs.tscn
+res://src/vivants/followeye.tscn
+res://src/global.gd

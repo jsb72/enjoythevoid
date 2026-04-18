@@ -109,7 +109,7 @@ func music_player_logic():
 			label_music="stimulation"
 			
 			var tween = get_tree().create_tween()
-			tween.tween_property(canvas_modulate, "color", Color("a6b7e6ff"), 2.0)
+			tween.tween_property(canvas_modulate, "color", Color("ffc7c7ff"), 2.0)
 			
 		if player.global_position.x > 1310:
 			index_music=1

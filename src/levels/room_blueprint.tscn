@@ -49,6 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://cuuupedh70x4h" path="res://src/elements/temps.tscn" id="45_lmpmd"]
 [ext_resource type="PackedScene" uid="uid://bdd03axytgixu" path="res://src/platforms/damage_block.tscn" id="46_7f7j5"]
 [ext_resource type="Texture2D" uid="uid://dk52pj28ds5fn" path="res://sprites/zero.png" id="46_73yqq"]
+[ext_resource type="Texture2D" uid="uid://brl4xaoemjgd3" path="res://sprites/rooms2/test_paralax.png" id="46_lmpmd"]
 [ext_resource type="PackedScene" uid="uid://denjct5e4x1jd" path="res://src/elements/cadavre.tscn" id="47_5ihcl"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="53_1nkay"]
 [ext_resource type="PackedScene" uid="uid://dij3e8be2nf5t" path="res://src/vivants/spider.tscn" id="53_6nwfb"]
@@ -372,7 +373,7 @@ noise = SubResource("FastNoiseLite_7rpky")
 shader = ExtResource("2_7rpky")
 shader_parameter/dissolve_texture = SubResource("NoiseTexture2D_k4edk")
 shader_parameter/dissolve_value = 1.0
-shader_parameter/burn_size = 0.03999999910592
+shader_parameter/burn_size = 0.0
 shader_parameter/burn_color = Color(0, 0, 0, 1)
 
 [sub_resource type="Gradient" id="Gradient_vb8r4"]
@@ -419,7 +420,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [1.0, 0.8190000389025]
+"values": [0.750000035625, 0.250000011875]
 }
 
 [sub_resource type="Animation" id="Animation_01erx"]
@@ -1953,15 +1954,14 @@ z_index = 1
 position = Vector2(9823, 1616)
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
-visible = false
 position = Vector2(132, 0)
 
 [node name="fond_beforeburn" type="ColorRect" parent="lvl2" unique_id=1106919876]
 offset_left = -3932.0
 offset_top = -1741.0
 offset_right = 1139.0
-offset_bottom = 2498.0
-color = Color(0.52, 0.52, 0.52, 1)
+offset_bottom = 3793.0
+color = Color(0, 0, 0, 1)
 
 [node name="Parallax2D" type="Parallax2D" parent="lvl2" unique_id=296382481]
 scroll_scale = Vector2(0.5, 0.5)
@@ -1978,6 +1978,16 @@ texture = SubResource("GradientTexture1D_7rpky")
 libraries/ = SubResource("AnimationLibrary_hw218")
 autoplay = &"new_animation"
 speed_scale = 0.1
+
+[node name="Parallax2D2" type="Parallax2D" parent="lvl2" unique_id=372844038]
+visible = false
+scroll_scale = Vector2(0.75, 0.75)
+
+[node name="Sprite2D" type="Sprite2D" parent="lvl2/Parallax2D2" unique_id=82727939]
+visible = false
+position = Vector2(-1510.0001, 228)
+scale = Vector2(0.62475, 0.62475)
+texture = ExtResource("46_lmpmd")
 
 [node name="meta_room_piece" parent="lvl2" unique_id=1053535631 instance=ExtResource("30_lqu8a")]
 position = Vector2(-2327, -993)
@@ -2076,6 +2086,7 @@ position = Vector2(2997, 3380)
 is_rotatingg = false
 
 [node name="void" type="Node2D" parent="." unique_id=1239576127]
+position = Vector2(42, 0)
 
 [node name="ColorRect3" type="ColorRect" parent="void" unique_id=1628904168]
 offset_left = -50054.0
