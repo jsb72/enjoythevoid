@@ -854,18 +854,6 @@ position = Vector2(2618, 2048)
 portal_target = NodePath("../portal")
 black_portal = true
 
-[node name="portal3" parent="." unique_id=730619911 node_paths=PackedStringArray("portal_target") instance=ExtResource("15_lompd")]
-position = Vector2(-2, 1751)
-rotation = 1.5707964
-portal_target = NodePath("../portal4")
-black_portal = true
-
-[node name="portal4" parent="." unique_id=417375861 node_paths=PackedStringArray("portal_target") instance=ExtResource("15_lompd")]
-position = Vector2(-2, 229)
-rotation = -1.5707964
-portal_target = NodePath("../portal3")
-black_portal = true
-
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=400262145]
 z_index = 30
 scroll_scale = Vector2(1.2, 1.2)
@@ -877,7 +865,7 @@ rope_length = 3000.0
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="Parallax2D/Rope" unique_id=1656676398]
-points = PackedVector2Array(0, 0, -10.235321, 301.0481, -21.423798, 601.9888, -33.643616, 902.78845, -46.95511, 1203.4199, -61.419495, 1503.8608, -77.10535, 1804.092, -94.085205, 2104.0974, -112.437775, 2403.861, -132.25296, 2703.369, -153.63007, 3002.6062)
+points = PackedVector2Array(0, 0, -11.060059, 301.0188, -23.145569, 601.9246, -36.333862, 902.6832, -50.677673, 1203.2671, -66.23215, 1503.6534, -83.04993, 1803.8232, -101.18689, 2103.7607, -120.696045, 2403.4514, -141.643, 2702.882, -164.08734, 3002.0413)
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
 metadata/_custom_type_script = "uid://dfppmnngy2wx4"
@@ -889,7 +877,7 @@ rope_length = 3000.0
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="Parallax2D/Rope2" unique_id=1790835956]
-points = PackedVector2Array(0, 0, -10.137146, 301.0512, -21.212646, 601.99585, -33.295166, 902.8008, -46.434875, 1203.4396, -60.675232, 1503.891, -76.06305, 1804.1375, -92.64465, 2104.1648, -110.453125, 2403.9614, -129.48944, 2703.5195, -149.71161, 3002.8374)
+points = PackedVector2Array(0, 0, -11.06189, 301.01874, -23.149902, 601.92444, -36.33914, 902.683, -50.684692, 1203.2668, -66.24014, 1503.6531, -83.06061, 1803.8228, -101.19995, 2103.76, -120.71106, 2403.4507, -141.65466, 2702.8816, -164.09442, 3002.041)
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
 metadata/_custom_type_script = "uid://dfppmnngy2wx4"
@@ -901,7 +889,7 @@ rope_length = 3000.0
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="Parallax2D/Rope3" unique_id=747387521]
-points = PackedVector2Array(0, 0, -10.4227295, 301.0417, -21.816895, 601.9747, -34.260254, 902.76514, -47.814697, 1203.3857, -62.541626, 1503.8138, -78.50525, 1804.0305, -95.775635, 2104.019, -114.44006, 2403.7637, -134.57507, 2703.25, -156.29077, 3002.4631)
+points = PackedVector2Array(0, 0, -11.061157, 301.01877, -23.145752, 601.9247, -36.336426, 902.68317, -50.68567, 1203.2667, -66.23657, 1503.6533, -83.057495, 1803.823, -101.19043, 2103.7607, -120.70178, 2403.4512, -141.65051, 2702.8818, -164.09375, 3002.041)
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
 metadata/_custom_type_script = "uid://dfppmnngy2wx4"
@@ -913,7 +901,7 @@ rope_length = 3000.0
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="Parallax2D/Rope4" unique_id=1674848336]
-points = PackedVector2Array(0, 0, -10.136475, 301.0523, -21.326416, 601.9938, -33.65448, 902.7898, -46.933594, 1203.4235, -60.717834, 1503.897, -74.65277, 1804.2151, -89.25568, 2104.3457, -106.206635, 2404.1924, -126.01965, 2703.7002, -143.96161, 3003.163)
+points = PackedVector2Array(0, 0, -11.057007, 301.01892, -23.137146, 601.9249, -36.32086, 902.6838, -50.660217, 1203.2678, -66.21124, 1503.6543, -83.02472, 1803.8245, -101.15796, 2103.7622, -120.660095, 2403.4531, -141.59845, 2702.8845, -164.03796, 3002.0442)
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
 metadata/_custom_type_script = "uid://dfppmnngy2wx4"
@@ -925,7 +913,7 @@ rope_length = 3000.0
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="Parallax2D/Rope5" unique_id=845030306]
-points = PackedVector2Array(0, 0, -10.367676, 301.04355, -21.699097, 601.9788, -34.075073, 902.7721, -47.553223, 1203.396, -62.203125, 1503.8279, -78.08386, 1804.0491, -95.269165, 2104.0425, -113.8385, 2403.7927, -133.88647, 2703.285, -155.51575, 3002.5044)
+points = PackedVector2Array(0, 0, -11.062866, 301.0187, -23.15271, 601.9244, -36.348145, 902.68274, -50.69995, 1203.2662, -66.25513, 1503.6525, -83.08374, 1803.8218, -101.22107, 2103.759, -120.73596, 2403.4495, -141.68066, 2702.8804, -164.12683, 3002.0393)
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
 metadata/_custom_type_script = "uid://dfppmnngy2wx4"
@@ -937,7 +925,7 @@ rope_length = 3000.0
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="Parallax2D/Rope6" unique_id=687238972]
-points = PackedVector2Array(0, 0, -10.616455, 301.03473, -22.216797, 601.95966, -34.87915, 902.74084, -48.667725, 1203.3506, -63.65454, 1503.7659, -79.89551, 1803.9675, -97.4729, 2103.938, -116.45239, 2403.663, -136.92114, 2703.1267, -159.0105, 3002.3123)
+points = PackedVector2Array(0, 0, -11.057617, 301.01886, -23.134766, 601.92505, -36.31836, 902.68384, -50.65503, 1203.2681, -66.20532, 1503.6545, -83.015625, 1803.825, -101.164795, 2103.7615, -120.65869, 2403.4531, -141.57593, 2702.886, -164.0061, 3002.0464)
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
 metadata/_custom_type_script = "uid://dfppmnngy2wx4"
@@ -958,6 +946,19 @@ position = Vector2(15, 2950)
 
 [node name="platform5" parent="platforming" unique_id=904596463 instance=ExtResource("11_nvtr1")]
 position = Vector2(220, 3063)
+
+[node name="platform6" parent="platforming" unique_id=958079622 instance=ExtResource("11_nvtr1")]
+position = Vector2(734, 3251)
+
+[node name="platform8" parent="platforming" unique_id=1051110008 instance=ExtResource("11_nvtr1")]
+position = Vector2(2752, 3267)
+
+[node name="platform9" parent="platforming" unique_id=1322160080 instance=ExtResource("11_nvtr1")]
+position = Vector2(315, 2257)
+
+[node name="platform7" parent="platforming" unique_id=2077626258 instance=ExtResource("11_nvtr1")]
+position = Vector2(1272.9999, 3258.9998)
+rotation = -0.35081118
 
 [connection signal="body_entered" from="cam_zone" to="." method="_on_cam_zone_body_entered"]
 [connection signal="body_exited" from="cam_zone" to="." method="_on_cam_zone_body_exited"]
