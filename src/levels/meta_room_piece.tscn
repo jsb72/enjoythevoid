@@ -844,13 +844,37 @@ gradient = SubResource("Gradient_p6p5d")
 script = ExtResource("14_lompd")
 metadata/_custom_type_script = "uid://dfppmnngy2wx4"
 
+[node name="platform14" parent="." unique_id=226039902 instance=ExtResource("11_nvtr1")]
+position = Vector2(2722, 1080)
+
+[node name="platform15" parent="." unique_id=1620681969 instance=ExtResource("11_nvtr1")]
+position = Vector2(2802, 1080)
+
+[node name="platform16" parent="." unique_id=102274090 instance=ExtResource("11_nvtr1")]
+position = Vector2(2882, 1080)
+
+[node name="platform17" parent="." unique_id=728143498 instance=ExtResource("11_nvtr1")]
+position = Vector2(2961, 1080)
+
 [node name="portal" parent="." unique_id=871669185 node_paths=PackedStringArray("portal_target") instance=ExtResource("15_lompd")]
-position = Vector2(2614, 1047)
+position = Vector2(2989, 1022)
 portal_target = NodePath("../portal2")
 black_portal = true
 
+[node name="platform10" parent="." unique_id=1427938848 instance=ExtResource("11_nvtr1")]
+position = Vector2(2722, 2077)
+
+[node name="platform11" parent="." unique_id=99270515 instance=ExtResource("11_nvtr1")]
+position = Vector2(2802, 2077)
+
+[node name="platform12" parent="." unique_id=641041049 instance=ExtResource("11_nvtr1")]
+position = Vector2(2882, 2077)
+
+[node name="platform13" parent="." unique_id=1640843278 instance=ExtResource("11_nvtr1")]
+position = Vector2(2961, 2077)
+
 [node name="portal2" parent="." unique_id=1722614480 node_paths=PackedStringArray("portal_target") instance=ExtResource("15_lompd")]
-position = Vector2(2618, 2048)
+position = Vector2(2986, 2020)
 portal_target = NodePath("../portal")
 black_portal = true
 

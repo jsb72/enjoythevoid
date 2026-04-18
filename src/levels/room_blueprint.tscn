@@ -55,6 +55,7 @@
 [ext_resource type="PackedScene" uid="uid://dij3e8be2nf5t" path="res://src/vivants/spider.tscn" id="53_6nwfb"]
 [ext_resource type="PackedScene" uid="uid://ufnf3lc7ewin" path="res://src/vivants/a_atentacle.tscn" id="56_brhbg"]
 [ext_resource type="PackedScene" uid="uid://dvio2nnm1fv8q" path="res://src/vivants/yog_sothoth.tscn" id="56_gxno5"]
+[ext_resource type="Texture2D" uid="uid://dmrsbbrarvw1n" path="res://sprites/bigvectorBLACK.png" id="56_qgqoh"]
 
 [sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_7f7j5"]
 
@@ -611,6 +612,21 @@ scale_min = 0.099999994
 scale_max = 0.79999995
 scale_curve = SubResource("CurveTexture_1nkay")
 color_ramp = SubResource("GradientTexture1D_6nwfb")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6qp3"]
+atlas = ExtResource("56_qgqoh")
+region = Rect2(2500, 5000, 1250, 1250)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g62an"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6qp3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="room_blueprint" type="Node2D" unique_id=1528742533]
 script = ExtResource("1_76snk")
@@ -2957,6 +2973,12 @@ lifetime = 3.0
 visibility_rect = Rect2(-2000, -3000, 4000, 6000)
 draw_order = 0
 process_material = SubResource("ParticleProcessMaterial_j4o56")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=270908870]
+position = Vector2(12057, -2852)
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_g62an")
+flip_h = true
 
 [connection signal="body_entered" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_entered"]
 [connection signal="body_exited" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_exited"]

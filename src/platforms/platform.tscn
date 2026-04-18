@@ -6,6 +6,16 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hvdta"]
 size = Vector2(80.125, 14)
 
+[sub_resource type="Gradient" id="Gradient_hvdta"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jhkn7"]
+gradient = SubResource("Gradient_hvdta")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+metadata/_snap_enabled = true
+
 [node name="platform" type="AnimatableBody2D" unique_id=1968047125]
 script = ExtResource("1_hvdta")
 
@@ -17,3 +27,9 @@ texture = ExtResource("1_pndbt")
 position = Vector2(1.0625, -10)
 shape = SubResource("RectangleShape2D_hvdta")
 one_way_collision = true
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=731154078]
+position = Vector2(1.2722836, -12.298843)
+energy = 0.1
+texture = SubResource("GradientTexture2D_jhkn7")
+texture_scale = 2.0
