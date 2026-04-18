@@ -1478,9 +1478,9 @@ rotation = -0.06981317
 
 [node name="ouvriront" type="RichTextLabel" parent="lvl1" unique_id=1013986313]
 z_index = 1
-offset_left = -962.0
+offset_left = -1058.0
 offset_top = 36.00006
-offset_right = -381.05994
+offset_right = -477.05994
 offset_bottom = 143.8786
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 18
@@ -1954,6 +1954,7 @@ z_index = 1
 position = Vector2(9823, 1616)
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
+visible = false
 position = Vector2(132, 0)
 
 [node name="fond_beforeburn" type="ColorRect" parent="lvl2" unique_id=1106919876]
@@ -2777,7 +2778,7 @@ texture = ExtResource("45_1nkay")
 
 [node name="kind4" type="Sprite2D" parent="lvl5/Parallax2D" unique_id=1699257137]
 z_index = 500
-position = Vector2(37893, 1050)
+position = Vector2(38489, 1050)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("45_1nkay")
 
