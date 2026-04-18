@@ -23,7 +23,6 @@ vertical_alignment = 1
 [node name="Timer" type="Timer" parent="." unique_id=2009255761]
 wait_time = 5.0
 one_shot = true
-autostart = true
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1709462391]
 offset_left = 288.0
@@ -31,6 +30,5 @@ offset_right = 1248.0
 offset_bottom = 960.0
 scale = Vector2(0.75, 0.75)
 stream = ExtResource("2_o1nyv")
-autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

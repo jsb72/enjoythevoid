@@ -11,3 +11,5 @@ res://shaders/verticalwhiterain.gdshader
 res://shaders/blur.gdshader
 res://src/vivants/followeye.tscn
 res://src/global.gd
+res://src/accueil.tscn
+res://src/accueil.gd
