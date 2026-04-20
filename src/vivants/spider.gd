@@ -10,6 +10,8 @@ extends CharacterBody2D
 
 @onready var right: RayCast2D = $right
 @onready var left: RayCast2D = $left
+@onready var down: RayCast2D = $down
+@onready var top: RayCast2D = $top
 
 const SPEED = 50.0
 
@@ -32,6 +34,7 @@ func move_logic(delta)->void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 	move_and_slide()
+	
 	
 func atk_logik()->void:
 	var bodycolright :CharacterBody2D=getcollisionbody(right)
@@ -60,7 +63,7 @@ func move_animation()->void:
 		spiderrendu.scale.x = -1
 	if velocity.x > 0 :
 		spiderrendu.scale.x = 1
-	if is_on_ceiling():
+	if getCollisionSurface(top):
 		spiderrendu.scale.y = -1
 		
 		
