@@ -108,28 +108,35 @@ func move_animation()->void:
 			spiderrendu.scale.x = 1
 		
 func atk_logik()->void:
-	var bodycolright :CharacterBody2D=getcollisionbody(right)
-	var bodycolleft :CharacterBody2D=getcollisionbody(left)
+	var bodycol_front :CharacterBody2D
+	var bodycol_back :CharacterBody2D
 	
-	if bodycolright !=null or bodycolleft !=null:
+	if last_surface=="top" or last_surface=="down":
+		bodycol_front=getcollisionbody(right)
+		bodycol_back=getcollisionbody(left)
+	if last_surface=="right" or last_surface=="left":
+		bodycol_front=getcollisionbody(top)
+		bodycol_back=getcollisionbody(down)
+	
+	if bodycol_front !=null or bodycol_back !=null:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		animated_sprite_2d.play("attack")
 		audio_stream_player_2d.play()
 		
-		if bodycolleft != null and bodycolright == null:
-			if last_surface=="down" or last_surface=="left":
+		if bodycol_back != null and bodycol_front == null:
+			if last_surface=="down" or last_surface=="right":
 				spiderrendu.scale.x = -1
-			if last_surface=="top" or last_surface=="right":
+			if last_surface=="top" or last_surface=="left":
 				spiderrendu.scale.x = 1
 			await get_tree().create_timer(0.1).timeout
-			bodycolleft.position.x -= 3
-		if bodycolright != null and bodycolleft == null:
-			if last_surface=="down" or last_surface=="left":
+			bodycol_back.position.x -= 3
+		if bodycol_front != null and bodycol_back == null:
+			if last_surface=="down" or last_surface=="right":
 				spiderrendu.scale.x = 1
-			if last_surface=="top" or last_surface=="right":
+			if last_surface=="top" or last_surface=="left":
 				spiderrendu.scale.x = -1
 			await get_tree().create_timer(0.1).timeout
-			bodycolright.position.x += 3
+			bodycol_front.position.x += 3
 			
 func is_attacking()->bool:
 	return animated_sprite_2d.animation == "attack" and animated_sprite_2d.is_playing()
