@@ -15,9 +15,9 @@ extends CharacterBody2D
 
 func _physics_process(delta: float) -> void:
 	atk_logik()
-	if !is_attacking():move_logic(delta)
-	
-	move_animation()
+	if !is_attacking():
+		move_logic(delta)
+		move_animation()
 	
 const SPEED = 50.0
 var rng = RandomNumberGenerator.new()
@@ -117,13 +117,19 @@ func atk_logik()->void:
 		audio_stream_player_2d.play()
 		
 		if bodycolleft != null and bodycolright == null:
-			spiderrendu.scale.x = -1
+			if last_surface=="down" or last_surface=="left":
+				spiderrendu.scale.x = -1
+			if last_surface=="top" or last_surface=="right":
+				spiderrendu.scale.x = 1
 			await get_tree().create_timer(0.1).timeout
-			bodycolleft.position.x -= 2
+			bodycolleft.position.x -= 3
 		if bodycolright != null and bodycolleft == null:
-			spiderrendu.scale.x = 1
+			if last_surface=="down" or last_surface=="left":
+				spiderrendu.scale.x = 1
+			if last_surface=="top" or last_surface=="right":
+				spiderrendu.scale.x = -1
 			await get_tree().create_timer(0.1).timeout
-			bodycolright.position.x += 2
+			bodycolright.position.x += 3
 			
 func is_attacking()->bool:
 	return animated_sprite_2d.animation == "attack" and animated_sprite_2d.is_playing()
@@ -131,7 +137,7 @@ func is_attacking()->bool:
 func getcollisionbody(rcast:RayCast2D):
 	if rcast.is_colliding():
 		var collidobj = rcast.get_collider()
-		if collidobj is Player or collidobj is Spider :
+		if collidobj is Player :
 			return collidobj
 	return null
 
