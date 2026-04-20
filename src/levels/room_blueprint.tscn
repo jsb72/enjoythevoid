@@ -757,12 +757,12 @@ color = Color(0.72156864, 0.72156864, 0.72156864, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(0, -8500)
+position = Vector2(5817, -341)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -8660)
+position = Vector2(5867, -501)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -781,7 +781,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -8660)
+position = Vector2(5767, -501)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -799,7 +799,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -8500)
+position = Vector2(5867, -341)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -815,7 +815,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -8500)
+position = Vector2(5767, -341)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -831,7 +831,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(0, -8660)
+position = Vector2(5817, -501)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -847,7 +847,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="dezoomlvl7" type="Node2D" parent="." unique_id=448208578 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(0, -2270)
+position = Vector2(5817, -341)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -861,7 +861,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(50, -8660)
+position = Vector2(5867, -501)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -1315,8 +1315,8 @@ position = Vector2(169, -621)
 position = Vector2(1801, 2391)
 
 [node name="laser_trap" parent="lvl1/Structure/escalier_room2" unique_id=790521176 instance=ExtResource("13_f4kdv")]
-position = Vector2(-423, 134)
-rotation = 1.5707964
+position = Vector2(-510, 130)
+rotation = 1.3823007
 is_rotatingg = false
 
 [node name="pt_blueprint" parent="lvl1/Structure/escalier_room2" unique_id=308801530 instance=ExtResource("16_nfd4m")]
@@ -1877,29 +1877,12 @@ shape = SubResource("RectangleShape2D_brhbg")
 
 [node name="spiders" type="Node2D" parent="lvl1" unique_id=1413067626]
 
-[node name="spider7" parent="lvl1/spiders" unique_id=375732513 instance=ExtResource("53_6nwfb")]
-position = Vector2(5837, -320)
-
 [node name="spider8" parent="lvl1/spiders" unique_id=578968010 instance=ExtResource("53_6nwfb")]
-position = Vector2(6283, -305)
-
-[node name="spider9" parent="lvl1/spiders" unique_id=1878648781 instance=ExtResource("53_6nwfb")]
-position = Vector2(5782, -323)
-
-[node name="spider10" parent="lvl1/spiders" unique_id=1783218185 instance=ExtResource("53_6nwfb")]
-position = Vector2(5721, -328)
-
-[node name="spider3" parent="lvl1/spiders" unique_id=359167137 instance=ExtResource("53_6nwfb")]
-position = Vector2(6328.199, 35.381104)
+position = Vector2(5878, -417)
+motion_mode = 0
 
 [node name="spider4" parent="lvl1/spiders" unique_id=1387851100 instance=ExtResource("53_6nwfb")]
 position = Vector2(10141.293, -1484.4983)
-
-[node name="spider5" parent="lvl1/spiders" unique_id=1669013301 instance=ExtResource("53_6nwfb")]
-position = Vector2(381.38208, 2765.0195)
-
-[node name="spider6" parent="lvl1/spiders" unique_id=1458701811 instance=ExtResource("53_6nwfb")]
-position = Vector2(12507, 815)
 
 [node name="sprint_bonus" parent="lvl1" unique_id=1577787271 instance=ExtResource("15_fynux")]
 position = Vector2(4711, 1739)

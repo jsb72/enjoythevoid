@@ -591,8 +591,7 @@ offset_right = -187.0
 offset_bottom = 1799.0
 theme_override_colors/default_color = Color(0.22670749, 0.22670749, 0.22670746, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "ARPANET,
-Sa première démonstration officielle date d'octobre 1972"
+text = "première démonstration officielle d'ARPANET en 1972"
 horizontal_alignment = 3
 vertical_alignment = 1
 
@@ -603,7 +602,7 @@ offset_right = 2827.0
 offset_bottom = 1812.0
 theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "Le langage C a été inventé au cours de l'année 1972"
+text = "invention du langage C en 1972"
 horizontal_alignment = 3
 vertical_alignment = 1
 
@@ -614,7 +613,7 @@ offset_right = 1820.0
 offset_bottom = 1806.0
 theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "En 1972, Richard Karp a prouvé la NP-complétude de"
+text = "démonstration des 21 problèmes NP-complets de Karp en 1972"
 horizontal_alignment = 3
 vertical_alignment = 1
 
@@ -625,8 +624,7 @@ offset_right = 799.0
 offset_bottom = 2796.0
 theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "MK-Ultra
-sa fin est décidée le 10 juillet 1972"
+text = "fin du programme MK-Ultra en 1972"
 horizontal_alignment = 3
 vertical_alignment = 1
 
@@ -637,7 +635,7 @@ offset_right = 809.0
 offset_bottom = 806.0
 theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "La Bille bleue est une photographie célèbre de la Terre, prise le 7 décembre 1972"
+text = "The Blue Marble photographié en 1972"
 horizontal_alignment = 3
 vertical_alignment = 1
 
@@ -648,7 +646,7 @@ offset_right = 1825.0
 offset_bottom = 806.0
 theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "À l'origine présenté en comprimé, le produit est retiré de la vente en 1972"
+text = "DXM retiré de la vente aux US en 1972"
 horizontal_alignment = 3
 vertical_alignment = 1
 
@@ -659,7 +657,7 @@ offset_right = 820.0
 offset_bottom = 1807.0
 theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "Il est en décembre 1972 le commandant de la mission Apollo 17"
+text = "Dernier homme sur la Lune en 1972"
 horizontal_alignment = 3
 vertical_alignment = 1
 
@@ -670,7 +668,7 @@ offset_right = 1831.0
 offset_bottom = 2801.0
 theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "Les Limites à la croissance, est un rapport commandé par le club de Rome et publié en 1972"
+text = "Rapport Meadows publié en 1972"
 horizontal_alignment = 3
 vertical_alignment = 1
 
