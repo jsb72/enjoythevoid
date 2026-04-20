@@ -236,6 +236,117 @@ size = Vector2(864, 954)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fynux"]
 size = Vector2(66.5, 10084.096)
 
+[sub_resource type="Animation" id="Animation_brhbg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3550, -1697)]
+}
+
+[sub_resource type="Animation" id="Animation_gxno5"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3550, -1697), Vector2(3682, -1697)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qgqoh"]
+_data = {
+&"RESET": SubResource("Animation_brhbg"),
+&"new_animation": SubResource("Animation_gxno5")
+}
+
+[sub_resource type="Animation" id="Animation_w6qp3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3437.0002, -1568)]
+}
+
+[sub_resource type="Animation" id="Animation_g62an"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3437.0002, -1568), Vector2(3787, -1568)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3grwt"]
+_data = {
+&"RESET": SubResource("Animation_w6qp3"),
+&"new_animation": SubResource("Animation_g62an")
+}
+
+[sub_resource type="Animation" id="Animation_wm35a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3321, -1441)]
+}
+
+[sub_resource type="Animation" id="Animation_tuy4g"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3321, -1441), Vector2(3881, -1441)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6wgec"]
+_data = {
+&"RESET": SubResource("Animation_wm35a"),
+&"new_animation": SubResource("Animation_tuy4g")
+}
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1nkay"]
 size = Vector2(1591.0845, 806)
 
@@ -478,7 +589,7 @@ size = Vector2(47958, 53)
 size = Vector2(1446.75, 823)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cd7fg"]
-size = Vector2(487, 981.5)
+size = Vector2(1234, 1146)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1tqiw"]
 size = Vector2(3446.975, 1526.4834)
@@ -641,6 +752,7 @@ volume_db = -10.0
 environment = SubResource("Environment_vb8r4")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1364036370]
+color = Color(0.72156864, 0.72156864, 0.72156864, 1)
 
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
@@ -1203,21 +1315,16 @@ position = Vector2(169, -621)
 position = Vector2(1801, 2391)
 
 [node name="laser_trap" parent="lvl1/Structure/escalier_room2" unique_id=790521176 instance=ExtResource("13_f4kdv")]
-position = Vector2(-484, 339)
+position = Vector2(-423, 134)
 rotation = 1.5707964
-is_rotatingg = false
-
-[node name="laser_trap2" parent="lvl1/Structure/escalier_room2" unique_id=2041564519 instance=ExtResource("13_f4kdv")]
-position = Vector2(-523, 68)
-rotation = 1.261873
 is_rotatingg = false
 
 [node name="pt_blueprint" parent="lvl1/Structure/escalier_room2" unique_id=308801530 instance=ExtResource("16_nfd4m")]
 position = Vector2(-289, 457)
 
 [node name="pt_blueprint2" parent="lvl1/Structure/escalier_room2" unique_id=1522903968 instance=ExtResource("16_nfd4m")]
-position = Vector2(-382, 444)
-rotation = -0.4118977
+position = Vector2(-355, 448)
+rotation = -1.261873
 
 [node name="transition_rooms" parent="lvl1/Structure" unique_id=645547803 instance=ExtResource("13_h1car")]
 position = Vector2(4182, 2236)
@@ -1390,6 +1497,9 @@ position = Vector2(-2247, 0)
 [node name="pt_blueprint" parent="lvl1/Structure" unique_id=104659938 instance=ExtResource("16_nfd4m")]
 position = Vector2(818, -885)
 
+[node name="pt_blueprint2" parent="lvl1/Structure" unique_id=920875960 instance=ExtResource("16_nfd4m")]
+position = Vector2(902, -885)
+
 [node name="pour_remonter_tout_adroite" type="Node2D" parent="lvl1/Structure" unique_id=160171587]
 z_index = 2
 
@@ -1418,18 +1528,12 @@ position = Vector2(15513, -4)
 position = Vector2(15392, 71)
 
 [node name="laser_trap2" parent="lvl1/Structure" unique_id=1469680047 instance=ExtResource("13_f4kdv")]
-position = Vector2(5969, -1968.0002)
+z_index = 1
+position = Vector2(6432.0005, -2282)
 rotation = 1.5707964
+scale = Vector2(1.2, 1.2)
 reverse_rotate = true
-
-[node name="laser_trap3" parent="lvl1/Structure" unique_id=853668133 instance=ExtResource("13_f4kdv")]
-position = Vector2(5969, -2243)
-rotation = 1.5707964
-
-[node name="laser_trap4" parent="lvl1/Structure" unique_id=1403545980 instance=ExtResource("13_f4kdv")]
-position = Vector2(5969, -2519)
-rotation = 1.5707964
-reverse_rotate = true
+speed_rotate = 0.15
 
 [node name="fractals" type="Node2D" parent="lvl1" unique_id=1952825093]
 
@@ -1483,7 +1587,7 @@ rotation = -0.5602507
 position = Vector2(8337.001, -53.00007)
 rotation = -0.06981317
 
-[node name="pt_blueprint" parent="lvl1/gravas" unique_id=920875960 instance=ExtResource("16_nfd4m")]
+[node name="pt_blueprint" parent="lvl1/gravas" unique_id=1132569280 instance=ExtResource("16_nfd4m")]
 position = Vector2(8470, 80.99979)
 rotation = -0.9826203
 scale = Vector2(0.99999994, 0.99999994)
@@ -1547,42 +1651,21 @@ shape = SubResource("RectangleShape2D_fynux")
 
 [node name="TRAPS" type="Node2D" parent="lvl1" unique_id=1752754461]
 
-[node name="damage_block" parent="lvl1/TRAPS" unique_id=1476862944 instance=ExtResource("46_7f7j5")]
-position = Vector2(669.68115, -817.03174)
-
-[node name="damage_block3" parent="lvl1/TRAPS" unique_id=1974418075 instance=ExtResource("46_7f7j5")]
-position = Vector2(1276, -1176)
-
-[node name="damage_block4" parent="lvl1/TRAPS" unique_id=606674463 instance=ExtResource("46_7f7j5")]
-position = Vector2(1418, -1176)
-
-[node name="damage_block5" parent="lvl1/TRAPS" unique_id=2118789038 instance=ExtResource("46_7f7j5")]
-position = Vector2(1565, -1176)
-
-[node name="damage_block6" parent="lvl1/TRAPS" unique_id=1329077228 instance=ExtResource("46_7f7j5")]
-position = Vector2(1709, -1176)
-
-[node name="damage_block2" parent="lvl1/TRAPS" unique_id=946057123 instance=ExtResource("46_7f7j5")]
-position = Vector2(812.0982, -661.30475)
-
 [node name="tas_de_cadavre" parent="lvl1" unique_id=1593653933 instance=ExtResource("7_j2cwt")]
 position = Vector2(0, 111.57022)
 
 [node name="lasers" type="Node2D" parent="lvl1" unique_id=896136686]
 
 [node name="laser_trap" parent="lvl1/lasers" unique_id=128361332 instance=ExtResource("13_f4kdv")]
-position = Vector2(8176.3657, -22.029175)
-rotation = -0.6126106
+position = Vector2(8062.0005, 11.000122)
+rotation = -0.424115
+scale = Vector2(0.7, 0.7)
 is_rotatingg = false
 
 [node name="laser_trap2" parent="lvl1/lasers" unique_id=113913790 instance=ExtResource("13_f4kdv")]
-position = Vector2(7951, 78.99986)
-rotation = -0.22863813
-is_rotatingg = false
-
-[node name="laser_trap3" parent="lvl1/lasers" unique_id=544861001 instance=ExtResource("13_f4kdv")]
-position = Vector2(8350.999, 9.99995)
-rotation = 0.9669124
+position = Vector2(8114.9995, 62.999916)
+rotation = -0.17453292
+scale = Vector2(0.8, 0.8)
 is_rotatingg = false
 
 [node name="pt_blueprint" parent="lvl1" unique_id=553404117 instance=ExtResource("16_nfd4m")]
@@ -1594,29 +1677,32 @@ position = Vector2(7692, 97.39691)
 [node name="pt_blueprint3" parent="lvl1" unique_id=431420207 instance=ExtResource("16_nfd4m")]
 position = Vector2(7717.8213, 49.480957)
 
-[node name="damage_block" parent="lvl1" unique_id=487159233 instance=ExtResource("46_7f7j5")]
-position = Vector2(3480, -1417.8771)
-
 [node name="damage_block5" parent="lvl1" unique_id=1094553098 instance=ExtResource("46_7f7j5")]
-position = Vector2(3335, -1575)
+position = Vector2(3550, -1697)
+scale = Vector2(0.75, 0.75)
 
-[node name="damage_block3" parent="lvl1" unique_id=695524828 instance=ExtResource("46_7f7j5")]
-position = Vector2(3622.018, -1576)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="lvl1/damage_block5" unique_id=957805787]
+libraries/ = SubResource("AnimationLibrary_qgqoh")
+autoplay = &"new_animation"
+speed_scale = 3.0
 
-[node name="damage_block4" parent="lvl1" unique_id=624950967 instance=ExtResource("46_7f7j5")]
-position = Vector2(3775, -1576)
+[node name="damage_block7" parent="lvl1" unique_id=1974418075 instance=ExtResource("46_7f7j5")]
+position = Vector2(3437.0002, -1568)
+scale = Vector2(0.75, 0.75)
 
-[node name="damage_block7" parent="lvl1" unique_id=2086395580 instance=ExtResource("46_7f7j5")]
-position = Vector2(6988, -2659)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="lvl1/damage_block7" unique_id=697153537]
+libraries/ = SubResource("AnimationLibrary_3grwt")
+autoplay = &"new_animation"
+speed_scale = 4.0
 
-[node name="damage_block10" parent="lvl1" unique_id=1302630946 instance=ExtResource("46_7f7j5")]
-position = Vector2(6842, -2659)
+[node name="damage_block8" parent="lvl1" unique_id=530628477 instance=ExtResource("46_7f7j5")]
+position = Vector2(3321, -1441)
+scale = Vector2(0.75, 0.75)
 
-[node name="damage_block8" parent="lvl1" unique_id=2005552615 instance=ExtResource("46_7f7j5")]
-position = Vector2(6988, -2501)
-
-[node name="damage_block9" parent="lvl1" unique_id=712670352 instance=ExtResource("46_7f7j5")]
-position = Vector2(6988, -2344)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="lvl1/damage_block8" unique_id=1071921941]
+libraries/ = SubResource("AnimationLibrary_6wgec")
+autoplay = &"new_animation"
+speed_scale = 5.0
 
 [node name="damage_block2" parent="lvl1" unique_id=2116588 instance=ExtResource("46_7f7j5")]
 position = Vector2(2892, -2681)
@@ -1630,10 +1716,10 @@ position = Vector2(5514, -360)
 position = Vector2(1242.6768, -922.8294)
 
 [node name="3platformblueprint3" parent="lvl1/laby" unique_id=167321965 instance=ExtResource("32_f3u0r")]
-position = Vector2(1995.8807, -1016.04083)
+position = Vector2(1995.8807, -987)
 
 [node name="tunnelcorner" parent="lvl1/laby" unique_id=1322568270 instance=ExtResource("43_lmpmd")]
-position = Vector2(3577, -748)
+position = Vector2(3577, -719)
 rotation = 4.712389
 
 [node name="tunnelcorner3" parent="lvl1/laby" unique_id=742727350 instance=ExtResource("43_lmpmd")]
@@ -1644,7 +1730,7 @@ position = Vector2(3205, -1897)
 rotation = 3.1415927
 
 [node name="tunnelmid" parent="lvl1/laby" unique_id=2032612795 instance=ExtResource("45_gxno5")]
-position = Vector2(2476, -1116)
+position = Vector2(2476, -1087)
 
 [node name="tunnel" parent="lvl1/laby" unique_id=1067650181 instance=ExtResource("44_brhbg")]
 position = Vector2(4029, -1904)
@@ -1768,14 +1854,14 @@ position = Vector2(7101, -2304)
 rotation = -1.5707964
 
 [node name="Temps" parent="lvl1/laby" unique_id=1268341129 instance=ExtResource("45_lmpmd")]
-offset_left = 5842.0
-offset_top = -2291.0
-offset_right = 7064.0
-offset_bottom = -2192.0
+offset_left = 12158.0
+offset_top = -2847.0
+offset_right = 13380.0
+offset_bottom = -2748.0
 horizontal_alignment = 1
 
 [node name="bonus2" parent="lvl1" unique_id=715804290 instance=ExtResource("15_fynux")]
-position = Vector2(1121, -433.7632)
+position = Vector2(1130, -433.7632)
 type_bonus = "dash"
 
 [node name="novisibleplayerzone" type="Area2D" parent="lvl1" unique_id=2061754216]
@@ -1795,16 +1881,13 @@ shape = SubResource("RectangleShape2D_brhbg")
 position = Vector2(5837, -320)
 
 [node name="spider8" parent="lvl1/spiders" unique_id=578968010 instance=ExtResource("53_6nwfb")]
-position = Vector2(5901, -320)
+position = Vector2(6283, -305)
 
 [node name="spider9" parent="lvl1/spiders" unique_id=1878648781 instance=ExtResource("53_6nwfb")]
 position = Vector2(5782, -323)
 
 [node name="spider10" parent="lvl1/spiders" unique_id=1783218185 instance=ExtResource("53_6nwfb")]
 position = Vector2(5721, -328)
-
-[node name="spider2" parent="lvl1/spiders" unique_id=1591640146 instance=ExtResource("53_6nwfb")]
-position = Vector2(2436.2559, -1132.2017)
 
 [node name="spider3" parent="lvl1/spiders" unique_id=359167137 instance=ExtResource("53_6nwfb")]
 position = Vector2(6328.199, 35.381104)
@@ -1819,7 +1902,7 @@ position = Vector2(381.38208, 2765.0195)
 position = Vector2(12507, 815)
 
 [node name="sprint_bonus" parent="lvl1" unique_id=1577787271 instance=ExtResource("15_fynux")]
-position = Vector2(4711, 1928)
+position = Vector2(4711, 1739)
 type_bonus = "sprint"
 
 [node name="sage" parent="lvl1" unique_id=242949502 instance=ExtResource("40_5ihcl")]
@@ -1835,13 +1918,13 @@ theme_override_font_sizes/normal_font_size = 72
 text = "Ceux qui savent se taisent"
 
 [node name="fly" parent="lvl1" unique_id=1079513456 instance=ExtResource("41_5ihcl")]
-position = Vector2(7247, 1839)
+position = Vector2(7459, 1743)
 
 [node name="fly2" parent="lvl1" unique_id=1455604540 instance=ExtResource("41_5ihcl")]
-position = Vector2(9754, 1263)
+position = Vector2(11119, 581)
 
 [node name="fly3" parent="lvl1" unique_id=1686639578 instance=ExtResource("41_5ihcl")]
-position = Vector2(8382, 1605)
+position = Vector2(8579, 1509)
 
 [node name="TILES" type="Node2D" parent="lvl1" unique_id=2029442160]
 
@@ -1922,13 +2005,6 @@ texture_scale = 7.82
 
 [node name="PointLight2D6" type="PointLight2D" parent="lvl1" unique_id=1442861390]
 position = Vector2(12881, -1506)
-color = Color(1.1638972, 1.1638972, 1.1638972, 1)
-energy = 0.36
-texture = SubResource("GradientTexture2D_tkwxf")
-texture_scale = 7.82
-
-[node name="PointLight2D7" type="PointLight2D" parent="lvl1" unique_id=186108167]
-position = Vector2(7597, 2323)
 color = Color(1.1638972, 1.1638972, 1.1638972, 1)
 energy = 0.36
 texture = SubResource("GradientTexture2D_tkwxf")
@@ -2212,29 +2288,23 @@ position = Vector2(1910.9999, 3892)
 rotation = 0.10297442
 
 [node name="3platformblueprint3" parent="lvl3" unique_id=1580980550 instance=ExtResource("32_f3u0r")]
-position = Vector2(3404, 4066)
+position = Vector2(3366.9995, 4027)
+rotation = 0.1605703
 
 [node name="3platformblueprint4" parent="lvl3" unique_id=108376716 instance=ExtResource("32_f3u0r")]
 position = Vector2(4159, 4026)
+rotation = -0.1605703
 
 [node name="3platformblueprint" parent="lvl3" unique_id=614552391 instance=ExtResource("32_f3u0r")]
 position = Vector2(2312, 3619)
 rotation = -0.15533431
 
-[node name="pt_blueprint8" parent="lvl3" unique_id=1682629960 instance=ExtResource("16_nfd4m")]
-position = Vector2(4592, 3977)
-
-[node name="pt_blueprint9" parent="lvl3" unique_id=639221890 instance=ExtResource("16_nfd4m")]
-position = Vector2(4521, 3977)
-
 [node name="platform6" parent="lvl3" unique_id=1666926922 instance=ExtResource("8_ltygr")]
-position = Vector2(4642, 3780)
+position = Vector2(4400, 3811)
 
 [node name="pt_blueprint10" parent="lvl3" unique_id=1527362764 instance=ExtResource("16_nfd4m")]
-position = Vector2(4721, 3876)
-
-[node name="platform7" parent="lvl3" unique_id=2066706125 instance=ExtResource("8_ltygr")]
-position = Vector2(4483, 3726)
+position = Vector2(4608, 3782)
+rotation = 1.5707964
 
 [node name="platform8" parent="lvl3" unique_id=1704275224 instance=ExtResource("8_ltygr")]
 position = Vector2(4224, 3759)
@@ -2272,17 +2342,8 @@ shape = SubResource("RectangleShape2D_tpyur")
 [node name="change_scene_zone2lvl3" type="Area2D" parent="lvl3" unique_id=182773400]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lvl3/change_scene_zone2lvl3" unique_id=238191723]
-position = Vector2(4215, 3638.75)
+position = Vector2(4159, 3679)
 shape = SubResource("RectangleShape2D_cd7fg")
-
-[node name="laser_trap" parent="lvl3" unique_id=1983765388 instance=ExtResource("13_f4kdv")]
-position = Vector2(2608, 3884)
-rotation = 0.0
-
-[node name="laser_trap2" parent="lvl3" unique_id=1205945412 instance=ExtResource("13_f4kdv")]
-position = Vector2(3151, 3835)
-rotation = 1.5707964
-reverse_rotate = true
 
 [node name="lvl5" type="Node2D" parent="." unique_id=574120747]
 

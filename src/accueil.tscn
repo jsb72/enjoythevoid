@@ -2,13 +2,20 @@
 
 [ext_resource type="Script" uid="uid://c1myjyo415ms3" path="res://src/accueil.gd" id="1_o1nyv"]
 [ext_resource type="VideoStream" uid="uid://cfu7l2nt5cv6j" path="res://video/cutscene.ogv" id="2_o1nyv"]
+[ext_resource type="Shader" uid="uid://be2m7dd85xemn" path="res://shaders/vignette.gdshader" id="3_3gvnv"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yg4m0"]
+shader = ExtResource("3_3gvnv")
+shader_parameter/vignette_intensity = 3.0
+shader_parameter/vignette_opacity = 1.0
+shader_parameter/vignette_rgb = Color(0, 0, 0, 1)
 
 [node name="accueil" type="Node2D" unique_id=2027268033]
 script = ExtResource("1_o1nyv")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=42428622]
-offset_right = 3214.0
-offset_bottom = 1632.0
+[node name="bg" type="ColorRect" parent="." unique_id=1853480591]
+offset_right = 1280.0
+offset_bottom = 720.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="." unique_id=630756337]
@@ -25,10 +32,17 @@ wait_time = 5.0
 one_shot = true
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1709462391]
-offset_left = 288.0
-offset_right = 1248.0
-offset_bottom = 960.0
-scale = Vector2(0.75, 0.75)
+offset_left = 400.0
+offset_top = 120.0
+offset_right = 1360.0
+offset_bottom = 1080.0
+scale = Vector2(0.5, 0.5)
 stream = ExtResource("2_o1nyv")
+
+[node name="vignette" type="ColorRect" parent="." unique_id=1752494865]
+material = SubResource("ShaderMaterial_yg4m0")
+offset_left = 280.0
+offset_right = 1000.0
+offset_bottom = 720.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

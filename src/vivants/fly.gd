@@ -15,8 +15,18 @@ var rng2 = RandomNumberGenerator.new()
 
 var throwing_bomb : bool = false
 
+var initial_pos : Vector2
+func _ready() -> void:
+	initial_pos=global_position
+	
 func _physics_process(delta: float) -> void:
 
+	if global_position.x > initial_pos.x + 600:
+		if direction > 0 :
+			direction = 0
+	if global_position.x < initial_pos.x - 600:
+		if direction < 0 :
+			direction = 0
 		
 	if direction:
 		velocity.x = direction * SPEED
@@ -29,15 +39,6 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 	
-	"""var lache_bomb_int = rng2.randi_range(0, 256)
-	if lache_bomb_int == 0 and bomb.process_mode==Node.PROCESS_MODE_INHERIT:
-		var newbomb = bomb.duplicate()
-		bomb.hide()
-		bomb.process_mode=Node.PROCESS_MODE_PAUSABLE
-		$".".add_child(newbomb)  
-		await get_tree().create_timer(1).timeout
-		bomb.show()
-		bomb.process_mode=Node.PROCESS_MODE_INHERIT"""
 		
 		
 	#collision mask only collide mask 2 (player is layer collision 2)

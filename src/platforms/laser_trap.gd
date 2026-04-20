@@ -2,6 +2,7 @@ extends Node2D
 
 @export var is_rotatingg:bool=true
 @export var reverse_rotate:bool=false
+@export var speed_rotate:float=0.3
 
 @onready var timer: Timer = $Timer
 @onready var player: Player = %Player
@@ -17,7 +18,7 @@ func _ready() -> void:
 		else:
 			animation_player.play("new_animation")
 			
-
+	animation_player.speed_scale=speed_rotate
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

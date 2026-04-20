@@ -12,10 +12,6 @@ extends CharacterBody2D
 @onready var right: RayCast2D = $right
 @onready var left: RayCast2D = $left
 
-@onready var droitebas: RayCast2D = $droitebas
-@onready var droitehaut: RayCast2D = $droitehaut
-@onready var gauchebas: RayCast2D = $gauchebas
-@onready var gauchehaut: RayCast2D = $gauchehaut
 
 
 const SPEED = 50.0
@@ -63,11 +59,6 @@ func _physics_process(delta: float) -> void:
 	elif !is_attacking():
 		
 		
-		"""droitebas
-		droitehaut
-		gauchebas
-		gauchehaut"""
-		
 		if direction:
 			velocity.x = direction * SPEED
 		else:
@@ -90,6 +81,13 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 				
 	move_and_slide()
+	
+func getCollisionSurface(rcast:RayCast2D):
+	if rcast.is_colliding():
+		var collidobj = rcast.get_collider()
+		if collidobj is StaticBody2D :
+			return collidobj
+	return null
 
 func _on_timer_timeout() -> void:
 	direction = rng.randi_range(-1, 1)

@@ -593,7 +593,7 @@ theme_override_colors/default_color = Color(0.22670749, 0.22670749, 0.22670746, 
 theme_override_font_sizes/normal_font_size = 34
 text = "ARPANET,
 Sa première démonstration officielle date d'octobre 1972"
-horizontal_alignment = 1
+horizontal_alignment = 3
 vertical_alignment = 1
 
 [node name="Label7" type="RichTextLabel" parent="txt" unique_id=1400485756]
@@ -604,7 +604,7 @@ offset_bottom = 1812.0
 theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 theme_override_font_sizes/normal_font_size = 34
 text = "Le langage C a été inventé au cours de l'année 1972"
-horizontal_alignment = 1
+horizontal_alignment = 3
 vertical_alignment = 1
 
 [node name="Label8" type="RichTextLabel" parent="txt" unique_id=970376145]
@@ -615,7 +615,7 @@ offset_bottom = 1806.0
 theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 theme_override_font_sizes/normal_font_size = 34
 text = "En 1972, Richard Karp a prouvé la NP-complétude de"
-horizontal_alignment = 1
+horizontal_alignment = 3
 vertical_alignment = 1
 
 [node name="Label9" type="RichTextLabel" parent="txt" unique_id=833008860]
@@ -627,7 +627,7 @@ theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 
 theme_override_font_sizes/normal_font_size = 34
 text = "MK-Ultra
 sa fin est décidée le 10 juillet 1972"
-horizontal_alignment = 1
+horizontal_alignment = 3
 vertical_alignment = 1
 
 [node name="Label10" type="RichTextLabel" parent="txt" unique_id=2112262056]
@@ -638,7 +638,7 @@ offset_bottom = 806.0
 theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 theme_override_font_sizes/normal_font_size = 34
 text = "La Bille bleue est une photographie célèbre de la Terre, prise le 7 décembre 1972"
-horizontal_alignment = 1
+horizontal_alignment = 3
 vertical_alignment = 1
 
 [node name="Label12" type="RichTextLabel" parent="txt" unique_id=1901477410]
@@ -649,7 +649,7 @@ offset_bottom = 806.0
 theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 theme_override_font_sizes/normal_font_size = 34
 text = "À l'origine présenté en comprimé, le produit est retiré de la vente en 1972"
-horizontal_alignment = 1
+horizontal_alignment = 3
 vertical_alignment = 1
 
 [node name="Label13" type="RichTextLabel" parent="txt" unique_id=1666874227]
@@ -660,7 +660,7 @@ offset_bottom = 1807.0
 theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 theme_override_font_sizes/normal_font_size = 34
 text = "Il est en décembre 1972 le commandant de la mission Apollo 17"
-horizontal_alignment = 1
+horizontal_alignment = 3
 vertical_alignment = 1
 
 [node name="Label11" type="RichTextLabel" parent="txt" unique_id=324337172]
@@ -671,7 +671,7 @@ offset_bottom = 2801.0
 theme_override_colors/default_color = Color(0.22745098, 0.22745098, 0.22745098, 1)
 theme_override_font_sizes/normal_font_size = 34
 text = "Les Limites à la croissance, est un rapport commandé par le club de Rome et publié en 1972"
-horizontal_alignment = 1
+horizontal_alignment = 3
 vertical_alignment = 1
 
 [node name="platform5" parent="." unique_id=160471146 instance=ExtResource("11_nvtr1")]
@@ -686,6 +686,7 @@ position = Vector2(713, 2271)
 [node name="zoneFOG" type="Area2D" parent="." unique_id=1778930711]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="zoneFOG" unique_id=1038645701]
+visible = false
 position = Vector2(996, 1496)
 shape = SubResource("RectangleShape2D_qmf18")
 
@@ -702,152 +703,16 @@ offset_right = 4573.1143
 offset_bottom = 5582.1147
 
 [node name="Rope" type="Node2D" parent="." unique_id=574851393]
-position = Vector2(-499, 499)
+position = Vector2(-501, 843)
 script = ExtResource("13_p6p5d")
-rope_length = 500.0
+rope_length = 200.0
 enable_collisions = true
 collision_mask = 2
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="Rope" unique_id=1847793311]
 position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -19, 172.22278, -19, 223.37207, -19, 274.42047, -19, 325.34705, -19, 376.1363, -19, 426.7774, -19, 477.26294, -19, 527.58826, -19, 577.75085, -19, 627.75085)
-width = 5.0
-default_color = Color(0, 0, 0, 1)
-gradient = SubResource("Gradient_p6p5d")
-script = ExtResource("14_lompd")
-metadata/_custom_type_script = "uid://dfppmnngy2wx4"
-
-[node name="Rope2" type="Node2D" parent="." unique_id=486933092]
-position = Vector2(-443, 527)
-script = ExtResource("13_p6p5d")
-rope_length = 500.0
-enable_collisions = true
-collision_mask = 2
-metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
-
-[node name="RopeRendererLine2D" type="Line2D" parent="Rope2" unique_id=362263743]
-position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -19, 172.22278, -19, 223.37207, -19, 274.42047, -19, 325.34705, -19, 376.13635, -19, 426.77747, -19, 477.263, -19, 527.58826, -19, 577.7509, -19, 627.751)
-width = 5.0
-default_color = Color(0, 0, 0, 1)
-gradient = SubResource("Gradient_p6p5d")
-script = ExtResource("14_lompd")
-metadata/_custom_type_script = "uid://dfppmnngy2wx4"
-
-[node name="Rope3" type="Node2D" parent="." unique_id=1014898940]
-position = Vector2(2288, 565)
-script = ExtResource("13_p6p5d")
-rope_length = 500.0
-enable_collisions = true
-collision_mask = 2
-metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
-
-[node name="RopeRendererLine2D" type="Line2D" parent="Rope3" unique_id=1535092595]
-position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -19, 172.22278, -19, 223.37207, -19, 274.42047, -19, 325.34705, -19, 376.13635, -19, 426.77747, -19, 477.263, -19, 527.58826, -19, 577.7509, -19, 627.751)
-width = 5.0
-default_color = Color(0, 0, 0, 1)
-gradient = SubResource("Gradient_p6p5d")
-script = ExtResource("14_lompd")
-metadata/_custom_type_script = "uid://dfppmnngy2wx4"
-
-[node name="Rope4" type="Node2D" parent="." unique_id=1475233951]
-position = Vector2(2402, 575)
-script = ExtResource("13_p6p5d")
-rope_length = 500.0
-enable_collisions = true
-collision_mask = 2
-metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
-
-[node name="RopeRendererLine2D" type="Line2D" parent="Rope4" unique_id=1197122319]
-position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -19, 172.22278, -19, 223.37207, -19, 274.42047, -19, 325.34705, -19, 376.13635, -19, 426.77747, -19, 477.26306, -19, 527.5883, -19, 577.751, -19, 627.751)
-width = 5.0
-default_color = Color(0, 0, 0, 1)
-gradient = SubResource("Gradient_p6p5d")
-script = ExtResource("14_lompd")
-metadata/_custom_type_script = "uid://dfppmnngy2wx4"
-
-[node name="Rope5" type="Node2D" parent="." unique_id=1109914100]
-position = Vector2(1573, 551)
-script = ExtResource("13_p6p5d")
-rope_length = 500.0
-enable_collisions = true
-collision_mask = 2
-metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
-
-[node name="RopeRendererLine2D" type="Line2D" parent="Rope5" unique_id=923904652]
-position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -19, 172.22278, -19, 223.37207, -19, 274.42047, -19, 325.34705, -19, 376.13635, -19, 426.77747, -19, 477.263, -19, 527.58826, -19, 577.7509, -19, 627.751)
-width = 5.0
-default_color = Color(0, 0, 0, 1)
-gradient = SubResource("Gradient_p6p5d")
-script = ExtResource("14_lompd")
-metadata/_custom_type_script = "uid://dfppmnngy2wx4"
-
-[node name="Rope6" type="Node2D" parent="." unique_id=1504050659]
-position = Vector2(1570, 1536)
-script = ExtResource("13_p6p5d")
-rope_length = 500.0
-enable_collisions = true
-collision_mask = 2
-metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
-
-[node name="RopeRendererLine2D" type="Line2D" parent="Rope6" unique_id=522716386]
-position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -19, 172.22266, -19, 223.37183, -19, 274.42017, -19, 325.34668, -19, 376.136, -19, 426.7771, -19, 477.2627, -19, 527.5879, -19, 577.7505, -19, 627.7505)
-width = 5.0
-default_color = Color(0, 0, 0, 1)
-gradient = SubResource("Gradient_p6p5d")
-script = ExtResource("14_lompd")
-metadata/_custom_type_script = "uid://dfppmnngy2wx4"
-
-[node name="Rope7" type="Node2D" parent="." unique_id=1209411047]
-position = Vector2(1546, 1567)
-script = ExtResource("13_p6p5d")
-rope_length = 500.0
-enable_collisions = true
-collision_mask = 2
-metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
-
-[node name="RopeRendererLine2D" type="Line2D" parent="Rope7" unique_id=259286223]
-position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -19, 172.22253, -19, 223.37158, -19, 274.41968, -19, 325.34595, -19, 376.135, -19, 426.776, -19, 477.26147, -19, 527.5867, -19, 577.74915, -19, 627.749)
-width = 5.0
-default_color = Color(0, 0, 0, 1)
-gradient = SubResource("Gradient_p6p5d")
-script = ExtResource("14_lompd")
-metadata/_custom_type_script = "uid://dfppmnngy2wx4"
-
-[node name="Rope8" type="Node2D" parent="." unique_id=656016514]
-position = Vector2(2353, 1519)
-script = ExtResource("13_p6p5d")
-rope_length = 500.0
-enable_collisions = true
-collision_mask = 2
-metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
-
-[node name="RopeRendererLine2D" type="Line2D" parent="Rope8" unique_id=1143422517]
-position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -19, 172.22266, -19, 223.37183, -19, 274.42017, -19, 325.34668, -19, 376.136, -19, 426.7771, -19, 477.2627, -19, 527.5879, -19, 577.7505, -19, 627.7505)
-width = 5.0
-default_color = Color(0, 0, 0, 1)
-gradient = SubResource("Gradient_p6p5d")
-script = ExtResource("14_lompd")
-metadata/_custom_type_script = "uid://dfppmnngy2wx4"
-
-[node name="Rope9" type="Node2D" parent="." unique_id=1435504931]
-position = Vector2(-470, 576)
-script = ExtResource("13_p6p5d")
-rope_length = 500.0
-enable_collisions = true
-collision_mask = 2
-metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
-
-[node name="RopeRendererLine2D" type="Line2D" parent="Rope9" unique_id=1621604893]
-position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -19, 172.22278, -19, 223.37207, -19, 274.42047, -19, 325.34705, -19, 376.13635, -19, 426.77747, -19, 477.26306, -19, 527.5883, -19, 577.751, -19, 627.751)
+points = PackedVector2Array(-19, 121, -18.99704, 142.22272, -18.993866, 163.37195, -18.990448, 184.42029, -18.986694, 205.3468, -18.982666, 226.13605, -18.978363, 246.7771, -18.973389, 267.26263, -18.968536, 287.5879, -18.963379, 307.7505, -18.95816, 327.7505)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 gradient = SubResource("Gradient_p6p5d")

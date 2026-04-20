@@ -1,4 +1,4 @@
-res://src/levels/meta_room_piece.tscn
+res://src/accueil.tscn
 res://addons/phantom_camera/themes/theme.tres
 res://shaders/damage_impact.gdshader
 res://shaders/distorsion.gdshader
@@ -9,7 +9,12 @@ res://shaders/vhs.gdshader
 res://shaders/starfield.gdshader
 res://shaders/verticalwhiterain.gdshader
 res://shaders/blur.gdshader
-res://src/levels/room_blueprint.tscn
+res://shaders/vignette.gdshader
 res://src/global.gd
-res://src/platforms/platform.tscn
-res://src/platforms/platform.gd
+res://src/levels/room_piece.tscn
+res://src/levels/room_blueprint.tscn
+res://src/platforms/laser_trap_small.tscn
+res://src/platforms/laser_trap.tscn
+res://src/platforms/laser_trap.gd
+res://src/vivants/fly.tscn
+res://src/vivants/fly.gd
