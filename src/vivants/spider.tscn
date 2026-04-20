@@ -193,7 +193,6 @@ stream_0/stream = ExtResource("3_kstva")
 
 [node name="spider" type="CharacterBody2D" unique_id=1458701811]
 z_index = 6
-motion_mode = 1
 script = ExtResource("1_xf7fx")
 
 [node name="spiderrendu" type="Node2D" parent="." unique_id=293386959]
