@@ -14,7 +14,7 @@ extends CharacterBody2D
 @onready var top: RayCast2D = $top
 
 func _physics_process(delta: float) -> void:
-	#atk_logik()
+	atk_logik()
 	if !is_attacking():move_logic(delta)
 	
 	move_animation()
@@ -81,19 +81,31 @@ func move_animation()->void:
 		animated_sprite_2d.play("idle")
 	else:
 		animated_sprite_2d.play("walk")
+		
+	if last_surface=="top":
+		spiderrendu.rotation_degrees=180
+		if direction == -1 :
+			spiderrendu.scale.x = 1
+		if direction == 1 :
+			spiderrendu.scale.x = -1
+	if last_surface=="down":
+		spiderrendu.rotation_degrees=0
 		if direction == -1 :
 			spiderrendu.scale.x = -1
 		if direction == 1 :
 			spiderrendu.scale.x = 1
-		
-	if last_surface=="top":
-		spiderrendu.scale.y = -1
-	if last_surface=="down":
-		spiderrendu.scale.y = 1
 	if last_surface=="right":
-		rotation_degrees=-90
+		spiderrendu.rotation_degrees=-90
+		if direction == -1 :
+			spiderrendu.scale.x = 1
+		if direction == 1 :
+			spiderrendu.scale.x = -1
 	if last_surface=="left":
-		rotation_degrees=90
+		spiderrendu.rotation_degrees=90
+		if direction == -1 :
+			spiderrendu.scale.x = -1
+		if direction == 1 :
+			spiderrendu.scale.x = 1
 		
 func atk_logik()->void:
 	var bodycolright :CharacterBody2D=getcollisionbody(right)
