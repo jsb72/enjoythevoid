@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var timer: Timer = $Timer
 @onready var video_stream_player: VideoStreamPlayer = $VideoStreamPlayer
+@onready var rich_text_label: RichTextLabel = $RichTextLabel
 
 func load_game()->void:
 	get_tree().change_scene_to_file("res://src/vhs.tscn")
@@ -12,14 +13,19 @@ func _ready() -> void:
 	if Global.debug_mod:
 		load_game()
 	
-	Fadetoblack.transition(5)
-	await Fadetoblack.on_transition_finished	
-	video_stream_player.play()
-	timer.start()
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey or event is InputEventJoypadButton or event is InputEventMouseButton:
+		Fadetoblack.transition(5)
+		await Fadetoblack.on_transition_finished
+		rich_text_label.hide()	
+		video_stream_player.play()
+		timer.start()
 
 func _on_timer_timeout() -> void:
 	Fadetoblack.transition(5)

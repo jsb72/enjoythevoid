@@ -1,3 +1,4 @@
+RichTextLabel
 CharacterBody2D
 AnimationPlayer
 ColorRect
@@ -12,4 +13,3 @@ CanvasLayer
 CollisionShape2D
 Area2D
 LightOccluder2D
-AudioStreamPlayer
