@@ -1877,12 +1877,20 @@ shape = SubResource("RectangleShape2D_brhbg")
 
 [node name="spiders" type="Node2D" parent="lvl1" unique_id=1413067626]
 
-[node name="spider8" parent="lvl1/spiders" unique_id=578968010 instance=ExtResource("53_6nwfb")]
-position = Vector2(5878, -417)
-motion_mode = 0
-
 [node name="spider9" parent="lvl1/spiders" unique_id=1458701811 instance=ExtResource("53_6nwfb")]
 position = Vector2(5879, -303)
+motion_mode = 0
+
+[node name="spider10" parent="lvl1/spiders" unique_id=682832236 instance=ExtResource("53_6nwfb")]
+position = Vector2(5889, -418)
+motion_mode = 0
+
+[node name="spider11" parent="lvl1/spiders" unique_id=35126786 instance=ExtResource("53_6nwfb")]
+position = Vector2(6298, -382)
+motion_mode = 0
+
+[node name="spider12" parent="lvl1/spiders" unique_id=861919280 instance=ExtResource("53_6nwfb")]
+position = Vector2(6187, -475)
 motion_mode = 0
 
 [node name="sprint_bonus" parent="lvl1" unique_id=1577787271 instance=ExtResource("15_fynux")]
