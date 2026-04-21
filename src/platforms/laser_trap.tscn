@@ -81,7 +81,7 @@ shader_parameter/fixed_edge_size = 0.0
 shader_parameter/noise_scale = Vector2(1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lodqg"]
-size = Vector2(745.9999, 58.999855)
+size = Vector2(716.9998, 44.9998)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_nt2fc"]
 random_pitch = 1.0293022
@@ -131,8 +131,7 @@ offset_bottom = 239.86246
 position = Vector2(-153, 2.0000954)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=222596742]
-visible = false
-position = Vector2(153, -2.4999728)
+position = Vector2(150.49998, -9.500002)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_lodqg")
 

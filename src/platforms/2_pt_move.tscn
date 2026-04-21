@@ -16,7 +16,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(835, 8), Vector2(1835, 8)]
+"values": [Vector2(0, 8), Vector2(500, 8)]
 }
 
 [sub_resource type="Animation" id="Animation_u4oek"]
@@ -53,7 +53,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(991, 8), Vector2(1991, 8)]
+"values": [Vector2(0, 8), Vector2(500, 8)]
 }
 
 [sub_resource type="Animation" id="Animation_jj565"]

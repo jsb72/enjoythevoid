@@ -14,32 +14,21 @@ var btn4 : bool = false
 var zoom_true :bool=false
 @onready var zoomcamfixnbig: PhantomCamera2D = %zoomcamfixnbig
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	t1_1.hide()
+	pass
+	"""t1_1.hide()
 	t1_2.hide()
 	t1_3.hide()
 	t2_1.hide()
 	t2_2.hide()
-	t2_3.hide()
+	t2_3.hide()"""
 	
-	
-	
-	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-
 func _process(delta: float) -> void:
-	
-	
-	
-	if btn1 and btn2 and btn3 and btn4 and zoom_true:
+	"""if btn1 and btn2 and btn3 and btn4 and zoom_true:"""
+	if zoom_true:
 		zoomcamfixnbig.priority = 100
 	else :
 		zoomcamfixnbig.priority = 0
-
 
 func _on_button_body_entered1(body: Node2D) -> void:
 	if body is Player : t1_1.show()
@@ -65,20 +54,6 @@ func _on_button_2_body_entered4(body: Node2D) -> void:
 func _on_cam_zone_body_entered(body: Node2D) -> void:
 	if body is Player :
 		zoom_true = true
-
-
 func _on_cam_zone_body_exited(body: Node2D) -> void:
 	if body is Player :
 		zoom_true = false
-
-@onready var color_rect_fog: ColorRect = $ParallaxFOG/ColorRectFOG
-func _on_zone_fog_body_entered(body: Node2D) -> void:
-	if body is Player :
-		var tween2 = get_tree().create_tween()
-		tween2.tween_property(color_rect_fog, "modulate:a", 1.0, 1.0)
-
-
-func _on_zone_fog_body_exited(body: Node2D) -> void:
-	if body is Player :
-		var tween2 = get_tree().create_tween()
-		tween2.tween_property(color_rect_fog, "modulate:a", 0.0, 1.0)
