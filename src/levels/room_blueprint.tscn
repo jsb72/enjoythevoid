@@ -47,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://cphr0b1w3cwq8" path="res://sprites/un.png" id="45_1tqiw"]
 [ext_resource type="PackedScene" uid="uid://bf2hbc3ucd83i" path="res://src/platforms/tunnelmid.tscn" id="45_gxno5"]
 [ext_resource type="PackedScene" uid="uid://cuuupedh70x4h" path="res://src/elements/temps.tscn" id="45_lmpmd"]
+[ext_resource type="PackedScene" uid="uid://ca0qqvc5pjlky" path="res://src/elements/button.tscn" id="45_qgqoh"]
 [ext_resource type="PackedScene" uid="uid://bdd03axytgixu" path="res://src/platforms/damage_block.tscn" id="46_7f7j5"]
 [ext_resource type="Texture2D" uid="uid://dk52pj28ds5fn" path="res://sprites/zero.png" id="46_73yqq"]
 [ext_resource type="Texture2D" uid="uid://brl4xaoemjgd3" path="res://sprites/rooms2/test_paralax.png" id="46_lmpmd"]
@@ -757,12 +758,12 @@ color = Color(0.72156864, 0.72156864, 0.72156864, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(5817, -341)
+position = Vector2(10172, -355)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(5867, -501)
+position = Vector2(10222, -515)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -781,7 +782,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(5767, -501)
+position = Vector2(10122, -515)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -799,7 +800,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(5867, -341)
+position = Vector2(10222, -355)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -815,7 +816,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(5767, -341)
+position = Vector2(10122, -355)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -831,7 +832,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(5817, -501)
+position = Vector2(10172, -515)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -847,7 +848,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="dezoomlvl7" type="Node2D" parent="." unique_id=448208578 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(5817, -341)
+position = Vector2(10172, -355)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -861,7 +862,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(5867, -501)
+position = Vector2(10222, -515)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -1313,11 +1314,6 @@ position = Vector2(169, -621)
 
 [node name="escalier_room2" parent="lvl1/Structure" unique_id=1021733173 instance=ExtResource("12_7ls7j")]
 position = Vector2(1801, 2391)
-
-[node name="laser_trap" parent="lvl1/Structure/escalier_room2" unique_id=790521176 instance=ExtResource("13_f4kdv")]
-position = Vector2(-510, 130)
-rotation = 1.3823007
-is_rotatingg = false
 
 [node name="pt_blueprint" parent="lvl1/Structure/escalier_room2" unique_id=308801530 instance=ExtResource("16_nfd4m")]
 position = Vector2(-289, 457)
@@ -1878,20 +1874,19 @@ shape = SubResource("RectangleShape2D_brhbg")
 [node name="spiders" type="Node2D" parent="lvl1" unique_id=1413067626]
 
 [node name="spider9" parent="lvl1/spiders" unique_id=1458701811 instance=ExtResource("53_6nwfb")]
-position = Vector2(5879, -303)
-motion_mode = 0
+position = Vector2(6299, -376)
 
-[node name="spider10" parent="lvl1/spiders" unique_id=682832236 instance=ExtResource("53_6nwfb")]
-position = Vector2(5889, -418)
-motion_mode = 0
+[node name="spider10" parent="lvl1/spiders" unique_id=936828678 instance=ExtResource("53_6nwfb")]
+position = Vector2(5878, -414)
 
-[node name="spider11" parent="lvl1/spiders" unique_id=35126786 instance=ExtResource("53_6nwfb")]
-position = Vector2(6298, -382)
-motion_mode = 0
+[node name="spider11" parent="lvl1/spiders" unique_id=850280966 instance=ExtResource("53_6nwfb")]
+position = Vector2(5913, -305)
 
-[node name="spider12" parent="lvl1/spiders" unique_id=861919280 instance=ExtResource("53_6nwfb")]
-position = Vector2(6187, -475)
-motion_mode = 0
+[node name="spider12" parent="lvl1/spiders" unique_id=142256918 instance=ExtResource("53_6nwfb")]
+position = Vector2(6190, -605)
+
+[node name="spider13" parent="lvl1/spiders" unique_id=1079395588 instance=ExtResource("53_6nwfb")]
+position = Vector2(4849, -1142)
 
 [node name="sprint_bonus" parent="lvl1" unique_id=1577787271 instance=ExtResource("15_fynux")]
 position = Vector2(4711, 1739)
@@ -2036,6 +2031,29 @@ position = Vector2(9956, 1490)
 [node name="platform4" parent="lvl1" unique_id=290279720 instance=ExtResource("8_ltygr")]
 z_index = 1
 position = Vector2(9823, 1616)
+
+[node name="platform5" parent="lvl1" unique_id=943195073 instance=ExtResource("8_ltygr")]
+position = Vector2(1404, 2166)
+
+[node name="Line2D" type="Line2D" parent="lvl1" unique_id=381869024]
+position = Vector2(1327, 2166)
+points = PackedVector2Array(9, -12, -56, 6)
+default_color = Color(0, 0, 0, 1)
+
+[node name="platform6" parent="lvl1" unique_id=2067553282 instance=ExtResource("8_ltygr")]
+position = Vector2(1327, 2166)
+
+[node name="pt_blueprint" parent="lvl1/platform6" unique_id=887141482 instance=ExtResource("16_nfd4m")]
+position = Vector2(-32, -53)
+rotation = 1.5114552
+
+[node name="button" parent="lvl1/platform6" unique_id=1067572409 instance=ExtResource("45_qgqoh")]
+position = Vector2(5, -21)
+
+[node name="laser_trap" parent="lvl1/platform6" unique_id=790521176 instance=ExtResource("13_f4kdv")]
+position = Vector2(-36, 355)
+rotation = 1.3823007
+is_rotatingg = false
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
 visible = false
@@ -3032,6 +3050,23 @@ position = Vector2(12057, -2852)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_g62an")
 flip_h = true
+
+[node name="spider" parent="." unique_id=1080271589 instance=ExtResource("53_6nwfb")]
+position = Vector2(10228, -138)
+
+[node name="3platformblueprint" parent="." unique_id=853668133 instance=ExtResource("32_f3u0r")]
+position = Vector2(10023, -251)
+
+[node name="3platformblueprint3" parent="." unique_id=1514764297 instance=ExtResource("32_f3u0r")]
+position = Vector2(10133, -274)
+rotation = 1.5707964
+
+[node name="3platformblueprint4" parent="." unique_id=95000481 instance=ExtResource("32_f3u0r")]
+position = Vector2(10322, -282)
+rotation = 1.5707964
+
+[node name="3platformblueprint2" parent="." unique_id=548713162 instance=ExtResource("32_f3u0r")]
+position = Vector2(10030, -96)
 
 [connection signal="body_entered" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_entered"]
 [connection signal="body_exited" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_exited"]

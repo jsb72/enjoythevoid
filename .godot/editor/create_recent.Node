@@ -1,3 +1,5 @@
+Line2D
+Timer
 RichTextLabel
 CharacterBody2D
 AnimationPlayer
@@ -11,5 +13,3 @@ Node2D
 RayCast2D
 CanvasLayer
 CollisionShape2D
-Area2D
-LightOccluder2D

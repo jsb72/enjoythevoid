@@ -14,25 +14,25 @@ extends CharacterBody2D
 @onready var top: RayCast2D = $top
 
 func _physics_process(delta: float) -> void:
+
+	if Input.is_action_just_pressed("right"):
+		direction=1
+	if Input.is_action_just_pressed("left"):
+		direction=-1
 	atk_logik()
 	if !is_attacking():
 		move_logic(delta)
 		move_animation()
+		
+
 	
 const SPEED = 50.0
 var rng = RandomNumberGenerator.new()
 var direction : int = 0
 var last_surface : String = ""
+var changement_de_surface:bool=false
+@onready var changementdesurfacetimer: Timer = $changementdesurfacetimer
 func move_logic(delta)->void:
-	"""if getCollisionSurface(top):
-		last_surface="top"
-	if getCollisionSurface(down):
-		last_surface="down"
-	if getCollisionSurface(right):
-		last_surface="right"
-	if getCollisionSurface(left):
-		last_surface="left"
-	"""
 	if last_surface=="":
 		if getCollisionSurface(right):
 			last_surface="right"
@@ -42,26 +42,37 @@ func move_logic(delta)->void:
 			last_surface="top"
 		if getCollisionSurface(down):
 			last_surface="down"
-	if last_surface=="down":
+			
+	
+	
+	if last_surface=="down" and !changement_de_surface:
 		if getCollisionSurface(right):
 			last_surface="right"
+			changementdesurfacefn("down")
 		if getCollisionSurface(left):
 			last_surface="left"
-	if last_surface=="top":
+			changementdesurfacefn("down")
+	if last_surface=="top" and !changement_de_surface:
 		if getCollisionSurface(right):
 			last_surface="right"
+			changementdesurfacefn("top")
 		if getCollisionSurface(left):
 			last_surface="left"
-	if last_surface=="right":
+			changementdesurfacefn("top")
+	if last_surface=="right" and !changement_de_surface:
 		if getCollisionSurface(top):
 			last_surface="top"
+			changementdesurfacefn("right")
 		if getCollisionSurface(down):
 			last_surface="down"
-	if last_surface=="left":
+			changementdesurfacefn("right")
+	if last_surface=="left" and !changement_de_surface:
 		if getCollisionSurface(top):
 			last_surface="top"
+			changementdesurfacefn("left")
 		if getCollisionSurface(down):
 			last_surface="down"
+			changementdesurfacefn("left")
 
 	if direction :
 		if last_surface=="top" or last_surface=="down":
@@ -76,6 +87,47 @@ func move_logic(delta)->void:
 		
 	move_and_slide()
 	
+	prevent_walk_in_air()
+	
+func changementdesurfacefn(old_surface)->void:
+	changement_de_surface=true
+	if old_surface=="down":
+		if last_surface=="right":
+			direction=-1
+	if old_surface=="right":
+		if last_surface=="top":
+			direction=-1
+	if old_surface=="top":
+		if last_surface=="left":
+			direction=1
+	if old_surface=="left":
+		if last_surface=="bottom":
+			direction=1
+			
+	if old_surface=="down":
+		if last_surface=="left":
+			direction=-1
+	if old_surface=="left":
+		if last_surface=="top":
+			direction=1
+	if old_surface=="top":
+		if last_surface=="right":
+			direction=1
+	if old_surface=="right":
+		if last_surface=="bottom":
+			direction=-1
+	changementdesurfacetimer.start()
+
+func _on_changementdesurfacetimer_timeout() -> void:
+	changement_de_surface=false
+	
+	
+func prevent_walk_in_air()->void:
+	if !getCollisionSurface(right) and !getCollisionSurface(left) and !getCollisionSurface(top) and !getCollisionSurface(down):
+		global_position-=velocity/5
+		direction=0
+		
+
 func move_animation()->void:
 	if direction == 0 :
 		animated_sprite_2d.play("idle")
@@ -156,5 +208,6 @@ func getCollisionSurface(rcast:RayCast2D):
 	return null
 
 func _on_timer_timeout() -> void:
-	direction = rng.randi_range(-1, 1)
+	if !changement_de_surface : direction = rng.randi_range(-1, 1)
+	
 	timer.start()
