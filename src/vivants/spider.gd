@@ -101,7 +101,7 @@ func changementdesurfacefn(old_surface)->void:
 		if last_surface=="left":
 			direction=1
 	if old_surface=="left":
-		if last_surface=="bottom":
+		if last_surface=="down":
 			direction=1
 			
 	if old_surface=="down":
@@ -114,7 +114,7 @@ func changementdesurfacefn(old_surface)->void:
 		if last_surface=="right":
 			direction=1
 	if old_surface=="right":
-		if last_surface=="bottom":
+		if last_surface=="down":
 			direction=-1
 	changementdesurfacetimer.start()
 
