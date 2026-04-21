@@ -12,3 +12,6 @@ res://shaders/verticalwhiterain.gdshader
 res://shaders/blur.gdshader
 res://src/vivants/spider.gd
 res://src/levels/room_blueprint.tscn
+res://src/levels/room_blueprint.gd
+res://src/elements/cube.tscn
+res://src/elements/cube.gd

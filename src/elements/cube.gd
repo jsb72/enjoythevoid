@@ -104,3 +104,10 @@ func _on_line_edit_text_changed(new_text: String) -> void:
 		opened = true
 	if new_text.length()>4 :
 		line_edit.clear()"""
+
+var closed:bool = false
+func _on_close_zone_body_entered(body: Node2D) -> void:
+	if body is Player:
+		if !closed:
+			animation_player.play_backwards("up_door")
+			closed=true

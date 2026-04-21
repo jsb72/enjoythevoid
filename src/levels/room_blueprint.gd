@@ -71,8 +71,8 @@ func _process(delta: float) -> void:
 		blackgroundparticle2.show()
 		
 	if player.global_position.y > 200:
-		cam.limit_right = 10000000
-		cam_2.limit_right = 10000000
+		cam.limit_right = 28450
+		cam_2.limit_right = 28450
 	else:
 		cam.limit_right = 18722
 		cam_2.limit_right = 18722

@@ -608,6 +608,9 @@ fill_to = Vector2(0, 1)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7f7j5"]
 size = Vector2(4037.8684, 2857.106)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxno5"]
+size = Vector2(15306.57, 667.88086)
+
 [sub_resource type="Gradient" id="Gradient_73yqq"]
 offsets = PackedFloat32Array(0, 0.3, 0.7, 0.9)
 colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0)
@@ -637,10 +640,7 @@ scale_curve = SubResource("CurveTexture_aspbp")
 color_ramp = SubResource("GradientTexture1D_scxpf")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppux1"]
-size = Vector2(26472.516, 3367.3008)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_73yqq"]
-size = Vector2(27061.77, 3268.9854)
+size = Vector2(29084.438, 3367.3008)
 
 [sub_resource type="Gradient" id="Gradient_f3u0r"]
 offsets = PackedFloat32Array(0, 0.11111111, 0.22222222, 0.33333334, 0.44444445, 0.5555556, 0.6666667, 0.7777778, 0.8888889)
@@ -758,12 +758,12 @@ color = Color(0.72156864, 0.72156864, 0.72156864, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(6124, -348)
+position = Vector2(16562, 35)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(6174, -508)
+position = Vector2(16612, -125)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -782,7 +782,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(6074, -508)
+position = Vector2(16512, -125)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -800,7 +800,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(6174, -348)
+position = Vector2(16612, 35)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -816,7 +816,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(6074, -348)
+position = Vector2(16512, 35)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -832,7 +832,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(6124, -508)
+position = Vector2(16562, -125)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -848,7 +848,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="dezoomlvl7" type="Node2D" parent="." unique_id=448208578 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(6124, -348)
+position = Vector2(16562, 35)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -862,7 +862,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(6174, -508)
+position = Vector2(16612, -125)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -2543,6 +2543,28 @@ position = Vector2(25817.828, 1092.4419)
 scale = Vector2(0.274, 0.274)
 texture = ExtResource("1_p0cym")
 
+[node name="StaticBody2D3" type="StaticBody2D" parent="lvl5" unique_id=1103258334]
+position = Vector2(28168, 2140)
+rotation = -1.5707964
+scale = Vector2(0.274, 0.274)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lvl5/StaticBody2D3" unique_id=1027255114]
+z_index = 1
+position = Vector2(145.98535, 979.91406)
+shape = SubResource("RectangleShape2D_gxno5")
+
+[node name="ColorRect2" type="ColorRect" parent="lvl5" unique_id=1035803981]
+offset_left = 28286.0
+offset_top = 150.0
+offset_right = 29279.0
+offset_bottom = 4287.0
+
+[node name="wall" type="Sprite2D" parent="lvl5/ColorRect2" unique_id=1957504345]
+position = Vector2(-118, 1990)
+rotation = -1.5707964
+scale = Vector2(0.274, 0.274)
+texture = ExtResource("36_q5tgx")
+
 [node name="platformingzone" type="Node2D" parent="lvl5" unique_id=1515873731]
 process_mode = 4
 visible = false
@@ -2869,15 +2891,19 @@ position = Vector2(38489, 1050)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("45_1nkay")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="lvl5" unique_id=259710016]
+offset_left = 27848.0
+offset_top = 1125.0
+offset_right = 28198.0
+offset_bottom = 1399.0
+text = "« Si tu veux découvrir ce qu'est la matrice, tu devras l'explorer toi-même »"
+horizontal_alignment = 1
+
 [node name="DEATHZONE" type="Area2D" parent="." unique_id=265587749]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DEATHZONE" unique_id=1536129664]
-position = Vector2(-1191.1794, 6566.249)
+position = Vector2(114.781494, 6566.249)
 shape = SubResource("RectangleShape2D_ppux1")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="DEATHZONE" unique_id=940937821]
-position = Vector2(25542.8, 6014.6396)
-shape = SubResource("RectangleShape2D_73yqq")
 
 [node name="lvl7" type="Node2D" parent="." unique_id=1135323167]
 process_mode = 4

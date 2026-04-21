@@ -48,7 +48,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mf83c"]
-size = Vector2(22, 25)
+size = Vector2(16, 25)
 
 [sub_resource type="Animation" id="Animation_1xtlu"]
 length = 0.001
@@ -97,6 +97,9 @@ random_pitch = 1.0293022
 streams_count = 1
 stream_0/stream = ExtResource("6_0rqph")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxktc"]
+size = Vector2(309, 276)
+
 [node name="cube" type="Node2D" unique_id=1811157897]
 script = ExtResource("1_ksnvo")
 
@@ -122,7 +125,7 @@ libraries/ = SubResource("AnimationLibrary_ksnvo")
 [node name="openlockzone" type="Area2D" parent="." unique_id=851986770]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="openlockzone" unique_id=2079760111]
-position = Vector2(-54, 51.5)
+position = Vector2(-57, 51.5)
 shape = SubResource("RectangleShape2D_mf83c")
 
 [node name="locklayer" type="CanvasLayer" parent="." unique_id=377172618]
@@ -286,4 +289,12 @@ stream = SubResource("AudioStreamRandomizer_0rqph")
 [node name="ouverture" type="AudioStreamPlayer2D" parent="." unique_id=1867146132]
 stream = ExtResource("7_pxktc")
 
+[node name="close_zone" type="Area2D" parent="." unique_id=1841033003]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="close_zone" unique_id=204112044]
+z_index = 500
+position = Vector2(230, 203)
+shape = SubResource("RectangleShape2D_pxktc")
+
 [connection signal="body_entered" from="openlockzone" to="." method="_on_openlockzone_body_entered"]
+[connection signal="body_entered" from="close_zone" to="." method="_on_close_zone_body_entered"]
