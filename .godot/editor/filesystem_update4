@@ -15,3 +15,4 @@ res://src/levels/room_blueprint.tscn
 res://src/levels/room_blueprint.gd
 res://src/elements/cube.tscn
 res://src/elements/cube.gd
+res://src/global.gd
