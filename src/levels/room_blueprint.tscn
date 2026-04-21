@@ -3052,7 +3052,7 @@ sprite_frames = SubResource("SpriteFrames_g62an")
 flip_h = true
 
 [node name="spider" parent="." unique_id=1080271589 instance=ExtResource("53_6nwfb")]
-position = Vector2(10228, -138)
+position = Vector2(10222, -142)
 
 [node name="3platformblueprint" parent="." unique_id=853668133 instance=ExtResource("32_f3u0r")]
 position = Vector2(10023, -251)
