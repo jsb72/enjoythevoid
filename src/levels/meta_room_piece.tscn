@@ -18,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://dij3e8be2nf5t" path="res://src/vivants/spider.tscn" id="16_wu1p7"]
 [ext_resource type="Texture2D" uid="uid://ujsy1f37c3kn" path="res://sprites/cave/Cave - SmallRocks.png" id="17_1b72q"]
 [ext_resource type="Texture2D" uid="uid://bqp18spseu8bx" path="res://sprites/cave/Cave - SmallRocks_BLUR.png" id="18_jqaos"]
+[ext_resource type="Texture2D" uid="uid://dwehap5d7ves0" path="res://sprites/cave/Cave - SmallRocksBLACK.png" id="19_o6del"]
+[ext_resource type="Texture2D" uid="uid://cedl47qrbl21r" path="res://sprites/cave/Cave - RockCombinations1BLACK.png" id="20_cl0n7"]
 
 [sub_resource type="Resource" id="Resource_88ojq"]
 script = ExtResource("7_anba5")
@@ -313,6 +315,51 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_cl0n7"]
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_o6del")
+
+[sub_resource type="Gradient" id="Gradient_1nkay"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tkwxf"]
+gradient = SubResource("Gradient_1nkay")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8, 0.2)
+metadata/_snap_enabled = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cl0n7"]
+texture = ExtResource("19_o6del")
+texture_region_size = Vector2i(32, 32)
+57:31/size_in_atlas = Vector2i(7, 13)
+57:31/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sqkqu"]
+texture = ExtResource("20_cl0n7")
+texture_region_size = Vector2i(32, 32)
+0:38/size_in_atlas = Vector2i(20, 22)
+0:38/0 = 0
+21:39/size_in_atlas = Vector2i(15, 24)
+21:39/0 = 0
+36:38/size_in_atlas = Vector2i(12, 25)
+36:38/0 = 0
+48:37/size_in_atlas = Vector2i(16, 27)
+48:37/0 = 0
+30:1/size_in_atlas = Vector2i(16, 13)
+30:1/0 = 0
+40:23/size_in_atlas = Vector2i(24, 13)
+40:23/0 = 0
+0:27/size_in_atlas = Vector2i(20, 10)
+0:27/0 = 0
+16:13/size_in_atlas = Vector2i(14, 10)
+16:13/0 = 0
+30:14/size_in_atlas = Vector2i(9, 9)
+30:14/0 = 0
+39:14/size_in_atlas = Vector2i(10, 8)
+39:14/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_sqkqu"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_cl0n7")
+sources/1 = SubResource("TileSetAtlasSource_sqkqu")
 
 [node name="meta_room_piece" type="Node2D" unique_id=1053535631]
 script = ExtResource("1_u6kd6")
@@ -774,6 +821,22 @@ default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
 metadata/_custom_type_script = "uid://dfppmnngy2wx4"
 
+[node name="Rope8" type="Node2D" parent="cordes" unique_id=450254785]
+position = Vector2(-60, 2114)
+script = ExtResource("13_p6p5d")
+rope_length = 200.0
+enable_collisions = true
+collision_mask = 2
+metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
+
+[node name="RopeRendererLine2D" type="Line2D" parent="cordes/Rope8" unique_id=1043527243]
+position = Vector2(19, -121)
+points = PackedVector2Array(-19, 121, -18.99704, 142.22272, -18.993866, 163.37195, -18.990448, 184.42029, -18.986694, 205.3468, -18.982666, 226.13605, -18.978363, 246.7771, -18.973389, 267.26263, -18.968536, 287.5879, -18.963379, 307.7505, -18.95816, 327.7505)
+width = 5.0
+default_color = Color(0, 0, 0, 1)
+script = ExtResource("14_lompd")
+metadata/_custom_type_script = "uid://dfppmnngy2wx4"
+
 [node name="Rope6" type="Node2D" parent="cordes" unique_id=265971519]
 position = Vector2(2294, 1971)
 script = ExtResource("13_p6p5d")
@@ -1030,10 +1093,76 @@ tile_set = SubResource("TileSet_o6del")
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1474286363]
 z_index = -1
 scroll_scale = Vector2(0.9, 0.9)
+scroll_offset = Vector2(73, 77)
 
-[node name="back_blur_0" type="TileMapLayer" parent="Parallax2D" unique_id=2042414346]
-tile_map_data = PackedByteArray("AAABABgAAAAzABUAAAA=")
+[node name="Node2D" type="Node2D" parent="Parallax2D" unique_id=1748655731]
+position = Vector2(40.898163, 9.943146)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Parallax2D/Node2D" unique_id=2061341017]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1488.022, 3435.9717, 1436.022, 3547.9717, 1439.022, 3640.9717, 1505.1018, 3882.057, 1857.1018, 3903.057, 1968.1018, 3785.057, 1989.1018, 3641.057, 1899.1018, 3512.057, 1866.1018, 3430.057)
+
+[node name="Polygon2D" type="Polygon2D" parent="Parallax2D/Node2D" unique_id=1482880879]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-102, 717, -180, 672, -202, 567, -188, 423, -92, 380, 81, 351, 225, 407, 360, 464, 332, 567, 284, 655, 182, 715, 11, 725)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Parallax2D/Node2D" unique_id=1088866770]
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-177.64682, 2797.1287, -234.64682, 2824.1287, -282.61115, 2871.6865, -254.31702, 2984.9312, -164.31702, 3016.9312, 20.443085, 2982.4458, 32.443085, 2890.4458, 19.443085, 2839.4458, -8.556915, 2801.4458)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Parallax2D/Node2D" unique_id=1436626087]
+position = Vector2(-417.89816, -212.94315)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(2175, 510, 1820, 802, 1142, 796, 963, 579)
+
+[node name="back_blur_0" type="TileMapLayer" parent="Parallax2D/Node2D" unique_id=2042414346]
+tile_map_data = PackedByteArray("AAABABgAAAAzABUAAABGABsAAAAyAAEAAABGADsAAAAmADIAAAA0AGcAAAANADUAAAD9/1UAAAAkAAIAAAAlABgAAAAyAAEAAAAiABUAAAAzABUAAAAnABQAAAAzABUAAAAbABQAAAAzABUAAAAfABQAAAAzABUAAAA=")
 tile_set = SubResource("TileSet_cl0n7")
+
+[node name="hidedmgblock" type="Node2D" parent="." unique_id=1840906198]
+z_index = -1
+
+[node name="damage_block" parent="hidedmgblock" unique_id=1770458881 instance=ExtResource("13_lompd")]
+position = Vector2(2344, 1477)
+rotation = 1.5707964
+
+[node name="damage_block3" parent="hidedmgblock" unique_id=2028083349 instance=ExtResource("13_lompd")]
+position = Vector2(-408, 2475)
+rotation = 1.5707964
+
+[node name="damage_block5" parent="hidedmgblock" unique_id=1484183839 instance=ExtResource("13_lompd")]
+position = Vector2(-411, 2864)
+rotation = 1.5707964
+
+[node name="damage_block2" parent="hidedmgblock" unique_id=1888063182 instance=ExtResource("13_lompd")]
+position = Vector2(2723, 1745)
+rotation = -1.5707964
+
+[node name="damage_block4" parent="hidedmgblock" unique_id=1832940175 instance=ExtResource("13_lompd")]
+position = Vector2(-95, 2655)
+rotation = -1.5707964
+
+[node name="PointLight2D4" type="PointLight2D" parent="." unique_id=98018760]
+position = Vector2(2645, 1114)
+color = Color(1.1638972, 1.1638972, 1.1638972, 1)
+energy = 0.36
+texture = SubResource("GradientTexture2D_tkwxf")
+texture_scale = 16.94
+
+[node name="PointLight2D5" type="PointLight2D" parent="." unique_id=547538717]
+position = Vector2(-234, 3050)
+color = Color(1.1638972, 1.1638972, 1.1638972, 1)
+energy = 0.36
+texture = SubResource("GradientTexture2D_tkwxf")
+texture_scale = 16.94
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=780305839]
+z_index = 100
+scroll_scale = Vector2(1.1, 1.1)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="Parallax2D2" unique_id=364692081]
+tile_map_data = PackedByteArray("AAAuABUAAQAeAAEAAAAPABMAAQAeAAEAAAAdAFMAAQAeAAEAAABIAFcAAQAVACcAAADy/2YAAQAnAA4AAAAAAGYAAQAnAA4AAAAhAH0AAQAoABcAAAD7/00AAQAeAA4AAAA=")
+tile_set = SubResource("TileSet_sqkqu")
 
 [connection signal="body_entered" from="cam_zone" to="." method="_on_cam_zone_body_entered"]
 [connection signal="body_exited" from="cam_zone" to="." method="_on_cam_zone_body_exited"]

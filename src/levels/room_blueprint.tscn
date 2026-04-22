@@ -2063,6 +2063,7 @@ texture = SubResource("GradientTexture2D_tkwxf")
 texture_scale = 7.82
 
 [node name="surface_vein_paralax" type="Parallax2D" parent="lvl1" unique_id=364180509]
+visible = false
 z_index = 500
 scroll_scale = Vector2(1.4, 1.4)
 scroll_offset = Vector2(-2180, -69)
