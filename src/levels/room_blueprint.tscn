@@ -593,7 +593,7 @@ colors = PackedColorArray(0.18431373, 0.03529412, 0.03529412, 1, 0.18, 0.0342, 0
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_5ihcl"]
 gradient = SubResource("Gradient_7f7j5")
-height = 2048
+height = 1024
 use_hdr = true
 fill_to = Vector2(0, 1)
 
@@ -740,7 +740,7 @@ _data = {
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_qgqoh"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_w6qp3"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gxno5"]
 width = 1024
 height = 1024
 noise = SubResource("FastNoiseLite_qgqoh")
@@ -750,7 +750,7 @@ normalize = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_g62an"]
 shader = ExtResource("53_1nkay")
-shader_parameter/noise_texture = SubResource("NoiseTexture2D_w6qp3")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_gxno5")
 shader_parameter/density = 0.10000000475
 shader_parameter/speed = Vector2(0.02, 0.01)
 
@@ -2063,7 +2063,6 @@ texture = SubResource("GradientTexture2D_tkwxf")
 texture_scale = 7.82
 
 [node name="surface_vein_paralax" type="Parallax2D" parent="lvl1" unique_id=364180509]
-visible = false
 z_index = 500
 scroll_scale = Vector2(1.4, 1.4)
 scroll_offset = Vector2(-2180, -69)
@@ -3027,7 +3026,7 @@ offset_bottom = -3004.8853
 offset_left = -3696.0
 offset_top = -3024.0
 offset_right = 19748.0
-offset_bottom = -975.0
+offset_bottom = -2000.0
 texture = SubResource("GradientTexture2D_5ihcl")
 
 [node name="cutsceneparticle" type="GPUParticles2D" parent="red_plafond" unique_id=1483607889]

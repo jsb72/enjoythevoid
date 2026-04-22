@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bqp18spseu8bx" path="res://sprites/cave/Cave - SmallRocks_BLUR.png" id="18_jqaos"]
 [ext_resource type="Texture2D" uid="uid://dwehap5d7ves0" path="res://sprites/cave/Cave - SmallRocksBLACK.png" id="19_o6del"]
 [ext_resource type="Texture2D" uid="uid://cedl47qrbl21r" path="res://sprites/cave/Cave - RockCombinations1BLACK.png" id="20_cl0n7"]
+[ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="21_sqkqu"]
 
 [sub_resource type="Resource" id="Resource_88ojq"]
 script = ExtResource("7_anba5")
@@ -361,6 +362,24 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_cl0n7")
 sources/1 = SubResource("TileSetAtlasSource_sqkqu")
 
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_sqkqu"]
+frequency = 0.005
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qgxte"]
+width = 2048
+height = 2048
+noise = SubResource("FastNoiseLite_sqkqu")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_60ogs"]
+shader = ExtResource("21_sqkqu")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_qgxte")
+shader_parameter/density = 0.25
+shader_parameter/speed = Vector2(0.02, 0.01)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqkqu"]
+size = Vector2(2569, 3283.5)
+
 [node name="meta_room_piece" type="Node2D" unique_id=1053535631]
 script = ExtResource("1_u6kd6")
 metadata/_edit_vertical_guides_ = [1061.0]
@@ -393,7 +412,7 @@ offset_left = -2287.0
 offset_top = -377.0
 offset_right = 4783.0
 offset_bottom = 4521.0
-color = Color(0.34407577, 0.34407574, 0.34407574, 1)
+color = Color(0.5458197, 0.47947365, 0.4804517, 1)
 
 [node name="3platformblueprint" parent="." unique_id=97930136 instance=ExtResource("14_wu1p7")]
 position = Vector2(1424, 2240)
@@ -525,10 +544,10 @@ text = "The Blue Marble photographié en 1972..."
 vertical_alignment = 1
 
 [node name="Label12" type="RichTextLabel" parent="txt" unique_id=1901477410]
-offset_left = 5774.0
-offset_top = 5040.0
-offset_right = 5996.0
-offset_bottom = 5664.0
+offset_left = 6554.0
+offset_top = 5087.0
+offset_right = 6776.0
+offset_bottom = 5711.0
 theme_override_colors/default_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 theme_override_font_sizes/normal_font_size = 20
 text = "DXM retiré de la vente aux US en 1972..."
@@ -1164,9 +1183,29 @@ scroll_scale = Vector2(1.1, 1.1)
 tile_map_data = PackedByteArray("AAAuABUAAQAeAAEAAAAPABMAAQAeAAEAAAAdAFMAAQAeAAEAAABIAFcAAQAVACcAAADy/2YAAQAnAA4AAAAAAGYAAQAnAA4AAAAhAH0AAQAoABcAAAD7/00AAQAeAA4AAAA=")
 tile_set = SubResource("TileSet_sqkqu")
 
+[node name="Parallax2D3" type="Parallax2D" parent="." unique_id=726919003]
+z_index = 150
+scroll_scale = Vector2(1.05, 1.05)
+
+[node name="color_rect_fog" type="ColorRect" parent="Parallax2D3" unique_id=321318720]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_60ogs")
+offset_left = -2244.5767
+offset_top = -936.0
+offset_right = 4534.8833
+offset_bottom = 5168.0
+
+[node name="FOG_ZONE" type="Area2D" parent="." unique_id=724482987]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FOG_ZONE" unique_id=1886059367]
+position = Vector2(1111.5, 2237.25)
+shape = SubResource("RectangleShape2D_sqkqu")
+
 [connection signal="body_entered" from="cam_zone" to="." method="_on_cam_zone_body_entered"]
 [connection signal="body_exited" from="cam_zone" to="." method="_on_cam_zone_body_exited"]
 [connection signal="body_entered" from="buttons/button" to="." method="_on_button_body_entered1"]
 [connection signal="body_entered" from="buttons/button2" to="." method="_on_button_2_body_entered3"]
 [connection signal="body_entered" from="buttons2/button" to="." method="_on_button_body_entered2"]
 [connection signal="body_entered" from="buttons2/button2" to="." method="_on_button_2_body_entered4"]
+[connection signal="body_entered" from="FOG_ZONE" to="." method="_on_fog_zone_body_entered"]
+[connection signal="body_exited" from="FOG_ZONE" to="." method="_on_fog_zone_body_exited"]

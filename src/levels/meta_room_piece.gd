@@ -57,3 +57,14 @@ func _on_cam_zone_body_entered(body: Node2D) -> void:
 func _on_cam_zone_body_exited(body: Node2D) -> void:
 	if body is Player :
 		zoom_true = false
+		
+@onready var color_rect_fog: ColorRect = $Parallax2D3/color_rect_fog
+func _on_fog_zone_body_entered(body: Node2D) -> void:
+	if body is Player :
+		var tween = get_tree().create_tween()
+		tween.tween_property(color_rect_fog, "modulate:a", 1.0, 4.0)
+
+func _on_fog_zone_body_exited(body: Node2D) -> void:
+	if body is Player :
+		var tween = get_tree().create_tween()
+		tween.tween_property(color_rect_fog, "modulate:a", 0.0, 4.0)
