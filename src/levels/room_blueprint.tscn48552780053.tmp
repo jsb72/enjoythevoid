@@ -55,7 +55,6 @@
 [ext_resource type="Texture2D" uid="uid://qiebne0wvjkb" path="res://sprites/neuron.png" id="47_qgqoh"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="53_1nkay"]
 [ext_resource type="PackedScene" uid="uid://dij3e8be2nf5t" path="res://src/vivants/spider.tscn" id="53_6nwfb"]
-[ext_resource type="Script" uid="uid://ddhu3qfummrc2" path="res://addons/antialiased_line2d/antialiased_polygon2d.gd" id="54_w6qp3"]
 [ext_resource type="PackedScene" uid="uid://ufnf3lc7ewin" path="res://src/vivants/a_atentacle.tscn" id="56_brhbg"]
 [ext_resource type="PackedScene" uid="uid://dvio2nnm1fv8q" path="res://src/vivants/yog_sothoth.tscn" id="56_gxno5"]
 [ext_resource type="Texture2D" uid="uid://dmrsbbrarvw1n" path="res://sprites/bigvectorBLACK.png" id="56_qgqoh"]
@@ -851,12 +850,12 @@ color = Color(0.72156864, 0.72156864, 0.72156864, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(27305.197, 640.4121)
+position = Vector2(0, -8000)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(18082, 480.4121)
+position = Vector2(50, -8160)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -875,7 +874,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(18082, 480.4121)
+position = Vector2(-50, -8160)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -893,7 +892,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(27355.197, 640.4121)
+position = Vector2(50, -8000)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -909,7 +908,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(27255.197, 640.4121)
+position = Vector2(-50, -8000)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -925,7 +924,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(27305.197, 480.4121)
+position = Vector2(0, -8160)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -941,7 +940,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="dezoomlvl7" type="Node2D" parent="." unique_id=448208578 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(27305.197, 640.4121)
+position = Vector2(0, -2270)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -955,7 +954,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(18082, 480.4121)
+position = Vector2(50, -8160)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -2460,7 +2459,6 @@ position = Vector2(29353, 3395.8792)
 shape = SubResource("RectangleShape2D_1tqiw")
 
 [node name="ColorRect" type="ColorRect" parent="lvl5" unique_id=446163108]
-z_index = -50
 offset_left = 14277.213
 offset_top = 140.07562
 offset_right = 36982.0
@@ -2573,7 +2571,6 @@ position = Vector2(23023, 998)
 position = Vector2(6270.461, -203.48285)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lvl5/StaticBody2D2" unique_id=2122531603]
-z_index = 5
 position = Vector2(19421.605, 2931.9297)
 shape = SubResource("RectangleShape2D_7f7j5")
 
@@ -2998,32 +2995,20 @@ text = "« Si tu veux découvrir ce qu'est la matrice, tu devras l'explorer toi-
 horizontal_alignment = 1
 
 [node name="Parallax2D2" type="Parallax2D" parent="lvl5" unique_id=1169609106]
-z_index = -40
 scroll_scale = Vector2(0.95, 0.95)
 
 [node name="NEURON_back" type="TileMapLayer" parent="lvl5/Parallax2D2" unique_id=399492618]
 z_index = 6
-tile_map_data = PackedByteArray("AAD0BBoAAAAmABAAAACQBUYAAAALABEAAACSBlsAAAAYABEAAAA=")
+tile_map_data = PackedByteArray("AAB/BCUAAAALABEAAAD0BBoAAAAmABAAAADaBUgAAAALABEAAAA=")
 tile_set = SubResource("TileSet_g62an")
 
-[node name="NEURON_front" type="TileMapLayer" parent="lvl5" unique_id=517531217]
+[node name="Parallax2D3" type="Parallax2D" parent="lvl5" unique_id=961284905]
+scroll_scale = Vector2(1.05, 1.05)
+
+[node name="NEURON_front" type="TileMapLayer" parent="lvl5/Parallax2D3" unique_id=517531217]
 z_index = 6
-position = Vector2(-1353.2285, -42.818665)
+tile_map_data = PackedByteArray("AABrBTkAAAAAABEAAADJBlEAAAAdAAIAAAA=")
 tile_set = SubResource("TileSet_g62an")
-
-[node name="AntialiasedPolygon2D" type="Polygon2D" parent="lvl5" unique_id=1825966902]
-color = Color(0.91764706, 0.91764706, 0.91764706, 1)
-polygon = PackedVector2Array(27698.37, 1289.4727, 27704.676, 1289.505, 27709.82, 1290.5726, 27719.654, 1292.8694, 27719.424, 1311.0574, 27718.586, 1312.2465, 27710.896, 1313.8088, 27697.84, 1313.837, 27698.563, 1306.8442, 27716.742, 1311.0496, 27719.201, 1311.2437, 27716.969, 1310.4996, 27698.012, 1305.8091, 27698.434, 1301.2155, 27719.33, 1300.7626, 27698.11, 1300.6332)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="AntialiasedPolygon2D2" type="Polygon2D" parent="lvl5" unique_id=432474920]
-color = Color(0.72156864, 0.72156864, 0.72156864, 1)
-polygon = PackedVector2Array(26880.063, 1288.8724, 27704.95, 1288.4014, 27721.725, 1293.0381, 27728.78, 1265, 26895.09, 1260.1599)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
 
 [node name="DEATHZONE" type="Area2D" parent="." unique_id=265587749]
 

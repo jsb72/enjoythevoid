@@ -1,12 +1,13 @@
+res://addons/antialiased_line2d/antialiased_polygon2d.gd
+Polygon2D
+ColorRect
+Parallax2D
 Node2D
 CanvasLayer
 Label
 TileMapLayer
 CollisionShape2D
 Area2D
-ColorRect
-Parallax2D
-Polygon2D
 CollisionPolygon2D
 StaticBody2D
 AnimationPlayer
