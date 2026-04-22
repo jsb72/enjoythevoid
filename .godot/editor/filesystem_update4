@@ -23,3 +23,4 @@ res://src/platforms/laser_trap.tscn
 res://src/platforms/laser_trap.gd
 res://src/accueil.tscn
 res://src/accueil.gd
+res://src/elements/bomb.tscn

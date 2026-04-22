@@ -145,15 +145,16 @@ use_hdr = true
 fill_to = Vector2(0, 1)
 
 [sub_resource type="Gradient" id="Gradient_qgqoh"]
-offsets = PackedFloat32Array(0.17010309, 1)
-colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+offsets = PackedFloat32Array(0.23931624, 1)
+colors = PackedColorArray(0.72156864, 0.72156864, 0.72156864, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_w6qp3"]
 gradient = SubResource("Gradient_qgqoh")
 width = 256
 height = 256
 use_hdr = true
-fill_to = Vector2(0, 1)
+fill_from = Vector2(0.517094, 0.47435898)
+fill_to = Vector2(0.08547009, 0.6923077)
 
 [sub_resource type="Gradient" id="Gradient_f4kdv"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
@@ -1218,40 +1219,41 @@ texture = SubResource("GradientTexture2D_gxno5")
 
 [node name="TextureRect2" type="TextureRect" parent="lvl1/colors_ground" unique_id=1313290099]
 z_index = 1
-offset_left = 12637.0
-offset_top = 114.0
+offset_left = 12669.0
+offset_top = 100.0
 offset_right = 13149.0
-offset_bottom = 437.0
+offset_bottom = 846.0
 texture = SubResource("GradientTexture2D_w6qp3")
 
-[node name="Parallax2D2" type="Parallax2D" parent="lvl1" unique_id=1884114840]
-scroll_scale = Vector2(0, 1)
+[node name="surfaceblackparticle" type="Node2D" parent="lvl1" unique_id=1672141223]
+z_index = -10
+position = Vector2(11237, 0)
 
-[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl1/Parallax2D2" unique_id=1809780474]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="lvl1/surfaceblackparticle" unique_id=1809780474]
 position = Vector2(623, 111)
 amount = 1000
 texture = SubResource("GradientTexture2D_qrlky")
 visibility_rect = Rect2(-700, -1, 1400, 2)
 process_material = SubResource("ParticleProcessMaterial_41y7b")
 
-[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl1/Parallax2D2" unique_id=202768861]
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="lvl1/surfaceblackparticle" unique_id=202768861]
 position = Vector2(623, 137)
 amount = 1000
 texture = SubResource("GradientTexture2D_qrlky")
 visibility_rect = Rect2(-700, -1, 1400, 2)
 process_material = SubResource("ParticleProcessMaterial_41y7b")
 
-[node name="TextureRect" type="TextureRect" parent="lvl1/Parallax2D2" unique_id=764365305]
-offset_left = -2048.0
+[node name="TextureRect" type="TextureRect" parent="lvl1/surfaceblackparticle" unique_id=764365305]
+offset_left = -78.0
 offset_top = 94.0
-offset_right = 3445.0
+offset_right = 1328.0
 offset_bottom = 114.0
 texture = SubResource("GradientTexture2D_01erx")
 
-[node name="TextureRect2" type="TextureRect" parent="lvl1/Parallax2D2" unique_id=903776456]
-offset_left = -2048.0
+[node name="TextureRect2" type="TextureRect" parent="lvl1/surfaceblackparticle" unique_id=903776456]
+offset_left = -78.0
 offset_top = 119.0
-offset_right = 3445.0
+offset_right = 1328.0
 offset_bottom = 139.0
 texture = SubResource("GradientTexture2D_01erx")
 
@@ -1705,6 +1707,7 @@ position = Vector2(11887, -1340)
 shape = SubResource("RectangleShape2D_hw218")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="lvl1/cam_zones/no_bottom_offset_zone" unique_id=2140334494]
+visible = false
 position = Vector2(12789, 43.5)
 shape = SubResource("RectangleShape2D_lqu8a")
 
@@ -2054,7 +2057,7 @@ scroll_scale = Vector2(1.2, 1.2)
 z_index = 20
 material = SubResource("ShaderMaterial_vb8r4")
 scale = Vector2(1.25, 1.25)
-tile_map_data = PackedByteArray("AADZAhgAAgAEABsAAACzAjIAAgAMABUAAABpAjQAAgAMABwAAAASAmYAAgAMABUAAAA=")
+tile_map_data = PackedByteArray("AADZAhgAAgAEABsAAABpAjQAAgAMABwAAAC3AjEAAgAMABUAAAAUAmcAAgAMABUAAAA=")
 tile_set = SubResource("TileSet_k4edk")
 
 [node name="PointLight2D" type="PointLight2D" parent="lvl1" unique_id=1701893410]
@@ -2075,13 +2078,6 @@ position = Vector2(16739, 78)
 energy = 0.35
 texture = SubResource("GradientTexture2D_tkwxf")
 texture_scale = 20.32
-
-[node name="PointLight2D4" type="PointLight2D" parent="lvl1" unique_id=1784430213]
-position = Vector2(12809, 824)
-color = Color(1.1638972, 1.1638972, 1.1638972, 1)
-energy = 0.36
-texture = SubResource("GradientTexture2D_tkwxf")
-texture_scale = 16.94
 
 [node name="PointLight2D5" type="PointLight2D" parent="lvl1" unique_id=1321175156]
 visible = false
@@ -2382,7 +2378,7 @@ offset_bottom = 10902.608
 color = Color(0.7204674, 0.7204675, 0.7204674, 1)
 
 [node name="TextureRect" type="TextureRect" parent="lvl5" unique_id=1940401952]
-z_index = 1
+z_index = 50
 offset_left = 14264.388
 offset_top = 138.96323
 offset_right = 30099.006

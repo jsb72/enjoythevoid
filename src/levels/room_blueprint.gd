@@ -12,15 +12,12 @@ extends Node2D
 
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
-@onready var ground: Sprite2D = $lvl1/ground
 
 @onready var lvl_1: Node2D = $lvl1
 @onready var lvl_2: Node2D = $lvl2
 
 var lvl_2_loaded:bool = false
 
-@onready var blackgroundparticle: GPUParticles2D = $lvl1/Parallax2D2/GPUParticles2D
-@onready var blackgroundparticle2: GPUParticles2D = $lvl1/Parallax2D2/GPUParticles2D2
 @onready var black_particule: Node2D = $"lvl1/black particule"
 
 @onready var fractale_ciel: RigidBody2D = $fractale_ciel
@@ -69,12 +66,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("start"):
 		spawn_fractal()
 	
-	if player.global_position.x > 14000:
-		blackgroundparticle.hide()
-		blackgroundparticle2.hide()
-	else:
-		blackgroundparticle.show()
-		blackgroundparticle2.show()
 		
 	if player.global_position.y > 200:
 		cam.limit_right = 28450
@@ -146,18 +137,28 @@ func display_list_cadavre():
 		cad.global_position.y -= 36
 		$".".add_child(cad)  
 
+@onready var ground: Sprite2D = $lvl1/ground
+@onready var surfaceblackparticle: Node2D = $lvl1/surfaceblackparticle
 func duplicate_ground(offset_x):
 	var r = ground.duplicate()
 	r.position.x = r.position.x + offset_x 
 	r.z_index = r.z_index -1
 	$".".add_child(r)  
-
+func duplicate_surfaceblackparticle(offset_x):
+	var r = surfaceblackparticle.duplicate()
+	r.position.x = r.position.x + offset_x 
+	$".".add_child(r)  
 func creer_ground():
 	var len = 0.274 * 13902
 	for i in range(10):
 		duplicate_ground(i*len)
 	ground.hide()
 	ground.process_mode = Node.PROCESS_MODE_DISABLED		
+	
+	var width = 1406
+	for i in range(1,12):
+		duplicate_surfaceblackparticle(-i*width)
+	
 	
 func slowvoid_logic():
 	var limit = - 5555

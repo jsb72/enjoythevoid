@@ -411,7 +411,7 @@ z_index = -8
 offset_left = -2287.0
 offset_top = -377.0
 offset_right = 4783.0
-offset_bottom = 4521.0
+offset_bottom = 20292.0
 color = Color(0.5458197, 0.47947365, 0.4804517, 1)
 
 [node name="3platformblueprint" parent="." unique_id=97930136 instance=ExtResource("14_wu1p7")]
