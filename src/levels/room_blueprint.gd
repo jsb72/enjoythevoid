@@ -48,11 +48,16 @@ func _ready() -> void:
 		await get_tree().create_timer(0.2).timeout
 		player.process_mode = Node.PROCESS_MODE_INHERIT
 	
-	
+@onready var color_rect_fog: ColorRect = $red_plafond/ColorRectFOG
 var first_time_on_floor:bool=true		
 func _process(delta: float) -> void:
 	
-	
+	if player.global_position.y > -3775:
+		var tween = get_tree().create_tween()
+		tween.tween_property(color_rect_fog, "modulate:a", 0.0, 1.0)
+	else:
+		var tween = get_tree().create_tween()
+		tween.tween_property(color_rect_fog, "modulate:a", 1.0, 1.0)
 	
 	if player.is_on_floor() and first_time_on_floor:
 		first_time_on_floor=false
