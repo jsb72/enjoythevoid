@@ -512,6 +512,44 @@ texture_region_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_g62an"]
 sources/0 = SubResource("TileSetAtlasSource_w6qp3")
 
+[sub_resource type="Gradient" id="Gradient_ogf4b"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qgqoh"]
+gradient = SubResource("Gradient_ogf4b")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+metadata/_snap_enabled = true
+
+[sub_resource type="Gradient" id="Gradient_w6qp3"]
+offsets = PackedFloat32Array(0, 0.3, 0.7, 0.9)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_scxpf"]
+gradient = SubResource("Gradient_w6qp3")
+
+[sub_resource type="Curve" id="Curve_g62an"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.1590909, 1), 0.0, 0.0, 0, 0, Vector2(0.8484848, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_aspbp"]
+curve = SubResource("Curve_g62an")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3grwt"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(250, 200, 1)
+spread = 180.0
+initial_velocity_min = 4.0
+initial_velocity_max = 8.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.0
+scale_max = 0.099999994
+scale_curve = SubResource("CurveTexture_aspbp")
+color_ramp = SubResource("GradientTexture1D_scxpf")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_01erx"]
 size = Vector2(5040, 4218)
 
@@ -565,14 +603,14 @@ offsets = PackedFloat32Array(0, 0.3, 0.7, 0.9)
 colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0)
 metadata/_snap_enabled = true
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_scxpf"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wm35a"]
 gradient = SubResource("Gradient_73yqq")
 
 [sub_resource type="Curve" id="Curve_tkwxf"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.1590909, 1), 0.0, 0.0, 0, 0, Vector2(0.8484848, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 4
 
-[sub_resource type="CurveTexture" id="CurveTexture_aspbp"]
+[sub_resource type="CurveTexture" id="CurveTexture_tuy4g"]
 curve = SubResource("Curve_tkwxf")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_k2shy"]
@@ -585,8 +623,8 @@ initial_velocity_max = 8.0
 gravity = Vector3(0, 0, 0)
 scale_min = 0.0
 scale_max = 0.099999994
-scale_curve = SubResource("CurveTexture_aspbp")
-color_ramp = SubResource("GradientTexture1D_scxpf")
+scale_curve = SubResource("CurveTexture_tuy4g")
+color_ramp = SubResource("GradientTexture1D_wm35a")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppux1"]
 size = Vector2(29084.438, 3367.3008)
@@ -2153,16 +2191,60 @@ rotation = 1.3823007
 is_rotatingg = false
 
 [node name="NEURON" type="TileMapLayer" parent="lvl1" unique_id=687511251]
-z_index = 1
+visible = false
+z_index = 6
 scale = Vector2(0.5, 0.5)
 tile_map_data = PackedByteArray("AABuAtX/AAAxAAkAAABuA4f/AAAAAAAAAAAkAiP/AAAAAAAAAABWAVr/AABIAAcAAAC0AQL/AAA1AAAAAACzAbD/AAA6AAkAAADGAgD/AAAAACIAAABZBVj/AABBAAAAAACwBAr/AABBAAcAAAB4Awv/AABIAAcAAACDA97+AABBAAAAAAAIBAr/AABIAAcAAAA=")
 tile_set = SubResource("TileSet_g62an")
 
 [node name="NEURONpetit" type="TileMapLayer" parent="lvl1" unique_id=955873006]
-z_index = 1
+visible = false
+z_index = 6
 scale = Vector2(0.25, 0.25)
 tile_map_data = PackedByteArray("AAAtBhP/AAAxAAkAAAD7BY7/AABBAAAAAAC4BNL+AAAAACIAAABpA/n/AAA1AAAAAAAyBP/9AABIAAcAAACgBQf/AABBAAAAAAC/Bsr+AABIAAcAAACqAhf+AAAxAAkAAADpAtb+AAAAACIAAACNBQ3+AAA1AAAAAAA5CP/9AAAxAAkAAABHCPT9AABBAAAAAACqCX7+AAAAAAAAAADZAsj+AAAxAAkAAABjAwz+AAA1AAAAAABwA//9AAA1AAAAAAA=")
 tile_set = SubResource("TileSet_g62an")
+
+[node name="Node2D" type="Node2D" parent="lvl1" unique_id=800017337]
+
+[node name="whiteparticleforgreenzone" type="GPUParticles2D" parent="lvl1/Node2D" unique_id=706561271]
+z_index = 11
+position = Vector2(7350, 2118)
+amount = 25
+texture = SubResource("GradientTexture2D_qgqoh")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_3grwt")
+
+[node name="whiteparticleforgreenzone2" type="GPUParticles2D" parent="lvl1/Node2D" unique_id=1658882006]
+z_index = 11
+position = Vector2(7801, 2014)
+amount = 25
+texture = SubResource("GradientTexture2D_qgqoh")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_3grwt")
+
+[node name="whiteparticleforgreenzone3" type="GPUParticles2D" parent="lvl1/Node2D" unique_id=505391307]
+z_index = 11
+position = Vector2(8291, 1943)
+amount = 25
+texture = SubResource("GradientTexture2D_qgqoh")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_3grwt")
+
+[node name="whiteparticleforgreenzone4" type="GPUParticles2D" parent="lvl1/Node2D" unique_id=1003775998]
+z_index = 11
+position = Vector2(8740, 1903)
+amount = 25
+texture = SubResource("GradientTexture2D_qgqoh")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_3grwt")
+
+[node name="whiteparticleforgreenzone5" type="GPUParticles2D" parent="lvl1/Node2D" unique_id=1060314810]
+z_index = 11
+position = Vector2(10148, 1596)
+amount = 25
+texture = SubResource("GradientTexture2D_qgqoh")
+lifetime = 5.0
+process_material = SubResource("ParticleProcessMaterial_3grwt")
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
 visible = false

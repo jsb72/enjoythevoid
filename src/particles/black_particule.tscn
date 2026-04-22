@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://cixrrn1bnl2jj" path="res://src/particles/black_particule.gd" id="1_87seg"]
 
-[sub_resource type="Gradient" id="Gradient_ogf4b"]
+[sub_resource type="Gradient" id="Gradient_87seg"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_ogf4b"]
-gradient = SubResource("Gradient_ogf4b")
+gradient = SubResource("Gradient_87seg")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
@@ -17,14 +17,14 @@ offsets = PackedFloat32Array(0, 0.3, 0.7, 0.9)
 colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0)
 metadata/_snap_enabled = true
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_scxpf"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ghgb4"]
 gradient = SubResource("Gradient_scxpf")
 
 [sub_resource type="Curve" id="Curve_aspbp"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.1590909, 1), 0.0, 0.0, 0, 0, Vector2(0.8484848, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 4
 
-[sub_resource type="CurveTexture" id="CurveTexture_aspbp"]
+[sub_resource type="CurveTexture" id="CurveTexture_a7g5o"]
 curve = SubResource("Curve_aspbp")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uxuas"]
@@ -37,8 +37,8 @@ initial_velocity_max = 8.0
 gravity = Vector3(0, 0, 0)
 scale_min = 0.0
 scale_max = 0.099999994
-scale_curve = SubResource("CurveTexture_aspbp")
-color_ramp = SubResource("GradientTexture1D_scxpf")
+scale_curve = SubResource("CurveTexture_a7g5o")
+color_ramp = SubResource("GradientTexture1D_ghgb4")
 
 [node name="black particule" type="Node2D" unique_id=168835622]
 z_index = 33

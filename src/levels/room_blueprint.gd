@@ -114,7 +114,7 @@ func music_player_logic():
 			
 	if player.global_position.x > 6500 and player.global_position.y > 658 and player.global_position.x < 13000 and player.global_position.y < 3900:
 		var tween = get_tree().create_tween()
-		tween.tween_property(canvas_modulate, "color", Color("dbfff4ff"), 2.0)
+		tween.tween_property(canvas_modulate, "color", Color("6459deff"), 2.0)#dbfff4ff
 		
 		
 	if player.global_position.x > 14081 :
@@ -211,7 +211,8 @@ func _on_change_scene_whenvoid_body_entered(body: Node2D) -> void:
 	if body is Player:
 		if !lvl_2_loaded:
 			lvl_1.hide()
-			lvl_1.process_mode = Node.PROCESS_MODE_DISABLED
+			lvl_1.set_deferred("process_mode",Node.PROCESS_MODE_DISABLED)
+			#lvl_1.process_mode = Node.PROCESS_MODE_DISABLED
 			lvl_2.show()
 			lvl_2.process_mode = Node.PROCESS_MODE_INHERIT
 			
@@ -229,7 +230,8 @@ func _on_change_scene_zone_body_entered(body: Node2D) -> void:
 	if body is Player:
 		if !lvl_2_loaded:
 			lvl_1.hide()
-			lvl_1.process_mode = Node.PROCESS_MODE_DISABLED
+			lvl_1.set_deferred("process_mode",Node.PROCESS_MODE_DISABLED)
+			#lvl_1.process_mode = Node.PROCESS_MODE_DISABLED
 			lvl_2.show()
 			lvl_2.process_mode = Node.PROCESS_MODE_INHERIT
 			
@@ -244,7 +246,9 @@ func _on_change_scene_zone_2_lvl_3_body_entered(body: Node2D) -> void:
 			lvl_1.show()
 			lvl_1.process_mode = Node.PROCESS_MODE_INHERIT
 			lvl_2.hide()
-			lvl_2.process_mode = Node.PROCESS_MODE_DISABLED
+			lvl_2.set_deferred("process_mode",Node.PROCESS_MODE_DISABLED)
+			#lvl_2.process_mode = Node.PROCESS_MODE_DISABLED
+			
 			
 			black_particule.layer1.show()
 			black_particule.layer2.show()

@@ -24,3 +24,5 @@ res://src/platforms/laser_trap.gd
 res://src/accueil.tscn
 res://src/accueil.gd
 res://src/elements/bomb.tscn
+res://src/vivants/fly.tscn
+res://src/particles/black_particule.tscn

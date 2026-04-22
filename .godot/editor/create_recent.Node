@@ -1,4 +1,6 @@
 Node2D
+CanvasLayer
+Label
 TileMapLayer
 CollisionShape2D
 Area2D
@@ -10,5 +12,3 @@ StaticBody2D
 AnimationPlayer
 Sprite2D
 AnimatableBody2D
-RichTextLabel
-Line2D

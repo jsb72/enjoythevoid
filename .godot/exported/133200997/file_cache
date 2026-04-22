@@ -58,10 +58,10 @@ res://src/levels/bouche_degout.tscn::0ce3a262e2db475a441bad95addde35e::177619743
 res://src/levels/door.tscn::662be704df0da126e70e26a23b3a6e4f::1776197434::res://.godot/exported/133200997/export-1e3220afec8051fc83ef473fa9251932-door.scn
 res://src/levels/escalier_room.tscn::2545151bb2d4c29d532987599dd3b050::1776197434::res://.godot/exported/133200997/export-081a465e2b91f4c58be4513b37872452-escalier_room.scn
 res://src/levels/jump_room.tscn::3fe5e3b35b75e58140815a86c8d3880c::1776197434::res://.godot/exported/133200997/export-1321d2f102fe2652cdeb5766a9e5c748-jump_room.scn
-res://src/levels/meta_room_piece.tscn::0b8bbedaa50990667a32e33e3102e7ad::1776880139::res://.godot/exported/133200997/export-0f806d718e6d8d2dcbd414d62e1c85ea-meta_room_piece.scn
+res://src/levels/meta_room_piece.tscn::55629143c2b6fe1e9415f245a3e62744::1776883011::res://.godot/exported/133200997/export-0f806d718e6d8d2dcbd414d62e1c85ea-meta_room_piece.scn
 res://src/levels/portal_room.tscn::7bc9cda9a1f0a06e000a5b165a8773ce::1776197434::res://.godot/exported/133200997/export-c7c78cfa72c2e0d8446be42a76150fcf-portal_room.scn
 res://src/levels/room_1.tscn::3b7fc13544f6d385eaf781df1497f5f3::1776197434::res://.godot/exported/133200997/export-ebebd2883edc91435908b64a3e3e42e4-room_1.scn
-res://src/levels/room_blueprint.tscn::fb720fe4509426b3b514bcc267f60224::1776881823::res://.godot/exported/133200997/export-2388893ce8b32192889e9c56ebf99eaf-room_blueprint.scn
+res://src/levels/room_blueprint.tscn::ecbb0a27e103a9947c4efcfd190f8eba::1776890632::res://.godot/exported/133200997/export-2388893ce8b32192889e9c56ebf99eaf-room_blueprint.scn
 res://src/levels/room_piece.tscn::d5fa520453726776810e238abc8124f0::1776677884::res://.godot/exported/133200997/export-5e9b921bc0b1419f6911d26c549c6d6a-room_piece.scn
 res://src/levels/transition_rooms.tscn::f53cfacea1eba02d1f818ed67c60f3ae::1776824042::res://.godot/exported/133200997/export-1f8afdd358944e4b81a16572aa9188b9-transition_rooms.scn
 res://src/particles/ground_particle.tscn::50d878fab6cb7fe894f464ea2e48a3bc::1776197434::res://.godot/exported/133200997/export-052e73bd2a7085044463e6d5273ec5b7-ground_particle.scn
@@ -73,7 +73,7 @@ res://src/platforms/pt_blueprint.tscn::0c6326c5c7812939a96cfb36b08dea2e::1776197
 res://src/player/player.tscn::506d818ae02d428a27b5dc27528aa1f7::1776854849::res://.godot/exported/133200997/export-e6d031b4b01e7311dce0bbd1f2b58226-player.scn
 res://src/player/player_adding.tscn::b9f482a34b9be460f858b7b5bfea09d4::1776197434::res://.godot/exported/133200997/export-93888cec49933f4ed6722af45c58c6f4-player_adding.scn
 res://src/vivants/mouse.tscn::1486ac4baefa765ebc6a17ceb7890655::1776197434::res://.godot/exported/133200997/export-2be3191c6b65996b89420d89b8faf213-mouse.scn
-res://src/accueil.tscn::c700c43c92ce4107ad098ab86c9c863f::1776863008::res://.godot/exported/133200997/export-c25bb070dacbf7c5d50b2c720104707e-accueil.scn
+res://src/accueil.tscn::6d9e59e78b59ecd6ff82383922ab624e::1776890290::res://.godot/exported/133200997/export-c25bb070dacbf7c5d50b2c720104707e-accueil.scn
 res://src/vivants/monster.tscn::5cdf2f3f99a2c2030d8409f2bdc1407e::1776197434::res://.godot/exported/133200997/export-1cb7292022685bd688d197092ca94306-monster.scn
 res://src/platforms/laser_trap.tscn::0d48a9e6ef8a09fd0ea54cbda2bf9b22::1776854143::res://.godot/exported/133200997/export-1a1000b21320221fe8a98cfdea8f8068-laser_trap.scn
 res://src/levels/door_reverse.tscn::e397eb80ab786e368bf4eb3a50a9cff2::1776197434::res://.godot/exported/133200997/export-c18d31c43d532a6d9a551efb9d8dea6a-door_reverse.scn
@@ -90,7 +90,7 @@ res://src/platforms/longsimpleplatform.tscn::1d975e7358beb650a0c0468c06211485::1
 res://src/platforms/triangle_platform.tscn::7c13dc479241ce652be1e47a6b24a523::1776197434::res://.godot/exported/133200997/export-46346a210df3ca0cfb661f57be33f950-triangle_platform.scn
 res://src/antichambre.tscn::84be4a7eb069aff196eb96055b6fdd27::1776197434::res://.godot/exported/133200997/export-1d813f617f3b11de27e7a16eac04b92b-antichambre.scn
 res://src/generique.tscn::6529f0f3e4bf1597bdf471379af4f4eb::1776197434::res://.godot/exported/133200997/export-29fbe718b4c93472fc3bf296d832dfcd-generique.scn
-res://src/particles/black_particule.tscn::792c37f5b481298710b12f305fd91f36::1776197434::res://.godot/exported/133200997/export-8a02bb901a36f457c1cf49f7e65aef8b-black_particule.scn
+res://src/particles/black_particule.tscn::3e64752b6672fceab421b5fd50999c21::1776890545::res://.godot/exported/133200997/export-8a02bb901a36f457c1cf49f7e65aef8b-black_particule.scn
 res://src/particles/run_particle.tscn::4b5aa4c4d6da66e2add4af1196e8f6ff::1776197434::res://.godot/exported/133200997/export-ca2e838e16e6bdcb83fd2f0ade5de7a3-run_particle.scn
 res://src/particles/blood_particle.tscn::2cd0a731e61622c2df591a8890f3c063::1776197434::res://.godot/exported/133200997/export-4277ad1dbbdbf90eb427c9b92763ea75-blood_particle.scn
 res://src/vivants/spider.tscn::9b42fb53e9b5c8178470f6aad13aaa91::1776760865::res://.godot/exported/133200997/export-52090b2c5e4c28b6c843c02f8a57148b-spider.scn
@@ -109,8 +109,8 @@ res://src/rope/testrope.tscn::07c341135135d1246052e350da3fa23a::1776197434::res:
 res://src/vivants/followeye.tscn::a12ddb1b55c9af85cad2bec3cb56b112::1776779562::res://.godot/exported/133200997/export-5ce7213a5753e9a4e327512069186972-followeye.scn
 res://src/vivants/yog_sothoth.tscn::176cda2ebd05a456e8be5ae63e65c966::1776197434::res://.godot/exported/133200997/export-9a1a55ae90d5d6a7e6d6536c9a05c192-yog_sothoth.scn
 res://src/levels/escalier_little_black_reverse.tscn::f799d6f4c60e689668404a435a9e3d4d::1776197434::res://.godot/exported/133200997/export-7a70ee95b372e26fe14194f546a39bb0-escalier_little_black_reverse.scn
-res://src/elements/bomb.tscn::956a5d76e7e75be2c5818aab2a80053c::1776423147::res://.godot/exported/133200997/export-ea6c62fa6dfb1835d67d9f033e4ded40-bomb.scn
-res://src/vivants/fly.tscn::7a9dd11d51e3291b27f7954a7415333e::1776698762::res://.godot/exported/133200997/export-e589d08f270ad3ff50c9d4cfd1e324f7-fly.scn
+res://src/elements/bomb.tscn::b4d17456abb8938cb1e17d8089e678b4::1776887830::res://.godot/exported/133200997/export-ea6c62fa6dfb1835d67d9f033e4ded40-bomb.scn
+res://src/vivants/fly.tscn::7a9dd11d51e3291b27f7954a7415333e::1776889926::res://.godot/exported/133200997/export-e589d08f270ad3ff50c9d4cfd1e324f7-fly.scn
 res://src/vivants/sage.tscn::1d3cd5351f58bbeb9142671a19c4c9ac::1776457760::res://.godot/exported/133200997/export-ed7a8f019af3c971998ddd3473ced19e-sage.scn
 res://src/fadetoblack.tscn::2aaad968ca2fc6114f11603cb833d510::1776197434::res://.godot/exported/133200997/export-db47740fdbb22f7126ab72896a4debe8-fadetoblack.scn
 res://src/platforms/plarform_3.tscn::f5eb58024016b8cee2257d27e8212cf2::1776805321::res://.godot/exported/133200997/export-78edc9b488496e3993ff5837f9641ff4-plarform_3.scn

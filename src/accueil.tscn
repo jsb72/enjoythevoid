@@ -52,4 +52,15 @@ text = "Press any button to make a new leap of faith"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=427057289]
+layer = 2000
+
+[node name="loading" type="Label" parent="CanvasLayer" unique_id=337391387]
+visible = false
+offset_left = 1202.0
+offset_top = 697.0
+offset_right = 1277.0
+offset_bottom = 720.0
+text = "Loading..."
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
