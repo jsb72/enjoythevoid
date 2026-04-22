@@ -1,4 +1,4 @@
-res://src/levels/room_blueprint.tscn
+res://src/levels/transition_rooms.tscn
 res://addons/phantom_camera/themes/theme.tres
 res://shaders/damage_impact.gdshader
 res://shaders/distorsion.gdshader
@@ -10,7 +10,6 @@ res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/blur.gdshader
 res://shaders/vignette.gdshader
+res://src/levels/room_blueprint.tscn
 res://src/levels/meta_room_piece.tscn
-res://src/levels/meta_room_piece.gd
-res://src/platforms/2_pt_move.tscn
-res://src/platforms/plarform_3.tscn
+res://src/platforms/laser_trap.tscn

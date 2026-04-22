@@ -761,7 +761,7 @@ position = Vector2(1455, 2085)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dmg blck/damage_block8" unique_id=1153357901]
 libraries/ = SubResource("AnimationLibrary_cl0n7")
 autoplay = &"new_animation"
-speed_scale = 3.0
+speed_scale = 4.0
 
 [node name="damage_block9" parent="dmg blck" unique_id=1579224549 instance=ExtResource("13_lompd")]
 position = Vector2(1811, 2048)
@@ -769,7 +769,7 @@ position = Vector2(1811, 2048)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="dmg blck/damage_block9" unique_id=1092860512]
 libraries/ = SubResource("AnimationLibrary_jqaos")
 autoplay = &"new_animation"
-speed_scale = 3.0
+speed_scale = 4.0
 
 [node name="plarform3" parent="." unique_id=1332977636 instance=ExtResource("14_p6p5d")]
 position = Vector2(681, 1125)
@@ -821,13 +821,13 @@ polygon = PackedVector2Array(1132, 2403, 1215, 2265, 1253, 2206, 1367, 2210, 141
 
 [node name="AntialiasedPolygon2D" type="Polygon2D" parent="StaticBody2D5" unique_id=1775924435]
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(25, 2722, 2, 2570, 59, 2506, 105, 2559, 188, 2593, 249, 2517, 314, 2498, 310, 2327, 226, 2312, 44, 2343, -169, 2343, -169, 2460, -146, 2745, -78, 2912, 120, 2916, 165, 2897, 325, 2886, 363, 2836, 420, 2802, 363, 2756, 260, 2768, 108, 2764, 48, 2760)
+polygon = PackedVector2Array(25, 2722, 2, 2570, 59, 2506, 105, 2559, 188, 2593, 249, 2517, 314, 2498, 310, 2327, 226, 2312, 44, 2343, -169, 2343, -169, 2460, -146, 2745, -78, 2912, 120, 2916, 165, 2897, 325, 2886, 363, 2836, 474, 2778, 363, 2756, 260, 2768, 108, 2764, 48, 2760)
 script = ExtResource("12_qmf18")
 stroke_width = 0.0
 metadata/_custom_type_script = "uid://ddhu3qfummrc2"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D5" unique_id=1778685401]
-polygon = PackedVector2Array(25, 2722, 2, 2570, 59, 2506, 105, 2559, 188, 2593, 249, 2517, 314, 2498, 310, 2327, 226, 2312, 44, 2343, -169, 2343, -169, 2460, -146, 2745, -78, 2912, 120, 2916, 165, 2897, 325, 2886, 363, 2836, 420, 2802, 363, 2756, 260, 2768, 108, 2764, 48, 2760)
+polygon = PackedVector2Array(25, 2722, 2, 2570, 59, 2506, 105, 2559, 188, 2593, 249, 2517, 314, 2498, 310, 2327, 226, 2312, 44, 2343, -169, 2343, -169, 2460, -146, 2745, -78, 2912, 120, 2916, 165, 2897, 325, 2886, 363, 2836, 481, 2777, 363, 2756, 260, 2768, 108, 2764, 48, 2760)
 
 [node name="StaticBody2D6" type="StaticBody2D" parent="." unique_id=77407038]
 
