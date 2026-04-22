@@ -1038,10 +1038,6 @@ position = Vector2(0, -36)
 scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_tjw5d")
 
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1683301557]
-position = Vector2(0, -32)
-target_position = Vector2(0, 80)
-
 [node name="PointLight2D3" type="PointLight2D" parent="." unique_id=1733715955]
 visible = false
 position = Vector2(12, 19)

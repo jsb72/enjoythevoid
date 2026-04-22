@@ -260,3 +260,8 @@ func _on_novisibleplayerzone_body_entered(body: Node2D) -> void:
 func _on_novisibleplayerzone_body_exited(body: Node2D) -> void:
 	if body is Player:
 		body.sprite.show()
+
+
+func _on_checkpoints_body_entered(body: Node2D) -> void:
+	if body is Player:
+		body.last_floor_pos=body.global_position

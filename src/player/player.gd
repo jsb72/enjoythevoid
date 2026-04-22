@@ -394,7 +394,6 @@ func logic_spe():
 			Engine.time_scale = 0.1
 			
 	portal_logic()
-	respawn_logic()
 	
 	sprite_animation()
 	
@@ -520,17 +519,6 @@ func sound_animation() -> void:
 				ground_particle.restart()
 			
 var last_floor_pos : Vector2
-@onready var ray_cast_2d: RayCast2D = $RayCast2D
-
-func respawn_logic():
-	
-	if ray_cast_2d.is_colliding():
-		#print(ray_cast_2d.get_collider().get_class())
-		var collidobj = ray_cast_2d.get_collider()
-		if collidobj is Ptblueprint :
-			last_floor_pos.x = collidobj.global_position.x
-			last_floor_pos.y = global_position.y
-			
 @onready var animated_sprite_for_teleport_shader: AnimatedSprite2D = $AnimatedSpriteForTeleportShader
 @onready var animation_player_for_teleport_shader: AnimationPlayer = $AnimatedSpriteForTeleportShader/AnimationPlayerForTeleportShader
 var respawned : bool = false
@@ -538,7 +526,9 @@ func respawn():
 	var tween2 = get_tree().create_tween()
 	tween2.tween_property(point_light_2d_2, "energy", 1.0, 1.0)
 	
+	dead_ = false
 	respawned=true
+	deathspriteanim.hide()
 	sprite.hide()
 	sprite_shader.hide()
 	global_position = last_floor_pos
@@ -586,7 +576,6 @@ func play_death_anim():
 	blood_particle.restart()
 	dead_ = true
 	sprite.hide()
-	point_light_2d.hide()
 	deathspriteanim.show()
 	
 	deathspriteanim.play("default")

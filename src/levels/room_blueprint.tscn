@@ -755,6 +755,9 @@ shader_parameter/noise_texture = SubResource("NoiseTexture2D_w6qp3")
 shader_parameter/density = 0.10000000475
 shader_parameter/speed = Vector2(0.02, 0.01)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qgqoh"]
+size = Vector2(87, 104)
+
 [node name="room_blueprint" type="Node2D" unique_id=1528742533]
 script = ExtResource("1_76snk")
 metadata/_edit_vertical_guides_ = [-3490.0, -231.0, 538.0]
@@ -3066,6 +3069,16 @@ offset_top = -2068.0
 offset_right = 4573.1143
 offset_bottom = 5582.1147
 
+[node name="CHECKPOINTS" type="Area2D" parent="." unique_id=1485832154]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1269512142]
+position = Vector2(-0.5, -34)
+shape = SubResource("RectangleShape2D_qgqoh")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1236312384]
+position = Vector2(2094, -1063)
+shape = SubResource("RectangleShape2D_qgqoh")
+
 [connection signal="body_entered" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_entered"]
 [connection signal="body_exited" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_exited"]
 [connection signal="body_entered" from="lvl1/cam_zones/no_bottom_offset_zone" to="." method="_on_no_bottom_offset_zone_body_entered"]
@@ -3080,3 +3093,4 @@ offset_bottom = 5582.1147
 [connection signal="body_entered" from="lvl5/camzoneoffset_lvl5" to="." method="_on_camzoneoffset_lvl_5_body_entered"]
 [connection signal="body_exited" from="lvl5/camzoneoffset_lvl5" to="." method="_on_camzoneoffset_lvl_5_body_exited"]
 [connection signal="body_entered" from="DEATHZONE" to="." method="_on_deathzone_body_entered"]
+[connection signal="body_entered" from="CHECKPOINTS" to="." method="_on_checkpoints_body_entered"]

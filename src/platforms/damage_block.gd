@@ -44,8 +44,6 @@ func _on_timer_timeout() -> void:
 
 
 func _on_reloadtimer_timeout() -> void:
-	player.dead_ = false
-	player.deathspriteanim.hide()
 	player.respawn()
 	
 
