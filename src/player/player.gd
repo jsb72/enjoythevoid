@@ -535,6 +535,8 @@ func respawn_logic():
 @onready var animation_player_for_teleport_shader: AnimationPlayer = $AnimatedSpriteForTeleportShader/AnimationPlayerForTeleportShader
 var respawned : bool = false
 func respawn():
+	var tween2 = get_tree().create_tween()
+	tween2.tween_property(point_light_2d_2, "energy", 1.0, 1.0)
 	
 	respawned=true
 	sprite.hide()
@@ -578,6 +580,8 @@ func duplicate_sprite():
 
 var dead_ : bool = false
 func play_death_anim():
+	var tween2 = get_tree().create_tween()
+	tween2.tween_property(point_light_2d_2, "energy", 0.0, 1.0)
 	
 	blood_particle.restart()
 	dead_ = true

@@ -16,12 +16,12 @@ var zoom_true :bool=false
 
 func _ready() -> void:
 	pass
-	"""t1_1.hide()
+	t1_1.hide()
 	t1_2.hide()
 	t1_3.hide()
 	t2_1.hide()
 	t2_2.hide()
-	t2_3.hide()"""
+	t2_3.hide()
 	
 func _process(delta: float) -> void:
 	"""if btn1 and btn2 and btn3 and btn4 and zoom_true:"""

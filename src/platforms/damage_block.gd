@@ -4,7 +4,7 @@ extends Node2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var sprite_2d_2: Sprite2D = $Sprite2D2
 
-@onready var player: Player = %Player
+@onready var player: Player
 
 @onready var timer: Timer = $Timer
 @onready var reloadtimer: Timer = $reloadtimer
@@ -25,16 +25,17 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Player:
-		#Global.list_des_morts.push_back(body.global_position)
-		timer.start()
-		reloadtimer.start()
-		audio_stream_player_2d.play()
-		Input.start_joy_vibration(0,0.5,0.5)
-		body.play_death_anim()
-		body.shakecamtimer.start()
+		player=body
+		if !body.dead_:
+			#Global.list_des_morts.push_back(body.global_position)
+			timer.start()
+			reloadtimer.start()
+			audio_stream_player_2d.play()
+			Input.start_joy_vibration(0,0.5,0.5)
+			body.play_death_anim()
+			body.shakecamtimer.start()
 
 	
 func _on_timer_timeout() -> void:

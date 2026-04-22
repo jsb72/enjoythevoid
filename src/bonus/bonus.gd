@@ -21,7 +21,7 @@ func _ready() -> void:
 	dashsprite.hide()
 	if !Global.sprint_unlock:
 		if type_bonus == "sprint":
-			info_bonus.text = "[color=#FFFFFF]You can now sprint! Just hold[/color]"
+			info_bonus.text = "[color=#FFFFFF]Sprint = True #Just hold[/color]"
 			
 			dash_icon.show()
 			jump_icon.hide()
@@ -29,7 +29,7 @@ func _ready() -> void:
 			sprintsprite.show()
 	if !Global.dash_unlock:
 		if type_bonus == "dash":
-			info_bonus.text = "[color=#FFFFFF]You can now dash![/color]"
+			info_bonus.text = "[color=#FFFFFF]Dash = True[/color]"
 			
 			dash_icon.show()
 			jump_icon.hide()
@@ -37,7 +37,7 @@ func _ready() -> void:
 			dashsprite.show()
 	if !Global.doublejump_unlock:
 		if type_bonus == "doublejump":
-			info_bonus.text = "[color=#FFFFFF]You can now double jump![/color]"
+			info_bonus.text = "[color=#FFFFFF]Double_jump = True[/color]"
 			
 			jump_icon.show()
 			dash_icon.hide()

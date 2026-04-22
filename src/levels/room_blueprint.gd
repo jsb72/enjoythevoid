@@ -49,12 +49,13 @@ func _ready() -> void:
 		player.process_mode = Node.PROCESS_MODE_INHERIT
 	
 	
-		
+var first_time_on_floor:bool=true		
 func _process(delta: float) -> void:
 	
 	
 	
-	if player.is_on_floor():
+	if player.is_on_floor() and first_time_on_floor:
+		first_time_on_floor=false
 		var tween = get_tree().create_tween()
 		tween.tween_property(player.point_light_2d, "energy", 1.0, 10.0)
 		var tween2 = get_tree().create_tween()
@@ -77,7 +78,7 @@ func _process(delta: float) -> void:
 		cam.limit_right = 18722
 		cam_2.limit_right = 18722
 
-	if player.is_on_floor():music_player_logic()
+	if !first_time_on_floor:music_player_logic()
 	slowvoid_logic()
 	
 

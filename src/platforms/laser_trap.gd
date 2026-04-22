@@ -5,7 +5,7 @@ extends Node2D
 @export var speed_rotate:float=0.3
 
 @onready var timer: Timer = $Timer
-@onready var player: Player = %Player
+@onready var player: Player 
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
@@ -27,6 +27,7 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Player:
+		player=body
 		body.laser_dmg = true
 		timer.start()
 		audio_stream_player_2d.play()

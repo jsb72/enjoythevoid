@@ -49,12 +49,10 @@ _data = {
 
 [sub_resource type="Gradient" id="Gradient_4fd10"]
 offsets = PackedFloat32Array(0.32258064, 0.48387095, 1)
-colors = PackedColorArray(3.5618727, 3.5618727, 3.5618727, 1, 0.9999952, 0.15136006, 0.10834416, 1, 0, 0, 0, 0)
+colors = PackedColorArray(3.5618727, 3.5618727, 3.5618727, 1, 1.9754877, 0.3482106, 0.26256442, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_nt2fc"]
 gradient = SubResource("Gradient_4fd10")
-width = 128
-height = 128
 use_hdr = true
 fill = 1
 fill_from = Vector2(0.5, 0.5)
@@ -65,7 +63,7 @@ metadata/_snap_enabled = true
 shader = ExtResource("1_x0xp4")
 shader_parameter/beams = 3
 shader_parameter/energy = 6.0
-shader_parameter/roughness = 9
+shader_parameter/roughness = 5
 shader_parameter/frequency = 10
 shader_parameter/speed = 0.5
 shader_parameter/thickness = 0.00800000038
@@ -77,11 +75,11 @@ shader_parameter/color = Color(1, 0, 0, 1)
 shader_parameter/outline_color = Color(1, 0, 0, 1)
 shader_parameter/progress = 1.0
 shader_parameter/y_offset = 0.0
-shader_parameter/fixed_edge_size = 0.0
+shader_parameter/fixed_edge_size = 0.10800000513
 shader_parameter/noise_scale = Vector2(1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lodqg"]
-size = Vector2(716.9998, 44.9998)
+size = Vector2(695.9998, 44.9998)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_nt2fc"]
 random_pitch = 1.0293022
@@ -97,27 +95,35 @@ libraries/ = SubResource("AnimationLibrary_fakmx")
 speed_scale = 0.3
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=684181563]
-position = Vector2(-338, -7.000059)
-scale = Vector2(0.3010627, 0.3010627)
+position = Vector2(-335.99997, -6.0000534)
+scale = Vector2(0.13167538, 0.13167538)
+texture = ExtResource("2_lodqg")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=265689847]
+position = Vector2(332, -5.9999366)
+scale = Vector2(0.13167538, 0.13167538)
 texture = ExtResource("2_lodqg")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=258369829]
+visible = false
 position = Vector2(331, -6.9999423)
 scale = Vector2(0.3010627, 0.3010627)
 texture = ExtResource("2_lodqg")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1589157746]
-offset_left = -401.0
-offset_top = -71.00007
-offset_right = -273.0
-offset_bottom = 56.99993
+offset_left = -360.0
+offset_top = -30.000065
+offset_right = -296.0
+offset_bottom = 33.999935
+scale = Vector2(0.8, 0.8)
 texture = SubResource("GradientTexture2D_nt2fc")
 
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=1611925065]
-offset_left = 267.0
-offset_top = -68.999954
-offset_right = 395.0
-offset_bottom = 59.000046
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1006446140]
+offset_left = 307.99994
+offset_top = -29.999949
+offset_right = 371.99994
+offset_bottom = 34.000053
+scale = Vector2(0.8, 0.8)
 texture = SubResource("GradientTexture2D_nt2fc")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=85802366]
@@ -131,7 +137,7 @@ offset_bottom = 239.86246
 position = Vector2(-153, 2.0000954)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=222596742]
-position = Vector2(150.49998, -9.500002)
+position = Vector2(152.99998, -9.500002)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_lodqg")
 
