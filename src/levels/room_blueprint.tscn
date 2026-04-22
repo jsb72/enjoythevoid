@@ -52,6 +52,7 @@
 [ext_resource type="PackedScene" uid="uid://bdd03axytgixu" path="res://src/platforms/damage_block.tscn" id="46_7f7j5"]
 [ext_resource type="Texture2D" uid="uid://dk52pj28ds5fn" path="res://sprites/zero.png" id="46_73yqq"]
 [ext_resource type="PackedScene" uid="uid://denjct5e4x1jd" path="res://src/elements/cadavre.tscn" id="47_5ihcl"]
+[ext_resource type="Texture2D" uid="uid://qiebne0wvjkb" path="res://sprites/neuron.png" id="47_qgqoh"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="53_1nkay"]
 [ext_resource type="PackedScene" uid="uid://dij3e8be2nf5t" path="res://src/vivants/spider.tscn" id="53_6nwfb"]
 [ext_resource type="PackedScene" uid="uid://ufnf3lc7ewin" path="res://src/vivants/a_atentacle.tscn" id="56_brhbg"]
@@ -474,6 +475,41 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.8, 0.2)
 metadata/_snap_enabled = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w6qp3"]
+texture = ExtResource("47_qgqoh")
+texture_region_size = Vector2i(32, 32)
+0:34/size_in_atlas = Vector2i(21, 11)
+0:34/0 = 0
+49:9/size_in_atlas = Vector2i(9, 22)
+49:9/0 = 0
+0:0/size_in_atlas = Vector2i(28, 15)
+0:0/0 = 0
+53:0/size_in_atlas = Vector2i(11, 9)
+53:0/0 = 0
+65:0/size_in_atlas = Vector2i(15, 7)
+65:0/0 = 0
+72:7/size_in_atlas = Vector2i(6, 23)
+72:7/0 = 0
+65:7/size_in_atlas = Vector2i(7, 21)
+65:7/0 = 0
+58:9/size_in_atlas = Vector2i(7, 23)
+58:9/0 = 0
+29:2/size_in_atlas = Vector2i(14, 14)
+29:2/0 = 0
+38:16/size_in_atlas = Vector2i(11, 13)
+38:16/0 = 0
+24:17/size_in_atlas = Vector2i(12, 12)
+24:17/0 = 0
+11:17/size_in_atlas = Vector2i(13, 13)
+11:17/0 = 0
+0:17/size_in_atlas = Vector2i(11, 14)
+0:17/0 = 0
+22:31/size_in_atlas = Vector2i(21, 13)
+22:31/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_g62an"]
+sources/0 = SubResource("TileSetAtlasSource_w6qp3")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_01erx"]
 size = Vector2(5040, 4218)
@@ -2119,6 +2155,12 @@ position = Vector2(5, -21)
 position = Vector2(-36, 355)
 rotation = 1.3823007
 is_rotatingg = false
+
+[node name="NEURON" type="TileMapLayer" parent="lvl1" unique_id=687511251]
+z_index = 1
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AABuAtX/AAAxAAkAAABuA4f/AAAAAAAAAAAkAiP/AAAAAAAAAABWAVr/AABIAAcAAAC0AQL/AAA1AAAAAACzAbD/AAA6AAkAAADGAgD/AAAAACIAAABZBVj/AABBAAAAAACwBAr/AABBAAcAAAB4Awv/AABIAAcAAACDA97+AABBAAAAAAAIBAr/AABIAAcAAAA=")
+tile_set = SubResource("TileSet_g62an")
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
 visible = false
