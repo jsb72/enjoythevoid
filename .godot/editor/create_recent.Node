@@ -1,3 +1,4 @@
+Parallax2D
 TileMapLayer
 CollisionShape2D
 Area2D
@@ -12,4 +13,3 @@ Polygon2D
 RichTextLabel
 Line2D
 Timer
-CharacterBody2D

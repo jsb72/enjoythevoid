@@ -1142,6 +1142,7 @@ offset_bottom = 2957.0
 color = Color(0.3019608, 0.3019608, 0.3019608, 1)
 
 [node name="ground" type="Sprite2D" parent="lvl1" unique_id=417271694]
+z_index = -10
 position = Vector2(-4151, -82.90402)
 scale = Vector2(0.274, 0.274)
 texture = ExtResource("1_p0cym")
@@ -1157,6 +1158,7 @@ offset_bottom = 6504.0
 color = Color(0.3019608, 0.3019608, 0.3019608, 1)
 
 [node name="ColorRect2" type="ColorRect" parent="lvl1/colors_ground" unique_id=760454520]
+z_index = -11
 offset_left = -3513.0
 offset_top = 114.0
 offset_right = 12595.0
@@ -1164,6 +1166,7 @@ offset_bottom = 139.0
 color = Color(0.54896253, 0.5489626, 0.5489625, 1)
 
 [node name="ColorRect3" type="ColorRect" parent="lvl1/colors_ground" unique_id=1392230140]
+z_index = -10
 offset_left = 14307.0
 offset_top = 112.0
 offset_right = 25894.197
