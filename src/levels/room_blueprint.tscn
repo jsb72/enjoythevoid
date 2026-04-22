@@ -505,7 +505,7 @@ size = Vector2(1446.75, 823)
 size = Vector2(1234, 1146)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1tqiw"]
-size = Vector2(3446.975, 1526.4834)
+size = Vector2(3446.975, 5728.2417)
 
 [sub_resource type="Gradient" id="Gradient_y6lma"]
 offsets = PackedFloat32Array(0.33505154, 0.9948454, 1)
@@ -756,7 +756,7 @@ shader_parameter/density = 0.10000000475
 shader_parameter/speed = Vector2(0.02, 0.01)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qgqoh"]
-size = Vector2(87, 104)
+size = Vector2(186.5, 178)
 
 [node name="room_blueprint" type="Node2D" unique_id=1528742533]
 script = ExtResource("1_76snk")
@@ -2309,6 +2309,7 @@ shape = SubResource("RectangleShape2D_cd7fg")
 
 [node name="laser_trap" parent="lvl3" unique_id=853668133 instance=ExtResource("13_f4kdv")]
 position = Vector2(2183.0002, 3493)
+rotation = -2.300344
 scale = Vector2(0.3, 0.3)
 
 [node name="laser_trap2" parent="lvl3" unique_id=1617506107 instance=ExtResource("13_f4kdv")]
@@ -2326,7 +2327,7 @@ scale = Vector2(0.3, 0.3)
 [node name="camzoneoffset_lvl5" type="Area2D" parent="lvl5" unique_id=551414329]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="lvl5/camzoneoffset_lvl5" unique_id=988926525]
-position = Vector2(22748.62, -1589.269)
+position = Vector2(29353, 3395.8792)
 shape = SubResource("RectangleShape2D_1tqiw")
 
 [node name="ColorRect" type="ColorRect" parent="lvl5" unique_id=446163108]
@@ -3077,6 +3078,26 @@ shape = SubResource("RectangleShape2D_qgqoh")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1236312384]
 position = Vector2(2094, -1063)
+shape = SubResource("RectangleShape2D_qgqoh")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1177870026]
+position = Vector2(7124, -2169)
+shape = SubResource("RectangleShape2D_qgqoh")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=98541651]
+position = Vector2(12216, 31)
+shape = SubResource("RectangleShape2D_qgqoh")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=502425284]
+position = Vector2(12858, 511)
+shape = SubResource("RectangleShape2D_qgqoh")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1208145379]
+position = Vector2(1320, 3179)
+shape = SubResource("RectangleShape2D_qgqoh")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1683014757]
+position = Vector2(-3403, 53)
 shape = SubResource("RectangleShape2D_qgqoh")
 
 [connection signal="body_entered" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_entered"]
