@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c1ye8j32cc6js"]
+[gd_scene format=4 uid="uid://c1ye8j32cc6js"]
 
 [ext_resource type="Script" uid="uid://bx05u75a6jdq8" path="res://src/levels/meta_room_piece.gd" id="1_u6kd6"]
 [ext_resource type="Shader" uid="uid://r5ttx5k57uqv" path="res://shaders/laser.gdshader" id="2_m2xyl"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://mtmitx3k0avp" path="res://src/platforms/3_platformblueprint.tscn" id="14_wu1p7"]
 [ext_resource type="PackedScene" uid="uid://do35bbyy0qllr" path="res://src/platforms/platform.tscn" id="15_lompd"]
 [ext_resource type="PackedScene" uid="uid://dij3e8be2nf5t" path="res://src/vivants/spider.tscn" id="16_wu1p7"]
+[ext_resource type="Texture2D" uid="uid://ujsy1f37c3kn" path="res://sprites/cave/Cave - SmallRocks.png" id="17_1b72q"]
 
 [sub_resource type="Resource" id="Resource_88ojq"]
 script = ExtResource("7_anba5")
@@ -162,6 +163,89 @@ _data = {
 &"RESET": SubResource("Animation_lompd"),
 &"new_animation": SubResource("Animation_wu1p7")
 }
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jqaos"]
+texture = ExtResource("17_1b72q")
+texture_region_size = Vector2i(32, 32)
+37:51/size_in_atlas = Vector2i(13, 13)
+37:51/0 = 0
+26:51/size_in_atlas = Vector2i(10, 13)
+26:51/0 = 0
+0:50/size_in_atlas = Vector2i(13, 14)
+0:50/0 = 0
+13:52/size_in_atlas = Vector2i(13, 12)
+13:52/0 = 0
+51:44/size_in_atlas = Vector2i(6, 20)
+51:44/0 = 0
+57:50/size_in_atlas = Vector2i(7, 14)
+57:50/0 = 0
+51:21/size_in_atlas = Vector2i(12, 6)
+51:21/0 = 0
+57:13/size_in_atlas = Vector2i(6, 8)
+57:13/0 = 0
+50:14/size_in_atlas = Vector2i(7, 7)
+50:14/0 = 0
+51:1/size_in_atlas = Vector2i(5, 13)
+51:1/0 = 0
+56:1/size_in_atlas = Vector2i(8, 11)
+56:1/0 = 0
+57:31/size_in_atlas = Vector2i(7, 15)
+57:31/0 = 0
+49:36/size_in_atlas = Vector2i(8, 8)
+49:36/0 = 0
+51:27/size_in_atlas = Vector2i(5, 7)
+51:27/0 = 0
+9:3/size_in_atlas = Vector2i(6, 5)
+9:3/0 = 0
+16:3/size_in_atlas = Vector2i(5, 4)
+16:3/0 = 0
+22:7/size_in_atlas = Vector2i(5, 7)
+22:7/0 = 0
+28:8/size_in_atlas = Vector2i(7, 7)
+28:8/0 = 0
+36:8/size_in_atlas = Vector2i(13, 8)
+36:8/0 = 0
+35:2/size_in_atlas = Vector2i(8, 6)
+35:2/0 = 0
+43:1/size_in_atlas = Vector2i(6, 7)
+43:1/0 = 0
+28:2/size_in_atlas = Vector2i(7, 6)
+28:2/0 = 0
+21:2/size_in_atlas = Vector2i(7, 5)
+21:2/0 = 0
+3:2/size_in_atlas = Vector2i(5, 5)
+3:2/0 = 0
+2:7/size_in_atlas = Vector2i(7, 7)
+2:7/0 = 0
+9:9/size_in_atlas = Vector2i(6, 5)
+9:9/0 = 0
+16:9/size_in_atlas = Vector2i(4, 5)
+16:9/0 = 0
+38:27/size_in_atlas = Vector2i(6, 7)
+38:27/0 = 0
+11:14/size_in_atlas = Vector2i(7, 10)
+11:14/0 = 0
+25:35/size_in_atlas = Vector2i(24, 15)
+25:35/0 = 0
+1:28/size_in_atlas = Vector2i(24, 21)
+1:28/0 = 0
+25:27/size_in_atlas = Vector2i(6, 7)
+25:27/0 = 0
+32:27/size_in_atlas = Vector2i(5, 7)
+32:27/0 = 0
+2:15/size_in_atlas = Vector2i(8, 9)
+2:15/0 = 0
+18:15/size_in_atlas = Vector2i(8, 11)
+18:15/0 = 0
+26:15/size_in_atlas = Vector2i(9, 9)
+26:15/0 = 0
+36:17/size_in_atlas = Vector2i(13, 10)
+36:17/0 = 0
+44:27/size_in_atlas = Vector2i(7, 7)
+44:27/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_o6del"]
+sources/0 = SubResource("TileSetAtlasSource_jqaos")
 
 [node name="meta_room_piece" type="Node2D" unique_id=1053535631]
 script = ExtResource("1_u6kd6")
@@ -869,6 +953,11 @@ position = Vector2(1208, 3570)
 
 [node name="spider" parent="." unique_id=1458701811 instance=ExtResource("16_wu1p7")]
 position = Vector2(1874, 3693)
+
+[node name="back_order1_" type="TileMapLayer" parent="." unique_id=711371633]
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AACyAMEBAAAlADMAAAD2AMcBAAAaADMAAAAEABwBAAAAADIAAAAyAQ8BAAANADQAAADv/w0BAAAzABUAAAAkAfEAAAAzAAEAAAAWAX0AAAAzABUAAADrAHcAAAAyAA4AAAAGAXwAAAA5AA0AAAARAfwAAAAzABUAAAAQAHcAAAAcAAgAAAAWAZAAAAACAAcAAAAoAHoAAAAJAAkAAAAzAGIAAAAyAA4AAABAAHIBAAANADQAAAAZAG0BAAAyAA4AAADX/4wAAAAcAAgAAAA=")
+tile_set = SubResource("TileSet_o6del")
 
 [connection signal="body_entered" from="cam_zone" to="." method="_on_cam_zone_body_entered"]
 [connection signal="body_exited" from="cam_zone" to="." method="_on_cam_zone_body_exited"]
