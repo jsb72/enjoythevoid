@@ -68,14 +68,17 @@ func _process(delta: float) -> void:
 	
 		
 	if player.global_position.y > 200:
-		cam.limit_right = 28450
-		cam_2.limit_right = 28450
+		cam.limit_right = 28350
+		cam_2.limit_right = 28350
 	else:
 		cam.limit_right = 18722
 		cam_2.limit_right = 18722
 
 	if !first_time_on_floor:music_player_logic()
 	slowvoid_logic()
+	
+	if player.global_position.y > 10000:
+		get_tree().reload_current_scene()
 	
 
 

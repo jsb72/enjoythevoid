@@ -18,3 +18,4 @@ res://src/vivants/fly.gd
 res://src/levels/room_blueprint.gd
 res://src/vivants/spider.tscn
 res://src/vivants/spider.gd
+res://src/global.gd

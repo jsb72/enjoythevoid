@@ -357,6 +357,12 @@ size = Vector2(1591.0845, 806)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brhbg"]
 size = Vector2(1170.5, 892)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6qp3"]
+size = Vector2(414.8506, 123.33862)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g62an"]
+size = Vector2(102.896484, 139.49652)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vb8r4"]
 shader = ExtResource("28_vb8r4")
 shader_parameter/wind_start_threshold = 0.1
@@ -581,7 +587,7 @@ size = Vector2(2460.375, 1046.5)
 size = Vector2(1234, 1146)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1tqiw"]
-size = Vector2(3446.975, 5728.2417)
+size = Vector2(3446.975, 32269.258)
 
 [sub_resource type="Gradient" id="Gradient_y6lma"]
 offsets = PackedFloat32Array(0.33505154, 0.9948454, 1)
@@ -851,12 +857,12 @@ color = Color(0.72156864, 0.72156864, 0.72156864, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(16490.477, 13.524902)
+position = Vector2(0, -8000)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(16540.477, -146.4751)
+position = Vector2(50, -8160)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -875,7 +881,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(16440.477, -146.4751)
+position = Vector2(-50, -8160)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -893,7 +899,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(16540.477, 13.524902)
+position = Vector2(50, -8000)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -903,14 +909,14 @@ follow_damping = true
 dead_zone_width = 0.5
 dead_zone_height = 0.5
 draw_limits = true
-limit_right = 28450
+limit_right = 28350
 noise = SubResource("Resource_7rpky")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(16440.477, 13.524902)
+position = Vector2(-50, -8000)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -920,14 +926,14 @@ follow_damping = true
 dead_zone_width = 0.5
 dead_zone_height = 0.5
 draw_limits = true
-limit_right = 28450
+limit_right = 28350
 noise = SubResource("Resource_7rpky")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(16490.477, -146.4751)
+position = Vector2(0, -8160)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -943,7 +949,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="dezoomlvl7" type="Node2D" parent="." unique_id=448208578 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(16490.477, 13.524902)
+position = Vector2(0, -2270)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -957,7 +963,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(16540.477, -146.4751)
+position = Vector2(50, -8160)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -1482,10 +1488,10 @@ polygon = PackedVector2Array(11247.3, 706, 11738, 516, 12101, 516, 12427, 424, 1
 
 [node name="Polygon2D2" type="Polygon2D" parent="lvl1/Structure/right_decor" unique_id=463204651]
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(13044, -2616, 12194, -2731, 11950, -2731, 12221, -2460, 12653, -2336, 12795, -2143, 12947, -1798, 12910, -1518, 12676, -1495, 12759, -1261, 12777, -1059, 12814, -829, 12952, -797, 13099, -567, 13093, -544, 13084, -519, 13084, -517, 14060, -186)
+polygon = PackedVector2Array(13044, -2616, 12194, -2731, 11950, -2731, 12221, -2460, 12653, -2336, 12795, -2143, 12947, -1798, 12911, -1491, 12702, -1438, 12759, -1261, 12777, -1059, 12814, -829, 12952, -797, 13099, -567, 13093, -544, 13084, -519, 13084, -517, 14060, -186)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="lvl1/Structure/right_decor" unique_id=1030167250]
-polygon = PackedVector2Array(13044, -2616, 12194, -2731, 11950, -2731, 12221, -2460, 12653, -2336, 12795, -2143, 12947, -1798, 12910, -1518, 12676, -1495, 12759, -1261, 12777, -1059, 12814, -829, 12952, -797, 12970, -778, 12989, -747, 13007, -722, 13139, -498, 14062, -185)
+polygon = PackedVector2Array(13044, -2616, 12194, -2731, 11950, -2731, 12221, -2460, 12653, -2336, 12795, -2143, 12947, -1798, 12910, -1489, 12701, -1437, 12759, -1261, 12777, -1059, 12814, -829, 12952, -797, 12970, -778, 12989, -747, 13007, -722, 13139, -498, 14062, -185)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="lvl1/Structure/right_decor" unique_id=1349891364]
 polygon = PackedVector2Array(12986, 182, 12958, 43, 13008, -13, 13056, -430, 14081, -90, 15341, -160, 13050, 922, 12973, 815)
@@ -1618,6 +1624,9 @@ position = Vector2(13119, -240)
 [node name="platform8" parent="lvl1/Structure/right_pt_zone" unique_id=1566709629 instance=ExtResource("8_ltygr")]
 position = Vector2(12935, -399)
 
+[node name="platform14" parent="lvl1/Structure/right_pt_zone" unique_id=1650082806 instance=ExtResource("8_ltygr")]
+position = Vector2(12868, -1637)
+
 [node name="platform9" parent="lvl1/Structure/right_pt_zone" unique_id=596575196 instance=ExtResource("8_ltygr")]
 position = Vector2(12862, -515)
 
@@ -1669,11 +1678,10 @@ position = Vector2(15392, 71)
 
 [node name="laser_trap2" parent="lvl1/Structure" unique_id=1469680047 instance=ExtResource("13_f4kdv")]
 z_index = 1
-position = Vector2(6432.0005, -2244)
-rotation = 1.5707964
+position = Vector2(6306, -2316.0002)
+rotation = 1.6580628
 scale = Vector2(1.2, 1.2)
 reverse_rotate = true
-speed_rotate = 0.4
 
 [node name="fractals" type="Node2D" parent="lvl1" unique_id=1952825093]
 
@@ -1845,8 +1853,8 @@ libraries/ = SubResource("AnimationLibrary_6wgec")
 autoplay = &"new_animation"
 speed_scale = 5.0
 
-[node name="damage_block2" parent="lvl1" unique_id=2116588 instance=ExtResource("46_7f7j5")]
-position = Vector2(3036, -2681)
+[node name="damage_block3" parent="lvl1" unique_id=913775230 instance=ExtResource("46_7f7j5")]
+position = Vector2(12779, -1278)
 
 [node name="damage_block6" parent="lvl1" unique_id=1074440910 instance=ExtResource("46_7f7j5")]
 position = Vector2(5656, -360)
@@ -1876,9 +1884,6 @@ position = Vector2(2476, -1087)
 
 [node name="tunnel" parent="lvl1/laby" unique_id=1067650181 instance=ExtResource("44_brhbg")]
 position = Vector2(4029, -1904)
-
-[node name="tunnel2" parent="lvl1/laby" unique_id=820617528 instance=ExtResource("44_brhbg")]
-position = Vector2(3260, -2683)
 
 [node name="tunnelcorner4" parent="lvl1/laby" unique_id=804664609 instance=ExtResource("43_lmpmd")]
 position = Vector2(3584, -474)
@@ -1985,6 +1990,10 @@ position = Vector2(7366, -2192)
 [node name="3platformblueprint14" parent="lvl1/laby" unique_id=1143229694 instance=ExtResource("32_f3u0r")]
 position = Vector2(5856, -2783)
 
+[node name="3platformblueprint18" parent="lvl1/laby" unique_id=853668133 instance=ExtResource("32_f3u0r")]
+position = Vector2(3526, -2767)
+rotation = 1.5707964
+
 [node name="3platformblueprint15" parent="lvl1/laby" unique_id=1424799785 instance=ExtResource("32_f3u0r")]
 position = Vector2(6424, -2783)
 
@@ -2000,7 +2009,50 @@ offset_left = 12158.0
 offset_top = -2847.0
 offset_right = 13380.0
 offset_bottom = -2748.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 horizontal_alignment = 1
+
+[node name="pt_blueprint" parent="lvl1/laby" unique_id=960706395 instance=ExtResource("16_nfd4m")]
+position = Vector2(6903, -1867)
+rotation = 1.5707964
+
+[node name="pt_blueprint2" parent="lvl1/laby" unique_id=215483568 instance=ExtResource("16_nfd4m")]
+position = Vector2(6903, -1946)
+rotation = 1.5707964
+
+[node name="pt_blueprint5" parent="lvl1/laby" unique_id=887605427 instance=ExtResource("16_nfd4m")]
+position = Vector2(6903, -2002)
+rotation = 1.5707964
+
+[node name="pt_blueprint3" parent="lvl1/laby" unique_id=779009665 instance=ExtResource("16_nfd4m")]
+position = Vector2(6611, -1868)
+rotation = 1.5707964
+
+[node name="pt_blueprint4" parent="lvl1/laby" unique_id=1775241246 instance=ExtResource("16_nfd4m")]
+position = Vector2(6611, -1925)
+rotation = 1.5707964
+
+[node name="pt_blueprint6" parent="lvl1/laby" unique_id=1956019483 instance=ExtResource("16_nfd4m")]
+position = Vector2(6674, -1944)
+
+[node name="pt_blueprint7" parent="lvl1/laby" unique_id=2031093425 instance=ExtResource("16_nfd4m")]
+position = Vector2(6727, -1944)
+
+[node name="pt_blueprint8" parent="lvl1/laby" unique_id=818395793 instance=ExtResource("16_nfd4m")]
+position = Vector2(6747, -2002)
+rotation = 1.5707964
+
+[node name="pt_blueprint9" parent="lvl1/laby" unique_id=1693360907 instance=ExtResource("16_nfd4m")]
+position = Vector2(6809, -2021)
+
+[node name="pt_blueprint10" parent="lvl1/laby" unique_id=940318870 instance=ExtResource("16_nfd4m")]
+position = Vector2(6833, -2021)
+
+[node name="pt_blueprint11" parent="lvl1/laby" unique_id=711614980 instance=ExtResource("16_nfd4m")]
+position = Vector2(6538, -1855)
+
+[node name="pt_blueprint12" parent="lvl1/laby" unique_id=1334000761 instance=ExtResource("16_nfd4m")]
+position = Vector2(6457, -1855)
 
 [node name="bonus2" parent="lvl1" unique_id=715804290 instance=ExtResource("15_fynux")]
 position = Vector2(1426, -997)
@@ -2016,6 +2068,14 @@ shape = SubResource("RectangleShape2D_1nkay")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="lvl1/novisibleplayerzone" unique_id=1994931871]
 position = Vector2(2841.75, 1912)
 shape = SubResource("RectangleShape2D_brhbg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="lvl1/novisibleplayerzone" unique_id=1130217230]
+position = Vector2(16855.574, 192.34497)
+shape = SubResource("RectangleShape2D_w6qp3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="lvl1/novisibleplayerzone" unique_id=1519341291]
+position = Vector2(16743.402, 103.028656)
+shape = SubResource("RectangleShape2D_g62an")
 
 [node name="spiders" type="Node2D" parent="lvl1" unique_id=1413067626]
 
@@ -2039,6 +2099,9 @@ position = Vector2(4253, 35)
 
 [node name="spider15" parent="lvl1/spiders" unique_id=351638014 instance=ExtResource("53_6nwfb")]
 position = Vector2(9663, -1467)
+
+[node name="spider16" parent="lvl1/spiders" unique_id=1190376745 instance=ExtResource("53_6nwfb")]
+position = Vector2(6725, -1846)
 
 [node name="sprint_bonus" parent="lvl1" unique_id=1577787271 instance=ExtResource("15_fynux")]
 position = Vector2(4711, 1739)
@@ -2463,7 +2526,7 @@ shape = SubResource("RectangleShape2D_tpyur")
 position = Vector2(4159, 3679)
 shape = SubResource("RectangleShape2D_cd7fg")
 
-[node name="laser_trap" parent="lvl3" unique_id=853668133 instance=ExtResource("13_f4kdv")]
+[node name="laser_trap" parent="lvl3" unique_id=933192693 instance=ExtResource("13_f4kdv")]
 position = Vector2(2183.0002, 3493)
 rotation = -2.300344
 scale = Vector2(0.3, 0.3)
@@ -2483,7 +2546,7 @@ scale = Vector2(0.3, 0.3)
 [node name="camzoneoffset_lvl5" type="Area2D" parent="lvl5" unique_id=551414329]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="lvl5/camzoneoffset_lvl5" unique_id=988926525]
-position = Vector2(29353, 3395.8792)
+position = Vector2(29353, 16666.387)
 shape = SubResource("RectangleShape2D_1tqiw")
 
 [node name="ColorRect" type="ColorRect" parent="lvl5" unique_id=446163108]
@@ -3211,7 +3274,7 @@ offset_bottom = -3004.8853
 [node name="redgradientbg" type="TextureRect" parent="red_plafond" unique_id=1953395575]
 offset_left = -3696.0
 offset_top = -3024.0
-offset_right = 19748.0
+offset_right = 39208.35
 offset_bottom = -2000.0
 texture = SubResource("GradientTexture2D_5ihcl")
 
@@ -3269,7 +3332,7 @@ position = Vector2(2094, -1063)
 shape = SubResource("RectangleShape2D_qgqoh")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1177870026]
-position = Vector2(7124, -2169)
+position = Vector2(7223, -2169)
 shape = SubResource("RectangleShape2D_qgqoh")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=98541651]
