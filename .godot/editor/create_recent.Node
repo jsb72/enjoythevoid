@@ -1,10 +1,9 @@
-res://addons/ropesim/RopeAnchor.gd
+Node2D
 ColorRect
 CollisionShape2D
 PinJoint2D
 AudioStreamPlayer2D
 AnimationPlayer
-Node2D
 Polygon2D
 Parallax2D
 CanvasLayer
