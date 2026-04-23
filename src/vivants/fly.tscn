@@ -46,7 +46,10 @@ animations = [{
 [sub_resource type="Gradient" id="Gradient_wfyor"]
 offsets = PackedFloat32Array(0, 0.4347826)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfyor"]
+
 [node name="fly" type="CharacterBody2D" unique_id=1079513456]
+z_index = 5
 script = ExtResource("1_wjpkc")
 metadata/_edit_horizontal_guides_ = [85.0]
 
@@ -67,6 +70,7 @@ line_width = 0.0
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="Rope" unique_id=945559420]
+z_index = 5
 points = PackedVector2Array(0, 0, 0, 8.722748, 0, 17.371956, 0, 25.920254, 0, 34.346664, 0, 42.635834, 0, 50.776997, 0, 58.762894, 0, 66.58884, 0, 74.25188, 0, 81.75029, 0, 89.083046, 0, 96.249596, 0, 103.24962, 0, 110.08296, 0, 116.74963)
 width = 1.0
 default_color = Color(0, 0, 0, 1)
@@ -80,7 +84,11 @@ one_shot = true
 autostart = true
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=2071677612]
-target_position = Vector2(0, 2500)
+target_position = Vector2(-150, 1000)
+collision_mask = 2
+
+[node name="RayCast2D2" type="RayCast2D" parent="." unique_id=977717851]
+target_position = Vector2(150, 1000)
 collision_mask = 2
 
 [node name="bomb" parent="." unique_id=1115807001 instance=ExtResource("2_gpxll")]
@@ -97,5 +105,8 @@ modulate = Color(1, 0, 0, 0)
 offset_top = 22.0
 offset_right = 40.0
 offset_bottom = 62.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=544128252]
+shape = SubResource("RectangleShape2D_wfyor")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
