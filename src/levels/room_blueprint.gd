@@ -91,6 +91,8 @@ func music_player_logic():
 	if player.global_position.x < -3562:
 		index_music=1
 		label_music="noise"
+		var tween = get_tree().create_tween()
+		tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 2.0)
 		
 	if !lvl_2_loaded:
 		if player.global_position.x > -3562:
@@ -111,6 +113,8 @@ func music_player_logic():
 		if player.global_position.x > 1310:
 			index_music=1
 			label_music="noise"
+			var tween = get_tree().create_tween()
+			tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 2.0)
 			
 	if player.global_position.x > 6500 and player.global_position.y > 658 and player.global_position.x < 13000 and player.global_position.y < 3900:
 		var tween = get_tree().create_tween()

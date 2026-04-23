@@ -15,3 +15,4 @@ res://src/platforms/dmgblockecrasevertical.gd
 res://src/levels/meta_room_piece.tscn
 res://src/vivants/fly.tscn
 res://src/vivants/fly.gd
+res://src/levels/room_blueprint.gd
