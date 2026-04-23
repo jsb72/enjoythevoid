@@ -594,7 +594,7 @@ use_hdr = true
 fill_to = Vector2(0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7f7j5"]
-size = Vector2(4037.8684, 2857.106)
+size = Vector2(4046.8677, 2857.106)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxno5"]
 size = Vector2(15306.57, 667.88086)
@@ -851,12 +851,12 @@ color = Color(0.72156864, 0.72156864, 0.72156864, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(27305.197, 640.4121)
+position = Vector2(8273.092, 1925.3652)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(18082, 480.4121)
+position = Vector2(8323.092, 1765.3652)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -875,7 +875,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(18082, 480.4121)
+position = Vector2(8223.092, 1765.3652)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -893,7 +893,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(27355.197, 640.4121)
+position = Vector2(8323.092, 1925.3652)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -909,7 +909,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(27255.197, 640.4121)
+position = Vector2(8223.092, 1925.3652)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -925,7 +925,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(27305.197, 480.4121)
+position = Vector2(8273.092, 1765.3652)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -941,7 +941,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 
 [node name="dezoomlvl7" type="Node2D" parent="." unique_id=448208578 node_paths=PackedStringArray("follow_target")]
 top_level = true
-position = Vector2(27305.197, 640.4121)
+position = Vector2(8273.092, 1925.3652)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -955,7 +955,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(18082, 480.4121)
+position = Vector2(8323.092, 1765.3652)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -2574,7 +2574,7 @@ position = Vector2(6270.461, -203.48285)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lvl5/StaticBody2D2" unique_id=2122531603]
 z_index = 5
-position = Vector2(19421.605, 2931.9297)
+position = Vector2(19426.105, 2931.9297)
 shape = SubResource("RectangleShape2D_7f7j5")
 
 [node name="pt_blueprint" parent="lvl5" unique_id=10759605 instance=ExtResource("16_nfd4m")]
@@ -2991,9 +2991,9 @@ texture = ExtResource("45_1nkay")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="lvl5" unique_id=259710016]
 offset_left = 27848.0
-offset_top = 1125.0
+offset_top = 1134.0
 offset_right = 28198.0
-offset_bottom = 1399.0
+offset_bottom = 1408.0
 text = "« Si tu veux découvrir ce qu'est la matrice, tu devras l'explorer toi-même »"
 horizontal_alignment = 1
 
@@ -3002,11 +3002,13 @@ z_index = -40
 scroll_scale = Vector2(0.95, 0.95)
 
 [node name="NEURON_back" type="TileMapLayer" parent="lvl5/Parallax2D2" unique_id=399492618]
+visible = false
 z_index = 6
 tile_map_data = PackedByteArray("AAD0BBoAAAAmABAAAACQBUYAAAALABEAAACSBlsAAAAYABEAAAA=")
 tile_set = SubResource("TileSet_g62an")
 
 [node name="NEURON_front" type="TileMapLayer" parent="lvl5" unique_id=517531217]
+visible = false
 z_index = 6
 position = Vector2(-1353.2285, -42.818665)
 tile_set = SubResource("TileSet_g62an")

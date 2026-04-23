@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://b2shq2gjd4fvt" path="res://addons/ropesim/Rope.gd" id="13_p6p5d"]
 [ext_resource type="Script" uid="uid://dfppmnngy2wx4" path="res://addons/ropesim/RopeRendererLine2D.gd" id="14_lompd"]
 [ext_resource type="PackedScene" uid="uid://c8mkgg0r4x32f" path="res://src/platforms/plarform_3.tscn" id="14_p6p5d"]
+[ext_resource type="PackedScene" uid="uid://wdfut4kjwfw6" path="res://src/platforms/dmgblockecrasevertical.tscn" id="14_qgxte"]
 [ext_resource type="PackedScene" uid="uid://mtmitx3k0avp" path="res://src/platforms/3_platformblueprint.tscn" id="14_wu1p7"]
 [ext_resource type="PackedScene" uid="uid://do35bbyy0qllr" path="res://src/platforms/platform.tscn" id="15_lompd"]
 [ext_resource type="PackedScene" uid="uid://dij3e8be2nf5t" path="res://src/vivants/spider.tscn" id="16_wu1p7"]
@@ -54,82 +55,6 @@ shader_parameter/progress = 0.6000000285
 shader_parameter/y_offset = 0.0
 shader_parameter/fixed_edge_size = 0.12400000589
 shader_parameter/noise_scale = Vector2(1, 1)
-
-[sub_resource type="Animation" id="Animation_jqaos"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1455, 2085)]
-}
-
-[sub_resource type="Animation" id="Animation_o6del"]
-resource_name = "new_animation"
-length = 3.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1455, 2085), Vector2(1455, 2302), Vector2(1455, 2085)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_cl0n7"]
-_data = {
-&"RESET": SubResource("Animation_jqaos"),
-&"new_animation": SubResource("Animation_o6del")
-}
-
-[sub_resource type="Animation" id="Animation_p6p5d"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1811, 2048)]
-}
-
-[sub_resource type="Animation" id="Animation_1b72q"]
-resource_name = "new_animation"
-length = 3.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1811, 2048), Vector2(1811, 2305), Vector2(1811, 2048)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_jqaos"]
-_data = {
-&"RESET": SubResource("Animation_p6p5d"),
-&"new_animation": SubResource("Animation_1b72q")
-}
 
 [sub_resource type="Animation" id="Animation_lompd"]
 length = 0.001
@@ -990,21 +915,11 @@ position = Vector2(450, 2526)
 [node name="damage_block7" parent="dmg blck" unique_id=1676730612 instance=ExtResource("13_lompd")]
 position = Vector2(1588, 1459)
 
-[node name="damage_block8" parent="dmg blck" unique_id=1543101986 instance=ExtResource("13_lompd")]
-position = Vector2(1455, 2085)
+[node name="dmgblockecrasevertical" parent="dmg blck" unique_id=1286018354 instance=ExtResource("14_qgxte")]
+position = Vector2(1815, 2306)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="dmg blck/damage_block8" unique_id=1153357901]
-libraries/ = SubResource("AnimationLibrary_cl0n7")
-autoplay = &"new_animation"
-speed_scale = 4.0
-
-[node name="damage_block9" parent="dmg blck" unique_id=1579224549 instance=ExtResource("13_lompd")]
-position = Vector2(1811, 2048)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="dmg blck/damage_block9" unique_id=1092860512]
-libraries/ = SubResource("AnimationLibrary_jqaos")
-autoplay = &"new_animation"
-speed_scale = 4.0
+[node name="dmgblockecrasevertical2" parent="dmg blck" unique_id=666134350 instance=ExtResource("14_qgxte")]
+position = Vector2(1493, 2306)
 
 [node name="plarform3" parent="." unique_id=1332977636 instance=ExtResource("14_p6p5d")]
 position = Vector2(681, 1125)

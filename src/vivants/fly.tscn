@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://df67royhaj2fm" path="res://sprites/test_fly_bug.png" id="1_1nper"]
 [ext_resource type="Script" uid="uid://rqckvadgdnc1" path="res://src/vivants/fly.gd" id="1_wjpkc"]
 [ext_resource type="PackedScene" uid="uid://bmwyobu5l8pyt" path="res://src/elements/bomb.tscn" id="2_gpxll"]
+[ext_resource type="Script" uid="uid://b2shq2gjd4fvt" path="res://addons/ropesim/Rope.gd" id="4_5ynmd"]
+[ext_resource type="Script" uid="uid://brklaoabvl73l" path="res://addons/ropesim/RopeAnchor.gd" id="5_evxss"]
+[ext_resource type="Script" uid="uid://dfppmnngy2wx4" path="res://addons/ropesim/RopeRendererLine2D.gd" id="5_wfyor"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gpxll"]
 atlas = ExtResource("1_1nper")
@@ -40,32 +43,37 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_evxss"]
-size = Vector2(16, 24)
+[sub_resource type="Gradient" id="Gradient_wfyor"]
+offsets = PackedFloat32Array(0, 0.4347826)
 
 [node name="fly" type="CharacterBody2D" unique_id=1079513456]
 script = ExtResource("1_wjpkc")
+metadata/_edit_horizontal_guides_ = [85.0]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1687051031]
-position = Vector2(3.8146973e-06, -5.9604645e-08)
+[node name="rendu" type="Node2D" parent="." unique_id=800080577]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="rendu" unique_id=1687051031]
+position = Vector2(-8, 4.999999)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_wfyor")
 autoplay = "default"
 frame_progress = 0.038138397
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1597648743]
-position = Vector2(0, -5)
-shape = SubResource("RectangleShape2D_evxss")
+[node name="Rope" type="Node2D" parent="." unique_id=1065471867]
+position = Vector2(-1, 12)
+script = ExtResource("4_5ynmd")
+num_segments = 15
+line_width = 0.0
+metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
-[node name="PinJoint2D" type="PinJoint2D" parent="." unique_id=1028622955]
-position = Vector2(0, 15)
-node_a = NodePath("..")
-node_b = NodePath("../bomb")
-softness = 16.0
-motor_enabled = true
-
-[node name="bomb" parent="." unique_id=1115807001 instance=ExtResource("2_gpxll")]
-position = Vector2(0, 95)
+[node name="RopeRendererLine2D" type="Line2D" parent="Rope" unique_id=945559420]
+points = PackedVector2Array(0, 0, 0, 8.722748, 0, 17.371956, 0, 25.920254, 0, 34.346664, 0, 42.635834, 0, 50.776997, 0, 58.762894, 0, 66.58884, 0, 74.25188, 0, 81.75029, 0, 89.083046, 0, 96.249596, 0, 103.24962, 0, 110.08296, 0, 116.74963)
+width = 1.0
+default_color = Color(0, 0, 0, 1)
+gradient = SubResource("Gradient_wfyor")
+antialiased = true
+script = ExtResource("5_wfyor")
+metadata/_custom_type_script = "uid://dfppmnngy2wx4"
 
 [node name="Timer" type="Timer" parent="." unique_id=137943850]
 one_shot = true
@@ -74,5 +82,20 @@ autostart = true
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=2071677612]
 target_position = Vector2(0, 2500)
 collision_mask = 2
+
+[node name="bomb" parent="." unique_id=1115807001 instance=ExtResource("2_gpxll")]
+position = Vector2(87, 81)
+
+[node name="RopeAnchor" type="Marker2D" parent="." unique_id=948405414]
+position = Vector2(-1, 128.74963)
+script = ExtResource("5_evxss")
+rope_path = NodePath("../Rope")
+metadata/_custom_type_script = "uid://brklaoabvl73l"
+
+[node name="ancrerouge" type="ColorRect" parent="RopeAnchor" unique_id=720024693]
+modulate = Color(1, 0, 0, 0)
+offset_top = 22.0
+offset_right = 40.0
+offset_bottom = 62.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
