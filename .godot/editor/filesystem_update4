@@ -16,3 +16,5 @@ res://src/levels/meta_room_piece.tscn
 res://src/vivants/fly.tscn
 res://src/vivants/fly.gd
 res://src/levels/room_blueprint.gd
+res://src/vivants/spider.tscn
+res://src/vivants/spider.gd

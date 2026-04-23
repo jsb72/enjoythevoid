@@ -123,9 +123,11 @@ func _on_changementdesurfacetimer_timeout() -> void:
 	
 	
 func prevent_walk_in_air()->void:
-	if !getCollisionSurface(right) and !getCollisionSurface(left) and !getCollisionSurface(top) and !getCollisionSurface(down):
-		global_position-=velocity/5
-		direction=0
+	if !getCollisionSurface(right) and !getCollisionSurface(left) and !getCollisionSurface(top) and !getCollisionSurface(down) and !timer.paused:
+		timer.paused=true
+		direction=-direction
+		await get_tree().create_timer(1).timeout
+		timer.paused=false
 		
 
 func move_animation()->void:
