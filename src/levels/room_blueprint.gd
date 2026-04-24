@@ -78,8 +78,6 @@ func _process(delta: float) -> void:
 	if !first_time_on_floor:music_player_logic()
 	slowvoid_logic()
 	
-	if player.global_position.y>9000:
-		player.glitch_rect.visible=true
 	if player.global_position.y > 13000:
 		Global.first_cycle_done=true
 		get_tree().change_scene_to_file("res://src/accueil.tscn")
@@ -143,6 +141,13 @@ func music_player_logic():
 			
 			var tween = get_tree().create_tween()
 			tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 5.0)
+		
+	if player.global_position.y>9000:
+		player.glitch_rect.visible=true
+		index_music=1
+		label_music="noise"
+		var tween = get_tree().create_tween()
+		tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 5.0)
 			
 			
 	if audio_stream_player.get_stream_playback().get_current_clip_index() !=index_music:

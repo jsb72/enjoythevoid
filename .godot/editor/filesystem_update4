@@ -11,10 +11,3 @@ res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/blur.gdshader
 res://src/global.gd
-res://src/accueil.tscn
-res://src/accueil.gd
-res://src/levels/room_blueprint.gd
-res://src/vivants/sage.tscn
-res://src/vivants/fly.tscn
-res://src/vivants/fly.gd
-res://src/vivants/sage.gd
