@@ -6,7 +6,8 @@ extends Node2D
 @onready var loading: Label = $CanvasLayer/loading
 
 func _ready() -> void:
-	pass
+	if Global.first_cycle_done:
+		rich_text_label.text = "You cannont understand me"
 
 var has_begun:bool=false
 func _process(delta: float) -> void:
