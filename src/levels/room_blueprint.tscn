@@ -863,12 +863,12 @@ color = Color(0.72156864, 0.72156864, 0.72156864, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(0, -8000)
+position = Vector2(12240, -1326)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -8160)
+position = Vector2(12290, -1486)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -887,7 +887,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -8160)
+position = Vector2(12190, -1486)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -905,7 +905,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -8000)
+position = Vector2(12290, -1326)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -922,7 +922,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -8000)
+position = Vector2(12190, -1326)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -939,7 +939,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(0, -8160)
+position = Vector2(12240, -1486)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -956,7 +956,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(50, -8160)
+position = Vector2(12290, -1486)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -1479,12 +1479,15 @@ z_index = 50
 position = Vector2(9.700195, 421)
 polygon = PackedVector2Array(11247.3, 706, 11738, 516, 12101, 516, 12427, 424, 12579, 424, 12579, 332, 12827, 286, 12868, 180, 12988, 180, 12988.001, 440.35632, 12988, 778, 12937, 718, 12887, 663, 11483.151, 700.71027)
 
-[node name="Polygon2D2" type="Polygon2D" parent="lvl1/Structure/right_decor" unique_id=463204651]
+[node name="PolygonMONTAGNE" type="Polygon2D" parent="lvl1/Structure/right_decor" unique_id=463204651]
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(13044, -2616, 12194, -2731, 11950, -2731, 12221, -2460, 12653, -2336, 12795, -2143, 12947, -1798, 12911, -1491, 12702, -1438, 12759, -1261, 12777, -1059, 12814, -829, 12952, -797, 13099, -567, 13093, -544, 13084, -519, 13084, -517, 14060, -186)
+polygon = PackedVector2Array(13044, -2616, 12194, -2731, 11950, -2731, 12221, -2460, 12653, -2336, 12795, -2143, 12947, -1798, 12916.3, -1536.1936, 12702, -1438, 12759, -1261, 12777, -1059, 12814, -829, 12952, -797, 13099, -567, 13093, -544, 13084, -519, 13084, -517, 14060, -186)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="lvl1/Structure/right_decor" unique_id=1030167250]
-polygon = PackedVector2Array(13044, -2616, 12194, -2731, 11950, -2731, 12221, -2460, 12653, -2336, 12795, -2143, 12947, -1798, 12910, -1489, 12701, -1437, 12759, -1261, 12777, -1059, 12814, -829, 12952, -797, 12970, -778, 12989, -747, 13007, -722, 13139, -498, 14062, -185)
+[node name="CollisionPolygonMONTAGNE" type="CollisionPolygon2D" parent="lvl1/Structure/right_decor" unique_id=1030167250]
+polygon = PackedVector2Array(13458, -1626, 12920, -1536, 12701, -1437, 12759, -1261, 12777, -1059, 12814, -829, 12952, -797, 12970, -778, 12989, -747, 13007, -722, 13139, -498, 14062, -185)
+
+[node name="CollisionPolygonMONTAGNE2" type="CollisionPolygon2D" parent="lvl1/Structure/right_decor" unique_id=2110964022]
+polygon = PackedVector2Array(13044, -2616, 12194, -2731, 11950, -2731, 12221, -2460, 12653, -2336, 12795, -2143, 12947, -1798, 13361.598, -1851.226)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="lvl1/Structure/right_decor" unique_id=1349891364]
 polygon = PackedVector2Array(12986, 182, 12958, 43, 13008, -13, 13056, -430, 14081, -90, 15341, -160, 13050, 922, 12973, 815)
@@ -1616,15 +1619,6 @@ position = Vector2(13119, -240)
 
 [node name="platform8" parent="lvl1/Structure/right_pt_zone" unique_id=1566709629 instance=ExtResource("8_ltygr")]
 position = Vector2(12935, -399)
-
-[node name="platform14" parent="lvl1/Structure/right_pt_zone" unique_id=1650082806 instance=ExtResource("8_ltygr")]
-position = Vector2(12868, -1637)
-
-[node name="platform15" parent="lvl1/Structure/right_pt_zone" unique_id=1319333277 instance=ExtResource("8_ltygr")]
-position = Vector2(12593, -1754)
-
-[node name="platform16" parent="lvl1/Structure/right_pt_zone" unique_id=1623492203 instance=ExtResource("8_ltygr")]
-position = Vector2(12518, -1754)
 
 [node name="platform9" parent="lvl1/Structure/right_pt_zone" unique_id=596575196 instance=ExtResource("8_ltygr")]
 position = Vector2(12862, -515)
@@ -2103,7 +2097,7 @@ position = Vector2(9663, -1467)
 position = Vector2(6725, -1846)
 
 [node name="sprint_bonus" parent="lvl1" unique_id=1577787271 instance=ExtResource("15_fynux")]
-position = Vector2(4711, 1739)
+position = Vector2(4711, 1639)
 type_bonus = "sprint"
 
 [node name="sage" parent="lvl1" unique_id=242949502 instance=ExtResource("40_5ihcl")]
@@ -2210,7 +2204,7 @@ texture_scale = 7.82
 [node name="PointLight2D6" type="PointLight2D" parent="lvl1" unique_id=1442861390]
 position = Vector2(12881, -1506)
 color = Color(1.1638972, 1.1638972, 1.1638972, 1)
-energy = 0.36
+energy = 0.6
 texture = SubResource("GradientTexture2D_tkwxf")
 texture_scale = 7.82
 
@@ -2549,7 +2543,7 @@ offset_bottom = 15841.0
 color = Color(0.7204674, 0.7204675, 0.7204674, 1)
 
 [node name="TextureRect" type="TextureRect" parent="lvl5" unique_id=1940401952]
-z_index = 50
+z_index = 4096
 offset_left = 14264.388
 offset_top = 138.96323
 offset_right = 30099.006
@@ -3486,6 +3480,31 @@ shape = SubResource("RectangleShape2D_qgqoh")
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=540901163]
 position = Vector2(27604, 1217)
 shape = SubResource("RectangleShape2D_qgqoh")
+
+[node name="lvl_reload_right" type="Node2D" parent="." unique_id=1833511117]
+
+[node name="platform" parent="lvl_reload_right" unique_id=603881487 instance=ExtResource("8_ltygr")]
+position = Vector2(13482, -1616.8042)
+rotation = -0.26529005
+
+[node name="platform4" parent="lvl_reload_right" unique_id=711118098 instance=ExtResource("8_ltygr")]
+position = Vector2(13275, -2097.0002)
+rotation = 0.006981317
+
+[node name="platform2" parent="lvl_reload_right" unique_id=1452103471 instance=ExtResource("8_ltygr")]
+position = Vector2(13359, -1907)
+rotation = -0.26529005
+
+[node name="platform3" parent="lvl_reload_right" unique_id=1427688372 instance=ExtResource("8_ltygr")]
+position = Vector2(13490, -1798)
+rotation = -0.08901179
+
+[node name="platform5" parent="lvl_reload_right" unique_id=607532100 instance=ExtResource("8_ltygr")]
+position = Vector2(13258, -2281)
+rotation = -0.08901179
+
+[node name="platform6" parent="lvl_reload_right" unique_id=27108509 instance=ExtResource("8_ltygr")]
+position = Vector2(13123, -2452)
 
 [connection signal="body_entered" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_entered"]
 [connection signal="body_exited" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_exited"]

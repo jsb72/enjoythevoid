@@ -5,7 +5,8 @@ extends Node2D
 var iswaken : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if Global.first_cycle_done:
+		animated_sprite_2d.play("stone")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,7 +16,7 @@ func _process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Player:
-		if !iswaken:
+		if !iswaken and !Global.first_cycle_done:
 			var tween2 = get_tree().create_tween()
 			tween2.tween_property(rich_text_label, "modulate:a", 1.0, 1.0)
 			

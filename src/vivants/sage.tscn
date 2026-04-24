@@ -2,10 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://bfgyr2nqo6pc4" path="res://sprites/bigvector.png" id="1_atlln"]
 [ext_resource type="Script" uid="uid://c2u4wogbdyxdq" path="res://src/vivants/sage.gd" id="1_juy4e"]
+[ext_resource type="Texture2D" uid="uid://dmrsbbrarvw1n" path="res://sprites/bigvectorBLACK.png" id="3_o8qme"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_juy4e"]
 atlas = ExtResource("1_atlln")
 region = Rect2(0, 5000, 1250, 1250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbc1u"]
+atlas = ExtResource("3_o8qme")
+region = Rect2(5000, 5000, 1250, 1250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o8qme"]
 atlas = ExtResource("1_atlln")
@@ -31,6 +36,14 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbc1u")
+}],
+"loop": true,
+"name": &"stone",
 "speed": 5.0
 }, {
 "frames": [{
@@ -72,10 +85,8 @@ script = ExtResource("1_juy4e")
 z_index = 4
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_juy4e")
-animation = &"wakeup"
+animation = &"stone"
 autoplay = "default"
-frame = 3
-frame_progress = 1.0
 
 [node name="PointLight2D2" type="PointLight2D" parent="." unique_id=506416439]
 color = Color(1.0309138, 1.0309138, 1.0309138, 1)

@@ -17,3 +17,4 @@ res://src/levels/room_blueprint.gd
 res://src/vivants/sage.tscn
 res://src/vivants/fly.tscn
 res://src/vivants/fly.gd
+res://src/vivants/sage.gd
