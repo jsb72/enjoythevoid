@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://3t2f2pn81x60"]
 
-[ext_resource type="Texture2D" uid="uid://cn2jwlk8pgem2" path="res://sprites/univers.png" id="1_bgnu4"]
+[ext_resource type="Texture2D" uid="uid://setgc3pr83hm" path="res://sprites/univers.png" id="1_bgnu4"]
 [ext_resource type="PackedScene" uid="uid://butf5gp8u4ri6" path="res://src/vivants/followeye.tscn" id="2_yjfjr"]
 
 [sub_resource type="Animation" id="Animation_bgnu4"]

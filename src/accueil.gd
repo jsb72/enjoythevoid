@@ -16,7 +16,6 @@ func _process(delta: float) -> void:
 		if Global.debug_mod:
 			load_game()
 		if Global.first_cycle_done:
-			rich_text_label.hide()
 			start_game()
 	
 var key_pressed:bool=false
@@ -35,7 +34,7 @@ func _on_timer_timeout() -> void:
 func start_game()->void:
 	Fadetoblack.transition(5)
 	await Fadetoblack.on_transition_finished
-	rich_text_label.hide()	
+	if !Global.first_cycle_done:rich_text_label.hide()	
 	video_stream_player.play()
 	timer.start()
 	

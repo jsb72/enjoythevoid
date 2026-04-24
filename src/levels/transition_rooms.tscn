@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dhihe4rrnqw3d"]
 
 [ext_resource type="Texture2D" uid="uid://cs773gk0fxngv" path="res://sprites/rooms/unnamevectord.png" id="1_3s88y"]
-[ext_resource type="Texture2D" uid="uid://ctg21c6yt5dre" path="res://sprites/rooms/bridge.png" id="3_wcg16"]
 [ext_resource type="PackedScene" uid="uid://do35bbyy0qllr" path="res://src/platforms/platform.tscn" id="4_uxlox"]
 [ext_resource type="PackedScene" uid="uid://c0g2bfslm40qt" path="res://src/platforms/pt_blueprint.tscn" id="5_1qo4e"]
 [ext_resource type="PackedScene" uid="uid://bhno22n7k5cmv" path="res://src/elements/portal.tscn" id="5_3s88y"]
@@ -29,11 +28,6 @@ metadata/_edit_vertical_guides_ = [3416.0, -3114.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1440240781]
 texture = ExtResource("1_3s88y")
-
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=344807917]
-visible = false
-z_index = 20
-texture = ExtResource("3_wcg16")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1457820279]
 position = Vector2(-3, -696)
@@ -145,18 +139,6 @@ position = Vector2(638, 10)
 [node name="platform19" parent="." unique_id=949890814 instance=ExtResource("4_uxlox")]
 z_index = 4
 position = Vector2(718, 10)
-
-[node name="Label" type="Label" parent="." unique_id=167706288]
-visible = false
-z_index = 4
-offset_left = -599.0
-offset_top = 395.0
-offset_right = 345.0
-offset_bottom = 494.0
-theme_override_colors/font_color = Color(0.3019608, 0.3019608, 0.3019608, 1)
-theme_override_font_sizes/font_size = 34
-text = "Les pi_ces du fractal ouvriront la Voie..."
-horizontal_alignment = 1
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1737914132]
 color = Color(0, 0, 0, 1)

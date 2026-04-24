@@ -10,7 +10,6 @@
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_mu531"]
 [ext_resource type="AudioStream" uid="uid://cim7pql7240kp" path="res://sounds/musics/Portal Soundtrack - Stop What You Are Doing.mp3" id="5_73yqq"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_j2cwt"]
-[ext_resource type="AudioStream" uid="uid://ds65wgrdxn3rs" path="res://sounds/musics/Trigg & Gusset - Under the Blackbridge (Blue Prince OST).mp3" id="6_1tqiw"]
 [ext_resource type="Script" uid="uid://dimvdouy8g0sv" path="res://addons/phantom_camera/scripts/resources/phantom_camera_noise_2d.gd" id="6_k548o"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_ltygr"]
 [ext_resource type="PackedScene" uid="uid://dayo7lbiwbhw3" path="res://src/elements/tas_de_cadavre.tscn" id="7_j2cwt"]
@@ -52,7 +51,6 @@
 [ext_resource type="PackedScene" uid="uid://bdd03axytgixu" path="res://src/platforms/damage_block.tscn" id="46_7f7j5"]
 [ext_resource type="Texture2D" uid="uid://dk52pj28ds5fn" path="res://sprites/zero.png" id="46_73yqq"]
 [ext_resource type="PackedScene" uid="uid://denjct5e4x1jd" path="res://src/elements/cadavre.tscn" id="47_5ihcl"]
-[ext_resource type="Texture2D" uid="uid://qiebne0wvjkb" path="res://sprites/neuron.png" id="47_qgqoh"]
 [ext_resource type="PackedScene" uid="uid://cuk53lm5g5rl3" path="res://src/platforms/litlelongdmgblock.tscn" id="48_g62an"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="53_1nkay"]
 [ext_resource type="PackedScene" uid="uid://dij3e8be2nf5t" path="res://src/vivants/spider.tscn" id="53_6nwfb"]
@@ -65,7 +63,7 @@
 [sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_7f7j5"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_qrlky"]
-clip_count = 6
+clip_count = 5
 clip_0/name = &"portal"
 clip_0/stream = ExtResource("2_01erx")
 clip_0/auto_advance = 0
@@ -78,13 +76,9 @@ clip_2/auto_advance = 0
 clip_3/name = &"intense"
 clip_3/stream = ExtResource("5_73yqq")
 clip_3/auto_advance = 0
-clip_4/name = &"blue_prince"
-clip_4/stream = ExtResource("6_1tqiw")
+clip_4/name = &"vide"
+clip_4/stream = SubResource("AudioStreamGenerator_7f7j5")
 clip_4/auto_advance = 0
-clip_5/name = &"vide"
-clip_5/stream = SubResource("AudioStreamGenerator_7f7j5")
-clip_5/auto_advance = 0
-initial_clip = 5
 
 [sub_resource type="Environment" id="Environment_vb8r4"]
 background_mode = 3
@@ -482,41 +476,6 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.8, 0.2)
 metadata/_snap_enabled = true
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w6qp3"]
-texture = ExtResource("47_qgqoh")
-texture_region_size = Vector2i(32, 32)
-0:34/size_in_atlas = Vector2i(21, 11)
-0:34/0 = 0
-49:9/size_in_atlas = Vector2i(9, 22)
-49:9/0 = 0
-0:0/size_in_atlas = Vector2i(28, 15)
-0:0/0 = 0
-53:0/size_in_atlas = Vector2i(11, 9)
-53:0/0 = 0
-65:0/size_in_atlas = Vector2i(15, 7)
-65:0/0 = 0
-72:7/size_in_atlas = Vector2i(6, 23)
-72:7/0 = 0
-65:7/size_in_atlas = Vector2i(7, 21)
-65:7/0 = 0
-58:9/size_in_atlas = Vector2i(7, 23)
-58:9/0 = 0
-29:2/size_in_atlas = Vector2i(14, 14)
-29:2/0 = 0
-38:16/size_in_atlas = Vector2i(11, 13)
-38:16/0 = 0
-24:17/size_in_atlas = Vector2i(12, 12)
-24:17/0 = 0
-11:17/size_in_atlas = Vector2i(13, 13)
-11:17/0 = 0
-0:17/size_in_atlas = Vector2i(11, 14)
-0:17/0 = 0
-22:31/size_in_atlas = Vector2i(21, 13)
-22:31/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_g62an"]
-sources/0 = SubResource("TileSetAtlasSource_w6qp3")
-
 [sub_resource type="Gradient" id="Gradient_ogf4b"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
@@ -909,12 +868,12 @@ color = Color(0.72156864, 0.72156864, 0.72156864, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(0, -8000)
+position = Vector2(27118.87, 880.37695)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -8160)
+position = Vector2(18082, 720.37695)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -933,7 +892,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -8160)
+position = Vector2(18082, 720.37695)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -951,7 +910,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -8000)
+position = Vector2(27168.87, 880.37695)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -968,7 +927,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -8000)
+position = Vector2(27068.87, 880.37695)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -985,7 +944,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(0, -8160)
+position = Vector2(27118.87, 720.37695)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -1002,7 +961,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(50, -8160)
+position = Vector2(18082, 720.37695)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -2328,20 +2287,6 @@ position = Vector2(-36, 355)
 rotation = 1.3823007
 is_rotatingg = false
 
-[node name="NEURON" type="TileMapLayer" parent="lvl1" unique_id=687511251]
-visible = false
-z_index = 6
-scale = Vector2(0.5, 0.5)
-tile_map_data = PackedByteArray("AABuAtX/AAAxAAkAAABuA4f/AAAAAAAAAAAkAiP/AAAAAAAAAABWAVr/AABIAAcAAAC0AQL/AAA1AAAAAACzAbD/AAA6AAkAAADGAgD/AAAAACIAAABZBVj/AABBAAAAAACwBAr/AABBAAcAAAB4Awv/AABIAAcAAACDA97+AABBAAAAAAAIBAr/AABIAAcAAAA=")
-tile_set = SubResource("TileSet_g62an")
-
-[node name="NEURONpetit" type="TileMapLayer" parent="lvl1" unique_id=955873006]
-visible = false
-z_index = 6
-scale = Vector2(0.25, 0.25)
-tile_map_data = PackedByteArray("AAAtBhP/AAAxAAkAAAD7BY7/AABBAAAAAAC4BNL+AAAAACIAAABpA/n/AAA1AAAAAAAyBP/9AABIAAcAAACgBQf/AABBAAAAAAC/Bsr+AABIAAcAAACqAhf+AAAxAAkAAADpAtb+AAAAACIAAACNBQ3+AAA1AAAAAAA5CP/9AAAxAAkAAABHCPT9AABBAAAAAACqCX7+AAAAAAAAAADZAsj+AAAxAAkAAABjAwz+AAA1AAAAAABwA//9AAA1AAAAAAA=")
-tile_set = SubResource("TileSet_g62an")
-
 [node name="Node2D" type="Node2D" parent="lvl1" unique_id=800017337]
 
 [node name="whiteparticleforgreenzone" type="GPUParticles2D" parent="lvl1/Node2D" unique_id=706561271]
@@ -3245,17 +3190,6 @@ offset_right = 28198.0
 offset_bottom = 1408.0
 text = "« Si tu veux découvrir ce qu'est la matrice, tu devras l'explorer toi-même »"
 horizontal_alignment = 1
-
-[node name="NEURON_back" type="TileMapLayer" parent="lvl5" unique_id=399492618]
-z_index = 6
-position = Vector2(1631.2598, 273.3755)
-tile_set = SubResource("TileSet_g62an")
-
-[node name="NEURON_front" type="TileMapLayer" parent="lvl5" unique_id=517531217]
-visible = false
-z_index = 6
-position = Vector2(-1353.2285, -42.818665)
-tile_set = SubResource("TileSet_g62an")
 
 [node name="AntialiasedPolygon2D" type="Polygon2D" parent="lvl5" unique_id=1825966902]
 color = Color(0.91764706, 0.91764706, 0.91764706, 1)

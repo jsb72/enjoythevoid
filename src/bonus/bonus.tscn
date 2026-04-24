@@ -2,48 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://0krpdldcn1rw" path="res://sprites/sprint1.png" id="1_ea6r3"]
 [ext_resource type="Script" uid="uid://mscdt2l6ixx3" path="res://src/bonus/bonus.gd" id="1_k404d"]
-[ext_resource type="Texture2D" uid="uid://c84dxhfcuhtmd" path="res://sprites/sprint2.png" id="2_k404d"]
 [ext_resource type="Texture2D" uid="uid://c1pwixmon4bp2" path="res://sprites/dash1.png" id="3_yyq72"]
 [ext_resource type="Texture2D" uid="uid://ctef644vqx5ad" path="res://sprites/doublejump.png" id="4_whhxl"]
 [ext_resource type="Texture2D" uid="uid://be4rl0m53xwjh" path="res://sprites/walljump.png" id="5_eb3bx"]
 [ext_resource type="Script" uid="uid://cv80afgvbn3p7" path="res://addons/controller_icons/objects/ControllerIconTexture.gd" id="6_1bvym"]
-
-[sub_resource type="Animation" id="Animation_yyq72"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_2nmh6"]
-resource_name = "new_animation"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_g7j44"]
-_data = {
-&"RESET": SubResource("Animation_yyq72"),
-&"new_animation": SubResource("Animation_2nmh6")
-}
 
 [sub_resource type="Animation" id="Animation_kbf15"]
 length = 0.001
@@ -199,15 +161,6 @@ texture = ExtResource("4_whhxl")
 visible = false
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_eb3bx")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Node2D/sprites" unique_id=1329979185]
-visible = false
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("2_k404d")
-
-[node name="light_effect_anim" type="AnimationPlayer" parent="Node2D/sprites/Sprite2D2" unique_id=452624367]
-libraries/ = SubResource("AnimationLibrary_g7j44")
-autoplay = &"new_animation"
 
 [node name="fadout_sprit_anim" type="AnimationPlayer" parent="Node2D/sprites" unique_id=551738100]
 libraries/ = SubResource("AnimationLibrary_cqd35")

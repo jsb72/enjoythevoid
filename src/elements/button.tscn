@@ -1,15 +1,11 @@
 [gd_scene format=3 uid="uid://ca0qqvc5pjlky"]
 
 [ext_resource type="Script" uid="uid://dwg2pohsrlcyf" path="res://src/elements/button.gd" id="1_ihcdu"]
-[ext_resource type="Texture2D" uid="uid://dlua5q00whex4" path="res://sprites/rooms/ground_ptWHITE.png" id="2_vvdvm"]
 [ext_resource type="Texture2D" uid="uid://csuiewxwaqi25" path="res://sprites/btn1.png" id="4_wl5o2"]
 [ext_resource type="Texture2D" uid="uid://viwuftj2virg" path="res://sprites/btn2.png" id="5_utlp5"]
 [ext_resource type="Texture2D" uid="uid://bt5xylad21rh8" path="res://sprites/btn1gold.png" id="5_vvdvm"]
 [ext_resource type="AudioStream" uid="uid://ij7h5h6vm1qw" path="res://sounds/microwave-button-82493.mp3" id="5_wl5o2"]
 [ext_resource type="Texture2D" uid="uid://dqn5qfu82doyy" path="res://sprites/btn2gold.png" id="6_ewf5h"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_utlp5"]
-size = Vector2(125, 81)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ab8rq"]
 size = Vector2(33, 25)
@@ -78,20 +74,6 @@ metadata/_snap_enabled = true
 
 [node name="button" type="Area2D" unique_id=1067572409]
 script = ExtResource("1_ihcdu")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=542832843]
-process_mode = 4
-visible = false
-position = Vector2(3.046814, -3.2644348)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1241402372]
-position = Vector2(0, 38.999996)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_vvdvm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=545169149]
-position = Vector2(1.5, 43.252106)
-shape = SubResource("RectangleShape2D_utlp5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=529146898]
 position = Vector2(3.5, -0.5)

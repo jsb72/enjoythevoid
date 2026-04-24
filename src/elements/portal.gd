@@ -4,18 +4,11 @@ class_name Portal
 @export var portal_target:Portal
 @export var portal_reverse_color:bool = false
 @export var black_portal:bool = false
-@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@onready var point_light_2d: PointLight2D = $PointLight2D
 @onready var sound: AudioStreamPlayer2D = $sound
 
 
 func _ready() -> void:
-	if portal_reverse_color :
-		point_light_2d.color = Color("d477ffff")
-		animated_sprite_2d.play("reverse")
-	if black_portal:
-		point_light_2d.color = Color("5c5c5cff")
-		animated_sprite_2d.play("black")
+	pass
 func _process(delta: float) -> void:
 	pass
 

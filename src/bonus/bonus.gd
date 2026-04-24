@@ -2,7 +2,6 @@ extends Node2D
 
 @onready var text_anim: AnimationPlayer = $Node2D/info_bonus/text_anim
 @onready var move_y_anim: AnimationPlayer = $Node2D/move_y_anim
-@onready var light_effect_anim: AnimationPlayer = $Node2D/sprites/Sprite2D2/light_effect_anim
 @onready var fadout_sprit_anim: AnimationPlayer = $Node2D/sprites/fadout_sprit_anim
 
 @export var type_bonus : String = ""
@@ -59,7 +58,6 @@ func _process(delta: float) -> void:
 
 func anim():
 	move_y_anim.stop()
-	light_effect_anim.stop()
 	fadout_sprit_anim.play("new_animation")
 	text_anim.play("new_animation")
 func _on_area_2d_body_entered(body: Node2D) -> void:

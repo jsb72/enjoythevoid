@@ -1,8 +1,6 @@
 extends Node2D
 
 @export var black:bool= false
-@onready var sprite_2d: Sprite2D = $Sprite2D
-@onready var sprite_2d_2: Sprite2D = $Sprite2D2
 
 @onready var player: Player
 
@@ -13,12 +11,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if black : 
-		sprite_2d.show()
-		sprite_2d_2.hide()
-	else:
-		sprite_2d.hide()
-		sprite_2d_2.show()
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
