@@ -19,3 +19,4 @@ res://src/levels/transition_rooms.tscn
 res://src/bonus/bonus.tscn
 res://src/elements/button.tscn
 res://src/bonus/bonus.gd
+res://src/elements/portal.tscn

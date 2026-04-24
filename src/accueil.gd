@@ -7,7 +7,7 @@ extends Node2D
 
 func _ready() -> void:
 	if Global.first_cycle_done:
-		rich_text_label.text = "You cannot understand me"
+		rich_text_label.text = "You cannot understand"
 
 var has_begun:bool=false
 func _process(delta: float) -> void:
@@ -35,6 +35,7 @@ func start_game()->void:
 	Fadetoblack.transition(5)
 	await Fadetoblack.on_transition_finished
 	if !Global.first_cycle_done:rich_text_label.hide()	
+	else:rich_text_label.text = "You cannot!"
 	video_stream_player.play()
 	timer.start()
 	

@@ -64,7 +64,7 @@ animations = [{
 }]
 
 [sub_resource type="Gradient" id="Gradient_cy2nw"]
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+colors = PackedColorArray(1.353256, 1.353256, 1.353256, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_dlg23"]
 gradient = SubResource("Gradient_cy2nw")
@@ -133,11 +133,11 @@ animation = &"black"
 autoplay = "black"
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=1802170706]
-position = Vector2(-1.4305115e-06, -3.8146973e-06)
+position = Vector2(3.4232924, -3.8146973e-06)
 scale = Vector2(0.6765464, 1.4497421)
 energy = 1.62
 texture = SubResource("GradientTexture2D_dlg23")
-texture_scale = 1.49
+texture_scale = 1.9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=577988718]
 shape = SubResource("RectangleShape2D_i26i4")
