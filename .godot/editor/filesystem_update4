@@ -18,3 +18,6 @@ res://src/elements/fractale.tscn
 res://src/elements/fractale.gd
 res://src/accueil.tscn
 res://src/accueil.gd
+res://shaders/godrays.gdshader
+res://src/levels/meta_room_piece.tscn
+res://src/levels/room_blueprint.gd

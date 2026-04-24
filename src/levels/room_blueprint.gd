@@ -87,11 +87,20 @@ func _process(delta: float) -> void:
 
 #FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS
 @onready var hugetentacles: Node2D = $lvl5/hugetentacles
+@onready var tentacles_void: Node2D = $void/tentacles
+
 func optimization_logic()->void:
 	if player.global_position.y < 8888:
 		hugetentacles.process_mode=Node.PROCESS_MODE_DISABLED
 	else:
 		hugetentacles.process_mode=Node.PROCESS_MODE_INHERIT
+		
+	if player.global_position.x >-4600 and player.global_position.x < -2500:
+		tentacles_void.process_mode=Node.PROCESS_MODE_INHERIT
+		tentacles_void.show()
+	else:
+		tentacles_void.process_mode=Node.PROCESS_MODE_DISABLED
+		tentacles_void.hide()
 	
 var index_music : int = 0
 var label_music : String = ""

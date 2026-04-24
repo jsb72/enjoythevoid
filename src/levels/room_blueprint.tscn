@@ -60,6 +60,7 @@
 [ext_resource type="PackedScene" uid="uid://ufnf3lc7ewin" path="res://src/vivants/a_atentacle.tscn" id="56_brhbg"]
 [ext_resource type="PackedScene" uid="uid://dvio2nnm1fv8q" path="res://src/vivants/yog_sothoth.tscn" id="56_gxno5"]
 [ext_resource type="Texture2D" uid="uid://dmrsbbrarvw1n" path="res://sprites/bigvectorBLACK.png" id="56_qgqoh"]
+[ext_resource type="Shader" uid="uid://b374xol4h6crb" path="res://shaders/godrays.gdshader" id="61_3grwt"]
 
 [sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_7f7j5"]
 
@@ -144,16 +145,15 @@ use_hdr = true
 fill_to = Vector2(0, 1)
 
 [sub_resource type="Gradient" id="Gradient_qgqoh"]
-offsets = PackedFloat32Array(0.23931624, 1)
-colors = PackedColorArray(0.72156864, 0.72156864, 0.72156864, 1, 0, 0, 0, 0)
+colors = PackedColorArray(0.72156864, 0.72156864, 0.72156864, 1, 0.45840502, 0.45840508, 0.45840502, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_w6qp3"]
 gradient = SubResource("Gradient_qgqoh")
 width = 256
 height = 256
 use_hdr = true
-fill_from = Vector2(0.517094, 0.47435898)
-fill_to = Vector2(0.08547009, 0.6923077)
+fill_from = Vector2(0.2905983, 0)
+fill_to = Vector2(0, 0.115384616)
 
 [sub_resource type="Gradient" id="Gradient_f4kdv"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
@@ -554,6 +554,51 @@ scale_min = 0.0
 scale_max = 0.099999994
 scale_curve = SubResource("CurveTexture_aspbp")
 color_ramp = SubResource("GradientTexture1D_scxpf")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wm35a"]
+shader = ExtResource("61_3grwt")
+shader_parameter/angle = -0.3
+shader_parameter/position = -0.2
+shader_parameter/spread = 0.5
+shader_parameter/cutoff = 0.1
+shader_parameter/falloff = 0.2
+shader_parameter/edge_fade = 0.50000002375
+shader_parameter/speed = 3.0
+shader_parameter/ray1_density = 8.0
+shader_parameter/ray2_density = 30.0
+shader_parameter/ray2_intensity = 0.3
+shader_parameter/color = Color(1, 1, 1, 1)
+shader_parameter/hdr = false
+shader_parameter/seed = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3grwt"]
+shader = ExtResource("61_3grwt")
+shader_parameter/angle = -0.4
+shader_parameter/position = -0.4
+shader_parameter/spread = 0.5
+shader_parameter/cutoff = 0.1
+shader_parameter/falloff = 0.2
+shader_parameter/edge_fade = 0.48800002318
+shader_parameter/speed = 3.0
+shader_parameter/ray1_density = 8.0
+shader_parameter/ray2_density = 30.0
+shader_parameter/ray2_intensity = 0.3
+shader_parameter/color = Color(0.6358334, 0.6358334, 0.6358334, 1)
+shader_parameter/hdr = false
+shader_parameter/seed = 5.0
+
+[sub_resource type="Gradient" id="Gradient_3grwt"]
+offsets = PackedFloat32Array(0.17094018, 1)
+colors = PackedColorArray(18.892157, 18.892157, 18.892157, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_wm35a"]
+gradient = SubResource("Gradient_3grwt")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.7, 0.3)
+metadata/_snap_enabled = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_01erx"]
 size = Vector2(5040, 4218)
@@ -1267,9 +1312,9 @@ texture = SubResource("GradientTexture2D_gxno5")
 
 [node name="TextureRect2" type="TextureRect" parent="lvl1/colors_ground" unique_id=1313290099]
 z_index = 1
-offset_left = 12669.0
+offset_left = 12566.513
 offset_top = 100.0
-offset_right = 13149.0
+offset_right = 13125.042
 offset_bottom = 846.0
 texture = SubResource("GradientTexture2D_w6qp3")
 
@@ -2361,6 +2406,46 @@ position = Vector2(5179.5825, -2614.244)
 position = Vector2(1419.5708, -999.11005)
 type_bonus = "walljump"
 
+[node name="godraylvl1" type="Node2D" parent="lvl1" unique_id=58599440]
+
+[node name="godray1" type="ColorRect" parent="lvl1/godraylvl1" unique_id=1687113208]
+z_index = 16
+material = SubResource("ShaderMaterial_wm35a")
+offset_left = -353.06104
+offset_top = -1830.2946
+offset_right = 184.41138
+offset_bottom = 218.58264
+
+[node name="godray2" type="ColorRect" parent="lvl1/godraylvl1" unique_id=149460431]
+z_index = 16
+material = SubResource("ShaderMaterial_3grwt")
+offset_left = 12758.109
+offset_top = 136.61293
+offset_right = 12968.528
+offset_bottom = 602.25903
+
+[node name="TextureRect" type="TextureRect" parent="lvl1/godraylvl1" unique_id=1493447829]
+offset_left = -480.5277
+offset_top = -1839.5273
+offset_right = -41.307617
+offset_bottom = -1400.3071
+texture = SubResource("GradientTexture2D_wm35a")
+
+[node name="godray3" type="ColorRect" parent="lvl1/godraylvl1" unique_id=616350384]
+z_index = 16
+material = SubResource("ShaderMaterial_wm35a")
+offset_left = 16355.76
+offset_top = -1830.2946
+offset_right = 16893.232
+offset_bottom = 218.58264
+
+[node name="TextureRect2" type="TextureRect" parent="lvl1/godraylvl1" unique_id=799929232]
+offset_left = 16319.202
+offset_top = -1778.3702
+offset_right = 16584.043
+offset_bottom = -1513.5303
+texture = SubResource("GradientTexture2D_wm35a")
+
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
 visible = false
 position = Vector2(132, 0)
@@ -2838,12 +2923,6 @@ position = Vector2(28697, 1747)
 
 [node name="platform7" parent="lvl5/platformingzone" unique_id=453684620 instance=ExtResource("8_ltygr")]
 position = Vector2(28616, 1762)
-
-[node name="AAtentacle" parent="lvl5" unique_id=1566691538 node_paths=PackedStringArray("target") instance=ExtResource("56_brhbg")]
-z_index = 100
-position = Vector2(26813, 1563)
-size_multiple = 4
-target = NodePath("../../Player")
 
 [node name="hugetentacles" type="Node2D" parent="lvl5" unique_id=1678858777]
 
