@@ -11,3 +11,8 @@ res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/blur.gdshader
 res://src/global.gd
+res://src/bonus/bonus.tscn
+res://src/bonus/bonus.gd
+res://src/player/player.gd
+res://src/elements/fractale.tscn
+res://src/elements/fractale.gd

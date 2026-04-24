@@ -1,7 +1,8 @@
+TextureRect
+Sprite2D
 AudioStreamPlayer
 Node2D
 ColorRect
-TextureRect
 CollisionShape2D
 CollisionPolygon2D
 Area2D
@@ -11,5 +12,3 @@ AudioStreamPlayer2D
 AnimationPlayer
 Polygon2D
 Parallax2D
-CanvasLayer
-Label

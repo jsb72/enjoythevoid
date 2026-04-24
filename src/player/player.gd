@@ -237,7 +237,7 @@ func wall_jump() -> void:
 	jump_particle.restart()
 
 func try_wall_jump(ignore_wall: bool = false) -> void:
-	if Input.is_action_just_pressed("jump") and (is_on_wall() or ignore_wall) and !dead_:
+	if Input.is_action_just_pressed("jump") and (is_on_wall() or ignore_wall) and Global.walljump_unlock and !dead_:
 		wall_jump()
 
 func try_coyote_wall_jump() -> void:

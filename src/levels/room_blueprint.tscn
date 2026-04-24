@@ -53,6 +53,7 @@
 [ext_resource type="Texture2D" uid="uid://dk52pj28ds5fn" path="res://sprites/zero.png" id="46_73yqq"]
 [ext_resource type="PackedScene" uid="uid://denjct5e4x1jd" path="res://src/elements/cadavre.tscn" id="47_5ihcl"]
 [ext_resource type="Texture2D" uid="uid://qiebne0wvjkb" path="res://sprites/neuron.png" id="47_qgqoh"]
+[ext_resource type="PackedScene" uid="uid://cuk53lm5g5rl3" path="res://src/platforms/litlelongdmgblock.tscn" id="48_g62an"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="53_1nkay"]
 [ext_resource type="PackedScene" uid="uid://dij3e8be2nf5t" path="res://src/vivants/spider.tscn" id="53_6nwfb"]
 [ext_resource type="Script" uid="uid://ddhu3qfummrc2" path="res://addons/antialiased_line2d/antialiased_polygon2d.gd" id="54_w6qp3"]
@@ -1687,12 +1688,14 @@ reverse_rotate = true
 
 [node name="fractale" parent="lvl1/fractals" unique_id=764819064 instance=ExtResource("17_p2ed6")]
 position = Vector2(8342, -109)
+identifiant = 2
 
 [node name="fractale2" parent="lvl1/fractals" unique_id=653933748 instance=ExtResource("17_p2ed6")]
 position = Vector2(3024, -1308)
 
 [node name="fractale4" parent="lvl1/fractals" unique_id=913439784 instance=ExtResource("17_p2ed6")]
 position = Vector2(5760, -368)
+identifiant = 1
 
 [node name="gravas" type="Node2D" parent="lvl1" unique_id=2043255634]
 
@@ -1815,6 +1818,13 @@ is_rotatingg = false
 position = Vector2(8114.9995, 62.999916)
 rotation = -0.17453292
 scale = Vector2(0.8, 0.8)
+is_rotatingg = false
+
+[node name="laser_trap3" parent="lvl1/lasers" unique_id=853668133 instance=ExtResource("13_f4kdv")]
+z_index = 1
+position = Vector2(3386.5046, -67.79038)
+rotation = -1.2356931
+scale = Vector2(0.6, 0.6)
 is_rotatingg = false
 
 [node name="pt_blueprint" parent="lvl1" unique_id=553404117 instance=ExtResource("16_nfd4m")]
@@ -1990,7 +2000,7 @@ position = Vector2(7366, -2192)
 [node name="3platformblueprint14" parent="lvl1/laby" unique_id=1143229694 instance=ExtResource("32_f3u0r")]
 position = Vector2(5856, -2783)
 
-[node name="3platformblueprint18" parent="lvl1/laby" unique_id=853668133 instance=ExtResource("32_f3u0r")]
+[node name="3platformblueprint18" parent="lvl1/laby" unique_id=1508428086 instance=ExtResource("32_f3u0r")]
 position = Vector2(3526, -2767)
 rotation = 1.5707964
 
@@ -2055,7 +2065,7 @@ position = Vector2(6538, -1855)
 position = Vector2(6457, -1855)
 
 [node name="bonus2" parent="lvl1" unique_id=715804290 instance=ExtResource("15_fynux")]
-position = Vector2(1426, -997)
+position = Vector2(4002.5457, -2627.9792)
 type_bonus = "dash"
 
 [node name="novisibleplayerzone" type="Area2D" parent="lvl1" unique_id=2061754216]
@@ -2328,6 +2338,28 @@ amount = 25
 texture = SubResource("GradientTexture2D_qgqoh")
 lifetime = 5.0
 process_material = SubResource("ParticleProcessMaterial_3grwt")
+
+[node name="litlelongdmgblock" parent="lvl1" unique_id=483214926 instance=ExtResource("48_g62an")]
+position = Vector2(5274.2656, -1835.4545)
+
+[node name="litlelongdmgblock2" parent="lvl1" unique_id=1048362839 instance=ExtResource("48_g62an")]
+position = Vector2(3208.2031, -1022.17957)
+
+[node name="litlelongdmgblock4" parent="lvl1" unique_id=1040885171 instance=ExtResource("48_g62an")]
+position = Vector2(5526.3867, -1026.1669)
+
+[node name="litlelongdmgblock5" parent="lvl1" unique_id=1080308369 instance=ExtResource("48_g62an")]
+position = Vector2(7934.2783, -2120.5078)
+
+[node name="litlelongdmgblock6" parent="lvl1" unique_id=1993403078 instance=ExtResource("48_g62an")]
+position = Vector2(8136.0938, -2256.028)
+
+[node name="litlelongdmgblock3" parent="lvl1" unique_id=267074823 instance=ExtResource("48_g62an")]
+position = Vector2(5179.5825, -2614.244)
+
+[node name="bonus" parent="lvl1" unique_id=379160366 instance=ExtResource("15_fynux")]
+position = Vector2(1419.5708, -999.11005)
+type_bonus = "walljump"
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
 visible = false

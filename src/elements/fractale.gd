@@ -5,6 +5,7 @@ extends RigidBody2D
 
 @onready var collision_polygon_2d: CollisionPolygon2D = $CollisionPolygon2D
 
+@export var identifiant:int
 
 var touched = false
 
@@ -15,7 +16,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if !Global.fractal_list[identifiant]:
+		queue_free()
 
 
 
@@ -33,5 +35,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 
 func _on_touchedsong_finished() -> void:
-	queue_free()
+	Global.fractal_list[identifiant]=false
 	Global.nb_fractal +=1

@@ -10,6 +10,7 @@ extends Node2D
 @onready var sprintsprite: Sprite2D = $Node2D/sprites/sprintsprite
 @onready var dashsprite: Sprite2D = $Node2D/sprites/dashsprite
 @onready var doublejump: Sprite2D = $Node2D/sprites/doublejump
+@onready var walljump: Sprite2D = $Node2D/sprites/walljump
 
 @onready var dash_icon: TextureRect = $Node2D/info_bonus/dash_icon
 @onready var jump_icon: TextureRect = $Node2D/info_bonus/jump_icon
@@ -43,6 +44,14 @@ func _ready() -> void:
 			dash_icon.hide()
 			
 			doublejump.show()
+	if !Global.walljump_unlock:
+		if type_bonus == "walljump":
+			info_bonus.text = "[color=#FFFFFF]Wall_jump = True[/color]"
+			
+			jump_icon.show()
+			dash_icon.hide()
+			
+			walljump.show()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -65,4 +74,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			
 		if !Global.doublejump_unlock and type_bonus == "doublejump":
 			Global.doublejump_unlock = true
+			anim()
+			
+		if !Global.walljump_unlock and type_bonus == "walljump":
+			Global.walljump_unlock = true
 			anim()
