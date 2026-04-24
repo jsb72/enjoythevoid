@@ -88,6 +88,7 @@ func _process(delta: float) -> void:
 #FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS
 @onready var hugetentacles: Node2D = $lvl5/hugetentacles
 @onready var tentacles_void: Node2D = $void/tentacles
+@onready var yog_sothoth: Node2D = $"Yog-Sothoth"
 
 func optimization_logic()->void:
 	if player.global_position.y < 8888:
@@ -101,6 +102,13 @@ func optimization_logic()->void:
 	else:
 		tentacles_void.process_mode=Node.PROCESS_MODE_DISABLED
 		tentacles_void.hide()
+		
+	if player.global_position.x >22000 and player.global_position.y < 2400:
+		yog_sothoth.process_mode=Node.PROCESS_MODE_INHERIT
+		yog_sothoth.show()
+	else:
+		yog_sothoth.process_mode=Node.PROCESS_MODE_DISABLED
+		yog_sothoth.hide()
 	
 var index_music : int = 0
 var label_music : String = ""
