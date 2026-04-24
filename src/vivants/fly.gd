@@ -9,6 +9,7 @@ extends CharacterBody2D
 @onready var rendu: Node2D = $rendu
 
 @onready var ancrerouge: ColorRect = $RopeAnchor/ancrerouge
+@onready var rope_renderer_line_2d: RopeRendererLine2D = $Rope/RopeRendererLine2D
 
 @export var free_zone:Area2D
 
@@ -31,6 +32,9 @@ func _physics_process(delta: float) -> void:
 	if (ray_cast_2d.is_colliding() or ray_cast_2d_2.is_colliding()) and !throwing_bomb:#collision mask only collide mask 2 (player is layer collision 2)
 		throwing_bomb=true 
 		
+		var tween4 = get_tree().create_tween()
+		tween4.tween_property(rope_renderer_line_2d, "modulate:a", 0, 0.5)
+		
 		new_bomb.gravity_scale=1
 		
 		var bombpacked = load("res://src/elements/bomb.tscn")
@@ -43,6 +47,10 @@ func _physics_process(delta: float) -> void:
 		new_bomb.hide()
 		await get_tree().create_timer(0.1).timeout
 		new_bomb.show()
+		
+		var tween5 = get_tree().create_tween()
+		tween5.tween_property(rope_renderer_line_2d, "modulate:a", 1, 0.5)
+		
 		var tween = get_tree().create_tween()
 		tween.tween_property(new_bomb, "modulate:a", 1, 0.5)
 		

@@ -1,9 +1,10 @@
+Node2D
+ColorRect
+TextureRect
 CollisionShape2D
 CollisionPolygon2D
 Area2D
 RayCast2D
-Node2D
-ColorRect
 PinJoint2D
 AudioStreamPlayer2D
 AnimationPlayer
@@ -11,4 +12,3 @@ Polygon2D
 Parallax2D
 CanvasLayer
 Label
-TileMapLayer

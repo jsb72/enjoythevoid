@@ -3,31 +3,31 @@
 [ext_resource type="Texture2D" uid="uid://bfgyr2nqo6pc4" path="res://sprites/bigvector.png" id="1_atlln"]
 [ext_resource type="Script" uid="uid://c2u4wogbdyxdq" path="res://src/vivants/sage.gd" id="1_juy4e"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lmpmd"]
-atlas = ExtResource("1_atlln")
-region = Rect2(5000, 5000, 1250, 1250)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_atlln"]
-atlas = ExtResource("1_atlln")
-region = Rect2(3750, 5000, 1250, 1250)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_juy4e"]
 atlas = ExtResource("1_atlln")
-region = Rect2(2500, 5000, 1250, 1250)
+region = Rect2(0, 5000, 1250, 1250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o8qme"]
 atlas = ExtResource("1_atlln")
-region = Rect2(1250, 5000, 1250, 1250)
+region = Rect2(0, 5000, 1250, 1250)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d1y06"]
 atlas = ExtResource("1_atlln")
-region = Rect2(0, 5000, 1250, 1250)
+region = Rect2(1250, 5000, 1250, 1250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ehoc"]
+atlas = ExtResource("1_atlln")
+region = Rect2(2500, 5000, 1250, 1250)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6legv"]
+atlas = ExtResource("1_atlln")
+region = Rect2(5000, 5000, 1250, 1250)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_juy4e"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lmpmd")
+"texture": SubResource("AtlasTexture_juy4e")
 }],
 "loop": false,
 "name": &"default",
@@ -35,16 +35,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_atlln")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_juy4e")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_o8qme")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_d1y06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ehoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6legv")
 }],
 "loop": false,
 "name": &"wakeup",
@@ -75,6 +75,7 @@ sprite_frames = SubResource("SpriteFrames_juy4e")
 animation = &"wakeup"
 autoplay = "default"
 frame = 3
+frame_progress = 1.0
 
 [node name="PointLight2D2" type="PointLight2D" parent="." unique_id=506416439]
 color = Color(1.0309138, 1.0309138, 1.0309138, 1)

@@ -32,11 +32,13 @@ var y_select : int = 1
 @onready var res: Label = $locklayer/Node2D/res
 @onready var fadeoutdigit: AnimationPlayer = $locklayer/Node2D/fadeoutdigit
 
+var cube_opened:bool=false
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	touche_prec.modulate.a = 0.3
 	
-	if Global.cube_opened:animation_player.play("up_door")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -76,8 +78,8 @@ func _process(delta: float) -> void:
 			res.text = ""
 			
 	if res.text == "1972":
-		if !Global.cube_opened:
-			Global.cube_opened = true
+		if !cube_opened:
+			cube_opened = true
 			player.dead_ = false
 			ouverture.play()
 			
@@ -90,7 +92,7 @@ func _process(delta: float) -> void:
 		
 func _on_openlockzone_body_entered(body: Node2D) -> void:
 	if body is Player :
-		if !Global.cube_opened:
+		if !cube_opened:
 			locklayer.show()
 			#line_edit.grab_focus()
 			body.dead_=true

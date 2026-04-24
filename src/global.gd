@@ -1,17 +1,18 @@
 extends Node
 
-var debug_mod:bool=true
+var debug_mod:bool=false
 
 var nb_fractal:int = 0
 
 var door_opened:bool = false
-var cube_opened : bool = false
 
 var dash_unlock:bool = false
 var sprint_unlock:bool = false
 var doublejump_unlock:bool = false
 
 var list_des_morts: Array[Vector2]
+
+var first_cycle_done : bool = false
 
 
 # Called when the node enters the scene tree for the first time.

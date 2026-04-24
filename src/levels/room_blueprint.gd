@@ -6,7 +6,6 @@ extends Node2D
 @onready var cam_2: PhantomCamera2D = %cam2
 @onready var camoffesetbottom: PhantomCamera2D = $camoffesetbottom
 @onready var camoffesetbottom_2: PhantomCamera2D = %camoffesetbottom2
-@onready var dezoomlvl_7: PhantomCamera2D = $dezoomlvl7
 
 @onready var canvas_modulate: CanvasModulate = $CanvasModulate
 
@@ -25,6 +24,7 @@ var lvl_2_loaded:bool = false
 @onready var cadavre: AnimatedSprite2D = $cadavre
 
 func _ready() -> void:
+	
 	
 	cam.noise.positional_noise= true
 	camoffesetbottom.noise.positional_noise= true
@@ -48,6 +48,7 @@ func _ready() -> void:
 @onready var color_rect_fog: ColorRect = $red_plafond/ColorRectFOG
 var first_time_on_floor:bool=true		
 func _process(delta: float) -> void:
+	optimization_logic()
 	
 	if player.global_position.y > -3775:
 		var tween = get_tree().create_tween()
@@ -77,12 +78,23 @@ func _process(delta: float) -> void:
 	if !first_time_on_floor:music_player_logic()
 	slowvoid_logic()
 	
-	if player.global_position.y > 10000:
-		get_tree().reload_current_scene()
+	if player.global_position.y>9000:
+		player.glitch_rect.visible=true
+	if player.global_position.y > 13000:
+		Global.first_cycle_done=true
+		get_tree().change_scene_to_file("res://src/accueil.tscn")
+		#get_tree().reload_current_scene()
 	
 
 
 #FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS#FONCTIONS
+@onready var hugetentacles: Node2D = $lvl5/hugetentacles
+func optimization_logic()->void:
+	if player.global_position.y < 8888:
+		hugetentacles.process_mode=Node.PROCESS_MODE_DISABLED
+	else:
+		hugetentacles.process_mode=Node.PROCESS_MODE_INHERIT
+	
 var index_music : int = 0
 var label_music : String = ""
 var volume_music : float = -10.0
@@ -95,7 +107,7 @@ func music_player_logic():
 		index_music=1
 		label_music="noise"
 		var tween = get_tree().create_tween()
-		tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 2.0)
+		tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 5.0)
 		
 	if !lvl_2_loaded:
 		if player.global_position.x > -3562:
@@ -103,7 +115,7 @@ func music_player_logic():
 			label_music="portal"
 			
 			var tween = get_tree().create_tween()
-			tween.tween_property(canvas_modulate, "color", Color("b8b8b8"), 10.0)
+			tween.tween_property(canvas_modulate, "color", Color("b8b8b8"), 5.0)
 		
 	if lvl_2_loaded:		
 		if player.global_position.x > -3562 and player.global_position.x < 1310:
@@ -111,17 +123,17 @@ func music_player_logic():
 			label_music="stimulation"
 			
 			var tween = get_tree().create_tween()
-			tween.tween_property(canvas_modulate, "color", Color("ffc7c7ff"), 2.0)
+			tween.tween_property(canvas_modulate, "color", Color("ffc7c7ff"), 5.0)
 			
 		if player.global_position.x > 1310:
 			index_music=1
 			label_music="noise"
 			var tween = get_tree().create_tween()
-			tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 2.0)
+			tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 5.0)
 			
 	if player.global_position.x > 6500 and player.global_position.y > 658 and player.global_position.x < 13000 and player.global_position.y < 3900:
 		var tween = get_tree().create_tween()
-		tween.tween_property(canvas_modulate, "color", Color("6459deff"), 2.0)#dbfff4ff
+		tween.tween_property(canvas_modulate, "color", Color("6459deff"), 5.0)#dbfff4ff
 		
 		
 	if player.global_position.x > 14081 :
@@ -130,7 +142,7 @@ func music_player_logic():
 			label_music="intense"
 			
 			var tween = get_tree().create_tween()
-			tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 10.0)
+			tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 5.0)
 			
 			
 	if audio_stream_player.get_stream_playback().get_current_clip_index() !=index_music:
@@ -207,6 +219,8 @@ func _on_no_offset_zone_lvl_2_body_exited(body: Node2D) -> void:
 func _on_camzoneoffset_lvl_5_body_entered(body: Node2D) -> void:
 	if body is Player : 
 		camoffesetbottom.priority = 10
+		"""camoffesetbottom.follow_offset.y=250
+		camoffesetbottom_2.follow_offset.y=250"""
 func _on_camzoneoffset_lvl_5_body_exited(body: Node2D) -> void:
 	if body is Player : 
 		camoffesetbottom.priority = 0

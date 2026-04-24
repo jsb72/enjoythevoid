@@ -1620,12 +1620,6 @@ position = Vector2(12935, -399)
 [node name="platform14" parent="lvl1/Structure/right_pt_zone" unique_id=1650082806 instance=ExtResource("8_ltygr")]
 position = Vector2(12868, -1637)
 
-[node name="platform15" parent="lvl1/Structure/right_pt_zone" unique_id=1319333277 instance=ExtResource("8_ltygr")]
-position = Vector2(12593, -1754)
-
-[node name="platform16" parent="lvl1/Structure/right_pt_zone" unique_id=1623492203 instance=ExtResource("8_ltygr")]
-position = Vector2(12518, -1754)
-
 [node name="platform9" parent="lvl1/Structure/right_pt_zone" unique_id=596575196 instance=ExtResource("8_ltygr")]
 position = Vector2(12862, -515)
 
@@ -2004,12 +1998,12 @@ position = Vector2(7101, -2304)
 rotation = -1.5707964
 
 [node name="Temps" parent="lvl1/laby" unique_id=1268341129 instance=ExtResource("45_lmpmd")]
-offset_left = 12185.001
-offset_top = -2772.9998
-offset_right = 13407.001
-offset_bottom = -2673.9998
-rotation = 0.12755209
-theme_override_font_sizes/font_size = 27
+offset_left = 12158.0
+offset_top = -2847.0
+offset_right = 13380.0
+offset_bottom = -2748.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+horizontal_alignment = 1
 
 [node name="pt_blueprint" parent="lvl1/laby" unique_id=960706395 instance=ExtResource("16_nfd4m")]
 position = Vector2(6903, -1867)
@@ -2122,18 +2116,26 @@ text = "Ceux qui savent se taisent"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="lvl1/FLYZONE" unique_id=889261870]
 position = Vector2(-4.6103516, 209.84094)
-polygon = PackedVector2Array(6728.9556, 1714.2319, 7546.8613, 1672.8772, 7994.256, 1553.9379, 8152.882, 1626.82, 8450.841, 1508.9225, 8603.035, 1438.1841, 9228.621, 1456.9133, 9897.677, 924.0415, 10215.61, 634.15906, 10637.61, 508.15906, 11301.61, 521.15906, 11698.61, 366.15906, 12002.61, 362.15906, 12000.11, 219.77795, 10340.61, 262.15906, 9614.62, 695.8769, 8931.005, 1221.6815, 8680.204, 1219.538, 7959.9585, 1292.42, 6774.9053, 1392.5837)
+polygon = PackedVector2Array(6728.9556, 1714.2319, 7546.8613, 1672.8772, 7994.256, 1553.9379, 8152.882, 1626.82, 8450.841, 1508.9225, 8603.035, 1438.1841, 9228.621, 1456.9133, 9897.677, 924.0415, 10232.547, 696.19165, 10630.681, 567.26154, 11256.609, 577.97955, 11698.188, 451.50775, 12013.919, 461.437, 12000.11, 219.77795, 10332.723, 376.48212, 9614.62, 695.8769, 8931.005, 1221.6815, 8680.204, 1219.538, 7959.9585, 1292.42, 6774.9053, 1392.5837)
 
 [node name="fly" parent="lvl1" unique_id=1079513456 node_paths=PackedStringArray("free_zone") instance=ExtResource("41_5ihcl")]
 position = Vector2(7459, 1743)
 free_zone = NodePath("../FLYZONE")
 
 [node name="fly4" parent="lvl1" unique_id=1727515795 node_paths=PackedStringArray("free_zone") instance=ExtResource("41_5ihcl")]
-position = Vector2(9247, 1397)
+position = Vector2(9072, 1481)
 free_zone = NodePath("../FLYZONE")
 
 [node name="fly5" parent="lvl1" unique_id=1647404557 node_paths=PackedStringArray("free_zone") instance=ExtResource("41_5ihcl")]
-position = Vector2(11004, 639)
+position = Vector2(11334.091, 601.7603)
+free_zone = NodePath("../FLYZONE")
+
+[node name="fly2" parent="lvl1" unique_id=1455604540 node_paths=PackedStringArray("free_zone") instance=ExtResource("41_5ihcl")]
+position = Vector2(11096, 650)
+free_zone = NodePath("../FLYZONE")
+
+[node name="fly3" parent="lvl1" unique_id=1686639578 node_paths=PackedStringArray("free_zone") instance=ExtResource("41_5ihcl")]
+position = Vector2(8579, 1509)
 free_zone = NodePath("../FLYZONE")
 
 [node name="TILES" type="Node2D" parent="lvl1" unique_id=2029442160]
@@ -2142,7 +2144,7 @@ free_zone = NodePath("../FLYZONE")
 z_index = 15
 material = SubResource("ShaderMaterial_vb8r4")
 scale = Vector2(0.75, 0.75)
-tile_map_data = PackedByteArray("AAAkBHb/AAAMABcAAABEBNT/AAAMABcAAAAXBAAAAAAMABwAAABEArMAAAAMABwAAADzA0QAAAAMABwAAABjA4YAAAAAABAAAABHBNn/AAAMABUAAAA=")
+tile_map_data = PackedByteArray("AAAkBHb/AAAMABcAAABHBOD/AAAMABUAAABEBNT/AAAMABcAAAAXBAAAAAAMABwAAABEArMAAAAMABwAAADzA0QAAAAMABwAAABjA4YAAAAAABAAAAA=")
 tile_set = SubResource("TileSet_k4edk")
 
 [node name="herbes_behind_speed1" type="TileMapLayer" parent="lvl1/TILES" unique_id=1811267797]
@@ -3388,7 +3390,6 @@ position = Vector2(27139, 547)
 [node name="red_plafond" type="Node2D" parent="." unique_id=1748682753]
 
 [node name="bgcutscene" type="ColorRect" parent="red_plafond" unique_id=225723151]
-z_index = -200
 offset_left = -3741.0
 offset_top = -10920.0
 offset_right = 19683.0
@@ -3403,7 +3404,6 @@ offset_right = 4219.1143
 offset_bottom = -3004.8853
 
 [node name="redgradientbg" type="TextureRect" parent="red_plafond" unique_id=1953395575]
-z_index = -200
 offset_left = -3696.0
 offset_top = -3024.0
 offset_right = 39208.35
