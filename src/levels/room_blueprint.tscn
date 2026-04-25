@@ -139,8 +139,8 @@ metadata/_snap_count = 7
 gradient = SubResource("Gradient_wm35a")
 width = 1024
 height = 1024
-fill_from = Vector2(0, 0.17521368)
-fill_to = Vector2(0.76495725, 0)
+fill_from = Vector2(0.025641026, 0.1965812)
+fill_to = Vector2(0.53418803, 0)
 
 [sub_resource type="Gradient" id="Gradient_brhbg"]
 colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0)
@@ -490,7 +490,7 @@ fill_to = Vector2(0.8, 0.2)
 metadata/_snap_enabled = true
 
 [sub_resource type="Gradient" id="Gradient_ogf4b"]
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_qgqoh"]
 gradient = SubResource("Gradient_ogf4b")
@@ -500,8 +500,8 @@ fill_to = Vector2(1, 0.5)
 metadata/_snap_enabled = true
 
 [sub_resource type="Gradient" id="Gradient_w6qp3"]
-offsets = PackedFloat32Array(0, 0.3, 0.7, 0.9)
-colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0)
+offsets = PackedFloat32Array(0, 0.3, 0.7, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
 metadata/_snap_enabled = true
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_scxpf"]
@@ -517,13 +517,13 @@ curve = SubResource("Curve_g62an")
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3grwt"]
 particle_flag_disable_z = true
 emission_shape = 3
-emission_box_extents = Vector3(250, 200, 1)
+emission_box_extents = Vector3(2000, 600, 1)
 spread = 180.0
 initial_velocity_min = 4.0
 initial_velocity_max = 8.0
 gravity = Vector3(0, 0, 0)
-scale_min = 0.0
-scale_max = 0.099999994
+scale_min = 0.099999994
+scale_max = 0.5
 scale_curve = SubResource("CurveTexture_aspbp")
 color_ramp = SubResource("GradientTexture1D_scxpf")
 
@@ -542,19 +542,6 @@ shader_parameter/ray2_intensity = 0.3
 shader_parameter/color = Color(1, 1, 1, 1)
 shader_parameter/hdr = false
 shader_parameter/seed = 5.0
-
-[sub_resource type="Gradient" id="Gradient_3grwt"]
-offsets = PackedFloat32Array(0.17094018, 1)
-colors = PackedColorArray(18.892157, 18.892157, 18.892157, 1, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_wm35a"]
-gradient = SubResource("Gradient_3grwt")
-width = 256
-height = 256
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.7, 0.3)
-metadata/_snap_enabled = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_01erx"]
 size = Vector2(5040, 4218)
@@ -856,12 +843,12 @@ color = Color(0.72156864, 0.72156864, 0.72156864, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(0, -8500)
+position = Vector2(6850, 1935)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -8660)
+position = Vector2(6900, 1775)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -880,7 +867,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -8660)
+position = Vector2(6800, 1775)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -898,7 +885,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -8500)
+position = Vector2(6900, 1935)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -915,7 +902,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -8500)
+position = Vector2(6800, 1935)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -932,7 +919,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(0, -8660)
+position = Vector2(6850, 1775)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -949,7 +936,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(50, -8660)
+position = Vector2(6900, 1775)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -1112,7 +1099,7 @@ color = Color(0.18431373, 0.03529412, 0.03529412, 1)
 [node name="TextureRect" type="TextureRect" parent="lvl1" unique_id=1627506987]
 z_index = -199
 offset_left = -3877.0
-offset_top = -1873.0
+offset_top = -9398.0
 offset_right = -403.0
 offset_bottom = 301.0
 texture = SubResource("GradientTexture2D_tuy4g")
@@ -2290,46 +2277,45 @@ position = Vector2(-36, 355)
 rotation = 1.3823007
 is_rotatingg = false
 
-[node name="Node2D" type="Node2D" parent="lvl1" unique_id=800017337]
+[node name="whiteparticle" type="Node2D" parent="lvl1" unique_id=800017337]
 
-[node name="whiteparticleforgreenzone" type="GPUParticles2D" parent="lvl1/Node2D" unique_id=706561271]
+[node name="CanvasLayer" type="CanvasLayer" parent="lvl1/whiteparticle" unique_id=2058540173]
+follow_viewport_enabled = true
+follow_viewport_scale = 0.9
+
+[node name="whiteparticleforgreenzone" type="GPUParticles2D" parent="lvl1/whiteparticle/CanvasLayer" unique_id=424682992]
 z_index = 11
-position = Vector2(7350, 2118)
-amount = 25
+position = Vector2(8492.5, 1625)
+amount = 10
 texture = SubResource("GradientTexture2D_qgqoh")
 lifetime = 5.0
+visibility_rect = Rect2(-2000, -600, 4000, 1200)
 process_material = SubResource("ParticleProcessMaterial_3grwt")
 
-[node name="whiteparticleforgreenzone2" type="GPUParticles2D" parent="lvl1/Node2D" unique_id=1658882006]
+[node name="CanvasLayer2" type="CanvasLayer" parent="lvl1/whiteparticle" unique_id=738196865]
+follow_viewport_enabled = true
+follow_viewport_scale = 1.2
+
+[node name="whiteparticleforgreenzone" type="GPUParticles2D" parent="lvl1/whiteparticle/CanvasLayer2" unique_id=1031432759]
 z_index = 11
-position = Vector2(7801, 2014)
-amount = 25
+position = Vector2(8492.5, 1625)
+amount = 10
 texture = SubResource("GradientTexture2D_qgqoh")
 lifetime = 5.0
+visibility_rect = Rect2(-2000, -600, 4000, 1200)
 process_material = SubResource("ParticleProcessMaterial_3grwt")
 
-[node name="whiteparticleforgreenzone3" type="GPUParticles2D" parent="lvl1/Node2D" unique_id=505391307]
-z_index = 11
-position = Vector2(8291, 1943)
-amount = 25
-texture = SubResource("GradientTexture2D_qgqoh")
-lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_3grwt")
+[node name="CanvasLayer3" type="CanvasLayer" parent="lvl1/whiteparticle" unique_id=284765213]
+follow_viewport_enabled = true
+follow_viewport_scale = 1.5
 
-[node name="whiteparticleforgreenzone4" type="GPUParticles2D" parent="lvl1/Node2D" unique_id=1003775998]
+[node name="whiteparticleforgreenzone" type="GPUParticles2D" parent="lvl1/whiteparticle/CanvasLayer3" unique_id=1696564339]
 z_index = 11
-position = Vector2(8740, 1903)
-amount = 25
+position = Vector2(8492.5, 1625)
+amount = 10
 texture = SubResource("GradientTexture2D_qgqoh")
 lifetime = 5.0
-process_material = SubResource("ParticleProcessMaterial_3grwt")
-
-[node name="whiteparticleforgreenzone5" type="GPUParticles2D" parent="lvl1/Node2D" unique_id=1060314810]
-z_index = 11
-position = Vector2(10148, 1596)
-amount = 25
-texture = SubResource("GradientTexture2D_qgqoh")
-lifetime = 5.0
+visibility_rect = Rect2(-2000, -600, 4000, 1200)
 process_material = SubResource("ParticleProcessMaterial_3grwt")
 
 [node name="litlelongdmgblock5" parent="lvl1" unique_id=1080308369 instance=ExtResource("48_g62an")]
@@ -2380,12 +2366,23 @@ offset_right = -317.73706
 offset_bottom = 389.76965
 rotation = -0.29147
 
-[node name="TextureRect" type="TextureRect" parent="lvl1/godraylvl1" unique_id=1493447829]
-offset_left = -928.4669
-offset_top = -1676.8997
-offset_right = -489.24683
-offset_bottom = -1237.6794
-texture = SubResource("GradientTexture2D_wm35a")
+[node name="godray2" type="ColorRect" parent="lvl1/godraylvl1" unique_id=1881341107]
+z_index = 16
+material = SubResource("ShaderMaterial_wm35a")
+offset_left = -1517.0
+offset_top = -2939.0
+offset_right = -979.5276
+offset_bottom = -890.1228
+rotation = -0.29147
+
+[node name="godray4" type="ColorRect" parent="lvl1/godraylvl1" unique_id=1872449629]
+z_index = 16
+material = SubResource("ShaderMaterial_wm35a")
+offset_left = -2107.0
+offset_top = -4152.0
+offset_right = -1569.5276
+offset_bottom = -2103.1228
+rotation = -0.29147
 
 [node name="godray3" type="ColorRect" parent="lvl1/godraylvl1" unique_id=616350384]
 z_index = 16
@@ -2394,13 +2391,6 @@ offset_left = 16355.76
 offset_top = -1830.2946
 offset_right = 16893.232
 offset_bottom = 218.58264
-
-[node name="TextureRect2" type="TextureRect" parent="lvl1/godraylvl1" unique_id=799929232]
-offset_left = 16319.202
-offset_top = -1778.3702
-offset_right = 16584.043
-offset_bottom = -1513.5303
-texture = SubResource("GradientTexture2D_wm35a")
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
 visible = false

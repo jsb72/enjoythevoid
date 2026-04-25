@@ -18,3 +18,4 @@ res://src/accueil.tscn
 res://src/player/player.tscn
 res://src/player/states/idle_state.gd
 res://src/player/states/dash_state.gd
+res://src/vivants/fly.tscn
