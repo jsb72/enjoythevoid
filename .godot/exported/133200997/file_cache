@@ -61,7 +61,7 @@ res://src/levels/jump_room.tscn::3fe5e3b35b75e58140815a86c8d3880c::1776197434::r
 res://src/levels/meta_room_piece.tscn::8f69d428a639757e23a9a16aa19c282c::1777109699::res://.godot/exported/133200997/export-0f806d718e6d8d2dcbd414d62e1c85ea-meta_room_piece.scn
 res://src/levels/portal_room.tscn::7bc9cda9a1f0a06e000a5b165a8773ce::1776197434::res://.godot/exported/133200997/export-c7c78cfa72c2e0d8446be42a76150fcf-portal_room.scn
 res://src/levels/room_1.tscn::3b7fc13544f6d385eaf781df1497f5f3::1776197434::res://.godot/exported/133200997/export-ebebd2883edc91435908b64a3e3e42e4-room_1.scn
-res://src/levels/room_blueprint.tscn::4843ccad344420ed802f0aba5e588094::1777110696::res://.godot/exported/133200997/export-2388893ce8b32192889e9c56ebf99eaf-room_blueprint.scn
+res://src/levels/room_blueprint.tscn::7168fb497d018e045aef9532fe89f0a3::1777116317::res://.godot/exported/133200997/export-2388893ce8b32192889e9c56ebf99eaf-room_blueprint.scn
 res://src/levels/room_piece.tscn::d5fa520453726776810e238abc8124f0::1776677884::res://.godot/exported/133200997/export-5e9b921bc0b1419f6911d26c549c6d6a-room_piece.scn
 res://src/levels/transition_rooms.tscn::07ba02e81f6ee331b3b4cfc6da7b264b::1777062838::res://.godot/exported/133200997/export-1f8afdd358944e4b81a16572aa9188b9-transition_rooms.scn
 res://src/particles/ground_particle.tscn::50d878fab6cb7fe894f464ea2e48a3bc::1776197434::res://.godot/exported/133200997/export-052e73bd2a7085044463e6d5273ec5b7-ground_particle.scn
@@ -93,7 +93,7 @@ res://src/generique.tscn::6529f0f3e4bf1597bdf471379af4f4eb::1776197434::res://.g
 res://src/particles/black_particule.tscn::3e64752b6672fceab421b5fd50999c21::1776890545::res://.godot/exported/133200997/export-8a02bb901a36f457c1cf49f7e65aef8b-black_particule.scn
 res://src/particles/run_particle.tscn::4b5aa4c4d6da66e2add4af1196e8f6ff::1776197434::res://.godot/exported/133200997/export-ca2e838e16e6bdcb83fd2f0ade5de7a3-run_particle.scn
 res://src/particles/blood_particle.tscn::2cd0a731e61622c2df591a8890f3c063::1776197434::res://.godot/exported/133200997/export-4277ad1dbbdbf90eb427c9b92763ea75-blood_particle.scn
-res://src/vivants/spider.tscn::9b42fb53e9b5c8178470f6aad13aaa91::1776967561::res://.godot/exported/133200997/export-52090b2c5e4c28b6c843c02f8a57148b-spider.scn
+res://src/vivants/spider.tscn::f4bd1f31e6fbe315d5ea1b774a33b235::1777114186::res://.godot/exported/133200997/export-52090b2c5e4c28b6c843c02f8a57148b-spider.scn
 res://src/platforms/tunnelmid.tscn::4fdbf54793e8e118350672a03736ba70::1776197434::res://.godot/exported/133200997/export-0c3bdcb3044650180ca6de3764754196-tunnelmid.scn
 res://src/platforms/tunnel_corner.tscn::b8cfe90f1b27f061d84d3cd4ce419080::1776197434::res://.godot/exported/133200997/export-2c1a234d0fb9729d56c7fd83d295a75f-tunnel_corner.scn
 res://src/platforms/tunnel.tscn::5ca394a4ebf32cd8539081983d28061d::1776197434::res://.godot/exported/133200997/export-c09ef651275c4488bcee618f71f03bdf-tunnel.scn
@@ -110,7 +110,7 @@ res://src/vivants/followeye.tscn::a12ddb1b55c9af85cad2bec3cb56b112::1776779562::
 res://src/vivants/yog_sothoth.tscn::176cda2ebd05a456e8be5ae63e65c966::1776197434::res://.godot/exported/133200997/export-9a1a55ae90d5d6a7e6d6536c9a05c192-yog_sothoth.scn
 res://src/levels/escalier_little_black_reverse.tscn::f799d6f4c60e689668404a435a9e3d4d::1776197434::res://.godot/exported/133200997/export-7a70ee95b372e26fe14194f546a39bb0-escalier_little_black_reverse.scn
 res://src/elements/bomb.tscn::b4d17456abb8938cb1e17d8089e678b4::1776887830::res://.godot/exported/133200997/export-ea6c62fa6dfb1835d67d9f033e4ded40-bomb.scn
-res://src/vivants/fly.tscn::3c5219d17bfe16aed58de27733b3a405::1777060363::res://.godot/exported/133200997/export-e589d08f270ad3ff50c9d4cfd1e324f7-fly.scn
+res://src/vivants/fly.tscn::b72f0cefbfc4e1ee5a4fc02d52234721::1777114650::res://.godot/exported/133200997/export-e589d08f270ad3ff50c9d4cfd1e324f7-fly.scn
 res://src/vivants/sage.tscn::56ca64aa90634c7d091bb76fe030f4ed::1777060000::res://.godot/exported/133200997/export-ed7a8f019af3c971998ddd3473ced19e-sage.scn
 res://src/fadetoblack.tscn::2aaad968ca2fc6114f11603cb833d510::1776197434::res://.godot/exported/133200997/export-db47740fdbb22f7126ab72896a4debe8-fadetoblack.scn
 res://src/platforms/plarform_3.tscn::f5eb58024016b8cee2257d27e8212cf2::1776805321::res://.godot/exported/133200997/export-78edc9b488496e3993ff5837f9641ff4-plarform_3.scn
