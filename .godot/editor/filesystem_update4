@@ -11,4 +11,6 @@ res://shaders/starfield.gdshader
 res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/blur.gdshader
+res://src/levels/meta_room_piece.tscn
 res://src/global.gd
+res://src/elements/button.tscn

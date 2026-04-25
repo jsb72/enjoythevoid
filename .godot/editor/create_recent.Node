@@ -1,3 +1,4 @@
+TileMapLayer
 VisibleOnScreenNotifier2D
 ColorRect
 Node2D
@@ -12,4 +13,3 @@ PinJoint2D
 AudioStreamPlayer2D
 AnimationPlayer
 Polygon2D
-Parallax2D

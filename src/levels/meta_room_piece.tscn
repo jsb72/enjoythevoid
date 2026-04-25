@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://cedl47qrbl21r" path="res://sprites/cave/Cave - RockCombinations1BLACK.png" id="20_cl0n7"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="21_sqkqu"]
 [ext_resource type="Shader" uid="uid://b374xol4h6crb" path="res://shaders/godrays.gdshader" id="23_60ogs"]
+[ext_resource type="Texture2D" uid="uid://fhacyvqvhyv7" path="res://sprites/cable_elec.png" id="24_b7nc7"]
 
 [sub_resource type="Resource" id="Resource_88ojq"]
 script = ExtResource("7_anba5")
@@ -321,6 +322,21 @@ shader_parameter/ray2_intensity = 0.3
 shader_parameter/color = Color(1, 1, 1, 1)
 shader_parameter/hdr = false
 shader_parameter/seed = 5.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0a4x0"]
+texture = ExtResource("24_b7nc7")
+texture_region_size = Vector2i(32, 32)
+2:0/size_in_atlas = Vector2i(51, 22)
+2:0/0 = 0
+33:23/size_in_atlas = Vector2i(20, 19)
+33:23/0 = 0
+21:23/size_in_atlas = Vector2i(9, 19)
+21:23/0 = 0
+1:22/size_in_atlas = Vector2i(17, 17)
+1:22/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_thuay"]
+sources/0 = SubResource("TileSetAtlasSource_0a4x0")
 
 [node name="meta_room_piece" type="Node2D" unique_id=1053535631]
 script = ExtResource("1_u6kd6")
@@ -1133,13 +1149,19 @@ offset_bottom = 5168.0
 position = Vector2(1111.5, 2237.25)
 shape = SubResource("RectangleShape2D_sqkqu")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1465727935]
+[node name="godray" type="ColorRect" parent="." unique_id=1465727935]
 z_index = 16
 material = SubResource("ShaderMaterial_b7nc7")
-offset_left = -597.0
-offset_top = -338.0
-offset_right = -254.0
-offset_bottom = 1246.0
+offset_left = -985.0
+offset_top = -255.0
+offset_right = -642.0
+offset_bottom = 1329.0
+rotation = -0.29147
+
+[node name="tilecablelec" type="TileMapLayer" parent="." unique_id=51859679]
+z_index = 16
+tile_map_data = PackedByteArray("AABCADMAAAACAAAAAAARAHEAAAAhABcAAACQAEMAAAAhABcAAADt/4wAAAABABYAAACHAIEAAAAVABcAAAA=")
+tile_set = SubResource("TileSet_thuay")
 
 [connection signal="body_entered" from="cam_zone" to="." method="_on_cam_zone_body_entered"]
 [connection signal="body_exited" from="cam_zone" to="." method="_on_cam_zone_body_exited"]

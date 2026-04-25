@@ -2356,10 +2356,11 @@ type_bonus = "walljump"
 [node name="godray1" type="ColorRect" parent="lvl1/godraylvl1" unique_id=1687113208]
 z_index = 16
 material = SubResource("ShaderMaterial_wm35a")
-offset_left = -353.06104
-offset_top = -1830.2946
-offset_right = 184.41138
-offset_bottom = 218.58264
+offset_left = -855.2095
+offset_top = -1659.1075
+offset_right = -317.73706
+offset_bottom = 389.76965
+rotation = -0.29147
 
 [node name="godray2" type="ColorRect" parent="lvl1/godraylvl1" unique_id=149460431]
 z_index = 16
@@ -2370,10 +2371,10 @@ offset_right = 12968.528
 offset_bottom = 602.25903
 
 [node name="TextureRect" type="TextureRect" parent="lvl1/godraylvl1" unique_id=1493447829]
-offset_left = -480.5277
-offset_top = -1839.5273
-offset_right = -41.307617
-offset_bottom = -1400.3071
+offset_left = -928.4669
+offset_top = -1676.8997
+offset_right = -489.24683
+offset_bottom = -1237.6794
 texture = SubResource("GradientTexture2D_wm35a")
 
 [node name="godray3" type="ColorRect" parent="lvl1/godraylvl1" unique_id=616350384]
