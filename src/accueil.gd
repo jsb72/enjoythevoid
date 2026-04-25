@@ -7,7 +7,7 @@ extends Node2D
 
 func _ready() -> void:
 	if Global.first_cycle_done:
-		rich_text_label.text = "You cannot understand"
+		rich_text_label.text = "You cannot understand me"
 
 var has_begun:bool=false
 func _process(delta: float) -> void:

@@ -230,5 +230,8 @@ volume_db = -5.0
 [node name="changementdesurfacetimer" type="Timer" parent="." unique_id=171047853]
 one_shot = true
 
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=775097706]
+rect = Rect2(-30, -30, 60, 60)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="changementdesurfacetimer" to="." method="_on_changementdesurfacetimer_timeout"]

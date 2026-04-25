@@ -109,4 +109,7 @@ offset_bottom = 62.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=544128252]
 shape = SubResource("RectangleShape2D_wfyor")
 
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=242471388]
+rect = Rect2(-62, -33, 124, 220)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

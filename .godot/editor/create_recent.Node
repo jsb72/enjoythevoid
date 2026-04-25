@@ -1,7 +1,8 @@
-TileMapLayer
+VisibleOnScreenEnabler2D
 VisibleOnScreenNotifier2D
-ColorRect
 Node2D
+TileMapLayer
+ColorRect
 TextureRect
 Sprite2D
 AudioStreamPlayer
@@ -11,5 +12,3 @@ Area2D
 RayCast2D
 PinJoint2D
 AudioStreamPlayer2D
-AnimationPlayer
-Polygon2D

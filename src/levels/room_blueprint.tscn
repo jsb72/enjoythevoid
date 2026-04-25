@@ -2185,6 +2185,13 @@ position = Vector2(0, -88)
 tile_map_data = PackedByteArray("AABFAogAAgAMABwAAAAYAoQAAgAEABsAAAA=")
 tile_set = SubResource("TileSet_k4edk")
 
+[node name="herbes_tiles_frontparallax2" type="TileMapLayer" parent="lvl1/TILES/Parallax2D" unique_id=993338470]
+z_index = 15
+material = SubResource("ShaderMaterial_vb8r4")
+position = Vector2(0, -88)
+tile_map_data = PackedByteArray("AABFAogAAgAMABwAAAAYAoQAAgAEABsAAAA=")
+tile_set = SubResource("TileSet_k4edk")
+
 [node name="Parallax2D2" type="Parallax2D" parent="lvl1/TILES" unique_id=1526487236]
 scroll_scale = Vector2(1.2, 1.2)
 
@@ -2192,7 +2199,7 @@ scroll_scale = Vector2(1.2, 1.2)
 z_index = 20
 material = SubResource("ShaderMaterial_vb8r4")
 scale = Vector2(1.25, 1.25)
-tile_map_data = PackedByteArray("AADZAhgAAgAEABsAAABpAjQAAgAMABwAAAC3AjEAAgAMABUAAAAUAmcAAgAMABUAAAA=")
+tile_map_data = PackedByteArray("AADZAhgAAgAEABsAAABpAjQAAgAMABwAAAC3AjEAAgAMABUAAAA=")
 tile_set = SubResource("TileSet_k4edk")
 
 [node name="PointLight2D" type="PointLight2D" parent="lvl1" unique_id=1701893410]
@@ -2329,23 +2336,38 @@ texture = SubResource("GradientTexture2D_qgqoh")
 lifetime = 5.0
 process_material = SubResource("ParticleProcessMaterial_3grwt")
 
-[node name="litlelongdmgblock" parent="lvl1" unique_id=483214926 instance=ExtResource("48_g62an")]
-position = Vector2(5274.2656, -1835.4545)
-
-[node name="litlelongdmgblock2" parent="lvl1" unique_id=1048362839 instance=ExtResource("48_g62an")]
-position = Vector2(3208.2031, -1022.17957)
-
-[node name="litlelongdmgblock4" parent="lvl1" unique_id=1040885171 instance=ExtResource("48_g62an")]
-position = Vector2(5526.3867, -1026.1669)
-
 [node name="litlelongdmgblock5" parent="lvl1" unique_id=1080308369 instance=ExtResource("48_g62an")]
-position = Vector2(7934.2783, -2120.5078)
+position = Vector2(8125, -2120.5078)
 
 [node name="litlelongdmgblock6" parent="lvl1" unique_id=1993403078 instance=ExtResource("48_g62an")]
-position = Vector2(8136.0938, -2256.028)
+position = Vector2(7933, -2256.028)
 
-[node name="litlelongdmgblock3" parent="lvl1" unique_id=267074823 instance=ExtResource("48_g62an")]
+[node name="labyblackptcorrection" type="Node2D" parent="lvl1" unique_id=1381484320]
 position = Vector2(5179.5825, -2614.244)
+
+[node name="platform3" parent="lvl1/labyblackptcorrection" unique_id=1100216113 instance=ExtResource("8_ltygr")]
+position = Vector2(-752.5825, 26.243896)
+
+[node name="platform4" parent="lvl1/labyblackptcorrection" unique_id=580270454 instance=ExtResource("8_ltygr")]
+position = Vector2(-829.5825, 26.243896)
+
+[node name="labytrap" type="Node2D" parent="lvl1" unique_id=2033972797]
+position = Vector2(5179.5825, -2614.244)
+
+[node name="laser_trap" parent="lvl1/labytrap" unique_id=1785419273 instance=ExtResource("13_f4kdv")]
+position = Vector2(-1972.5435, 1601.5515)
+scale = Vector2(0.3, 0.3)
+is_rotatingg = false
+
+[node name="laser_trap2" parent="lvl1/labytrap" unique_id=1425689831 instance=ExtResource("13_f4kdv")]
+position = Vector2(91.41748, 786.2439)
+scale = Vector2(0.3, 0.3)
+is_rotatingg = false
+
+[node name="laser_trap3" parent="lvl1/labytrap" unique_id=886489092 instance=ExtResource("13_f4kdv")]
+position = Vector2(346.41748, 1595.2439)
+scale = Vector2(0.3, 0.3)
+is_rotatingg = false
 
 [node name="bonus" parent="lvl1" unique_id=379160366 instance=ExtResource("15_fynux")]
 position = Vector2(1419.5708, -999.11005)
