@@ -7,7 +7,7 @@ extends Node2D
 
 func _ready() -> void:
 	if Global.first_cycle_done:
-		rich_text_label.text = "You cannot understand me"
+		rich_text_label.text = "La Vérité est impénétrable"
 
 var has_begun:bool=false
 func _process(delta: float) -> void:
@@ -16,6 +16,11 @@ func _process(delta: float) -> void:
 		if Global.debug_mod:
 			load_game()
 		if Global.first_cycle_done:
+			await get_tree().create_timer(1).timeout
+			Fadetoblack.transition(5)
+			await Fadetoblack.on_transition_finished
+			rich_text_label.text = "Ton désir de savoir te tuera"
+			await get_tree().create_timer(1).timeout
 			start_game()
 	
 var key_pressed:bool=false
@@ -34,8 +39,7 @@ func _on_timer_timeout() -> void:
 func start_game()->void:
 	Fadetoblack.transition(5)
 	await Fadetoblack.on_transition_finished
-	if !Global.first_cycle_done:rich_text_label.hide()	
-	else:rich_text_label.text = "You cannot!"
+	rich_text_label.hide()	
 	video_stream_player.play()
 	timer.start()
 	

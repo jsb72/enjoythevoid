@@ -1,9 +1,9 @@
+TextureRect
 VisibleOnScreenEnabler2D
 VisibleOnScreenNotifier2D
 Node2D
 TileMapLayer
 ColorRect
-TextureRect
 Sprite2D
 AudioStreamPlayer
 CollisionShape2D

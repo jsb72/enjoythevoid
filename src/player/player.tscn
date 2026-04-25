@@ -612,6 +612,7 @@ shader_parameter/shake_color_rate = 0.0
 z_index = 1
 collision_layer = 3
 floor_snap_length = 2.0
+safe_margin = 0.1
 script = ExtResource("1_4anbu")
 max_speed = 389.0
 max_h_velocity_ratio = 3.0

@@ -11,3 +11,10 @@ res://shaders/starfield.gdshader
 res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/blur.gdshader
+res://src/levels/room_blueprint.gd
+res://src/accueil.gd
+res://src/global.gd
+res://src/accueil.tscn
+res://src/player/player.tscn
+res://src/player/states/idle_state.gd
+res://src/player/states/dash_state.gd
