@@ -57,7 +57,16 @@ z_index = 5
 script = ExtResource("1_wjpkc")
 metadata/_edit_horizontal_guides_ = [85.0]
 
+[node name="Timer" type="Timer" parent="." unique_id=137943850]
+one_shot = true
+autostart = true
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=2071677612]
+target_position = Vector2(0, 1000)
+collision_mask = 2
+
 [node name="rendu" type="Node2D" parent="." unique_id=800080577]
+position = Vector2(0, -129)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="rendu" unique_id=1687051031]
 position = Vector2(-8, 4.999999)
@@ -67,7 +76,7 @@ autoplay = "default"
 frame_progress = 0.038138397
 
 [node name="Rope" type="Node2D" parent="." unique_id=1065471867]
-position = Vector2(-1, 12)
+position = Vector2(-1, -117)
 script = ExtResource("4_5ynmd")
 num_segments = 15
 line_width = 0.0
@@ -83,19 +92,11 @@ antialiased = true
 script = ExtResource("5_wfyor")
 metadata/_custom_type_script = "uid://dfppmnngy2wx4"
 
-[node name="Timer" type="Timer" parent="." unique_id=137943850]
-one_shot = true
-autostart = true
-
-[node name="RayCast2D" type="RayCast2D" parent="." unique_id=2071677612]
-target_position = Vector2(0, 1000)
-collision_mask = 2
-
 [node name="bomb" parent="." unique_id=1115807001 instance=ExtResource("2_gpxll")]
-position = Vector2(-1, 129)
+position = Vector2(-1, 0)
 
 [node name="RopeAnchor" type="Marker2D" parent="." unique_id=948405414]
-position = Vector2(-1, 128.74963)
+position = Vector2(-1, -0.2503662)
 script = ExtResource("5_evxss")
 rope_path = NodePath("../Rope")
 metadata/_custom_type_script = "uid://brklaoabvl73l"
@@ -108,12 +109,13 @@ offset_bottom = 62.0
 metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=544128252]
+position = Vector2(0, -129)
 shape = SubResource("RectangleShape2D_wfyor")
 
 [node name="free_zone" type="Area2D" parent="." unique_id=1356994127]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="free_zone" unique_id=2053539486]
-position = Vector2(0, 44)
+position = Vector2(0, 19)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_wfyor")
 

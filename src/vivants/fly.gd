@@ -12,6 +12,7 @@ extends CharacterBody2D
 
 @onready var free_zone: Area2D = $free_zone
 
+@onready var player: Player = %Player
 
 const SPEED = 75.0
 
@@ -86,13 +87,20 @@ func _physics_process(delta: float) -> void:
 	
 	if !free_zone.overlaps_body(self) and!timer.paused:
 		timer.paused=true
-		directionx=get_new_dir_to_init_pos_for_recenter().x
-		directiony=get_new_dir_to_init_pos_for_recenter().y
+		set_new_dir_to_target(init_pos)
 		await get_tree().create_timer(2).timeout
 		timer.paused=false
+		
+	if player.global_position.x > init_pos.x-846/2 and player.global_position.x < init_pos.x+846/2  :
+		timer.paused=true
+		set_new_dir_to_target(player.global_position)
+	else:
+		timer.paused=false
 
-func get_new_dir_to_init_pos_for_recenter()->Vector2:
-	return init_pos - global_position
+func set_new_dir_to_target(target:Vector2)->void:
+	var newdir = target - global_position
+	directionx=newdir.x
+	directiony=newdir.y
 
 func _on_timer_timeout() -> void:
 	directionx = rng.randi_range(-10, 10)
