@@ -843,12 +843,12 @@ color = Color(0.72156864, 0.72156864, 0.72156864, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(6850, 1935)
+position = Vector2(11246, 1050)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(6900, 1775)
+position = Vector2(11296, 890)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -867,7 +867,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(6800, 1775)
+position = Vector2(11196, 890)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -885,7 +885,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(6900, 1935)
+position = Vector2(11296, 1050)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -902,7 +902,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(6800, 1935)
+position = Vector2(11196, 1050)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -919,7 +919,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(6850, 1775)
+position = Vector2(11246, 890)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -936,7 +936,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(6900, 1775)
+position = Vector2(11296, 890)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -2116,23 +2116,14 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 72
 text = "Ceux qui savent se taisent"
 
-[node name="FLYZONE" type="Area2D" parent="lvl1" unique_id=1083634578]
+[node name="fly" parent="lvl1" unique_id=1079513456 instance=ExtResource("41_5ihcl")]
+position = Vector2(8175, 1706)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="lvl1/FLYZONE" unique_id=889261870]
-position = Vector2(-4.6103516, 209.84094)
-polygon = PackedVector2Array(6728.9556, 1714.2319, 7546.8613, 1672.8772, 7994.256, 1553.9379, 8152.882, 1626.82, 8450.841, 1508.9225, 8603.035, 1438.1841, 9228.621, 1456.9133, 9897.677, 924.0415, 10215.61, 634.15906, 10637.61, 508.15906, 11301.61, 521.15906, 11698.61, 366.15906, 12002.61, 362.15906, 12000.11, 219.77795, 10340.61, 262.15906, 9614.62, 695.8769, 8931.005, 1221.6815, 8680.204, 1219.538, 7959.9585, 1292.42, 6774.9053, 1392.5837)
+[node name="fly4" parent="lvl1" unique_id=1727515795 instance=ExtResource("41_5ihcl")]
+position = Vector2(9058, 1545)
 
-[node name="fly" parent="lvl1" unique_id=1079513456 node_paths=PackedStringArray("free_zone") instance=ExtResource("41_5ihcl")]
-position = Vector2(7459, 1743)
-free_zone = NodePath("../FLYZONE")
-
-[node name="fly4" parent="lvl1" unique_id=1727515795 node_paths=PackedStringArray("free_zone") instance=ExtResource("41_5ihcl")]
-position = Vector2(9247, 1397)
-free_zone = NodePath("../FLYZONE")
-
-[node name="fly5" parent="lvl1" unique_id=1647404557 node_paths=PackedStringArray("free_zone") instance=ExtResource("41_5ihcl")]
-position = Vector2(11004, 639)
-free_zone = NodePath("../FLYZONE")
+[node name="fly5" parent="lvl1" unique_id=1647404557 instance=ExtResource("41_5ihcl")]
+position = Vector2(11083, 651)
 
 [node name="TILES" type="Node2D" parent="lvl1" unique_id=2029442160]
 

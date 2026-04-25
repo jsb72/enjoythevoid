@@ -48,6 +48,10 @@ offsets = PackedFloat32Array(0, 0.4347826)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wfyor"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wfyor"]
+radius = 161.0
+height = 846.0
+
 [node name="fly" type="CharacterBody2D" unique_id=1079513456]
 z_index = 5
 script = ExtResource("1_wjpkc")
@@ -84,15 +88,11 @@ one_shot = true
 autostart = true
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=2071677612]
-target_position = Vector2(-150, 1000)
-collision_mask = 2
-
-[node name="RayCast2D2" type="RayCast2D" parent="." unique_id=977717851]
-target_position = Vector2(150, 1000)
+target_position = Vector2(0, 1000)
 collision_mask = 2
 
 [node name="bomb" parent="." unique_id=1115807001 instance=ExtResource("2_gpxll")]
-position = Vector2(87, 81)
+position = Vector2(-1, 129)
 
 [node name="RopeAnchor" type="Marker2D" parent="." unique_id=948405414]
 position = Vector2(-1, 128.74963)
@@ -105,8 +105,16 @@ modulate = Color(1, 0, 0, 0)
 offset_top = 22.0
 offset_right = 40.0
 offset_bottom = 62.0
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=544128252]
 shape = SubResource("RectangleShape2D_wfyor")
+
+[node name="free_zone" type="Area2D" parent="." unique_id=1356994127]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="free_zone" unique_id=2053539486]
+position = Vector2(0, 44)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_wfyor")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

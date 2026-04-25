@@ -4,14 +4,14 @@ extends CharacterBody2D
 @onready var timer: Timer = $Timer
 @onready var bomb: RigidBody2D = $bomb
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
-@onready var ray_cast_2d_2: RayCast2D = $RayCast2D2
 
 @onready var rendu: Node2D = $rendu
 
 @onready var ancrerouge: ColorRect = $RopeAnchor/ancrerouge
 @onready var rope_renderer_line_2d: RopeRendererLine2D = $Rope/RopeRendererLine2D
 
-@export var free_zone:Area2D
+@onready var free_zone: Area2D = $free_zone
+
 
 const SPEED = 75.0
 
@@ -22,14 +22,20 @@ var rng2 = RandomNumberGenerator.new()
 
 var throwing_bomb : bool = false
 var new_bomb : RigidBody2D
+
+var init_pos:Vector2
+
 func _ready() -> void:
 	new_bomb=bomb
+	init_pos=global_position
 	
 func _physics_process(delta: float) -> void:
+	free_zone.global_position=init_pos#then free zone dont move with fly movement
+	
 	new_bomb.global_position=ancrerouge.global_position
 	new_bomb.gravity_scale=0
 	
-	if (ray_cast_2d.is_colliding() or ray_cast_2d_2.is_colliding()) and !throwing_bomb:#collision mask only collide mask 2 (player is layer collision 2)
+	if ray_cast_2d.is_colliding() and !throwing_bomb:#collision mask only collide mask 2 (player is layer collision 2)
 		throwing_bomb=true 
 		
 		var tween4 = get_tree().create_tween()
@@ -80,13 +86,15 @@ func _physics_process(delta: float) -> void:
 	
 	if !free_zone.overlaps_body(self) and!timer.paused:
 		timer.paused=true
-		directionx=-directionx
-		directiony=-directiony
-		await get_tree().create_timer(1).timeout
+		directionx=get_new_dir_to_init_pos_for_recenter().x
+		directiony=get_new_dir_to_init_pos_for_recenter().y
+		await get_tree().create_timer(2).timeout
 		timer.paused=false
 
+func get_new_dir_to_init_pos_for_recenter()->Vector2:
+	return init_pos - global_position
 
 func _on_timer_timeout() -> void:
-	directionx = rng.randi_range(-1, 1)
-	directiony = rng.randi_range(-1, 1)
+	directionx = rng.randi_range(-10, 10)
+	directiony = rng.randi_range(-10, 10)
 	timer.start()

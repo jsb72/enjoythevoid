@@ -1,5 +1,8 @@
-CanvasLayer
 Node2D
+CharacterBody2D
+CollisionShape2D
+Area2D
+CanvasLayer
 TextureRect
 VisibleOnScreenEnabler2D
 VisibleOnScreenNotifier2D
@@ -7,8 +10,5 @@ TileMapLayer
 ColorRect
 Sprite2D
 AudioStreamPlayer
-CollisionShape2D
 CollisionPolygon2D
-Area2D
 RayCast2D
-PinJoint2D
