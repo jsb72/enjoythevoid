@@ -10,7 +10,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	for i in range(1,30):
+	for i in range(1,31):
 		var p1 = layer1_gpu_particles_2d.duplicate()
 		p1.position += Vector2(500*i,0)
 		layer1.add_child(p1)  

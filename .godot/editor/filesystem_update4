@@ -20,3 +20,8 @@ res://src/player/states/idle_state.gd
 res://src/player/states/dash_state.gd
 res://src/vivants/fly.tscn
 res://src/vivants/fly.gd
+res://src/levels/meta_room_piece.tscn
+res://src/particles/black_particule.tscn
+res://src/particles/black_particule.gd
+res://src/vivants/sage.tscn
+res://src/vivants/sage.gd

@@ -781,6 +781,7 @@ position = Vector2(3200, 710)
 position = Vector2(3256, 706)
 
 [node name="cordes" type="Node2D" parent="." unique_id=1799141700]
+z_index = 16
 
 [node name="Rope" type="Node2D" parent="cordes" unique_id=574851393]
 position = Vector2(439, 760)

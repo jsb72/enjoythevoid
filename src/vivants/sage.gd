@@ -1,5 +1,6 @@
 extends Node2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var point_light_2d_2: PointLight2D = $PointLight2D2
 
 @onready var rich_text_label: RichTextLabel = $RichTextLabel
 var iswaken : bool = false
@@ -7,6 +8,7 @@ var iswaken : bool = false
 func _ready() -> void:
 	if Global.first_cycle_done:
 		animated_sprite_2d.play("stone")
+		point_light_2d_2.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -64,8 +64,8 @@ func _process(delta: float) -> void:
 		var tween2 = get_tree().create_tween()
 		tween2.tween_property(player.point_light_2d_2, "energy", 1.0, 10.0)
 	
-	if Input.is_action_just_pressed("start"):
-		spawn_fractal()
+	"""if Input.is_action_just_pressed("start"):
+		spawn_fractal()"""
 	
 		
 	if player.global_position.y > 200:

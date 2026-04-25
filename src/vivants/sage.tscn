@@ -89,7 +89,7 @@ animation = &"wakeup"
 autoplay = "default"
 
 [node name="PointLight2D2" type="PointLight2D" parent="." unique_id=506416439]
-color = Color(1.0309138, 1.0309138, 1.0309138, 1)
+color = Color(1.0309138, 0, 0, 1)
 texture = SubResource("GradientTexture2D_atlln")
 texture_scale = 2.0
 
