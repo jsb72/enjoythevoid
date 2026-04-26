@@ -1,7 +1,7 @@
-AntialiasedPolygon2D
 CollisionPolygon2D
 StaticBody2D
 Node2D
+AntialiasedPolygon2D
 ColorRect
 CharacterBody2D
 CollisionShape2D
