@@ -40,20 +40,15 @@
 [ext_resource type="Texture2D" uid="uid://x8hb077gci1e" path="res://sprites/Mossy Tileset/Mossy - Decorations&HazardsBLUR.png" id="41_k2shy"]
 [ext_resource type="Texture2D" uid="uid://sggt0ur5arfk" path="res://sprites/backgroundvein - Copy.png" id="41_tkwxf"]
 [ext_resource type="PackedScene" uid="uid://vw31d2odlcv6" path="res://src/particles/black_particule.tscn" id="42_j4o56"]
-[ext_resource type="PackedScene" uid="uid://cqafrfx31iqu6" path="res://src/platforms/tunnel_corner.tscn" id="43_lmpmd"]
 [ext_resource type="PackedScene" uid="uid://n80ossa7y51v" path="res://src/levels/escalier_little_black_reverse.tscn" id="43_y6lma"]
-[ext_resource type="PackedScene" uid="uid://cwmh0r3f2teg7" path="res://src/platforms/tunnel.tscn" id="44_brhbg"]
 [ext_resource type="Texture2D" uid="uid://dcp7ouktirxcj" path="res://sprites/kindpng_17046.png" id="45_1nkay"]
 [ext_resource type="Texture2D" uid="uid://cphr0b1w3cwq8" path="res://sprites/un.png" id="45_1tqiw"]
-[ext_resource type="PackedScene" uid="uid://bf2hbc3ucd83i" path="res://src/platforms/tunnelmid.tscn" id="45_gxno5"]
 [ext_resource type="PackedScene" uid="uid://cuuupedh70x4h" path="res://src/elements/temps.tscn" id="45_lmpmd"]
 [ext_resource type="PackedScene" uid="uid://ca0qqvc5pjlky" path="res://src/elements/button.tscn" id="45_qgqoh"]
 [ext_resource type="PackedScene" uid="uid://bdd03axytgixu" path="res://src/platforms/damage_block.tscn" id="46_7f7j5"]
 [ext_resource type="Texture2D" uid="uid://dk52pj28ds5fn" path="res://sprites/zero.png" id="46_73yqq"]
 [ext_resource type="PackedScene" uid="uid://denjct5e4x1jd" path="res://src/elements/cadavre.tscn" id="47_5ihcl"]
-[ext_resource type="PackedScene" uid="uid://cuk53lm5g5rl3" path="res://src/platforms/litlelongdmgblock.tscn" id="48_g62an"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="53_1nkay"]
-[ext_resource type="PackedScene" uid="uid://dij3e8be2nf5t" path="res://src/vivants/spider.tscn" id="53_6nwfb"]
 [ext_resource type="Script" uid="uid://ddhu3qfummrc2" path="res://addons/antialiased_line2d/antialiased_polygon2d.gd" id="54_w6qp3"]
 [ext_resource type="PackedScene" uid="uid://ufnf3lc7ewin" path="res://src/vivants/a_atentacle.tscn" id="56_brhbg"]
 [ext_resource type="PackedScene" uid="uid://dvio2nnm1fv8q" path="res://src/vivants/yog_sothoth.tscn" id="56_gxno5"]
@@ -244,117 +239,6 @@ size = Vector2(864, 954)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fynux"]
 size = Vector2(66.5, 10084.096)
-
-[sub_resource type="Animation" id="Animation_brhbg"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(3550, -1697)]
-}
-
-[sub_resource type="Animation" id="Animation_gxno5"]
-resource_name = "new_animation"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(3550, -1697), Vector2(3682, -1697)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qgqoh"]
-_data = {
-&"RESET": SubResource("Animation_brhbg"),
-&"new_animation": SubResource("Animation_gxno5")
-}
-
-[sub_resource type="Animation" id="Animation_w6qp3"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(3437.0002, -1568)]
-}
-
-[sub_resource type="Animation" id="Animation_g62an"]
-resource_name = "new_animation"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(3437.0002, -1568), Vector2(3787, -1568)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_3grwt"]
-_data = {
-&"RESET": SubResource("Animation_w6qp3"),
-&"new_animation": SubResource("Animation_g62an")
-}
-
-[sub_resource type="Animation" id="Animation_wm35a"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(3321, -1441)]
-}
-
-[sub_resource type="Animation" id="Animation_tuy4g"]
-resource_name = "new_animation"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(3321, -1441), Vector2(3881, -1441)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6wgec"]
-_data = {
-&"RESET": SubResource("Animation_wm35a"),
-&"new_animation": SubResource("Animation_tuy4g")
-}
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1nkay"]
 size = Vector2(1591.0845, 806)
@@ -840,6 +724,117 @@ shader_parameter/speed = Vector2(0.02, 0.01)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qgqoh"]
 size = Vector2(186.5, 178)
+
+[sub_resource type="Animation" id="Animation_brhbg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3550, -1697)]
+}
+
+[sub_resource type="Animation" id="Animation_gxno5"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3550, -1697), Vector2(3682, -1697)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qgqoh"]
+_data = {
+&"RESET": SubResource("Animation_brhbg"),
+&"new_animation": SubResource("Animation_gxno5")
+}
+
+[sub_resource type="Animation" id="Animation_w6qp3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3437.0002, -1568)]
+}
+
+[sub_resource type="Animation" id="Animation_g62an"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3437.0002, -1568), Vector2(3787, -1568)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3grwt"]
+_data = {
+&"RESET": SubResource("Animation_w6qp3"),
+&"new_animation": SubResource("Animation_g62an")
+}
+
+[sub_resource type="Animation" id="Animation_wm35a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3321, -1441)]
+}
+
+[sub_resource type="Animation" id="Animation_tuy4g"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3321, -1441), Vector2(3881, -1441)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6wgec"]
+_data = {
+&"RESET": SubResource("Animation_wm35a"),
+&"new_animation": SubResource("Animation_tuy4g")
+}
 
 [node name="room_blueprint" type="Node2D" unique_id=1528742533]
 script = ExtResource("1_76snk")
@@ -1435,8 +1430,7 @@ position = Vector2(1117.24, -440)
 position = Vector2(1040, -552)
 
 [node name="pt_blueprint8" parent="lvl1/Structure/platforms" unique_id=256048777 instance=ExtResource("16_nfd4m")]
-z_index = 1
-position = Vector2(1913.4717, -985.91376)
+position = Vector2(1924.3702, -986.1774)
 rotation = -0.02617994
 
 [node name="Node2D3" type="Node2D" parent="lvl1/Structure/platforms" unique_id=1135486316]
@@ -1679,13 +1673,6 @@ position = Vector2(15513, -4)
 [node name="block4" parent="lvl1/Structure/pour_remonter_tout_adroite" unique_id=1107154646 instance=ExtResource("27_514du")]
 position = Vector2(15392, 71)
 
-[node name="laser_trap2" parent="lvl1/Structure" unique_id=1469680047 instance=ExtResource("13_f4kdv")]
-z_index = 1
-position = Vector2(6306, -2316.0002)
-rotation = 1.6580628
-scale = Vector2(1.2, 1.2)
-reverse_rotate = true
-
 [node name="fractals" type="Node2D" parent="lvl1" unique_id=1952825093]
 
 [node name="fractale" parent="lvl1/fractals" unique_id=764819064 instance=ExtResource("17_p2ed6")]
@@ -1811,8 +1798,8 @@ position = Vector2(0, 124)
 [node name="lasers" type="Node2D" parent="lvl1" unique_id=896136686]
 
 [node name="laser_trap" parent="lvl1/lasers" unique_id=128361332 instance=ExtResource("13_f4kdv")]
-position = Vector2(8062.0005, 11.000122)
-rotation = -0.424115
+position = Vector2(8072, 32.999878)
+rotation = -0.33684856
 scale = Vector2(0.7, 0.7)
 is_rotatingg = false
 
@@ -1822,201 +1809,19 @@ rotation = -0.17453292
 scale = Vector2(0.8, 0.8)
 is_rotatingg = false
 
-[node name="laser_trap3" parent="lvl1/lasers" unique_id=853668133 instance=ExtResource("13_f4kdv")]
-z_index = 1
-position = Vector2(3386.5046, -67.79038)
-rotation = -1.2356931
-scale = Vector2(0.6, 0.6)
-is_rotatingg = false
-
 [node name="pt_blueprint" parent="lvl1" unique_id=553404117 instance=ExtResource("16_nfd4m")]
-position = Vector2(7772.5254, 97.39691)
+position = Vector2(7795.5254, 97.39691)
 
 [node name="pt_blueprint2" parent="lvl1" unique_id=1639643020 instance=ExtResource("16_nfd4m")]
-position = Vector2(7692, 97.39691)
+position = Vector2(7715, 97.39691)
 
 [node name="pt_blueprint3" parent="lvl1" unique_id=431420207 instance=ExtResource("16_nfd4m")]
-position = Vector2(7717.8213, 49.480957)
-
-[node name="damage_block5" parent="lvl1" unique_id=1094553098 instance=ExtResource("46_7f7j5")]
-position = Vector2(3550, -1697)
-scale = Vector2(0.75, 0.75)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="lvl1/damage_block5" unique_id=957805787]
-libraries/ = SubResource("AnimationLibrary_qgqoh")
-autoplay = &"new_animation"
-speed_scale = 3.0
-
-[node name="damage_block7" parent="lvl1" unique_id=2134426328 instance=ExtResource("46_7f7j5")]
-position = Vector2(3437.0002, -1568)
-scale = Vector2(0.75, 0.75)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="lvl1/damage_block7" unique_id=697153537]
-libraries/ = SubResource("AnimationLibrary_3grwt")
-autoplay = &"new_animation"
-speed_scale = 4.0
-
-[node name="damage_block8" parent="lvl1" unique_id=530628477 instance=ExtResource("46_7f7j5")]
-position = Vector2(3321, -1441)
-scale = Vector2(0.75, 0.75)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="lvl1/damage_block8" unique_id=1071921941]
-libraries/ = SubResource("AnimationLibrary_6wgec")
-autoplay = &"new_animation"
-speed_scale = 5.0
+position = Vector2(7740.8213, 49.480957)
 
 [node name="damage_block3" parent="lvl1" unique_id=913775230 instance=ExtResource("46_7f7j5")]
 position = Vector2(12779, -1278)
 
-[node name="damage_block6" parent="lvl1" unique_id=1074440910 instance=ExtResource("46_7f7j5")]
-position = Vector2(5656, -360)
-
-[node name="laby" type="Node2D" parent="lvl1" unique_id=1399592639]
-
-[node name="3platformblueprint2" parent="lvl1/laby" unique_id=599573117 instance=ExtResource("32_f3u0r")]
-position = Vector2(1173.9999, -929)
-rotation = -0.08901179
-
-[node name="3platformblueprint3" parent="lvl1/laby" unique_id=167321965 instance=ExtResource("32_f3u0r")]
-position = Vector2(1995.8807, -987)
-
-[node name="tunnelcorner" parent="lvl1/laby" unique_id=1322568270 instance=ExtResource("43_lmpmd")]
-position = Vector2(3577, -719)
-rotation = 4.712389
-
-[node name="tunnelcorner3" parent="lvl1/laby" unique_id=742727350 instance=ExtResource("43_lmpmd")]
-position = Vector2(4230, -1175)
-
-[node name="tunnelcorner2" parent="lvl1/laby" unique_id=2128015814 instance=ExtResource("43_lmpmd")]
-position = Vector2(3205, -1897)
-rotation = 3.1415927
-
-[node name="tunnelmid" parent="lvl1/laby" unique_id=2032612795 instance=ExtResource("45_gxno5")]
-position = Vector2(2476, -1087)
-
-[node name="tunnel" parent="lvl1/laby" unique_id=1067650181 instance=ExtResource("44_brhbg")]
-position = Vector2(4029, -1904)
-
-[node name="tunnelcorner4" parent="lvl1/laby" unique_id=804664609 instance=ExtResource("43_lmpmd")]
-position = Vector2(3584, -474)
-rotation = 1.5707964
-
-[node name="tunnelmid2" parent="lvl1/laby" unique_id=897921684 instance=ExtResource("45_gxno5")]
-position = Vector2(4755, -2676)
-rotation = 3.1415927
-
-[node name="tunnelmid3" parent="lvl1/laby" unique_id=555441674 instance=ExtResource("45_gxno5")]
-position = Vector2(3987, -2676)
-rotation = 3.1415927
-
-[node name="tunnelmid4" parent="lvl1/laby" unique_id=1921171598 instance=ExtResource("45_gxno5")]
-position = Vector2(4959, -1897)
-rotation = 3.1415927
-
-[node name="tunnelmid7" parent="lvl1/laby" unique_id=1745550489 instance=ExtResource("45_gxno5")]
-position = Vector2(4520, -113)
-
-[node name="tunnelcorner5" parent="lvl1/laby" unique_id=2141678642 instance=ExtResource("43_lmpmd")]
-position = Vector2(5249, -1087)
-rotation = 3.1415925
-
-[node name="3platformblueprint" parent="lvl1/laby" unique_id=1827063680 instance=ExtResource("32_f3u0r")]
-position = Vector2(3978, -1804)
-
-[node name="3platformblueprint4" parent="lvl1/laby" unique_id=2101484910 instance=ExtResource("32_f3u0r")]
-position = Vector2(3746, -1075)
-
-[node name="tunnelmid5" parent="lvl1/laby" unique_id=1057347592 instance=ExtResource("45_gxno5")]
-position = Vector2(8707, -2185)
-rotation = -3.1415925
-
-[node name="tunnel5" parent="lvl1/laby" unique_id=1916428245 instance=ExtResource("44_brhbg")]
-position = Vector2(9261, -2192)
-
-[node name="tunnel6" parent="lvl1/laby" unique_id=431905200 instance=ExtResource("44_brhbg")]
-position = Vector2(10599, -1446)
-
-[node name="tunnelcorner6" parent="lvl1/laby" unique_id=1783917607 instance=ExtResource("43_lmpmd")]
-position = Vector2(9715, -1824)
-rotation = -1.5707964
-
-[node name="tunnelcorner7" parent="lvl1/laby" unique_id=313836171 instance=ExtResource("43_lmpmd")]
-position = Vector2(9722, -1807)
-rotation = 1.5707964
-
-[node name="tunnel3" parent="lvl1/laby" unique_id=1349899464 instance=ExtResource("44_brhbg")]
-position = Vector2(7966, -2192)
-
-[node name="3platformblueprint5" parent="lvl1/laby" unique_id=1270757334 instance=ExtResource("32_f3u0r")]
-position = Vector2(10498, -1346)
-
-[node name="tunnelcorner8" parent="lvl1/laby" unique_id=1337029078 instance=ExtResource("43_lmpmd")]
-position = Vector2(6635, -1094)
-
-[node name="tunnelmid6" parent="lvl1/laby" unique_id=820351570 instance=ExtResource("45_gxno5")]
-position = Vector2(6609, -1087)
-rotation = -3.1415925
-
-[node name="tunnelcorner9" parent="lvl1/laby" unique_id=1654695934 instance=ExtResource("43_lmpmd")]
-position = Vector2(5880, -363)
-
-[node name="tunnel4" parent="lvl1/laby" unique_id=1340088073 instance=ExtResource("44_brhbg")]
-position = Vector2(5832, -1094)
-
-[node name="3platformblueprint6" parent="lvl1/laby" unique_id=549328036 instance=ExtResource("32_f3u0r")]
-position = Vector2(5291, -1804)
-
-[node name="3platformblueprint9" parent="lvl1/laby" unique_id=1476617990 instance=ExtResource("32_f3u0r")]
-position = Vector2(5291, -2004)
-
-[node name="3platformblueprint7" parent="lvl1/laby" unique_id=1114234013 instance=ExtResource("32_f3u0r")]
-position = Vector2(5850, -1804)
-
-[node name="3platformblueprint8" parent="lvl1/laby" unique_id=1248826 instance=ExtResource("32_f3u0r")]
-position = Vector2(6337, -1804)
-
-[node name="3platformblueprint10" parent="lvl1/laby" unique_id=283111001 instance=ExtResource("32_f3u0r")]
-position = Vector2(7155, -2092)
-
-[node name="3platformblueprint11" parent="lvl1/laby" unique_id=601280340 instance=ExtResource("32_f3u0r")]
-position = Vector2(7103, -2073)
-rotation = 1.5707964
-
-[node name="3platformblueprint13" parent="lvl1/laby" unique_id=567461133 instance=ExtResource("32_f3u0r")]
-position = Vector2(5807, -2564)
-rotation = 1.5707964
-
-[node name="3platformblueprint12" parent="lvl1/laby" unique_id=281402528 instance=ExtResource("32_f3u0r")]
-position = Vector2(6903, -1785)
-rotation = 1.5707964
-
-[node name="tunnel7" parent="lvl1/laby" unique_id=983237271 instance=ExtResource("44_brhbg")]
-position = Vector2(5337, -2683)
-
-[node name="tunnel8" parent="lvl1/laby" unique_id=422848921 instance=ExtResource("44_brhbg")]
-position = Vector2(5534, -2683)
-
-[node name="tunnel9" parent="lvl1/laby" unique_id=733418879 instance=ExtResource("44_brhbg")]
-position = Vector2(7366, -2192)
-
-[node name="3platformblueprint14" parent="lvl1/laby" unique_id=1143229694 instance=ExtResource("32_f3u0r")]
-position = Vector2(5856, -2783)
-
-[node name="3platformblueprint18" parent="lvl1/laby" unique_id=1508428086 instance=ExtResource("32_f3u0r")]
-position = Vector2(3526, -2767)
-rotation = 1.5707964
-
-[node name="3platformblueprint15" parent="lvl1/laby" unique_id=1424799785 instance=ExtResource("32_f3u0r")]
-position = Vector2(6424, -2783)
-
-[node name="3platformblueprint16" parent="lvl1/laby" unique_id=1383801033 instance=ExtResource("32_f3u0r")]
-position = Vector2(6593, -2783)
-
-[node name="3platformblueprint17" parent="lvl1/laby" unique_id=618716291 instance=ExtResource("32_f3u0r")]
-position = Vector2(7101, -2304)
-rotation = -1.5707964
-
-[node name="Temps" parent="lvl1/laby" unique_id=1268341129 instance=ExtResource("45_lmpmd")]
+[node name="Temps" parent="lvl1" unique_id=1268341129 instance=ExtResource("45_lmpmd")]
 offset_left = 12280.0
 offset_top = -2560.0002
 offset_right = 13502.0
@@ -2024,50 +1829,17 @@ offset_bottom = -2461.0002
 rotation = 0.12755209
 theme_override_font_sizes/font_size = 27
 
-[node name="pt_blueprint" parent="lvl1/laby" unique_id=960706395 instance=ExtResource("16_nfd4m")]
-position = Vector2(6903, -1867)
-rotation = 1.5707964
+[node name="laby" type="Node2D" parent="lvl1" unique_id=1399592639]
 
-[node name="pt_blueprint2" parent="lvl1/laby" unique_id=215483568 instance=ExtResource("16_nfd4m")]
-position = Vector2(6903, -1946)
-rotation = 1.5707964
+[node name="3platformblueprint2" parent="lvl1/laby" unique_id=599573117 instance=ExtResource("32_f3u0r")]
+position = Vector2(1173.9999, -929)
+rotation = -0.08901179
 
-[node name="pt_blueprint5" parent="lvl1/laby" unique_id=887605427 instance=ExtResource("16_nfd4m")]
-position = Vector2(6903, -2002)
-rotation = 1.5707964
-
-[node name="pt_blueprint3" parent="lvl1/laby" unique_id=779009665 instance=ExtResource("16_nfd4m")]
-position = Vector2(6611, -1868)
-rotation = 1.5707964
-
-[node name="pt_blueprint4" parent="lvl1/laby" unique_id=1775241246 instance=ExtResource("16_nfd4m")]
-position = Vector2(6611, -1925)
-rotation = 1.5707964
-
-[node name="pt_blueprint6" parent="lvl1/laby" unique_id=1956019483 instance=ExtResource("16_nfd4m")]
-position = Vector2(6674, -1944)
-
-[node name="pt_blueprint7" parent="lvl1/laby" unique_id=2031093425 instance=ExtResource("16_nfd4m")]
-position = Vector2(6727, -1944)
-
-[node name="pt_blueprint8" parent="lvl1/laby" unique_id=818395793 instance=ExtResource("16_nfd4m")]
-position = Vector2(6747, -2002)
-rotation = 1.5707964
-
-[node name="pt_blueprint9" parent="lvl1/laby" unique_id=1693360907 instance=ExtResource("16_nfd4m")]
-position = Vector2(6809, -2021)
-
-[node name="pt_blueprint10" parent="lvl1/laby" unique_id=940318870 instance=ExtResource("16_nfd4m")]
-position = Vector2(6833, -2021)
-
-[node name="pt_blueprint11" parent="lvl1/laby" unique_id=711614980 instance=ExtResource("16_nfd4m")]
-position = Vector2(6538, -1855)
-
-[node name="pt_blueprint12" parent="lvl1/laby" unique_id=1334000761 instance=ExtResource("16_nfd4m")]
-position = Vector2(6457, -1855)
+[node name="3platformblueprint5" parent="lvl1/laby" unique_id=1270757334 instance=ExtResource("32_f3u0r")]
+position = Vector2(10498, -1346)
 
 [node name="bonus2" parent="lvl1" unique_id=715804290 instance=ExtResource("15_fynux")]
-position = Vector2(4002.5457, -2627.9792)
+position = Vector2(1421, -1000)
 type_bonus = "dash"
 
 [node name="novisibleplayerzone" type="Area2D" parent="lvl1" unique_id=2061754216]
@@ -2088,32 +1860,6 @@ shape = SubResource("RectangleShape2D_w6qp3")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="lvl1/novisibleplayerzone" unique_id=1519341291]
 position = Vector2(16743.402, 103.028656)
 shape = SubResource("RectangleShape2D_g62an")
-
-[node name="spiders" type="Node2D" parent="lvl1" unique_id=1413067626]
-
-[node name="spider9" parent="lvl1/spiders" unique_id=1458701811 instance=ExtResource("53_6nwfb")]
-position = Vector2(6299, -376)
-
-[node name="spider10" parent="lvl1/spiders" unique_id=936828678 instance=ExtResource("53_6nwfb")]
-position = Vector2(5878, -414)
-
-[node name="spider11" parent="lvl1/spiders" unique_id=850280966 instance=ExtResource("53_6nwfb")]
-position = Vector2(5913, -305)
-
-[node name="spider12" parent="lvl1/spiders" unique_id=142256918 instance=ExtResource("53_6nwfb")]
-position = Vector2(6190, -605)
-
-[node name="spider13" parent="lvl1/spiders" unique_id=1079395588 instance=ExtResource("53_6nwfb")]
-position = Vector2(4849, -1142)
-
-[node name="spider14" parent="lvl1/spiders" unique_id=169466146 instance=ExtResource("53_6nwfb")]
-position = Vector2(4253, 35)
-
-[node name="spider15" parent="lvl1/spiders" unique_id=351638014 instance=ExtResource("53_6nwfb")]
-position = Vector2(9663, -1467)
-
-[node name="spider16" parent="lvl1/spiders" unique_id=1190376745 instance=ExtResource("53_6nwfb")]
-position = Vector2(6725, -1846)
 
 [node name="sprint_bonus" parent="lvl1" unique_id=1577787271 instance=ExtResource("15_fynux")]
 position = Vector2(4711, 1639)
@@ -2339,39 +2085,6 @@ texture = SubResource("GradientTexture2D_qgqoh")
 lifetime = 5.0
 visibility_rect = Rect2(-2000, -600, 4000, 1200)
 process_material = SubResource("ParticleProcessMaterial_3grwt")
-
-[node name="litlelongdmgblock5" parent="lvl1" unique_id=1080308369 instance=ExtResource("48_g62an")]
-position = Vector2(8125, -2120.5078)
-
-[node name="litlelongdmgblock6" parent="lvl1" unique_id=1993403078 instance=ExtResource("48_g62an")]
-position = Vector2(7933, -2256.028)
-
-[node name="labyblackptcorrection" type="Node2D" parent="lvl1" unique_id=1381484320]
-position = Vector2(5179.5825, -2614.244)
-
-[node name="platform3" parent="lvl1/labyblackptcorrection" unique_id=1100216113 instance=ExtResource("8_ltygr")]
-position = Vector2(-752.5825, 26.243896)
-
-[node name="platform4" parent="lvl1/labyblackptcorrection" unique_id=580270454 instance=ExtResource("8_ltygr")]
-position = Vector2(-829.5825, 26.243896)
-
-[node name="labytrap" type="Node2D" parent="lvl1" unique_id=2033972797]
-position = Vector2(5179.5825, -2614.244)
-
-[node name="laser_trap" parent="lvl1/labytrap" unique_id=1785419273 instance=ExtResource("13_f4kdv")]
-position = Vector2(-1972.5435, 1601.5515)
-scale = Vector2(0.3, 0.3)
-is_rotatingg = false
-
-[node name="laser_trap2" parent="lvl1/labytrap" unique_id=1425689831 instance=ExtResource("13_f4kdv")]
-position = Vector2(91.41748, 786.2439)
-scale = Vector2(0.3, 0.3)
-is_rotatingg = false
-
-[node name="laser_trap3" parent="lvl1/labytrap" unique_id=886489092 instance=ExtResource("13_f4kdv")]
-position = Vector2(346.41748, 1595.2439)
-scale = Vector2(0.3, 0.3)
-is_rotatingg = false
 
 [node name="godraylvl1" type="Node2D" parent="lvl1" unique_id=58599440]
 
@@ -3516,14 +3229,6 @@ offset_bottom = 5582.1147
 position = Vector2(-0.5, -34)
 shape = SubResource("RectangleShape2D_qgqoh")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1236312384]
-position = Vector2(2094, -1063)
-shape = SubResource("RectangleShape2D_qgqoh")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1177870026]
-position = Vector2(7223, -2169)
-shape = SubResource("RectangleShape2D_qgqoh")
-
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=98541651]
 position = Vector2(12216, 31)
 shape = SubResource("RectangleShape2D_qgqoh")
@@ -3572,6 +3277,63 @@ position = Vector2(13198, -2273)
 [node name="platform7" parent="lvl_reload_right" unique_id=1485280181 instance=ExtResource("8_ltygr")]
 position = Vector2(12445.001, -1289.0001)
 rotation = -0.082030475
+
+[node name="MIDDLEMAP" type="Node2D" parent="." unique_id=1262928961]
+
+[node name="damage_block5" parent="MIDDLEMAP" unique_id=1094553098 instance=ExtResource("46_7f7j5")]
+position = Vector2(3550, -1697)
+scale = Vector2(0.75, 0.75)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MIDDLEMAP/damage_block5" unique_id=957805787]
+libraries/ = SubResource("AnimationLibrary_qgqoh")
+autoplay = &"new_animation"
+speed_scale = 3.0
+
+[node name="damage_block7" parent="MIDDLEMAP" unique_id=2134426328 instance=ExtResource("46_7f7j5")]
+position = Vector2(3437.0002, -1568)
+scale = Vector2(0.75, 0.75)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MIDDLEMAP/damage_block7" unique_id=697153537]
+libraries/ = SubResource("AnimationLibrary_3grwt")
+autoplay = &"new_animation"
+speed_scale = 4.0
+
+[node name="damage_block8" parent="MIDDLEMAP" unique_id=530628477 instance=ExtResource("46_7f7j5")]
+position = Vector2(3321, -1441)
+scale = Vector2(0.75, 0.75)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MIDDLEMAP/damage_block8" unique_id=1071921941]
+libraries/ = SubResource("AnimationLibrary_6wgec")
+autoplay = &"new_animation"
+speed_scale = 5.0
+
+[node name="structure" type="StaticBody2D" parent="MIDDLEMAP" unique_id=778099030]
+
+[node name="AntialiasedPolygon2D" type="Polygon2D" parent="MIDDLEMAP/structure" unique_id=1120569684]
+position = Vector2(-93, 0)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1952, 140, 1986, -232, 2055, -477, 2120, -535, 2138, -740, 2075, -888, 2043.9791, -1012.89087, 2115, -1011, 2157, -1002, 2215, -977, 2269, -980, 2329, -985, 2366, -985, 2351, -1040, 2351, -1125, 2360, -1231, 2454, -1225, 2523, -1219, 2577, -1219, 2661, 140)
+script = ExtResource("54_w6qp3")
+stroke_width = 0.0
+metadata/_custom_type_script = "uid://ddhu3qfummrc2"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MIDDLEMAP/structure" unique_id=1981092032]
+position = Vector2(-93, 0)
+polygon = PackedVector2Array(1952, 140, 1986, -232, 2055, -477, 2120, -535, 2138, -740, 2075, -888, 2047, -1009, 2115, -1011, 2157, -1002, 2215, -977, 2269, -980, 2329, -985, 2366, -985, 2351, -1040, 2351, -1125, 2360, -1231, 2454, -1225, 2523, -1219, 2577, -1219, 2661, 140)
+
+[node name="AntialiasedPolygon2D2" type="Polygon2D" parent="MIDDLEMAP/structure" unique_id=1325983117]
+position = Vector2(78, 50)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(1952, -1244, 1942, -1592, 2024, -3091, 2370, -3289, 2488, -1627, 2335, -1668, 2178, -1658, 2106, -1561, 2068, -1445, 2002, -1373)
+script = ExtResource("54_w6qp3")
+stroke_width = 0.0
+metadata/_custom_type_script = "uid://ddhu3qfummrc2"
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MIDDLEMAP/structure" unique_id=1567260791]
+position = Vector2(77, 48)
+polygon = PackedVector2Array(1952, -1244, 1942, -1592, 1961, -1966, 2460, -1969, 2488, -1627, 2335, -1668, 2178, -1658, 2106, -1561, 2068, -1445, 2002, -1373)
+
+[node name="platforms" type="Node2D" parent="MIDDLEMAP" unique_id=930750670]
 
 [connection signal="body_entered" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_entered"]
 [connection signal="body_exited" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_exited"]

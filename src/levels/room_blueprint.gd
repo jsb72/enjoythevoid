@@ -131,7 +131,7 @@ func ambiance_logic():
 			label_music="portal"
 			
 			var tween = get_tree().create_tween()
-			tween.tween_property(canvas_modulate, "color", Color("b8b8b8ff"), 5.0)
+			tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 5.0)
 		
 	if lvl_2_loaded:		
 		if player.global_position.x > -3562 and player.global_position.x < 1310:
