@@ -1,6 +1,6 @@
 extends Node
 
-var debug_mod:bool=false
+var debug_mod:bool=true
 
 var nb_fractal:int = 0
 
@@ -29,8 +29,8 @@ func _process(delta: float) -> void:
 	
 	if debug_mod:
 		dash_unlock = true
-		sprint_unlock = true
-		doublejump_unlock = true
+		#sprint_unlock = true
+		#doublejump_unlock = true
 		walljump_unlock = true
 		nb_fractal=3
 		

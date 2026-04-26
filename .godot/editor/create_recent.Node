@@ -1,5 +1,5 @@
-CollisionPolygon2D
 AntialiasedPolygon2D
+CollisionPolygon2D
 StaticBody2D
 Node2D
 ColorRect

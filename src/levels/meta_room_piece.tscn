@@ -22,7 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://dwehap5d7ves0" path="res://sprites/cave/Cave - SmallRocksBLACK.png" id="19_o6del"]
 [ext_resource type="Texture2D" uid="uid://cedl47qrbl21r" path="res://sprites/cave/Cave - RockCombinations1BLACK.png" id="20_cl0n7"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="21_sqkqu"]
-[ext_resource type="Shader" uid="uid://b374xol4h6crb" path="res://shaders/godrays.gdshader" id="23_60ogs"]
 [ext_resource type="Texture2D" uid="uid://fhacyvqvhyv7" path="res://sprites/cable_elec.png" id="24_b7nc7"]
 
 [sub_resource type="Resource" id="Resource_88ojq"]
@@ -306,22 +305,6 @@ shader_parameter/speed = Vector2(0.02, 0.01)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sqkqu"]
 size = Vector2(2569, 3283.5)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_b7nc7"]
-shader = ExtResource("23_60ogs")
-shader_parameter/angle = -0.3
-shader_parameter/position = -0.2
-shader_parameter/spread = 0.5
-shader_parameter/cutoff = 0.1
-shader_parameter/falloff = 0.2
-shader_parameter/edge_fade = 0.454000021565
-shader_parameter/speed = 3.0
-shader_parameter/ray1_density = 8.0
-shader_parameter/ray2_density = 30.0
-shader_parameter/ray2_intensity = 0.3
-shader_parameter/color = Color(1, 1, 1, 1)
-shader_parameter/hdr = false
-shader_parameter/seed = 5.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0a4x0"]
 texture = ExtResource("24_b7nc7")
@@ -1150,15 +1133,6 @@ offset_bottom = 5168.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FOG_ZONE" unique_id=1886059367]
 position = Vector2(1111.5, 2237.25)
 shape = SubResource("RectangleShape2D_sqkqu")
-
-[node name="godray" type="ColorRect" parent="." unique_id=1465727935]
-z_index = 16
-material = SubResource("ShaderMaterial_b7nc7")
-offset_left = -985.0
-offset_top = -255.0
-offset_right = -642.0
-offset_bottom = 1329.0
-rotation = -0.29147
 
 [node name="tilecablelec" type="TileMapLayer" parent="." unique_id=51859679]
 z_index = 16
