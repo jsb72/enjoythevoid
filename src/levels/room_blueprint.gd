@@ -76,7 +76,7 @@ func _process(delta: float) -> void:
 		cam.limit_right = 18722
 		cam_2.limit_right = 18722
 
-	if !first_time_on_floor:music_player_logic()
+	if !first_time_on_floor:ambiance_logic()
 	slowvoid_logic()
 	
 	if player.global_position.y > 13000:
@@ -114,7 +114,7 @@ func optimization_logic()->void:
 var index_music : int = 0
 var label_music : String = ""
 var volume_music : float = -10.0
-func music_player_logic():
+func ambiance_logic():
 	if !audio_stream_player.playing:
 		audio_stream_player.play()
 	
@@ -148,6 +148,9 @@ func music_player_logic():
 			tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 5.0)
 			
 	if player.global_position.x > 6500 and player.global_position.y > 658 and player.global_position.x < 13000 and player.global_position.y < 3900:
+		index_music=4
+		label_music="vide"
+		
 		var tween = get_tree().create_tween()
 		tween.tween_property(canvas_modulate, "color", Color("6459deff"), 5.0)#dbfff4ff
 		
@@ -171,6 +174,23 @@ func music_player_logic():
 	if audio_stream_player.get_stream_playback().get_current_clip_index() !=index_music:
 		audio_stream_player.get_stream_playback().switch_to_clip_by_name(label_music)
 		audio_stream_player.volume_db=volume_music
+		
+	if label_music=="portal":
+		var tween2 = get_tree().create_tween()
+		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 0.0, 0.0, 1.0), 10.0)
+	if label_music=="vide":
+		var tween2 = get_tree().create_tween()
+		tween2.tween_property(player.point_light_2d_2, "color", Color(0.0, 0.967, 1.0, 1.0), 10.0)
+	if label_music=="noise":
+		var tween2 = get_tree().create_tween()
+		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 0.0, 0.017, 1.0), 10.0)
+	if label_music=="stimulation":
+		var tween2 = get_tree().create_tween()
+		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 0.0, 0.017, 1.0), 10.0)
+	if label_music=="intense":
+		var tween2 = get_tree().create_tween()
+		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 1.0, 1.0, 1.0), 10.0)
+	
 		
 func display_list_cadavre():
 	for cadavre_elem in Global.list_des_morts:

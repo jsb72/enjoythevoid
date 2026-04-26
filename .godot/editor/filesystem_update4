@@ -12,3 +12,8 @@ res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/blur.gdshader
 res://src/levels/transition_rooms.tscn
+res://src/global.gd
+res://src/vivants/fly.tscn
+res://src/vivants/fly.gd
+res://src/player/player.tscn
+res://src/levels/room_blueprint.gd
