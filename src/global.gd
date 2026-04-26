@@ -9,7 +9,7 @@ var door_opened:bool = false
 var dash_unlock:bool = false
 var sprint_unlock:bool = false
 var doublejump_unlock:bool = false
-var walljump_unlock:bool=false
+var walljump_unlock:bool=true
 
 var list_des_morts: Array[Vector2]
 

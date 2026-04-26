@@ -543,6 +543,22 @@ shader_parameter/color = Color(1, 1, 1, 1)
 shader_parameter/hdr = false
 shader_parameter/seed = 5.0
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w6qp3"]
+shader = ExtResource("61_3grwt")
+shader_parameter/angle = -0.3
+shader_parameter/position = -0.2
+shader_parameter/spread = 0.5
+shader_parameter/cutoff = 0.1
+shader_parameter/falloff = 0.2
+shader_parameter/edge_fade = 0.15
+shader_parameter/speed = 6.0
+shader_parameter/ray1_density = 8.0
+shader_parameter/ray2_density = 30.0
+shader_parameter/ray2_intensity = 0.3
+shader_parameter/color = Color(0.2, 0, 0, 0.8)
+shader_parameter/hdr = false
+shader_parameter/seed = 5.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_01erx"]
 size = Vector2(5040, 4218)
 
@@ -1436,13 +1452,6 @@ position = Vector2(791, -914)
 [node name="escalier_room2" parent="lvl1/Structure" unique_id=1021733173 instance=ExtResource("12_7ls7j")]
 position = Vector2(1801, 2391)
 
-[node name="pt_blueprint" parent="lvl1/Structure/escalier_room2" unique_id=308801530 instance=ExtResource("16_nfd4m")]
-position = Vector2(-289, 457)
-
-[node name="pt_blueprint2" parent="lvl1/Structure/escalier_room2" unique_id=1522903968 instance=ExtResource("16_nfd4m")]
-position = Vector2(-355, 448)
-rotation = -1.261873
-
 [node name="transition_rooms" parent="lvl1/Structure" unique_id=645547803 instance=ExtResource("13_h1car")]
 position = Vector2(4182, 2236)
 
@@ -1478,13 +1487,14 @@ polygon = PackedVector2Array(11247.3, 706, 11738, 516, 12101, 516, 12427, 424, 1
 
 [node name="PolygonMONTAGNE" type="Polygon2D" parent="lvl1/Structure/right_decor" unique_id=463204651]
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(13044, -2616, 12194, -2731, 11950, -2731, 12221, -2460, 12653, -2336, 12795, -2143, 12947, -1798, 12916.3, -1536.1936, 12702, -1438, 12759, -1261, 12777, -1059, 12814, -829, 12952, -797, 13099, -567, 13093, -544, 13084, -519, 13084, -517, 14060, -186)
+polygon = PackedVector2Array(13135, -2398, 12294, -2514, 12041, -2515, 12312, -2245, 12748, -2121, 12887, -1921, 12966, -1737, 12916.3, -1536.1936, 12702, -1438, 12759, -1261, 12777, -1059, 12814, -829, 12952, -797, 13099, -567, 13093, -544, 13084, -519, 13084, -517, 14060, -186)
 
 [node name="CollisionPolygonMONTAGNE" type="CollisionPolygon2D" parent="lvl1/Structure/right_decor" unique_id=1030167250]
 polygon = PackedVector2Array(13458, -1626, 12920, -1536, 12701, -1437, 12759, -1261, 12777, -1059, 12814, -829, 12952, -797, 12970, -778, 12989, -747, 13007, -722, 13139, -498, 14062, -185)
 
 [node name="CollisionPolygonMONTAGNE2" type="CollisionPolygon2D" parent="lvl1/Structure/right_decor" unique_id=2110964022]
-polygon = PackedVector2Array(13044, -2616, 12194, -2731, 11950, -2731, 12221, -2460, 12653, -2336, 12795, -2143, 12947, -1798, 13361.598, -1851.226)
+position = Vector2(91, 216)
+polygon = PackedVector2Array(13044, -2616, 12194, -2731, 11950, -2731, 12221, -2460, 12653, -2336, 12795, -2143, 12865, -1986, 13273, -2062)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="lvl1/Structure/right_decor" unique_id=1349891364]
 polygon = PackedVector2Array(12986, 182, 12958, 43, 13008, -13, 13056, -430, 14081, -90, 15341, -160, 13050, 922, 12973, 815)
@@ -1609,10 +1619,10 @@ position = Vector2(12508, -1080)
 position = Vector2(12569, -1080)
 
 [node name="pt_blueprint5" parent="lvl1/Structure/right_pt_zone" unique_id=1500177113 instance=ExtResource("16_nfd4m")]
-position = Vector2(13039, -185)
+position = Vector2(13110, -73)
 
 [node name="pt_blueprint6" parent="lvl1/Structure/right_pt_zone" unique_id=2094159507 instance=ExtResource("16_nfd4m")]
-position = Vector2(13119, -240)
+position = Vector2(13190, -128)
 
 [node name="platform8" parent="lvl1/Structure/right_pt_zone" unique_id=1566709629 instance=ExtResource("8_ltygr")]
 position = Vector2(12935, -399)
@@ -1625,6 +1635,9 @@ position = Vector2(12959, -636)
 
 [node name="platform11" parent="lvl1/Structure/right_pt_zone" unique_id=978039422 instance=ExtResource("8_ltygr")]
 position = Vector2(13199, -341)
+
+[node name="platform14" parent="lvl1/Structure/right_pt_zone" unique_id=483996302 instance=ExtResource("8_ltygr")]
+position = Vector2(13042, -237)
 
 [node name="pt_blueprint8" parent="lvl1/Structure/right_pt_zone" unique_id=352774770 instance=ExtResource("16_nfd4m")]
 position = Vector2(12758, -924)
@@ -1676,14 +1689,14 @@ reverse_rotate = true
 [node name="fractals" type="Node2D" parent="lvl1" unique_id=1952825093]
 
 [node name="fractale" parent="lvl1/fractals" unique_id=764819064 instance=ExtResource("17_p2ed6")]
-position = Vector2(8342, -109)
+position = Vector2(12243, -2591)
 identifiant = 2
 
 [node name="fractale2" parent="lvl1/fractals" unique_id=653933748 instance=ExtResource("17_p2ed6")]
 position = Vector2(3024, -1308)
 
 [node name="fractale4" parent="lvl1/fractals" unique_id=913439784 instance=ExtResource("17_p2ed6")]
-position = Vector2(5760, -368)
+position = Vector2(9585, 1820)
 identifiant = 1
 
 [node name="gravas" type="Node2D" parent="lvl1" unique_id=2043255634]
@@ -1793,7 +1806,7 @@ shape = SubResource("RectangleShape2D_fynux")
 [node name="TRAPS" type="Node2D" parent="lvl1" unique_id=1752754461]
 
 [node name="tas_de_cadavre" parent="lvl1" unique_id=1593653933 instance=ExtResource("7_j2cwt")]
-position = Vector2(0, 111.57022)
+position = Vector2(0, 124)
 
 [node name="lasers" type="Node2D" parent="lvl1" unique_id=896136686]
 
@@ -2004,10 +2017,10 @@ position = Vector2(7101, -2304)
 rotation = -1.5707964
 
 [node name="Temps" parent="lvl1/laby" unique_id=1268341129 instance=ExtResource("45_lmpmd")]
-offset_left = 12185.001
-offset_top = -2772.9998
-offset_right = 13407.001
-offset_bottom = -2673.9998
+offset_left = 12280.0
+offset_top = -2560.0002
+offset_right = 13502.0
+offset_bottom = -2461.0002
 rotation = 0.12755209
 theme_override_font_sizes/font_size = 27
 
@@ -2231,21 +2244,34 @@ z_index = 1
 position = Vector2(10205, 1394)
 rotation = 1.43117
 
-[node name="platform" parent="lvl1" unique_id=387117004 instance=ExtResource("8_ltygr")]
+[node name="pt_blueprint5" parent="lvl1" unique_id=1929360420 instance=ExtResource("16_nfd4m")]
 z_index = 1
-position = Vector2(10255, 1265)
+position = Vector2(10195.999, 1330.9999)
+rotation = 1.43117
 
 [node name="platform2" parent="lvl1" unique_id=1501586417 instance=ExtResource("8_ltygr")]
+process_mode = 4
+visible = false
 z_index = 1
 position = Vector2(10097, 1374)
 
 [node name="platform3" parent="lvl1" unique_id=1517389640 instance=ExtResource("8_ltygr")]
+process_mode = 4
+visible = false
 z_index = 1
 position = Vector2(9956, 1490)
 
 [node name="platform4" parent="lvl1" unique_id=290279720 instance=ExtResource("8_ltygr")]
+process_mode = 4
+visible = false
 z_index = 1
 position = Vector2(9823, 1616)
+
+[node name="platform7" parent="lvl1" unique_id=1544348589 instance=ExtResource("8_ltygr")]
+process_mode = 4
+visible = false
+z_index = 1
+position = Vector2(9962, 1688)
 
 [node name="platform5" parent="lvl1" unique_id=943195073 instance=ExtResource("8_ltygr")]
 position = Vector2(1404, 2166)
@@ -2258,16 +2284,19 @@ default_color = Color(0, 0, 0, 1)
 [node name="platform6" parent="lvl1" unique_id=2067553282 instance=ExtResource("8_ltygr")]
 position = Vector2(1327, 2166)
 
-[node name="pt_blueprint" parent="lvl1/platform6" unique_id=887141482 instance=ExtResource("16_nfd4m")]
-position = Vector2(-32, -53)
-rotation = 1.5114552
-
 [node name="button" parent="lvl1/platform6" unique_id=1067572409 instance=ExtResource("45_qgqoh")]
-position = Vector2(5, -21)
+position = Vector2(35, -21)
 
 [node name="laser_trap" parent="lvl1/platform6" unique_id=790521176 instance=ExtResource("13_f4kdv")]
-position = Vector2(-36, 355)
-rotation = 1.3823007
+position = Vector2(-6, 237)
+rotation = 1.293289
+scale = Vector2(0.7, 0.7)
+is_rotatingg = false
+
+[node name="laser_trap2" parent="lvl1/platform6" unique_id=1790390210 instance=ExtResource("13_f4kdv")]
+position = Vector2(56, 493)
+rotation = 1.5707964
+scale = Vector2(0.7, 0.7)
 is_rotatingg = false
 
 [node name="whiteparticle" type="Node2D" parent="lvl1" unique_id=800017337]
@@ -2344,10 +2373,6 @@ position = Vector2(346.41748, 1595.2439)
 scale = Vector2(0.3, 0.3)
 is_rotatingg = false
 
-[node name="bonus" parent="lvl1" unique_id=379160366 instance=ExtResource("15_fynux")]
-position = Vector2(1419.5708, -999.11005)
-type_bonus = "walljump"
-
 [node name="godraylvl1" type="Node2D" parent="lvl1" unique_id=58599440]
 
 [node name="godray1" type="ColorRect" parent="lvl1/godraylvl1" unique_id=1687113208]
@@ -2359,23 +2384,12 @@ offset_right = -317.73706
 offset_bottom = 389.76965
 rotation = -0.29147
 
-[node name="godray2" type="ColorRect" parent="lvl1/godraylvl1" unique_id=1881341107]
-z_index = 16
-material = SubResource("ShaderMaterial_wm35a")
-offset_left = -1517.0
-offset_top = -2939.0
-offset_right = -979.5276
-offset_bottom = -890.1228
-rotation = -0.29147
-
-[node name="godray4" type="ColorRect" parent="lvl1/godraylvl1" unique_id=1872449629]
-z_index = 16
-material = SubResource("ShaderMaterial_wm35a")
-offset_left = -2107.0
-offset_top = -4152.0
-offset_right = -1569.5276
-offset_bottom = -2103.1228
-rotation = -0.29147
+[node name="redgodray" type="ColorRect" parent="lvl1/godraylvl1" unique_id=287951]
+material = SubResource("ShaderMaterial_w6qp3")
+offset_left = 12698.0
+offset_top = 87.0
+offset_right = 12880.0
+offset_bottom = 688.0
 
 [node name="godray3" type="ColorRect" parent="lvl1/godraylvl1" unique_id=616350384]
 z_index = 16
@@ -3465,7 +3479,7 @@ draw_order = 0
 process_material = SubResource("ParticleProcessMaterial_j4o56")
 
 [node name="PIERREpresent" type="AnimatedSprite2D" parent="." unique_id=270908870]
-position = Vector2(12057, -2852)
+position = Vector2(12127, -2635)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_g62an")
 flip_h = true
@@ -3537,23 +3551,27 @@ position = Vector2(13482, -1616.8042)
 rotation = -0.26529005
 
 [node name="platform4" parent="lvl_reload_right" unique_id=711118098 instance=ExtResource("8_ltygr")]
-position = Vector2(13275, -2097.0002)
+position = Vector2(13305, -2010)
 rotation = 0.006981317
 
 [node name="platform2" parent="lvl_reload_right" unique_id=1452103471 instance=ExtResource("8_ltygr")]
-position = Vector2(13359, -1907)
+position = Vector2(13373, -1875)
 rotation = -0.26529005
 
 [node name="platform3" parent="lvl_reload_right" unique_id=1427688372 instance=ExtResource("8_ltygr")]
-position = Vector2(13490, -1798)
+position = Vector2(13490, -1758)
 rotation = -0.08901179
 
 [node name="platform5" parent="lvl_reload_right" unique_id=607532100 instance=ExtResource("8_ltygr")]
-position = Vector2(13258, -2281)
+position = Vector2(13319.999, -2142)
 rotation = -0.08901179
 
 [node name="platform6" parent="lvl_reload_right" unique_id=27108509 instance=ExtResource("8_ltygr")]
-position = Vector2(13123, -2452)
+position = Vector2(13198, -2273)
+
+[node name="platform7" parent="lvl_reload_right" unique_id=1485280181 instance=ExtResource("8_ltygr")]
+position = Vector2(12445.001, -1289.0001)
+rotation = -0.082030475
 
 [connection signal="body_entered" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_entered"]
 [connection signal="body_exited" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_exited"]

@@ -1,3 +1,4 @@
+ColorRect
 Node2D
 CharacterBody2D
 CollisionShape2D
@@ -7,7 +8,6 @@ TextureRect
 VisibleOnScreenEnabler2D
 VisibleOnScreenNotifier2D
 TileMapLayer
-ColorRect
 Sprite2D
 AudioStreamPlayer
 CollisionPolygon2D

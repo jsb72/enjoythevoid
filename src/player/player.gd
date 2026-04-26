@@ -110,7 +110,7 @@ func _physics_process(_delta: float) -> void:
 	logic_spe()
 
 func try_double_jump() -> void:
-	if Input.is_action_just_pressed("jump") and can_double_jump and Global.doublejump_unlock:
+	if Input.is_action_just_pressed("jump") and can_double_jump and Global.doublejump_unlock and !dead_:
 		jump()
 		can_double_jump = false	
 
@@ -151,7 +151,7 @@ func apply_movement(delta: float, acc_time: float, dec_time: float) -> void:
 func apply_gravity(delta: float) -> void:
 	velocity.y += calculate_gravity() * delta
 	velocity.y = clampf(velocity.y, max_up_velocity, calculate_gravity_limit())
-	if dead_:velocity.y = 0
+	#if dead_:velocity.y = 0
 
 func get_default_gravity() -> float:
 	return falling_gravity if velocity.y >= 0.0 else jumping_gravity

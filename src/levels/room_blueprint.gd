@@ -24,7 +24,7 @@ var lvl_2_loaded:bool = false
 @onready var cadavre: AnimatedSprite2D = $cadavre
 
 func _ready() -> void:
-	
+	player.dead_ = true
 	
 	cam.noise.positional_noise= true
 	camoffesetbottom.noise.positional_noise= true
@@ -59,6 +59,7 @@ func _process(delta: float) -> void:
 	
 	if player.is_on_floor() and first_time_on_floor:
 		first_time_on_floor=false
+		player.dead_ = false
 		var tween = get_tree().create_tween()
 		tween.tween_property(player.point_light_2d, "energy", 1.0, 10.0)
 		var tween2 = get_tree().create_tween()

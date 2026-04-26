@@ -184,9 +184,6 @@ position = Vector2(-623, -137)
 rotation = -1.8587756
 
 [node name="pt_blueprint6" parent="Node2D" unique_id=470163221 instance=ExtResource("5_1qo4e")]
-position = Vector2(-657.99994, -203.99998)
+z_index = -1
+position = Vector2(-638.00006, -202.00002)
 rotation = -3.1869712
-
-[node name="pt_blueprint7" parent="Node2D" unique_id=163154824 instance=ExtResource("5_1qo4e")]
-position = Vector2(-698.99994, -222.00003)
-rotation = -4.426155
