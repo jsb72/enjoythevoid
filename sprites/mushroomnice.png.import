@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn78pk7huhcxy"
-path="res://.godot/imported/tilesetchampi_base.png-229373554afa27c0d7f8ebe95d3c569b.ctex"
+uid="uid://x4pubbufdfbf"
+path="res://.godot/imported/mushroomnice.png-0e10c4d0d04e1090ac422e8d7e0a6667.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/tilesetchampi_base.png"
-dest_files=["res://.godot/imported/tilesetchampi_base.png-229373554afa27c0d7f8ebe95d3c569b.ctex"]
+source_file="res://sprites/mushroomnice.png"
+dest_files=["res://.godot/imported/mushroomnice.png-0e10c4d0d04e1090ac422e8d7e0a6667.ctex"]
 
 [params]
 
