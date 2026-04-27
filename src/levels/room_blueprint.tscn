@@ -1470,7 +1470,7 @@ position = Vector2(12569, -1080)
 position = Vector2(13190, -128)
 
 [node name="platform8" parent="lvl1/Structure/right_pt_zone" unique_id=1566709629 instance=ExtResource("8_ltygr")]
-position = Vector2(12935, -399)
+position = Vector2(12933.536, -371.18207)
 
 [node name="platform9" parent="lvl1/Structure/right_pt_zone" unique_id=596575196 instance=ExtResource("8_ltygr")]
 position = Vector2(12862, -515)
