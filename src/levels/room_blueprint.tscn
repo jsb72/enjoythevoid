@@ -49,9 +49,8 @@
 [ext_resource type="Texture2D" uid="uid://dk52pj28ds5fn" path="res://sprites/zero.png" id="46_73yqq"]
 [ext_resource type="PackedScene" uid="uid://denjct5e4x1jd" path="res://src/elements/cadavre.tscn" id="47_5ihcl"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="53_1nkay"]
-[ext_resource type="PackedScene" uid="uid://dij3e8be2nf5t" path="res://src/vivants/spider.tscn" id="53_6nwfb"]
 [ext_resource type="Script" uid="uid://ddhu3qfummrc2" path="res://addons/antialiased_line2d/antialiased_polygon2d.gd" id="54_w6qp3"]
-[ext_resource type="PackedScene" uid="uid://cgc1boc3xaavx" path="res://src/platforms/3_dmgblocktrapmove.tscn" id="55_brhbg"]
+[ext_resource type="PackedScene" uid="uid://wjb0iq8hpfjo" path="res://src/levels/midlvl.tscn" id="55_lmpmd"]
 [ext_resource type="PackedScene" uid="uid://ufnf3lc7ewin" path="res://src/vivants/a_atentacle.tscn" id="56_brhbg"]
 [ext_resource type="PackedScene" uid="uid://dvio2nnm1fv8q" path="res://src/vivants/yog_sothoth.tscn" id="56_gxno5"]
 [ext_resource type="Texture2D" uid="uid://dmrsbbrarvw1n" path="res://sprites/bigvectorBLACK.png" id="56_qgqoh"]
@@ -234,7 +233,7 @@ size = Vector2(1584.5, 498)
 size = Vector2(2002.9993, 1380)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqu8a"]
-size = Vector2(584, 1427)
+size = Vector2(584, 718.48694)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f4kdv"]
 size = Vector2(864, 954)
@@ -1261,28 +1260,28 @@ position = Vector2(366, -116)
 position = Vector2(401, -116)
 
 [node name="pt_blueprint2" parent="lvl1/Structure/platforms" unique_id=1663369056 instance=ExtResource("16_nfd4m")]
-position = Vector2(765, -290)
+position = Vector2(841, -268.5641)
 
 [node name="pt_blueprint5" parent="lvl1/Structure/platforms" unique_id=920875960 instance=ExtResource("16_nfd4m")]
-position = Vector2(811, -290)
+position = Vector2(887, -268.5641)
 
 [node name="platform13" parent="lvl1/Structure/platforms" unique_id=2104888243 instance=ExtResource("8_ltygr")]
-position = Vector2(1019, -355)
+position = Vector2(1005.35913, -374.48718)
 
 [node name="platform14" parent="lvl1/Structure/platforms" unique_id=1677572943 instance=ExtResource("8_ltygr")]
-position = Vector2(985, -355)
+position = Vector2(971.35913, -374.48718)
 
 [node name="platform16" parent="lvl1/Structure/platforms" unique_id=393004084 instance=ExtResource("8_ltygr")]
-position = Vector2(1191, -610)
+position = Vector2(1191, -598.5875)
 
 [node name="platform19" parent="lvl1/Structure/platforms" unique_id=1483464154 instance=ExtResource("8_ltygr")]
 position = Vector2(1132, -705)
 
 [node name="platform20" parent="lvl1/Structure/platforms" unique_id=510338595 instance=ExtResource("8_ltygr")]
-position = Vector2(1117.24, -440)
+position = Vector2(1134.7786, -465.33337)
 
 [node name="platform22" parent="lvl1/Structure/platforms" unique_id=1492328672 instance=ExtResource("8_ltygr")]
-position = Vector2(1040, -552)
+position = Vector2(1041.949, -579.28204)
 
 [node name="Node2D3" type="Node2D" parent="lvl1/Structure/platforms" unique_id=1135486316]
 position = Vector2(16.000004, -51)
@@ -1560,8 +1559,8 @@ position = Vector2(11887, -1340)
 shape = SubResource("RectangleShape2D_hw218")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="lvl1/cam_zones/no_bottom_offset_zone" unique_id=2140334494]
-visible = false
-position = Vector2(12789, 43.5)
+z_index = 8
+position = Vector2(12789, -526.57306)
 shape = SubResource("RectangleShape2D_lqu8a")
 
 [node name="cube" parent="lvl1" unique_id=1811157897 instance=ExtResource("30_f3u0r")]
@@ -1615,7 +1614,7 @@ rotation = -0.08901179
 position = Vector2(10498, -1346)
 
 [node name="bonus2" parent="lvl1" unique_id=715804290 instance=ExtResource("15_fynux")]
-position = Vector2(12233.852, 68.64856)
+position = Vector2(12875.589, -244.31659)
 type_bonus = "dash"
 
 [node name="novisibleplayerzone" type="Area2D" parent="lvl1" unique_id=2061754216]
@@ -1887,6 +1886,10 @@ offset_left = 16355.76
 offset_top = -1830.2946
 offset_right = 16893.232
 offset_bottom = 218.58264
+
+[node name="damage_block" parent="lvl1" unique_id=1113825460 instance=ExtResource("46_7f7j5")]
+position = Vector2(13019.245, -22.353027)
+rotation = -1.5707964
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
 visible = false
@@ -3046,325 +3049,7 @@ position = Vector2(13198, -2273)
 position = Vector2(12445.001, -1289.0001)
 rotation = -0.082030475
 
-[node name="MIDDLEMAP" type="Node2D" parent="." unique_id=1262928961]
-
-[node name="challenge1" type="Node2D" parent="MIDDLEMAP" unique_id=655691861]
-position = Vector2(954.7197, 216.59375)
-
-[node name="3dmgblocktrapmove" parent="MIDDLEMAP/challenge1" unique_id=177334153 instance=ExtResource("55_brhbg")]
-position = Vector2(2343.7158, -203.53674)
-
-[node name="StaticBody2D" type="StaticBody2D" parent="MIDDLEMAP/challenge1" unique_id=1637833928]
-position = Vector2(189.875, -407.36804)
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MIDDLEMAP/challenge1/StaticBody2D" unique_id=161820484]
-position = Vector2(-332.67383, 0)
-polygon = PackedVector2Array(4650.579, -1112.4751, 5124.8125, -1141.096, 5382.1636, -1153.6497, 5573.608, -1232.1104, 5573.608, -1533.3997, 5975.3267, -1558.5071, 5689.7295, -1508.2921, 5652.0684, -1458.0773, 5683.453, -1056.3584, 5953.3574, -1056.3584, 5928.5093, -1035.5471, 5724.847, -1000.7755, 5680.7617, -661.7525, 4785.8623, -632.67053, 4569.3105, -817.83777)
-
-[node name="AntialiasedPolygon2D" type="Polygon2D" parent="MIDDLEMAP/challenge1/StaticBody2D/CollisionPolygon2D" unique_id=1080324076]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(4651.0313, -1112.7894, 5124.8125, -1141.096, 5382.1636, -1153.6497, 5573.608, -1232.1104, 5573.608, -1533.3997, 5975.3267, -1558.5071, 5689.7295, -1508.2921, 5652.0684, -1458.0773, 5683.453, -1056.3584, 5953.3574, -1056.3584, 5928.079, -1037.2257, 5726.079, -1001.2257, 5681.079, -660.2257, 4785.8623, -632.67053, 4569.3105, -817.83777)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MIDDLEMAP/challenge1/StaticBody2D" unique_id=1737727388]
-polygon = PackedVector2Array(5898.007, -1569.5127, 6228.3887, -1554.3228, 6406.871, -1163.1803, 5898.007, -1091.0277, 6011.9316, -1147.9904, 6319.5293, -1201.1554, 6190.414, -1516.3478)
-
-[node name="AntialiasedPolygon2D" type="Polygon2D" parent="MIDDLEMAP/challenge1/StaticBody2D/CollisionPolygon2D2" unique_id=1017553986]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(5898.007, -1569.5127, 6228.3887, -1554.3228, 6406.871, -1163.1803, 5898.007, -1091.0277, 6011.9316, -1147.9904, 6319.5293, -1201.1554, 6190.414, -1516.3478)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="MIDDLEMAP/challenge1/StaticBody2D" unique_id=1497645809]
-polygon = PackedVector2Array(6617.8247, -1643.6563, 6551.918, -1050.4933, 5710.8184, -994.00134, 5717.0957, -937.50964, 5654.327, -912.4022, 5559.4053, -883.2257, 5546.4053, -690.2257, 5503.6826, -435.36096, 7104.2813, -444.77625, 7198.4346, -1439.6583)
-
-[node name="AntialiasedPolygon2D" type="Polygon2D" parent="MIDDLEMAP/challenge1/StaticBody2D/CollisionPolygon2D3" unique_id=1184192023]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(6617.8247, -1643.6563, 6551.918, -1050.4933, 5710.8184, -994.00134, 5717.0957, -937.50964, 5654.4053, -915.6803, 5559.86, -883.8622, 5542.587, -675.6803, 5503.6826, -435.36096, 7104.2813, -444.77625, 7198.4346, -1439.6583)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="pt_blueprint3" parent="MIDDLEMAP/challenge1" unique_id=1546994131 instance=ExtResource("16_nfd4m")]
-z_index = -1
-position = Vector2(4468.2544, -1493.5819)
-rotation = -0.10471976
-
-[node name="part1" type="Node2D" parent="MIDDLEMAP" unique_id=358994290]
-
-[node name="structure1" type="StaticBody2D" parent="MIDDLEMAP/part1" unique_id=778099030]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MIDDLEMAP/part1/structure1" unique_id=1981092032]
-position = Vector2(-93, 0)
-polygon = PackedVector2Array(1952, 140, 1986, -232, 2055, -477, 2120, -535, 2138, -740, 2075, -888, 2047, -1009, 2232.0579, -1051.6694, 2356.0247, -1059.1074, 2366.7686, -1118.6116, 2479.9917, -1159.1074, 2661.8098, -1186.3801, 2795.2622, -1210.8676, 3030.2856, -1210.8485, 2798.8677, -1154.2919, 2809.5898, -819.9967, 2752.72, -655.4367, 2850.73, -634.8667, 2921.1943, -191.16113, 3069.74, 141.95337)
-
-[node name="AntialiasedPolygon2D" type="Polygon2D" parent="MIDDLEMAP/part1/structure1/CollisionPolygon2D" unique_id=1120569684]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(1952, 140, 1986, -232, 2055, -477, 2120, -535, 2138, -740, 2075, -888, 2047, -1009, 2232.0579, -1051.6694, 2356.0247, -1059.1074, 2366.7686, -1118.6116, 2479.9917, -1159.1074, 2661.8098, -1186.3801, 2795.2622, -1210.8676, 2809.5898, -819.9967, 2752.72, -655.4367, 2850.73, -634.8667, 2921.1943, -191.16113, 3069.74, 141.95337)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MIDDLEMAP/part1/structure1" unique_id=1567260791]
-position = Vector2(471.93994, -173.32275)
-polygon = PackedVector2Array(1952, -1244, 1942, -1592, 1961, -1966, 2460, -1969, 2488, -1627, 2227.0586, -1618.3167, 2193.9302, -1577.3936, 2106, -1561, 2080.9045, -1476.0603, 2001.0073, -1474.1116)
-
-[node name="AntialiasedPolygon2D2" type="Polygon2D" parent="MIDDLEMAP/part1/structure1/CollisionPolygon2D2" unique_id=1325983117]
-position = Vector2(1, 2)
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(1952, -1244, 1942, -1592, 2024, -3091, 2370, -3289, 2488, -1627, 2218.2637, -1612.5219, 2194.879, -1571.5988, 2106, -1561, 2089.6482, -1474.1628, 2003.9048, -1474.1628)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="3platformblueprint" parent="MIDDLEMAP/part1/structure1" unique_id=853668133 instance=ExtResource("32_f3u0r")]
-z_index = -1
-position = Vector2(2739.4302, -1184.5989)
-
-[node name="part2" type="Node2D" parent="MIDDLEMAP" unique_id=1514738110]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="MIDDLEMAP/part2" unique_id=1821792709]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MIDDLEMAP/part2/StaticBody2D" unique_id=586438451]
-polygon = PackedVector2Array(2937.2969, -1210.8516, 2945.9292, -859.24194, 3048.6414, -805.0327, 3231.241, -799.3264, 3450.931, -790.7671, 3721.977, -756.5298, 3844.6611, -668.083, 3984.4639, -670.9363, 4007.2888, -785.0608, 4021.5544, -967.6604, 4007.4028, -1214.0684, 3671.991, -1244.6814, 3195.493, -1227.3784)
-
-[node name="AntialiasedPolygon2D" type="Polygon2D" parent="MIDDLEMAP/part2/StaticBody2D/CollisionPolygon2D" unique_id=1380020943]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(2937.2969, -1210.8516, 2945.9292, -859.24194, 3048.6414, -805.0327, 3231.241, -799.3264, 3450.931, -790.7671, 3721.977, -756.5298, 3844.6611, -668.083, 3984.4639, -670.9363, 4007.2888, -785.0608, 4021.5544, -967.6604, 4007.2888, -1213.0284, 3677.0908, -1245.0907, 3191.6165, -1228.4983)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MIDDLEMAP/part2/StaticBody2D" unique_id=1897395692]
-polygon = PackedVector2Array(3324.0933, -1232.7821, 3333.525, -1343.6057, 3444.3486, -1345.9636, 3470.2861, -1447.3555, 3569.3198, -1449.7134, 3595.2573, -1548.7472, 3729.6604, -1560.5369, 3937.1597, -1565.2528, 4007.4063, -1214.0781)
-
-[node name="AntialiasedPolygon2D2" type="Polygon2D" parent="MIDDLEMAP/part2/StaticBody2D/CollisionPolygon2D2" unique_id=490301133]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(3324.0933, -1232.7821, 3333.525, -1343.6057, 3444.3486, -1345.9636, 3470.2861, -1447.3555, 3569.3198, -1449.7134, 3595.2573, -1548.7472, 3729.6604, -1560.5369, 3937.1597, -1565.2528, 4007.8982, -1209.2026)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="MIDDLEMAP/part2/StaticBody2D" unique_id=243695017]
-polygon = PackedVector2Array(4468.5576, -1135.8315, 4485.819, -1298.0884, 4793.0713, -1301.5405, 5162.464, -1304.9929, 5379.957, -1294.636, 5438.646, -1073.6907, 5393.444, -660.5049, 5034.227, -719.0149, 4783.5923, -735.7239, 4491.1846, -777.49634, 3989.9146, -790.0281, 3994.0918, -1019.77686, 4303.2085, -1036.4858, 4453.5894, -1036.4858)
-
-[node name="AntialiasedPolygon2D" type="Polygon2D" parent="MIDDLEMAP/part2/StaticBody2D/CollisionPolygon2D3" unique_id=1650052884]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(4468.5576, -1135.8315, 4485.819, -1298.0884, 4793.0713, -1301.5405, 5162.464, -1304.9929, 5379.957, -1294.636, 5438.646, -1073.6907, 5393.444, -660.5049, 5034.227, -719.0149, 4783.5923, -735.7239, 4491.1846, -777.49634, 3989.9146, -790.0281, 3994.0918, -1019.77686, 4303.2085, -1036.4858, 4453.5894, -1036.4858)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="MIDDLEMAP/part2/StaticBody2D" unique_id=152404872]
-position = Vector2(210.09326, -25.937378)
-polygon = PackedVector2Array(5293.217, -1512.6924, 4950.682, -1525.2241, 4503.7163, -1558.6421, 4470.2983, -1738.2639, 4495.362, -1909.5311, 4775.238, -1955.4808, 5351.698, -1980.5443, 5880.543, -1978.5172, 6655.9976, -2021.2445, 6658.7246, -2003.0627, 6357.8154, -1949.4264, 6063.27, -1906.6991, 6026.785, -1725.796, 6026.2256, -1542.7238, 5748.5366, -1566.9966)
-
-[node name="AntialiasedPolygon2D" type="Polygon2D" parent="MIDDLEMAP/part2/StaticBody2D/CollisionPolygon2D4" unique_id=850980599]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(5293.217, -1512.6924, 4950.682, -1525.2241, 4503.7163, -1558.6421, 4470.2983, -1738.2639, 4495.362, -1909.5311, 4775.238, -1955.4808, 5351.698, -1980.5443, 5809.634, -1976.6991, 6659.634, -2020.3354, 6655.0884, -2002.1536, 6359.634, -1949.4264, 6063.27, -1906.6991, 6026.9063, -1717.6082, 6027.5566, -1540.0619, 5748.5366, -1566.9966)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="MIDDLEMAP/part2/StaticBody2D" unique_id=1679720333]
-position = Vector2(0, 94.937256)
-polygon = PackedVector2Array(2394.205, -3045.7432, 2561.2954, -1579.5283, 2628.1313, -1550.2876, 2715.8535, -1516.8696, 2997.9216, -1585.4591, 3181.8416, -1618.4703, 3200.4146, -1717.3777, 3271.4277, -1846.8723, 3342.441, -1976.3671, 3492.8218, -2018.1396, 3695.8745, -2068.8384, 3735.9595, -2189.0938, 4125.021, -2182.02, 4259.424, -2382.4456, 4482.83, -2394.092, 4865.417, -2448.4683, 5246.9155, -2533.834, 6066.4478, -2509.3704, 6372.2437, -3053.6865, 6086.894, -3354.8596, 2749.2715, -3521.9495)
-
-[node name="AntialiasedPolygon2D" type="Polygon2D" parent="MIDDLEMAP/part2/StaticBody2D/CollisionPolygon2D5" unique_id=231177846]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(2394.205, -3045.7432, 2561.2954, -1579.5283, 2628.1313, -1550.2876, 2715.8535, -1516.8696, 2997.9216, -1585.4591, 3181.8416, -1618.4703, 3200.4146, -1717.3777, 3271.4277, -1846.8723, 3342.441, -1976.3671, 3492.8218, -2018.1396, 3695.8745, -2068.8384, 3735.9595, -2189.0938, 4125.021, -2182.02, 4259.424, -2382.4456, 4482.83, -2394.092, 4865.417, -2448.4683, 5246.9155, -2533.834, 6066.4478, -2509.3704, 6372.2437, -3053.6865, 6086.894, -3354.8596, 2749.2715, -3521.9495)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="pt_blueprint" parent="MIDDLEMAP/part2" unique_id=372167664 instance=ExtResource("16_nfd4m")]
-position = Vector2(4061.2969, -1484.9023)
-
-[node name="pt_blueprint4" parent="MIDDLEMAP/part2" unique_id=1936965732 instance=ExtResource("16_nfd4m")]
-position = Vector2(4135.381, -1484.9023)
-
-[node name="pt_blueprint2" parent="MIDDLEMAP/part2" unique_id=98915328 instance=ExtResource("16_nfd4m")]
-position = Vector2(4310.8643, -1369.751)
-
-[node name="pt_blueprint3" parent="MIDDLEMAP/part2" unique_id=1280653342 instance=ExtResource("16_nfd4m")]
-position = Vector2(4352.7373, -1369.751)
-
-[node name="pt_blueprint5" parent="MIDDLEMAP/part2" unique_id=1443928809 instance=ExtResource("16_nfd4m")]
-position = Vector2(4269.942, -1129.4481)
-
-[node name="pt_blueprint6" parent="MIDDLEMAP/part2" unique_id=1654929163 instance=ExtResource("16_nfd4m")]
-position = Vector2(4311.815, -1129.4481)
-
-[node name="pt_blueprint7" parent="MIDDLEMAP/part2" unique_id=840674632 instance=ExtResource("16_nfd4m")]
-position = Vector2(4658.0215, -1672.558)
-rotation = -0.26529005
-
-[node name="pt_blueprint8" parent="MIDDLEMAP/part2" unique_id=1470324932 instance=ExtResource("16_nfd4m")]
-position = Vector2(4470.9443, -1812.8656)
-
-[node name="platform" parent="MIDDLEMAP/part2" unique_id=1408829938 instance=ExtResource("8_ltygr")]
-position = Vector2(4130.2314, -1250.9426)
-
-[node name="platform2" parent="MIDDLEMAP/part2" unique_id=1721520699 instance=ExtResource("8_ltygr")]
-position = Vector2(4621.3467, -1420.6489)
-rotation = -0.17627825
-
-[node name="platform3" parent="MIDDLEMAP/part2" unique_id=1980472780 instance=ExtResource("8_ltygr")]
-position = Vector2(4511.0635, -1556.6006)
-rotation = 0.17802358
-
-[node name="spider" parent="MIDDLEMAP" unique_id=1458701811 instance=ExtResource("53_6nwfb")]
-position = Vector2(5123.61, -1533.9063)
-
-[node name="gravas" type="Node2D" parent="MIDDLEMAP" unique_id=2043255634]
-position = Vector2(-2577.7808, -2127.9329)
-
-[node name="pt_blueprint11" parent="MIDDLEMAP/gravas" unique_id=1639329764 instance=ExtResource("16_nfd4m")]
-position = Vector2(8391, 88.000244)
-rotation = 1.5707964
-
-[node name="pt_blueprint12" parent="MIDDLEMAP/gravas" unique_id=830499475 instance=ExtResource("16_nfd4m")]
-position = Vector2(8550, 98)
-
-[node name="pt_blueprint13" parent="MIDDLEMAP/gravas" unique_id=2135977623 instance=ExtResource("16_nfd4m")]
-position = Vector2(8397, 7.999749)
-rotation = 0.28099802
-
-[node name="pt_blueprint2" parent="MIDDLEMAP/gravas" unique_id=1709124219 instance=ExtResource("16_nfd4m")]
-position = Vector2(8029, 97)
-
-[node name="pt_blueprint4" parent="MIDDLEMAP/gravas" unique_id=511259193 instance=ExtResource("16_nfd4m")]
-position = Vector2(8215, 97)
-
-[node name="pt_blueprint3" parent="MIDDLEMAP/gravas" unique_id=1355394741 instance=ExtResource("16_nfd4m")]
-position = Vector2(8122, 87.000244)
-rotation = 0.42062435
-
-[node name="pt_blueprint5" parent="MIDDLEMAP/gravas" unique_id=317128264 instance=ExtResource("16_nfd4m")]
-position = Vector2(8314, 97)
-
-[node name="pt_blueprint6" parent="MIDDLEMAP/gravas" unique_id=1021496962 instance=ExtResource("16_nfd4m")]
-position = Vector2(8246, 42)
-
-[node name="pt_blueprint7" parent="MIDDLEMAP/gravas" unique_id=486663072 instance=ExtResource("16_nfd4m")]
-position = Vector2(8319.999, 26)
-rotation = 1.1239921
-
-[node name="pt_blueprint8" parent="MIDDLEMAP/gravas" unique_id=1841253601 instance=ExtResource("16_nfd4m")]
-position = Vector2(8161, 26.999996)
-rotation = -0.5602507
-
-[node name="pt_blueprint9" parent="MIDDLEMAP/gravas" unique_id=1271668626 instance=ExtResource("16_nfd4m")]
-position = Vector2(8337.001, -53.00007)
-rotation = -0.06981317
-
-[node name="pt_blueprint" parent="MIDDLEMAP/gravas" unique_id=1132569280 instance=ExtResource("16_nfd4m")]
-position = Vector2(8470, 80.99979)
-rotation = -0.9826203
-scale = Vector2(0.99999994, 0.99999994)
-
-[node name="pt_blueprint10" parent="MIDDLEMAP/gravas" unique_id=2075897040 instance=ExtResource("16_nfd4m")]
-position = Vector2(8236.001, -29.00006)
-rotation = -0.06981317
-
-[node name="lasers" type="Node2D" parent="MIDDLEMAP/gravas" unique_id=896136686]
-position = Vector2(-51.90918, 23.958252)
-
-[node name="laser_trap" parent="MIDDLEMAP/gravas/lasers" unique_id=128361332 instance=ExtResource("13_f4kdv")]
-position = Vector2(8072, 32.999878)
-rotation = -0.33684856
-scale = Vector2(0.7, 0.7)
-is_rotatingg = false
-
-[node name="laser_trap2" parent="MIDDLEMAP/gravas/lasers" unique_id=113913790 instance=ExtResource("13_f4kdv")]
-position = Vector2(8114.9995, 62.999916)
-rotation = -0.17453292
-scale = Vector2(0.8, 0.8)
-is_rotatingg = false
-
-[node name="part3" type="Node2D" parent="MIDDLEMAP" unique_id=931857300]
-
-[node name="3platformblueprint" parent="MIDDLEMAP/part3" unique_id=1884302799 instance=ExtResource("32_f3u0r")]
-position = Vector2(6130.2603, -545.14526)
-rotation = -0.20943952
-
-[node name="platform" parent="MIDDLEMAP/part3" unique_id=1342733175 instance=ExtResource("8_ltygr")]
-position = Vector2(6637.4805, -784.4241)
-rotation = 0.10471976
-
-[node name="platform2" parent="MIDDLEMAP/part3" unique_id=1173768743 instance=ExtResource("8_ltygr")]
-position = Vector2(6656.8403, -994.964)
-rotation = 0.10471976
-
-[node name="platform3" parent="MIDDLEMAP/part3" unique_id=1798825006 instance=ExtResource("8_ltygr")]
-position = Vector2(6535.8403, -899.374)
-rotation = 0.10471976
-
-[node name="StaticBody2D" type="StaticBody2D" parent="MIDDLEMAP/part3" unique_id=1036592301]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MIDDLEMAP/part3/StaticBody2D" unique_id=40754082]
-polygon = PackedVector2Array(6085.578, -558.14844, 5661.071, -540.6826, 5628.9063, -462.5681, 5238.3335, -402.83325, 4595.037, -356.88354, 4273.3887, -356.88354, 4209.059, -191.4646, 4107.9697, -35.23535, 3992, 106, 3811.5457, 138.90613, 6123.8145, 139.43152, 6098.481, -509.49146)
-
-[node name="AntialiasedPolygon2D" type="Polygon2D" parent="MIDDLEMAP/part3/StaticBody2D/CollisionPolygon2D" unique_id=129965440]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(6085.578, -558.14844, 5661.071, -540.6826, 5628.9063, -462.5681, 5238.3335, -402.83325, 4595.037, -356.88354, 4273.3887, -356.88354, 4209.059, -191.4646, 4107.9697, -35.23535, 3991, 106, 3811.5457, 138.90613, 6123.8145, 139.43152, 6098.481, -509.49146)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="part4" type="Node2D" parent="MIDDLEMAP" unique_id=464045702]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="MIDDLEMAP/part4" unique_id=58249692]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MIDDLEMAP/part4/StaticBody2D" unique_id=1222353391]
-polygon = PackedVector2Array(12545.135, 134.95465, 12358.285, 96.726685, 12075.605, 85.013916, 12066.379, 8.300171, 11720.021, 9.063965, 11713.117, -77.24292, 11067.542, -77.24292, 10535.893, -177.35889, 10532.439, -515.6815, 10038.765, -522.58606, 10042.217, -874.7178, 9921.388, -874.7178, 9921.388, -1306.2518, 9955.91, -1572.0768, 10076.74, -1658.3835, 10556.605, -1613.5042, 10984.6875, -1630.7654, 10925.999, -1834.4495, 10072.488, -2073.3452, 9208.633, -1829.8113, 8889.353, 139.38843)
-
-[node name="AntialiasedPolygon2D" type="Polygon2D" parent="MIDDLEMAP/part4/StaticBody2D/CollisionPolygon2D" unique_id=604777841]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(12554.885, 141.78418, 12358.285, 96.726685, 12075.605, 85.013916, 12069.041, 8.300171, 11720.021, 9.063965, 11713.117, -77.24292, 11067.542, -77.24292, 10535.893, -177.35889, 10532.439, -515.6815, 10038.765, -522.58606, 10042.217, -874.7178, 9921.388, -874.7178, 9921.388, -1306.2518, 9955.91, -1572.0768, 10076.74, -1658.3835, 10556.605, -1613.5042, 10984.6875, -1630.7654, 10925.999, -1834.4495, 10072.488, -2073.3452, 9208.633, -1829.8113, 8885.775, 147.49048)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MIDDLEMAP/part4/StaticBody2D" unique_id=1921609882]
-polygon = PackedVector2Array(11961.457, -301.20703, 11938.672, -380.95435, 11600.695, -384.75195, 11403.225, -415.13184, 10993.095, -434.1194, 10852.588, -483.48682, 10769.043, -373.35938, 10761.447, -760.70435, 10286.76, -753.1094, 10279.165, -1091.0869, 10116.431, -1090.5101, 10117.044, -1193.8452, 10293.891, -1205.635, 10303.322, -1299.9529, 10455.83, -1311.916, 10454.961, -1376.2216, 10872.517, -1368.1588, 11027.871, -1315.3877, 11426.01, -992.3518, 11479.439, -855.6711, 11712.231, -942.053, 11864.498, -939.12476, 12094.361, -857.13513, 12067.787, -563.2344)
-
-[node name="AntialiasedPolygon2D" type="Polygon2D" parent="MIDDLEMAP/part4/StaticBody2D/CollisionPolygon2D2" unique_id=1481510657]
-color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(11961.457, -301.20703, 11938.672, -380.95435, 11600.695, -384.75195, 11403.225, -415.13184, 10993.095, -434.1194, 10852.588, -483.48682, 10769.043, -373.35938, 10761.447, -760.70435, 10286.76, -753.1094, 10279.165, -1091.0869, 10116.431, -1090.5101, 10117.044, -1193.8452, 10293.891, -1205.635, 10303.322, -1299.9529, 10455.25, -1312.4954, 10456.699, -1380.8562, 10869.518, -1371.4636, 11027.871, -1315.3877, 11426.01, -992.3518, 11479.439, -855.6711, 11712.231, -942.053, 11864.498, -939.12476, 12094.361, -857.13513, 12067.787, -563.2344)
-script = ExtResource("54_w6qp3")
-stroke_width = 0.0
-metadata/_custom_type_script = "uid://ddhu3qfummrc2"
-
-[node name="damage_block" parent="MIDDLEMAP/part4" unique_id=1681081461 instance=ExtResource("46_7f7j5")]
-position = Vector2(13019.245, -22.353027)
-rotation = -1.5707964
-
-[node name="laser_trap" parent="MIDDLEMAP/part4" unique_id=617814009 instance=ExtResource("13_f4kdv")]
-position = Vector2(11211.994, -251.0675)
-rotation = -4.712389
-scale = Vector2(0.5, 0.5)
-
-[node name="laser_trap2" parent="MIDDLEMAP/part4" unique_id=2058015571 instance=ExtResource("13_f4kdv")]
-z_index = -1
-position = Vector2(10156.168, -637.187)
-rotation = -3.874631
-scale = Vector2(0.5, 0.5)
-
-[node name="part5" type="Node2D" parent="MIDDLEMAP" unique_id=1258706297]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="MIDDLEMAP/part5" unique_id=1240675435]
-
-[node name="3platformblueprint" parent="MIDDLEMAP/part5" unique_id=88440810 instance=ExtResource("32_f3u0r")]
-position = Vector2(11165.424, -2720.2844)
-rotation = 0.31415927
-
-[node name="3platformblueprint2" parent="MIDDLEMAP/part5" unique_id=1846428011 instance=ExtResource("32_f3u0r")]
-position = Vector2(10385.267, -2977.6248)
-rotation = 0.31415927
+[node name="midlvl" parent="." unique_id=98324228 instance=ExtResource("55_lmpmd")]
 
 [connection signal="body_entered" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_entered"]
 [connection signal="body_exited" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_exited"]

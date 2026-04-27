@@ -1,15 +1,14 @@
-res://src/levels/meta_room_piece.tscn
+res://src/levels/midlvl.tscn
 res://addons/phantom_camera/themes/theme.tres
 res://shaders/vignette.gdshader
 res://shaders/damage_impact.gdshader
 res://shaders/distorsion.gdshader
 res://shaders/glitch.gdshader
 res://shaders/fog.gdshader
-res://shaders/godrays.gdshader
 res://shaders/screen_off.gdshader
+res://shaders/godrays.gdshader
 res://shaders/starfield.gdshader
 res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/blur.gdshader
 res://src/levels/room_blueprint.tscn
-res://src/global.gd
