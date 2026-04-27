@@ -496,7 +496,7 @@ func sound_animation() -> void:
 		slide_sound.stop()
 		
 		if velocity.y > 800 :
-			if !falling_sound.playing and !dead_: 
+			if !falling_sound.playing : 
 				if !falling_started:
 					var tween = get_tree().create_tween()
 					tween.tween_property(falling_sound, "volume_db", 0.0, 1.0)

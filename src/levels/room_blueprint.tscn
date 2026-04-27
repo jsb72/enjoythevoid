@@ -1366,7 +1366,7 @@ polygon = PackedVector2Array(11262, 1124, 11749, 937, 12118, 936, 12439, 843, 12
 [node name="Polygon2D6" type="Polygon2D" parent="lvl1/Structure/right_decor" unique_id=704741026]
 position = Vector2(1924, -311)
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(8680, 3389, 8503, 2042, 8458, 1465, 8636, 1376, 9228, 1362, 9391, 1450, 9361, 1695, 9132, 1650, 9117, 1872, 9109, 2309, 9169, 3012)
+polygon = PackedVector2Array(8680, 3389, 8503, 2042, 8464.992, 1499.8002, 8694.356, 1414.0565, 9228, 1362, 9391, 1450, 9361, 1695, 9132, 1650, 9117, 1872, 9109, 2309, 9169, 3012)
 
 [node name="Polygon2D7" type="Polygon2D" parent="lvl1/Structure/right_decor" unique_id=242826324]
 color = Color(0, 0, 0, 1)
@@ -1394,7 +1394,7 @@ default_color = Color(0, 0, 0, 1)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="lvl1/Structure/right_decor" unique_id=1567710808]
 position = Vector2(1929, -308)
-polygon = PackedVector2Array(8680, 3389, 8503, 2042, 8458, 1465, 8636, 1376, 9191.158, 1362.0452, 9482.122, 1417.3693, 9361, 1695, 9132, 1650, 9117, 1872, 9109, 2309, 9169, 3012)
+polygon = PackedVector2Array(8680, 3389, 8503, 2042, 8457.849, 1498.9437, 8687.213, 1411.0565, 9191.158, 1362.0452, 9482.122, 1417.3693, 9361, 1695, 9132, 1650, 9117, 1872, 9109, 2309, 9169, 3012)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="lvl1/Structure/right_decor" unique_id=1741089948]
 polygon = PackedVector2Array(10427, 1687, 9879, 1761, 9864, 1887, 10020, 1968, 10138, 2176, 10471, 2220)

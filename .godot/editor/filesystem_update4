@@ -12,3 +12,5 @@ res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/blur.gdshader
 res://src/levels/room_blueprint.tscn
+res://src/global.gd
+res://src/player/player.gd
