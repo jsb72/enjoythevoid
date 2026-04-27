@@ -235,6 +235,9 @@ size = Vector2(2002.9993, 1380)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lqu8a"]
 size = Vector2(584, 718.48694)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmpmd"]
+size = Vector2(316.91455, 1264.5673)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f4kdv"]
 size = Vector2(864, 954)
 
@@ -1562,6 +1565,10 @@ shape = SubResource("RectangleShape2D_hw218")
 z_index = 8
 position = Vector2(12789, -526.57306)
 shape = SubResource("RectangleShape2D_lqu8a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lvl1/cam_zones/no_bottom_offset_zone" unique_id=1906154737]
+position = Vector2(9269.617, -2959.4734)
+shape = SubResource("RectangleShape2D_lmpmd")
 
 [node name="cube" parent="lvl1" unique_id=1811157897 instance=ExtResource("30_f3u0r")]
 position = Vector2(16734, 73)
@@ -3014,6 +3021,18 @@ shape = SubResource("RectangleShape2D_qgqoh")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1683014757]
 position = Vector2(-3403, 53)
+shape = SubResource("RectangleShape2D_qgqoh")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1977742404]
+position = Vector2(3785.6934, -1665.2417)
+shape = SubResource("RectangleShape2D_qgqoh")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1646372932]
+position = Vector2(12457.639, 16.42041)
+shape = SubResource("RectangleShape2D_qgqoh")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1908838162]
+position = Vector2(9867.891, -3289.7598)
 shape = SubResource("RectangleShape2D_qgqoh")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=540901163]
