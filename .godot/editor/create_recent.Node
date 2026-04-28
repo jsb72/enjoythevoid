@@ -1,3 +1,5 @@
+Timer
+RayCast2D
 TileMapLayer
 ColorRect
 Parallax2D
@@ -10,5 +12,3 @@ CharacterBody2D
 Area2D
 CanvasLayer
 TextureRect
-VisibleOnScreenEnabler2D
-VisibleOnScreenNotifier2D

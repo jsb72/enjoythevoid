@@ -130,6 +130,8 @@ func update_flip_h() -> void:
 	
 	if h_input_dir:
 		flip_h = h_input_dir != 1.0
+		if state_machine.active_state is WallSlideState:
+			flip_h=!flip_h
 
 func get_input_vector() -> Vector2:
 	if dead_: return Vector2(0,0)
@@ -179,6 +181,7 @@ func jump() -> void:
 		try_play_new_anim("jumpup")
 		jump_sound.play()
 		jump_particle.restart()
+		is_sliding=false
 
 func try_jump() -> void:
 	if Input.is_action_just_pressed("jump") and !dead_:
@@ -209,13 +212,33 @@ func apply_wall_slide(delta: float) -> void:
 	var step: float = max_wall_slide_speed / wall_slide_acc_time
 	velocity.y = move_toward(velocity.y, calculate_wall_slide_speed(), step * delta)
 
+@onready var wall_ray_right: RayCast2D = $WallRayRight
+@onready var wall_ray_left: RayCast2D = $WallRayLeft
 func can_wall_slide() -> bool:
 	# Can wall slide if the player is touching the wall and moving towards it.
-	return is_on_wall() and get_input_vector().x * get_last_wall_dir() > 0
-
+	#return is_on_wall() and get_input_vector().x * get_last_wall_dir() > 0
+	var isonwall=false
+	var input_x=get_input_vector().x
+	if wall_ray_right.is_colliding():
+		var collidobj = wall_ray_right.get_collider()
+		if collidobj is StaticBody2D and input_x > 0:
+			isonwall=true
+	if wall_ray_left.is_colliding():
+		var collidobj = wall_ray_left.get_collider()
+		if collidobj is StaticBody2D and input_x < 0:
+			isonwall=true
+	return isonwall
+	
+var is_sliding:bool=false
 func try_wall_slide() -> void:
 	if can_wall_slide():
 		state_machine.activate_state_by_name("WallSlideState")
+		is_sliding=true
+		print(1)
+	else:
+		is_sliding=false
+		print(0)
+		
 
 func calculate_wall_slide_speed() -> float:
 	return max_wall_slide_speed * (
@@ -235,6 +258,9 @@ func wall_jump() -> void:
 	try_play_new_anim("jumpup",0.33*wall_jump_dir)
 	walljump_sound.play()
 	jump_particle.restart()
+	is_sliding=false
+	
+	
 
 func try_wall_jump(ignore_wall: bool = false) -> void:
 	if Input.is_action_just_pressed("jump") and (is_on_wall() or ignore_wall) and Global.walljump_unlock and !dead_:
@@ -271,6 +297,7 @@ func try_dash() -> void:
 	if Input.is_action_just_pressed("dash") and can_dash() and Global.dash_unlock and !dead_:
 		state_machine.activate_state_by_name("DashState")
 		dash_sound.play()
+		is_sliding=false
 
 func try_corner_correction(delta: float) -> void:
 	var v_motion: Vector2 = Vector2(0.0, velocity.y * delta)
@@ -397,6 +424,8 @@ func logic_spe():
 	
 	sprite_animation()
 	
+	particle_animation()
+	
 	sound_animation()
 	
 	camera_logic()
@@ -439,24 +468,41 @@ func try_play_new_anim(anim,rotation_=0.0) -> void:
 		sprite.rotation=rotation_
 		sprite.play(anim)
 		
-	"""if sprite.animation =="jumpdown":
-		sprite.material.set("shader_parameter/activated",false);
-	else:
-		sprite.material.set("shader_parameter/activated",false);"""
-		
 var en_train_de_tomber = false
 func sprite_animation() -> void:
-	
+	if is_on_floor():is_sliding=false
+	if is_sliding:
+		try_play_new_anim("slide")
+	else:
+		
+		if is_on_floor() :
+			if sprite.animation=="jumpground" and sprite.is_playing():
+				pass
+			else:
+				if velocity.x < -150 or velocity.x > 150 :
+					try_play_new_anim("run")
+				else:
+					try_play_new_anim("idle")
+		
+		if velocity.y > 0.0:
+			try_play_new_anim("robe")
+			en_train_de_tomber = true
+			
+		if en_train_de_tomber and is_on_floor():
+			try_play_new_anim("jumpground")
+			en_train_de_tomber = false
+		
+		
+			
+func particle_animation() -> void:
 	if is_on_wall_only():
-		#sprite.rotation=get_last_wall_dir()*0.15
 		if !dead_:slide_particle.emitting = true
-		if get_facing_dir() > 0 :
-			slide_particle.position.x = 13
 		if get_facing_dir() < 0 :
+			slide_particle.position.x = 13
+		if get_facing_dir() > 0 :
 			slide_particle.position.x = -13
 	else :
 		slide_particle.emitting = false
-	
 	
 	run_particle.emitting = false
 	if is_on_floor() :
@@ -464,24 +510,8 @@ func sprite_animation() -> void:
 			pass
 		else:
 			if velocity.x < -150 or velocity.x > 150 :
-				try_play_new_anim("run")
 				run_particle.emitting = true
-			else:
-				try_play_new_anim("idle")
-	
-	if velocity.y > 0.0:
-		try_play_new_anim("robe")
-		en_train_de_tomber = true
-		
-	if en_train_de_tomber and is_on_floor():
-		try_play_new_anim("jumpground")
-		en_train_de_tomber = false
-		
-		
-	if state_machine.active_state is WallSlideState:
-		try_play_new_anim("slide")
-		
-			
+				
 var saut_en_cours_for_sound = false
 var falling_started = false
 func sound_animation() -> void:
@@ -524,6 +554,8 @@ var last_floor_pos : Vector2
 @onready var animation_player_for_teleport_shader: AnimationPlayer = $AnimatedSpriteForTeleportShader/AnimationPlayerForTeleportShader
 var respawned : bool = false
 func respawn():
+	var tween22 = get_tree().create_tween()
+	tween22.tween_property(point_light_2d, "energy", 1.0, 1.0)
 	var tween2 = get_tree().create_tween()
 	tween2.tween_property(point_light_2d_2, "energy", 1.0, 1.0)
 	
@@ -571,6 +603,8 @@ func duplicate_sprite():
 
 var dead_ : bool = false
 func play_death_anim():
+	var tween22 = get_tree().create_tween()
+	tween22.tween_property(point_light_2d, "energy", 0.0, 1.0)
 	var tween2 = get_tree().create_tween()
 	tween2.tween_property(point_light_2d_2, "energy", 0.0, 1.0)
 	
