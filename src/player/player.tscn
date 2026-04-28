@@ -868,11 +868,11 @@ color = Color(1, 1, 1, 0)
 
 [node name="WallRayRight" type="RayCast2D" parent="." unique_id=685109009]
 position = Vector2(0, -32)
-target_position = Vector2(30, 0)
+target_position = Vector2(20, 0)
 
 [node name="WallRayLeft" type="RayCast2D" parent="." unique_id=473465288]
 position = Vector2(0, -32)
-target_position = Vector2(-30, 0)
+target_position = Vector2(-20, 0)
 
 [connection signal="wall_entered" from="." to="." method="_on_wall_entered"]
 [connection signal="wall_exited" from="." to="." method="_on_wall_exited"]

@@ -235,8 +235,15 @@ func try_wall_slide() -> void:
 		state_machine.activate_state_by_name("WallSlideState")
 		is_sliding=true
 		print(1)
+		try_play_new_anim("slide")
+		"""await get_tree().create_timer(0.1).timeout
+		if is_sliding:
+			try_play_new_anim("slide")
+			
+			print("slide")"""
 	else:
 		is_sliding=false
+		
 		print(0)
 		
 
@@ -471,10 +478,8 @@ func try_play_new_anim(anim,rotation_=0.0) -> void:
 var en_train_de_tomber = false
 func sprite_animation() -> void:
 	if is_on_floor():is_sliding=false
-	if is_sliding:
-		try_play_new_anim("slide")
-	else:
-		
+	
+	if !is_sliding:
 		if is_on_floor() :
 			if sprite.animation=="jumpground" and sprite.is_playing():
 				pass
@@ -495,7 +500,7 @@ func sprite_animation() -> void:
 		
 			
 func particle_animation() -> void:
-	if is_on_wall_only():
+	if is_sliding:
 		if !dead_:slide_particle.emitting = true
 		if get_facing_dir() < 0 :
 			slide_particle.position.x = 13
