@@ -16,6 +16,9 @@ extends Node2D
 @onready var cam_2: PhantomCamera2D = %cam2
 
 
+@onready var animation_playerbis1: AnimationPlayer = $sprite/Sprite2D/AnimationPlayer
+@onready var animation_playerbis2: AnimationPlayer = $sprite/Sprite2D2/AnimationPlayer
+@onready var animation_playerbis3: AnimationPlayer = $sprite/Sprite2D3/AnimationPlayer
 
 
 
@@ -79,3 +82,7 @@ func _process(delta: float) -> void:
 			
 			await get_tree().create_timer(1.1).timeout
 			Global.nb_fractal = 0
+			
+			animation_playerbis1.stop()
+			animation_playerbis2.stop()
+			animation_playerbis3.stop()
