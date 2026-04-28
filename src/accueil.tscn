@@ -3,19 +3,12 @@
 [ext_resource type="Script" uid="uid://c1myjyo415ms3" path="res://src/accueil.gd" id="1_o1nyv"]
 [ext_resource type="VideoStream" uid="uid://cfu7l2nt5cv6j" path="res://video/cutscene.ogv" id="2_o1nyv"]
 [ext_resource type="Shader" uid="uid://be2m7dd85xemn" path="res://shaders/vignette.gdshader" id="3_3gvnv"]
-[ext_resource type="AudioStream" uid="uid://dfpt6x7rpkbie" path="res://sounds/musics/u_gsljpm1sf7-creepy-noise-433020.mp3" id="4_yg4m0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yg4m0"]
 shader = ExtResource("3_3gvnv")
 shader_parameter/vignette_intensity = 3.0
 shader_parameter/vignette_opacity = 1.0
 shader_parameter/vignette_rgb = Color(0, 0, 0, 1)
-
-[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_hm8gm"]
-clip_count = 1
-clip_0/name = &"U Gsljpm 1 Sf 7 Creepy Noise 433020"
-clip_0/stream = ExtResource("4_yg4m0")
-clip_0/auto_advance = 0
 
 [node name="accueil" type="Node2D" unique_id=2027268033]
 script = ExtResource("1_o1nyv")
@@ -69,10 +62,5 @@ offset_top = 697.0
 offset_right = 1277.0
 offset_bottom = 720.0
 text = "Loading..."
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=222775049]
-stream = SubResource("AudioStreamInteractive_hm8gm")
-volume_db = -10.0
-autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

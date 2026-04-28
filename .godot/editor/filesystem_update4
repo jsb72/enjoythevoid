@@ -18,3 +18,4 @@ res://src/player/states/wall_slide_state.gd
 res://src/global.gd
 res://src/levels/midlvl.gd
 res://src/levels/room_blueprint.gd
+res://src/accueil.tscn
