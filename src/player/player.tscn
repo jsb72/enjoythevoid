@@ -151,9 +151,17 @@ region = Rect2(798, 402, 133, 133)
 atlas = ExtResource("14_4uy46")
 region = Rect2(931, 402, 133, 133)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3uvft"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xmpm3"]
 atlas = ExtResource("14_4uy46")
-region = Rect2(0, 801, 133, 133)
+region = Rect2(266, 798, 133, 133)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evlgt"]
+atlas = ExtResource("14_4uy46")
+region = Rect2(399, 798, 133, 133)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsylq"]
+atlas = ExtResource("14_4uy46")
+region = Rect2(665, 798, 133, 133)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ymg6t"]
 atlas = ExtResource("14_4uy46")
@@ -291,11 +299,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3uvft")
+"texture": SubResource("AtlasTexture_xmpm3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evlgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsylq")
 }],
-"loop": true,
-"name": &"teleport",
-"speed": 5.0
+"loop": false,
+"name": &"slide",
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -781,7 +795,7 @@ position = Vector2(0, -32)
 position = Vector2(0, -36)
 scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_j2873")
-animation = &"walk"
+animation = &"slide"
 autoplay = "idle"
 script = ExtResource("14_5efpn")
 

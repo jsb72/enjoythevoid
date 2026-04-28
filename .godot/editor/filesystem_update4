@@ -11,3 +11,6 @@ res://shaders/starfield.gdshader
 res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/blur.gdshader
+res://src/levels/midlvl.tscn
+res://src/player/player.tscn
+res://src/player/player.gd

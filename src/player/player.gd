@@ -477,8 +477,9 @@ func sprite_animation() -> void:
 		try_play_new_anim("jumpground")
 		en_train_de_tomber = false
 		
-	if inside_portal:
-		try_play_new_anim("teleport")
+		
+	if state_machine.active_state is WallSlideState:
+		try_play_new_anim("slide")
 		
 			
 var saut_en_cours_for_sound = false

@@ -1527,7 +1527,7 @@ position = Vector2(15392, 71)
 [node name="fractals" type="Node2D" parent="lvl1" unique_id=1952825093]
 
 [node name="fractale" parent="lvl1/fractals" unique_id=764819064 instance=ExtResource("17_p2ed6")]
-position = Vector2(12243, -2591)
+position = Vector2(11203.744, -2765.8997)
 identifiant = 2
 
 [node name="fractale2" parent="lvl1/fractals" unique_id=653933748 instance=ExtResource("17_p2ed6")]
@@ -1661,13 +1661,13 @@ theme_override_font_sizes/normal_font_size = 72
 text = "Ceux qui savent se taisent"
 
 [node name="fly" parent="lvl1" unique_id=1079513456 instance=ExtResource("41_5ihcl")]
-position = Vector2(8175, 1706)
+position = Vector2(8175, 1638.7251)
 
 [node name="fly4" parent="lvl1" unique_id=1727515795 instance=ExtResource("41_5ihcl")]
-position = Vector2(9058, 1545)
+position = Vector2(9058, 1477.7251)
 
 [node name="fly5" parent="lvl1" unique_id=1647404557 instance=ExtResource("41_5ihcl")]
-position = Vector2(11083, 651)
+position = Vector2(11083, 583.7251)
 
 [node name="TILES" type="Node2D" parent="lvl1" unique_id=2029442160]
 
