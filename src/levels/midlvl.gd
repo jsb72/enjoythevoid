@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Player:
 		var tween = get_tree().create_tween()
-		tween.tween_property(fogmidlvl, "modulate:a", 1.0, 1.0)
+		tween.tween_property(fogmidlvl, "modulate:a", 1.0, 3.0)
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:

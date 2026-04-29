@@ -17,3 +17,4 @@ res://src/global.gd
 res://src/player/player.gd
 res://src/levels/room_blueprint.gd
 res://src/platforms/laser_trap.tscn
+res://src/levels/midlvl.gd
