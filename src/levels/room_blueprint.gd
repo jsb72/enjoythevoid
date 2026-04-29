@@ -57,7 +57,7 @@ func _process(delta: float) -> void:
 		var tween = get_tree().create_tween()
 		tween.tween_property(color_rect_fog, "modulate:a", 1.0, 1.0)
 	
-	if player.is_on_floor() and first_time_on_floor:
+	if player.global_position.y > -700 and first_time_on_floor:
 		first_time_on_floor=false
 		player.dead_ = false
 		var tween = get_tree().create_tween()
@@ -111,86 +111,61 @@ func optimization_logic()->void:
 		yog_sothoth.process_mode=Node.PROCESS_MODE_DISABLED
 		yog_sothoth.hide()
 	
-var index_music : int = 0
-var label_music : String = ""
-var volume_music : float = -10.0
+
+@onready var surface: Area2D = $AMBIANCE_ZONE/surface
+@onready var matrice: Area2D = $AMBIANCE_ZONE/matrice
+@onready var floral: Area2D = $AMBIANCE_ZONE/floral
+@onready var complot: Area2D = $AMBIANCE_ZONE/complot
 func ambiance_logic():
+	
+	var ambiance_zone_actuelle:String="vide"
+	if surface.overlaps_body(player) and !lvl_2_loaded:
+		ambiance_zone_actuelle="surface"
+	if floral.overlaps_body(player):
+		ambiance_zone_actuelle="floral"
+	if complot.overlaps_body(player) and lvl_2_loaded:
+		ambiance_zone_actuelle="complot"
+	if matrice.overlaps_body(player):
+		ambiance_zone_actuelle="matrice"
+
 	if !audio_stream_player.playing:
 		audio_stream_player.play()
-	
-	
-	if player.global_position.x < -3562:
-		index_music=1
-		label_music="noise"
+	var playing_clip_name = audio_stream_player.stream.get_clip_name(audio_stream_player.get_stream_playback().get_current_clip_index())
+	if playing_clip_name !=ambiance_zone_actuelle:
+		audio_stream_player.get_stream_playback().switch_to_clip_by_name(ambiance_zone_actuelle)
+		audio_stream_player.volume_db=-10.0	
+		
+	if ambiance_zone_actuelle=="surface":		
 		var tween = get_tree().create_tween()
-		tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 5.0)
+		tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 3.0)
+		var tween2 = get_tree().create_tween()
+		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 0.0, 0.0, 1.0), 1.0)
 		
-	if !lvl_2_loaded:
-		if player.global_position.x > -3562:
-			index_music=0
-			label_music="portal"
-			
-			var tween = get_tree().create_tween()
-			tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 5.0)
-		
-	if lvl_2_loaded:		
-		if player.global_position.x > -3562 and player.global_position.x < 1310:
-			index_music=2
-			label_music="stimulation"
-			
-			var tween = get_tree().create_tween()
-			tween.tween_property(canvas_modulate, "color", Color("ffc7c7ff"), 5.0)
-			
-		if player.global_position.x > 1310:
-			index_music=1
-			label_music="noise"
-			var tween = get_tree().create_tween()
-			tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 5.0)
-			
-	if player.global_position.x > 6500 and player.global_position.y > 658 and player.global_position.x < 13000 and player.global_position.y < 3900:
-		index_music=4
-		label_music="vide"
-		
+	if ambiance_zone_actuelle=="floral":		
 		var tween = get_tree().create_tween()
-		tween.tween_property(canvas_modulate, "color", Color("6459deff"), 5.0)#dbfff4ff
+		tween.tween_property(canvas_modulate, "color", Color("6459deff"), 3.0)#dbfff4ff
+		var tween2 = get_tree().create_tween()
+		tween2.tween_property(player.point_light_2d_2, "color", Color(0.0, 0.967, 1.0, 1.0), 1.0)
 		
-		
-	if player.global_position.x > 14081 :
-		if player.position.y > 300:
-			index_music=3
-			label_music="intense"
-			
-			var tween = get_tree().create_tween()
-			tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 5.0)
-		
-	if player.global_position.y>9000:
-		player.glitch_rect.visible=true
-		index_music=1
-		label_music="noise"
+	if ambiance_zone_actuelle=="complot":		
 		var tween = get_tree().create_tween()
-		tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 5.0)
-			
-			
-	if audio_stream_player.get_stream_playback().get_current_clip_index() !=index_music:
-		audio_stream_player.get_stream_playback().switch_to_clip_by_name(label_music)
-		audio_stream_player.volume_db=volume_music
+		tween.tween_property(canvas_modulate, "color", Color("ffc7c7ff"), 3.0)
+		var tween2 = get_tree().create_tween()
+		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 0.0, 0.0, 1.0), 1.0)
 		
-	if label_music=="portal":
+	if ambiance_zone_actuelle=="matrice":	
+		var tween = get_tree().create_tween()
+		tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 3.0)
 		var tween2 = get_tree().create_tween()
-		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 0.0, 0.0, 1.0), 10.0)
-	if label_music=="vide":
+		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 0.0, 0.0, 1.0), 1.0)
+		
+	if ambiance_zone_actuelle=="vide":		
+		var tween = get_tree().create_tween()
+		tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 3.0)
 		var tween2 = get_tree().create_tween()
-		tween2.tween_property(player.point_light_2d_2, "color", Color(0.0, 0.967, 1.0, 1.0), 10.0)
-	if label_music=="noise":
-		var tween2 = get_tree().create_tween()
-		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 0.0, 0.017, 1.0), 10.0)
-	if label_music=="stimulation":
-		var tween2 = get_tree().create_tween()
-		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 0.0, 0.017, 1.0), 10.0)
-	if label_music=="intense":
-		var tween2 = get_tree().create_tween()
-		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 1.0, 1.0, 1.0), 10.0)
-	
+		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 1.0, 1.0, 1.0), 1.0)
+		
+		
 		
 func display_list_cadavre():
 	for cadavre_elem in Global.list_des_morts:

@@ -2,16 +2,17 @@
 
 [ext_resource type="Script" uid="uid://cfsrsjdfacr0o" path="res://src/levels/room_blueprint.gd" id="1_76snk"]
 [ext_resource type="Texture2D" uid="uid://6sperlai5t1p" path="res://sprites/rooms/ground.png" id="1_p0cym"]
-[ext_resource type="AudioStream" uid="uid://bm0hl1jvxub7r" path="res://sounds/musics/Portal Soundtrack  Self Esteem Fund.mp3" id="2_01erx"]
 [ext_resource type="Shader" uid="uid://cylkj8wo88c1h" path="res://shaders/burn.gdshader" id="2_7rpky"]
+[ext_resource type="AudioStream" uid="uid://wao5c77m061d" path="res://sounds/musics/beginlvl.mp3" id="2_lmpmd"]
 [ext_resource type="PackedScene" uid="uid://ducp7rsjpf40n" path="res://src/player/player.tscn" id="3_4j1ba"]
-[ext_resource type="AudioStream" uid="uid://dfpt6x7rpkbie" path="res://sounds/musics/u_gsljpm1sf7-creepy-noise-433020.mp3" id="3_tpyur"]
-[ext_resource type="AudioStream" uid="uid://d0cet2bsgenhl" path="res://sounds/musics/Portal Soundtrack - Procedural Jiggle Bone.mp3" id="4_1tqiw"]
+[ext_resource type="AudioStream" uid="uid://baygofpuipeht" path="res://sounds/musics/fly.mp3" id="3_brhbg"]
+[ext_resource type="AudioStream" uid="uid://dh783awlafwml" path="res://sounds/musics/complot.mp3" id="4_gxno5"]
 [ext_resource type="Script" uid="uid://bhexx6mj1xv3q" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="4_mu531"]
-[ext_resource type="AudioStream" uid="uid://cim7pql7240kp" path="res://sounds/musics/Portal Soundtrack - Stop What You Are Doing.mp3" id="5_73yqq"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="5_j2cwt"]
+[ext_resource type="AudioStream" uid="uid://bjdplgcxoxqgw" path="res://sounds/musics/matrice.mp3" id="5_qgqoh"]
 [ext_resource type="Script" uid="uid://dimvdouy8g0sv" path="res://addons/phantom_camera/scripts/resources/phantom_camera_noise_2d.gd" id="6_k548o"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_ltygr"]
+[ext_resource type="AudioStream" uid="uid://dgcprfmm7rth0" path="res://sounds/musics/ambiance.mp3" id="6_w6qp3"]
 [ext_resource type="PackedScene" uid="uid://dayo7lbiwbhw3" path="res://src/elements/tas_de_cadavre.tscn" id="7_j2cwt"]
 [ext_resource type="PackedScene" uid="uid://do35bbyy0qllr" path="res://src/platforms/platform.tscn" id="8_ltygr"]
 [ext_resource type="PackedScene" uid="uid://c07ghb70rt8ft" path="res://src/levels/escalier_room.tscn" id="12_7ls7j"]
@@ -56,25 +57,24 @@
 [ext_resource type="Texture2D" uid="uid://dmrsbbrarvw1n" path="res://sprites/bigvectorBLACK.png" id="56_qgqoh"]
 [ext_resource type="Shader" uid="uid://b374xol4h6crb" path="res://shaders/godrays.gdshader" id="61_3grwt"]
 
-[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_7f7j5"]
-
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_qrlky"]
 clip_count = 5
-clip_0/name = &"portal"
-clip_0/stream = ExtResource("2_01erx")
+clip_0/name = &"surface"
+clip_0/stream = ExtResource("2_lmpmd")
 clip_0/auto_advance = 0
-clip_1/name = &"noise"
-clip_1/stream = ExtResource("3_tpyur")
+clip_1/name = &"floral"
+clip_1/stream = ExtResource("3_brhbg")
 clip_1/auto_advance = 0
-clip_2/name = &"stimulation"
-clip_2/stream = ExtResource("4_1tqiw")
+clip_2/name = &"complot"
+clip_2/stream = ExtResource("4_gxno5")
 clip_2/auto_advance = 0
-clip_3/name = &"intense"
-clip_3/stream = ExtResource("5_73yqq")
+clip_3/name = &"matrice"
+clip_3/stream = ExtResource("5_qgqoh")
 clip_3/auto_advance = 0
 clip_4/name = &"vide"
-clip_4/stream = SubResource("AudioStreamGenerator_7f7j5")
+clip_4/stream = ExtResource("6_w6qp3")
 clip_4/auto_advance = 0
+initial_clip = 4
 
 [sub_resource type="Environment" id="Environment_vb8r4"]
 background_mode = 3
@@ -572,7 +572,7 @@ shader_parameter/speed = Vector2(0.02, 0.01)
 
 [sub_resource type="Gradient" id="Gradient_j4o56"]
 offsets = PackedFloat32Array(0.37216827, 1)
-colors = PackedColorArray(1.1638972, 0.3586162, 0.2165079, 1, 0, 0, 0, 0)
+colors = PackedColorArray(1.353256, 0.42148548, 0.25921082, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_73yqq"]
 gradient = SubResource("Gradient_j4o56")
@@ -729,6 +729,18 @@ shader_parameter/speed = Vector2(0.02, 0.01)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qgqoh"]
 size = Vector2(186.5, 178)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3grwt"]
+size = Vector2(23759.037, 5756.35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wm35a"]
+size = Vector2(17935.105, 11505.603)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuy4g"]
+size = Vector2(6138.6875, 4372.849)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wgec"]
+size = Vector2(2972.9485, 3965.463)
 
 [node name="room_blueprint" type="Node2D" unique_id=1528742533]
 script = ExtResource("1_76snk")
@@ -3072,6 +3084,32 @@ position = Vector2(12445.001, -1289.0001)
 rotation = -0.082030475
 
 [node name="midlvl" parent="." unique_id=98324228 instance=ExtResource("55_lmpmd")]
+
+[node name="AMBIANCE_ZONE" type="Node2D" parent="." unique_id=456457801]
+
+[node name="surface" type="Area2D" parent="AMBIANCE_ZONE" unique_id=1255528348]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AMBIANCE_ZONE/surface" unique_id=1949339358]
+position = Vector2(9634.017, -2738.431)
+shape = SubResource("RectangleShape2D_3grwt")
+
+[node name="matrice" type="Area2D" parent="AMBIANCE_ZONE" unique_id=543727214]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AMBIANCE_ZONE/matrice" unique_id=3931756]
+position = Vector2(24588.502, 6036.6)
+shape = SubResource("RectangleShape2D_wm35a")
+
+[node name="floral" type="Area2D" parent="AMBIANCE_ZONE" unique_id=2147225673]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AMBIANCE_ZONE/floral" unique_id=1466656296]
+position = Vector2(9607.071, 2619.049)
+shape = SubResource("RectangleShape2D_tuy4g")
+
+[node name="complot" type="Area2D" parent="AMBIANCE_ZONE" unique_id=37513551]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AMBIANCE_ZONE/complot" unique_id=1520237020]
+position = Vector2(-1151.0758, 1163.2922)
+shape = SubResource("RectangleShape2D_6wgec")
 
 [connection signal="body_entered" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_entered"]
 [connection signal="body_exited" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_exited"]
