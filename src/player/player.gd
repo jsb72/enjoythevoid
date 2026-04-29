@@ -618,3 +618,4 @@ func play_death_anim():
 	
 	deathspriteanim.play("default")
 		
+@onready var cadavre: AnimatedSprite2D = $cadavre

@@ -21,7 +21,6 @@ var lvl_2_loaded:bool = false
 
 @onready var fractale_ciel: RigidBody2D = $fractale_ciel
 
-@onready var cadavre: AnimatedSprite2D = $cadavre
 
 func _ready() -> void:
 	player.dead_ = true
@@ -169,9 +168,10 @@ func ambiance_logic():
 		
 func display_list_cadavre():
 	for cadavre_elem in Global.list_des_morts:
-		var cad = cadavre.duplicate()
+		var cad = player.cadavre.duplicate()
 		cad.global_position = cadavre_elem
 		cad.global_position.y -= 36
+		cad.visible=true
 		$".".add_child(cad)  
 
 @onready var ground: Sprite2D = $lvl1/ground

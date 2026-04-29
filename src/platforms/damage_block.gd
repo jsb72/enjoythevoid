@@ -37,6 +37,16 @@ func _on_timer_timeout() -> void:
 
 
 func _on_reloadtimer_timeout() -> void:
+	Global.list_des_morts.push_back(player.global_position)
+	
+	var cad = player.cadavre.duplicate()
+	cad.global_position = player.global_position
+	cad.global_position.y -= 36
+	cad.visible=true
+	get_tree().root.add_child(cad)
+	#$".".add_child(cad) 
+	print(cad.get_path())
+	
 	player.respawn()
 	
 

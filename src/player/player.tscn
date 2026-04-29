@@ -31,6 +31,7 @@
 [ext_resource type="Script" uid="uid://b6rm5gkxphdna" path="res://src/player/spritetrail.gd" id="22_5shm8"]
 [ext_resource type="Shader" uid="uid://chycd0t8penwl" path="res://shaders/teleport.gdshader" id="26_a4vah"]
 [ext_resource type="AudioStream" uid="uid://bd2ytox8or26g" path="res://sounds/hero_falling.wav" id="29_p6grl"]
+[ext_resource type="PackedScene" uid="uid://denjct5e4x1jd" path="res://src/elements/cadavre.tscn" id="34_h0enb"]
 [ext_resource type="Shader" uid="uid://chet47u8v3pes" path="res://shaders/distorsion.gdshader" id="34_xmpm3"]
 [ext_resource type="Shader" uid="uid://ncq23qfexrtu" path="res://shaders/glitch.gdshader" id="35_h0enb"]
 
@@ -882,6 +883,10 @@ target_position = Vector2(20, 0)
 [node name="WallRayLeft" type="RayCast2D" parent="." unique_id=473465288]
 position = Vector2(0, -32)
 target_position = Vector2(-20, 0)
+
+[node name="cadavre" parent="." unique_id=258405330 instance=ExtResource("34_h0enb")]
+visible = false
+scale = Vector2(0.55, 0.55)
 
 [connection signal="wall_entered" from="." to="." method="_on_wall_entered"]
 [connection signal="wall_exited" from="." to="." method="_on_wall_exited"]

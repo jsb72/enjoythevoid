@@ -17,3 +17,5 @@ res://src/player/player.tscn
 res://src/player/spritetrail.gd
 res://src/levels/room_blueprint.tscn
 res://src/levels/room_blueprint.gd
+res://src/platforms/damage_block.gd
+res://src/player/player.gd

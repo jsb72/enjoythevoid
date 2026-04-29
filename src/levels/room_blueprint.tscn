@@ -48,7 +48,6 @@
 [ext_resource type="PackedScene" uid="uid://ca0qqvc5pjlky" path="res://src/elements/button.tscn" id="45_qgqoh"]
 [ext_resource type="PackedScene" uid="uid://bdd03axytgixu" path="res://src/platforms/damage_block.tscn" id="46_7f7j5"]
 [ext_resource type="Texture2D" uid="uid://dk52pj28ds5fn" path="res://sprites/zero.png" id="46_73yqq"]
-[ext_resource type="PackedScene" uid="uid://denjct5e4x1jd" path="res://src/elements/cadavre.tscn" id="47_5ihcl"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="53_1nkay"]
 [ext_resource type="Script" uid="uid://ddhu3qfummrc2" path="res://addons/antialiased_line2d/antialiased_polygon2d.gd" id="54_w6qp3"]
 [ext_resource type="PackedScene" uid="uid://wjb0iq8hpfjo" path="res://src/levels/midlvl.tscn" id="55_lmpmd"]
@@ -2959,10 +2958,6 @@ position = Vector2(601.6201, -2182.7139)
 [node name="fractale_ciel" parent="." unique_id=1072920640 instance=ExtResource("17_p2ed6")]
 process_mode = 4
 visible = false
-
-[node name="cadavre" parent="." unique_id=258405330 instance=ExtResource("47_5ihcl")]
-position = Vector2(-503.16162, -11202.822)
-scale = Vector2(0.55, 0.55)
 
 [node name="multicolorbggradient" type="TextureRect" parent="." unique_id=263308249]
 visible = false
