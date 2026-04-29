@@ -148,7 +148,7 @@ use_hdr = true
 fill_to = Vector2(0, 1)
 
 [sub_resource type="Gradient" id="Gradient_qgqoh"]
-colors = PackedColorArray(0.18431373, 0.03529412, 0.03529412, 1, 0.45840502, 0.45840508, 0.45840502, 0)
+colors = PackedColorArray(0.44705883, 0, 0, 1, 0.45840502, 0.45840508, 0.45840502, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_w6qp3"]
 gradient = SubResource("Gradient_qgqoh")
@@ -443,7 +443,7 @@ shader_parameter/speed = 6.0
 shader_parameter/ray1_density = 8.0
 shader_parameter/ray2_density = 30.0
 shader_parameter/ray2_intensity = 0.3
-shader_parameter/color = Color(0.2, 0, 0, 0.8)
+shader_parameter/color = Color(0.44705883, 0, 0, 0.4392157)
 shader_parameter/hdr = false
 shader_parameter/seed = 5.0
 
@@ -550,8 +550,8 @@ noise = SubResource("FastNoiseLite_qrlky")
 color_ramp = SubResource("Gradient_f3u0r")
 
 [sub_resource type="Gradient" id="Gradient_lmpmd"]
-offsets = PackedFloat32Array(0.5270758, 0.6967509)
-colors = PackedColorArray(0.53, 0, 0, 1, 0.18431373, 0.03529412, 0.03529412, 1)
+offsets = PackedFloat32Array(0.525, 0.57)
+colors = PackedColorArray(0.44705883, 0, 0, 1, 0.60960835, 0.60960835, 0.60960835, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_brhbg"]
 
@@ -561,6 +561,7 @@ height = 1024
 noise = SubResource("FastNoiseLite_brhbg")
 color_ramp = SubResource("Gradient_lmpmd")
 seamless = true
+invert = true
 normalize = false
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gxno5"]
@@ -742,7 +743,7 @@ volume_db = -10.0
 environment = SubResource("Environment_vb8r4")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1364036370]
-color = Color(0.72156864, 0.72156864, 0.72156864, 1)
+color = Color(0.446777, 0.44677705, 0.44677705, 1)
 
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
@@ -998,7 +999,7 @@ offset_left = -4123.0
 offset_top = -9061.0
 offset_right = 23343.0
 offset_bottom = 114.0
-color = Color(0.18431373, 0.03529412, 0.03529412, 1)
+color = Color(0.44705883, 0, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="lvl1" unique_id=1627506987]
 z_index = -199
@@ -1949,7 +1950,7 @@ color = Color(0, 0, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="void" unique_id=1721457541]
 offset_left = -3760.0
-offset_top = -2428.0
+offset_top = -12668.82
 offset_right = -2736.0
 offset_bottom = 6379.0
 texture = SubResource("GradientTexture2D_k4edk")
@@ -2956,14 +2957,6 @@ position = Vector2(27139, 547)
 
 [node name="red_plafond" type="Node2D" parent="." unique_id=1748682753]
 
-[node name="bgcutscene" type="ColorRect" parent="red_plafond" unique_id=225723151]
-z_index = -200
-offset_left = -3741.0
-offset_top = -10920.0
-offset_right = 19683.0
-offset_bottom = -3024.0
-color = Color(0.18431373, 0.03529412, 0.03529412, 1)
-
 [node name="ColorRectFOG" type="ColorRect" parent="red_plafond" unique_id=1696217631]
 z_index = 16
 material = SubResource("ShaderMaterial_gxno5")
@@ -2975,7 +2968,7 @@ offset_bottom = -3004.8853
 [node name="cutsceneparticle" type="GPUParticles2D" parent="red_plafond" unique_id=1483607889]
 z_index = 1000
 z_as_relative = false
-position = Vector2(-2, -6015)
+position = Vector2(-2, -6479.809)
 amount = 500
 texture = SubResource("GradientTexture2D_73yqq")
 lifetime = 3.0
