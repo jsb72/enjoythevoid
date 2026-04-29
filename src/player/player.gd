@@ -234,7 +234,6 @@ func try_wall_slide() -> void:
 	if can_wall_slide():
 		state_machine.activate_state_by_name("WallSlideState")
 		is_sliding=true
-		print(1)
 		try_play_new_anim("slide")
 		"""await get_tree().create_timer(0.1).timeout
 		if is_sliding:
@@ -244,7 +243,6 @@ func try_wall_slide() -> void:
 	else:
 		is_sliding=false
 		
-		print(0)
 		
 
 func calculate_wall_slide_speed() -> float:

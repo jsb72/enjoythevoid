@@ -357,17 +357,17 @@ random_pitch = 1.5
 streams_count = 1
 stream_0/stream = ExtResource("18_a4vah")
 
-[sub_resource type="Gradient" id="Gradient_jcdrv"]
-offsets = PackedFloat32Array(0, 0.13138686, 0.38686132, 1)
-colors = PackedColorArray(1, 1, 1, 1, 0.5109489, 0.5109489, 0.5109489, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+[sub_resource type="Gradient" id="Gradient_e7e1q"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_hja65"]
-gradient = SubResource("Gradient_jcdrv")
+gradient = SubResource("Gradient_e7e1q")
+use_hdr = true
 fill = 1
 fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.85714287, 0.14285715)
+fill_to = Vector2(0.8181819, 0.18181819)
 metadata/_snap_enabled = true
-metadata/_snap_count = 3
+metadata/_snap_count = 31
 
 [sub_resource type="Gradient" id="Gradient_o04tx"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
@@ -771,7 +771,7 @@ position = Vector2(0, -32)
 position = Vector2(0, -36)
 scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_j2873")
-animation = &"slide"
+animation = &"idle"
 autoplay = "idle"
 script = ExtResource("14_5efpn")
 
@@ -811,9 +811,10 @@ volume_db = -80.0
 stream = SubResource("AudioStreamRandomizer_h0enb")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=479851347]
-visible = false
-position = Vector2(0, -32)
+position = Vector2(0, -17)
+color = Color(0.37, 0.37, 0.37, 1)
 texture = SubResource("GradientTexture2D_hja65")
+texture_scale = 6.0
 
 [node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1117608192]
 position = Vector2(0, -41)

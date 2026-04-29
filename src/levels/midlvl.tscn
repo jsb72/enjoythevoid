@@ -481,7 +481,7 @@ shape = SubResource("RectangleShape2D_at7t4")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=226148049]
 z_index = 16
-tile_map_data = PackedByteArray("AADfAsH/AAAzACAAAADjAr//AAA5ABsAAADTAsb/AAAuACMAAADIAr7/AAAzACAAAADNAsn/AAAuACMAAADBArn/AAAuACMAAAA=")
+tile_map_data = PackedByteArray("AADfAsH/AAAzACAAAADjAr//AAA5ABsAAADTAsb/AAAuACMAAADIAr7/AAAzACAAAADNAsn/AAAuACMAAADBArn/AAAuACMAAAB8AN7/AAAzACAAAACqANT/AAAzACAAAAB1AAEAAAA5ABsAAAB3AO7/AAAuACMAAAB7AL7/AAAuACMAAAA=")
 tile_set = SubResource("TileSet_pka4r")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

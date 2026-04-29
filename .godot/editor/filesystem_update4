@@ -1,4 +1,4 @@
-res://src/levels/room_blueprint.tscn
+res://src/player/player.tscn
 res://addons/phantom_camera/themes/theme.tres
 res://shaders/vignette.gdshader
 res://shaders/damage_impact.gdshader
@@ -12,10 +12,8 @@ res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/blur.gdshader
 res://src/levels/midlvl.tscn
-res://src/player/player.tscn
-res://src/player/player.gd
-res://src/player/states/wall_slide_state.gd
+res://src/levels/room_blueprint.tscn
 res://src/global.gd
-res://src/levels/midlvl.gd
+res://src/player/player.gd
 res://src/levels/room_blueprint.gd
-res://src/accueil.tscn
+res://src/platforms/laser_trap.tscn
