@@ -149,9 +149,9 @@ func ambiance_logic():
 		
 	if ambiance_zone_actuelle=="complot":		
 		var tween = get_tree().create_tween()
-		tween.tween_property(canvas_modulate, "color", Color("ffc7c7ff"), 3.0)
+		tween.tween_property(canvas_modulate, "color", Color("919191ff"), 3.0)#ffc7c7ff
 		var tween2 = get_tree().create_tween()
-		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 0.0, 0.0, 1.0), 1.0)
+		tween2.tween_property(player.point_light_2d_2, "color", Color("ffffffff"), 1.0)
 		
 	if ambiance_zone_actuelle=="matrice":	
 		var tween = get_tree().create_tween()

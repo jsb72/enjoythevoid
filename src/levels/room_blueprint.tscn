@@ -755,7 +755,7 @@ volume_db = -10.0
 environment = SubResource("Environment_vb8r4")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1364036370]
-color = Color(0.446777, 0.44677705, 0.44677705, 1)
+color = Color(0.32, 0.32, 0.32, 1)
 
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
@@ -1312,6 +1312,14 @@ position = Vector2(791, -914)
 [node name="escalier_room2" parent="lvl1/Structure" unique_id=1021733173 instance=ExtResource("12_7ls7j")]
 position = Vector2(1801, 2391)
 
+[node name="RichTextLabel" type="RichTextLabel" parent="lvl1/Structure/escalier_room2" unique_id=363674417]
+offset_left = -996.68896
+offset_top = -536.3861
+offset_right = -678.48267
+offset_bottom = -226.2909
+text = "if !button_logic :
+	print(\"please refer to your game dev\")"
+
 [node name="transition_rooms" parent="lvl1/Structure" unique_id=645547803 instance=ExtResource("13_h1car")]
 position = Vector2(4182, 2236)
 
@@ -1832,7 +1840,8 @@ default_color = Color(0, 0, 0, 1)
 position = Vector2(1327, 2166)
 
 [node name="button" parent="lvl1/platform6" unique_id=1067572409 instance=ExtResource("45_qgqoh")]
-position = Vector2(35, -21)
+position = Vector2(39.31067, -18.539063)
+scale = Vector2(0.7, 0.7)
 
 [node name="laser_trap" parent="lvl1/platform6" unique_id=790521176 instance=ExtResource("13_f4kdv")]
 position = Vector2(-6, 237)

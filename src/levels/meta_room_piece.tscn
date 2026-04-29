@@ -749,9 +749,11 @@ position = Vector2(-4166, 1696)
 
 [node name="button" parent="buttons" unique_id=1913669619 instance=ExtResource("3_pgh4i")]
 position = Vector2(5089, 718)
+scale = Vector2(0.7, 0.7)
 
 [node name="button2" parent="buttons" unique_id=1816048380 instance=ExtResource("3_pgh4i")]
 position = Vector2(5145, 714)
+scale = Vector2(0.8, 0.8)
 
 [node name="buttons2" type="Node2D" parent="." unique_id=1334336263]
 z_index = 1
@@ -759,6 +761,7 @@ position = Vector2(-2164, 1696)
 
 [node name="button" parent="buttons2" unique_id=250079183 instance=ExtResource("3_pgh4i")]
 position = Vector2(3200, 710)
+scale = Vector2(0.9, 0.9)
 
 [node name="button2" parent="buttons2" unique_id=834129342 instance=ExtResource("3_pgh4i")]
 position = Vector2(3256, 706)

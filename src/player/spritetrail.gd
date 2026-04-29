@@ -21,5 +21,7 @@ func _process(delta: float) -> void:
 	newSprite.stop()
 	newSprite.global_position = player.global_position+sprite.position
 	newSprite.modulate = Color(0.0, 0.0, 0.0, 1.0)
+	#get_tree().root.add_child(newSprite)
+	#player.add_sibling(newSprite)
 	get_tree().root.add_child(newSprite)
 	newSprite.startFading()
