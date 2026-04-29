@@ -3120,6 +3120,8 @@ shape = SubResource("RectangleShape2D_tuy4g")
 position = Vector2(-1151.0758, 1163.2922)
 shape = SubResource("RectangleShape2D_6wgec")
 
+[node name="trailplayer" type="Node2D" parent="." unique_id=589841280]
+
 [connection signal="body_entered" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_entered"]
 [connection signal="body_exited" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_exited"]
 [connection signal="body_entered" from="lvl1/cam_zones/no_bottom_offset_zone" to="." method="_on_no_bottom_offset_zone_body_entered"]

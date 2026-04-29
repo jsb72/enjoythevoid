@@ -2,6 +2,7 @@ extends Node
 
 @onready var sprite: AnimatedSprite2D = $"../Sprite"
 @onready var player: Player = $".."
+@onready var trailplayer: Node2D = $"../../trailplayer"
 
 
 # Called when the node enters the scene tree for the first time.
@@ -20,8 +21,12 @@ func _process(delta: float) -> void:
 	
 	newSprite.stop()
 	newSprite.global_position = player.global_position+sprite.position
+	
 	newSprite.modulate = Color(0.0, 0.0, 0.0, 1.0)
+	newSprite.z_index=4
 	#get_tree().root.add_child(newSprite)
 	#player.add_sibling(newSprite)
-	get_tree().root.add_child(newSprite)
+	trailplayer.add_child(newSprite)
+	print(newSprite.get_path())
+	print(sprite.get_path())
 	newSprite.startFading()

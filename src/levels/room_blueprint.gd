@@ -303,12 +303,15 @@ func _on_deathzone_body_entered(body: Node2D) -> void:
 		
 		
 #HIDE PLAYER ZONE#HIDE PLAYER ZONE#HIDE PLAYER ZONE#HIDE PLAYER ZONE#HIDE PLAYER ZONE#HIDE PLAYER ZONE#HIDE PLAYER ZONE
+@onready var trailplayer: Node2D = $trailplayer
 func _on_novisibleplayerzone_body_entered(body: Node2D) -> void:
 	if body is Player:
 		body.hide()
+		trailplayer.hide()
 func _on_novisibleplayerzone_body_exited(body: Node2D) -> void:
 	if body is Player:
 		body.show()
+		trailplayer.show()
 
 
 func _on_checkpoints_body_entered(body: Node2D) -> void:
