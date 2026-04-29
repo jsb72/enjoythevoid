@@ -39,7 +39,7 @@ res://addons/phantom_camera/panel/editor.tscn::0fa1038b9df55d356b28683d2a0c1e13:
 res://addons/phantom_camera/themes/button_focus.tres::aba93842cd51514adc1d0eb09ba4a71b::1776197434::res://.godot/exported/133200997/export-c2d52f8824b1bc567d558b9c148cee0f-button_focus.res
 res://addons/phantom_camera/themes/button_hover.tres::d863dce054a565f7fd2cc107ad0bec80::1776197434::res://.godot/exported/133200997/export-bf72e12c2ddcea6f1381ea8f179cf6d9-button_hover.res
 res://addons/phantom_camera/themes/button_normal.tres::407ecb984ab7b94ab5bf55a2462e56d5::1776197434::res://.godot/exported/133200997/export-056e5cffeb06d1c067d5922cfcb1322b-button_normal.res
-res://addons/phantom_camera/themes/theme.tres::23e4783277e8d699cd836177cf7f282d::1777361603::res://.godot/exported/133200997/export-4f46c67cc7d9a94d41450e7d2c070643-theme.res
+res://addons/phantom_camera/themes/theme.tres::23e4783277e8d699cd836177cf7f282d::1777469198::res://.godot/exported/133200997/export-4f46c67cc7d9a94d41450e7d2c070643-theme.res
 res://src/cinematic/cinematic.tscn::a263da1b4a298867dcba6cde2a7dd17d::1776197434::res://.godot/exported/133200997/export-ae004343d7e1223a9e76bbf6f5c5c9f7-cinematic.scn
 res://src/elements/ball.tscn::74c9abd82756c7351ebb1924e42d3375::1776197434::res://.godot/exported/133200997/export-d8f91a2efa165d2c71dbde449fc34fd6-ball.scn
 res://src/elements/balls_gen.tscn::145aaa3140fada2f08994846b6f70d1f::1776197434::res://.godot/exported/133200997/export-0dd99ddae1253eaa9535ff3220f4974e-balls_gen.scn
@@ -61,7 +61,7 @@ res://src/levels/jump_room.tscn::3fe5e3b35b75e58140815a86c8d3880c::1776197434::r
 res://src/levels/meta_room_piece.tscn::36811e1c418e4efe5acdcf128f59e50a::1777194183::res://.godot/exported/133200997/export-0f806d718e6d8d2dcbd414d62e1c85ea-meta_room_piece.scn
 res://src/levels/portal_room.tscn::7bc9cda9a1f0a06e000a5b165a8773ce::1776197434::res://.godot/exported/133200997/export-c7c78cfa72c2e0d8446be42a76150fcf-portal_room.scn
 res://src/levels/room_1.tscn::3b7fc13544f6d385eaf781df1497f5f3::1776197434::res://.godot/exported/133200997/export-ebebd2883edc91435908b64a3e3e42e4-room_1.scn
-res://src/levels/room_blueprint.tscn::5b6c350309117e4c45c493abecfdcf17::1777410646::res://.godot/exported/133200997/export-2388893ce8b32192889e9c56ebf99eaf-room_blueprint.scn
+res://src/levels/room_blueprint.tscn::da1c5b3a10d3d2b8e4bb7ca9fbd30ee8::1777481389::res://.godot/exported/133200997/export-2388893ce8b32192889e9c56ebf99eaf-room_blueprint.scn
 res://src/levels/room_piece.tscn::d5fa520453726776810e238abc8124f0::1776677884::res://.godot/exported/133200997/export-5e9b921bc0b1419f6911d26c549c6d6a-room_piece.scn
 res://src/levels/transition_rooms.tscn::2bbee3ce1b9676a63d8d7a54aa0f455d::1777171901::res://.godot/exported/133200997/export-1f8afdd358944e4b81a16572aa9188b9-transition_rooms.scn
 res://src/particles/ground_particle.tscn::50d878fab6cb7fe894f464ea2e48a3bc::1776197434::res://.godot/exported/133200997/export-052e73bd2a7085044463e6d5273ec5b7-ground_particle.scn
@@ -70,12 +70,12 @@ res://src/particles/slide_particle.tscn::c7ba67441633b97e3a27d13ef66aa4ef::17761
 res://src/platforms/3_platformblueprint.tscn::3b7f808408be975769e069f97b9b1286::1776197434::res://.godot/exported/133200997/export-8166f61f74cbe61bb75f1555c2dbaa88-3_platformblueprint.scn
 res://src/platforms/platform.tscn::469d02999ef7c2a4bd4466977e190f49::1776530666::res://.godot/exported/133200997/export-98ee12e4cb4fe4d6ecf8b04a97c29188-platform.scn
 res://src/platforms/pt_blueprint.tscn::0c6326c5c7812939a96cfb36b08dea2e::1776197434::res://.godot/exported/133200997/export-e59d137bc12bf4119ab3a8b9d8e222f7-pt_blueprint.scn
-res://src/player/player.tscn::52d3295bb0fe668fb288b452dbc31a6d::1777410929::res://.godot/exported/133200997/export-e6d031b4b01e7311dce0bbd1f2b58226-player.scn
+res://src/player/player.tscn::e958ad52615279fc473f30951d62df71::1777468493::res://.godot/exported/133200997/export-e6d031b4b01e7311dce0bbd1f2b58226-player.scn
 res://src/player/player_adding.tscn::b9f482a34b9be460f858b7b5bfea09d4::1776197434::res://.godot/exported/133200997/export-93888cec49933f4ed6722af45c58c6f4-player_adding.scn
 res://src/vivants/mouse.tscn::1486ac4baefa765ebc6a17ceb7890655::1776197434::res://.godot/exported/133200997/export-2be3191c6b65996b89420d89b8faf213-mouse.scn
-res://src/accueil.tscn::1d4f32e60ad8882c837ab5f0b949d7c4::1777136254::res://.godot/exported/133200997/export-c25bb070dacbf7c5d50b2c720104707e-accueil.scn
+res://src/accueil.tscn::6d9e59e78b59ecd6ff82383922ab624e::1777412089::res://.godot/exported/133200997/export-c25bb070dacbf7c5d50b2c720104707e-accueil.scn
 res://src/vivants/monster.tscn::5cdf2f3f99a2c2030d8409f2bdc1407e::1776197434::res://.godot/exported/133200997/export-1cb7292022685bd688d197092ca94306-monster.scn
-res://src/platforms/laser_trap.tscn::0d48a9e6ef8a09fd0ea54cbda2bf9b22::1776854143::res://.godot/exported/133200997/export-1a1000b21320221fe8a98cfdea8f8068-laser_trap.scn
+res://src/platforms/laser_trap.tscn::6659c10ed36bdb2f17934d4552c9e46b::1777460182::res://.godot/exported/133200997/export-1a1000b21320221fe8a98cfdea8f8068-laser_trap.scn
 res://src/levels/door_reverse.tscn::e397eb80ab786e368bf4eb3a50a9cff2::1776197434::res://.godot/exported/133200997/export-c18d31c43d532a6d9a551efb9d8dea6a-door_reverse.scn
 res://src/bonus/bonus.tscn::058171882f592505e9abc2c67bd86e89::1777063220::res://.godot/exported/133200997/export-5d073858ceb0f5971b929b0854d1743a-bonus.scn
 res://src/levels/descente_en_enfer.tscn::68c713763793df0842ce105407f4b9aa::1776197434::res://.godot/exported/133200997/export-eca5bb04862c9588d782ef933a06eb53-descente_en_enfer.scn
@@ -116,5 +116,5 @@ res://src/fadetoblack.tscn::2aaad968ca2fc6114f11603cb833d510::1776197434::res://
 res://src/platforms/plarform_3.tscn::f5eb58024016b8cee2257d27e8212cf2::1776805321::res://.godot/exported/133200997/export-78edc9b488496e3993ff5837f9641ff4-plarform_3.scn
 res://src/platforms/dmgblockecrasevertical.tscn::7fd7a87700f0f34708121d0c89684fb2::1776937546::res://.godot/exported/133200997/export-fe2fae66132ce7fbfb1cfd0261dab8a5-dmgblockecrasevertical.scn
 res://src/platforms/litlelongdmgblock.tscn::e6e761e5a594c2dce9c2317c97593a1f::1777042005::res://.godot/exported/133200997/export-7a3533895113cbe7bf3e6e9efaae6b0d-litlelongdmgblock.scn
-res://src/levels/midlvl.tscn::76f581f7d09ebb087bd187111e1d075a::1777411861::res://.godot/exported/133200997/export-268062af5763bbebb4f312007d0e0151-midlvl.scn
+res://src/levels/midlvl.tscn::1ff3540b491499ece96be6c48e20fa58::1777468855::res://.godot/exported/133200997/export-268062af5763bbebb4f312007d0e0151-midlvl.scn
 res://src/platforms/3_dmgblocktrapmove.tscn::008cc2b0fcc5f93fcffa27a6401ff5c9::1777194833::res://.godot/exported/133200997/export-e136bf6366f2fb33fc23330a33e19669-3_dmgblocktrapmove.scn
