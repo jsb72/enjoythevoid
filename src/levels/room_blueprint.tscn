@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="6_ltygr"]
 [ext_resource type="AudioStream" uid="uid://dgcprfmm7rth0" path="res://sounds/musics/ambiance.mp3" id="6_w6qp3"]
 [ext_resource type="PackedScene" uid="uid://dayo7lbiwbhw3" path="res://src/elements/tas_de_cadavre.tscn" id="7_j2cwt"]
+[ext_resource type="AudioStream" uid="uid://dpyis5e0otv6s" path="res://sounds/musics/surface2.mp3" id="7_lmpmd"]
 [ext_resource type="PackedScene" uid="uid://do35bbyy0qllr" path="res://src/platforms/platform.tscn" id="8_ltygr"]
 [ext_resource type="PackedScene" uid="uid://c07ghb70rt8ft" path="res://src/levels/escalier_room.tscn" id="12_7ls7j"]
 [ext_resource type="PackedScene" uid="uid://burxw4p2exuft" path="res://src/platforms/longsimpleplatform.tscn" id="13_73yqq"]
@@ -56,7 +57,7 @@
 [ext_resource type="Shader" uid="uid://b374xol4h6crb" path="res://shaders/godrays.gdshader" id="61_3grwt"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_qrlky"]
-clip_count = 5
+clip_count = 6
 clip_0/name = &"surface"
 clip_0/stream = ExtResource("2_lmpmd")
 clip_0/auto_advance = 0
@@ -72,6 +73,9 @@ clip_3/auto_advance = 0
 clip_4/name = &"vide"
 clip_4/stream = ExtResource("6_w6qp3")
 clip_4/auto_advance = 0
+clip_5/name = &"surface2"
+clip_5/stream = ExtResource("7_lmpmd")
+clip_5/auto_advance = 0
 initial_clip = 4
 
 [sub_resource type="Environment" id="Environment_vb8r4"]
@@ -729,7 +733,7 @@ shader_parameter/speed = Vector2(0.02, 0.01)
 size = Vector2(186.5, 178)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3grwt"]
-size = Vector2(23759.037, 5756.35)
+size = Vector2(25010.113, 5756.35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4fem0"]
 size = Vector2(423.54688, 1113.791)
@@ -3064,7 +3068,7 @@ z_index = -1
 [node name="surface" type="Area2D" parent="AMBIANCE_ZONE" unique_id=1255528348]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AMBIANCE_ZONE/surface" unique_id=1949339358]
-position = Vector2(9634.017, -2738.431)
+position = Vector2(9008.479, -2738.431)
 shape = SubResource("RectangleShape2D_3grwt")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="AMBIANCE_ZONE/surface" unique_id=778550057]

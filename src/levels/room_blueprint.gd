@@ -115,11 +115,17 @@ func optimization_logic()->void:
 @onready var matrice: Area2D = $AMBIANCE_ZONE/matrice
 @onready var floral: Area2D = $AMBIANCE_ZONE/floral
 @onready var complot: Area2D = $AMBIANCE_ZONE/complot
+var surface_music1_already_played:bool=false
 func ambiance_logic():
 	
 	var ambiance_zone_actuelle:String="vide"
 	if surface.overlaps_body(player) and !lvl_2_loaded:
-		ambiance_zone_actuelle="surface"
+		if !surface_music1_already_played:
+			ambiance_zone_actuelle="surface"
+		else:
+			ambiance_zone_actuelle="surface2"
+	else:
+		surface_music1_already_played=true
 	if floral.overlaps_body(player):
 		ambiance_zone_actuelle="floral"
 	if complot.overlaps_body(player) and lvl_2_loaded:

@@ -28,8 +28,10 @@ var x_select : int = 1
 var y_select : int = 1
 
 @onready var touche_prec : Label = label_7
-@onready var resfalse: Label = $locklayer/Node2D/resfalse
+
+@onready var resdisplay: Label = $locklayer/Node2D/resdisplay
 @onready var res: Label = $locklayer/Node2D/res
+
 @onready var fadeoutdigit: AnimationPlayer = $locklayer/Node2D/fadeoutdigit
 
 var cube_opened:bool=false
@@ -73,9 +75,11 @@ func _process(delta: float) -> void:
 			
 		if Input.is_action_just_released("jump"):
 			res.text += touche_prec.text
+			resdisplay.text += "*"
 
 		if res.text.length()>4 :
 			res.text = ""
+			resdisplay.text=""
 			
 	if res.text == "1972":
 		if !cube_opened:

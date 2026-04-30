@@ -14,3 +14,7 @@ res://shaders/vhs.gdshader
 res://shaders/blur.gdshader
 res://src/levels/escalier_room.tscn
 res://src/global.gd
+res://src/player/player.tscn
+res://src/levels/room_blueprint.gd
+res://src/elements/cube.tscn
+res://src/elements/cube.gd
