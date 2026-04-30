@@ -821,7 +821,7 @@ stream = SubResource("AudioStreamRandomizer_h0enb")
 
 [node name="PointLight2D" type="PointLight2D" parent="." unique_id=479851347]
 position = Vector2(0, -17)
-color = Color(0.37, 0.37, 0.37, 1)
+energy = 0.0
 texture = SubResource("GradientTexture2D_hja65")
 texture_scale = 6.0
 

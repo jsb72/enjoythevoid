@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://cs773gk0fxngv" path="res://sprites/rooms/unnamevectord.png" id="1_3s88y"]
 [ext_resource type="PackedScene" uid="uid://do35bbyy0qllr" path="res://src/platforms/platform.tscn" id="4_uxlox"]
-[ext_resource type="PackedScene" uid="uid://c0g2bfslm40qt" path="res://src/platforms/pt_blueprint.tscn" id="5_1qo4e"]
 [ext_resource type="PackedScene" uid="uid://bhno22n7k5cmv" path="res://src/elements/portal.tscn" id="5_3s88y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gy0ak"]
@@ -160,30 +159,3 @@ black_portal = true
 [node name="Polygon2D2" type="Polygon2D" parent="." unique_id=1628953267]
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-3820, 3797, -729, 725, 729, 726, 4181, 4142)
-
-[node name="Node2D" type="Node2D" parent="." unique_id=1130712462]
-z_index = 4
-
-[node name="pt_blueprint" parent="Node2D" unique_id=920875960 instance=ExtResource("5_1qo4e")]
-position = Vector2(-689, -37)
-
-[node name="pt_blueprint2" parent="Node2D" unique_id=401894807 instance=ExtResource("5_1qo4e")]
-position = Vector2(-602, -53.000015)
-rotation = 0.6195919
-
-[node name="pt_blueprint3" parent="Node2D" unique_id=873492416 instance=ExtResource("5_1qo4e")]
-position = Vector2(-685.00006, -98.00001)
-rotation = -0.14835298
-
-[node name="pt_blueprint4" parent="Node2D" unique_id=1883965007 instance=ExtResource("5_1qo4e")]
-position = Vector2(-701.99994, -152)
-rotation = -0.08901179
-
-[node name="pt_blueprint5" parent="Node2D" unique_id=2111108790 instance=ExtResource("5_1qo4e")]
-position = Vector2(-623, -137)
-rotation = -1.8587756
-
-[node name="pt_blueprint6" parent="Node2D" unique_id=470163221 instance=ExtResource("5_1qo4e")]
-z_index = -1
-position = Vector2(-638.00006, -202.00002)
-rotation = -3.1869712

@@ -136,9 +136,9 @@ func ambiance_logic():
 		
 	if ambiance_zone_actuelle=="surface":		
 		var tween = get_tree().create_tween()
-		tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 3.0)
+		tween.tween_property(canvas_modulate, "color", Color("9e9e9eff"), 3.0)
 		var tween2 = get_tree().create_tween()
-		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 0.0, 0.0, 1.0), 1.0)
+		tween2.tween_property(player.point_light_2d_2, "color", Color(0.0, 0.0, 0.0, 1.0), 1.0)
 		
 	if ambiance_zone_actuelle=="floral":		
 		var tween = get_tree().create_tween()

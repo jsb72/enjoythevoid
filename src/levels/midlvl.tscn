@@ -51,6 +51,10 @@ texture = ExtResource("12_8wre4")
 51:32/0 = 0
 46:35/size_in_atlas = Vector2i(5, 9)
 46:35/0 = 0
+19:14/size_in_atlas = Vector2i(7, 7)
+19:14/0 = 0
+25:32/size_in_atlas = Vector2i(21, 15)
+25:32/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_pka4r"]
 sources/0 = SubResource("TileSetAtlasSource_74080")
@@ -115,7 +119,7 @@ polygon = PackedVector2Array(1952, 140, 1986, -232, 2055, -477, 2120, -535, 2138
 
 [node name="AntialiasedPolygon2D" type="Polygon2D" parent="structure/part1/structure1/CollisionPolygon2D" unique_id=335053238]
 color = Color(0, 0, 0, 1)
-polygon = PackedVector2Array(1952, 140, 1986, -232, 2055, -477, 2120, -535, 2138, -740, 2075, -888, 2048.9946, -1008.3692, 2232.0579, -1051.6694, 2356.0247, -1059.1074, 2366.7686, -1118.6116, 2479.9917, -1159.1074, 2661.8098, -1186.3801, 2795.2622, -1210.8676, 2809.5898, -819.9967, 2752.72, -655.4367, 2850.73, -634.8667, 2921.1943, -191.16113, 3069.74, 141.95337)
+polygon = PackedVector2Array(1952, 140, 1986, -232, 2055, -477, 2120, -535, 2138, -740, 2075, -888, 2048.9946, -1008.3692, 2056.9539, -1033.1787, 2076.7886, -1026.5671, 2109.02, -1029.0464, 2232.0579, -1051.6694, 2356.0247, -1059.1074, 2366.7686, -1118.6116, 2479.9917, -1159.1074, 2661.8098, -1186.3801, 2795.2622, -1210.8676, 2809.5898, -819.9967, 2752.72, -655.4367, 2850.73, -634.8667, 2921.1943, -191.16113, 3069.74, 141.95337)
 script = ExtResource("2_nvfqf")
 stroke_width = 0.0
 metadata/_custom_type_script = "uid://ddhu3qfummrc2"
@@ -232,25 +236,56 @@ rotation = 0.17802358
 [node name="gravas" type="Node2D" parent="structure" unique_id=1478155172]
 position = Vector2(-2577.7808, -2127.9329)
 
+[node name="Node2D" type="Node2D" parent="structure/gravas" unique_id=955021798]
+
+[node name="pt_blueprint14" parent="structure/gravas/Node2D" unique_id=1576572643 instance=ExtResource("3_k15l3")]
+position = Vector2(8163.517, 76.71069)
+rotation = 1.5707964
+
+[node name="pt_blueprint15" parent="structure/gravas/Node2D" unique_id=333146781 instance=ExtResource("3_k15l3")]
+position = Vector2(8435.594, 80.66211)
+rotation = 1.5707964
+
+[node name="pt_blueprint16" parent="structure/gravas/Node2D" unique_id=1493019184 instance=ExtResource("3_k15l3")]
+position = Vector2(8373.501, 65.98584)
+rotation = 1.9582595
+
+[node name="pt_blueprint17" parent="structure/gravas/Node2D" unique_id=594135196 instance=ExtResource("3_k15l3")]
+position = Vector2(8476.799, 93.64514)
+rotation = 2.989749
+
+[node name="pt_blueprint18" parent="structure/gravas/Node2D" unique_id=2129408060 instance=ExtResource("3_k15l3")]
+position = Vector2(8274.717, 77.84009)
+rotation = 2.2165682
+
+[node name="pt_blueprint19" parent="structure/gravas/Node2D" unique_id=153742897 instance=ExtResource("3_k15l3")]
+position = Vector2(8247.729, 6.9001465)
+rotation = 2.2165682
+
+[node name="pt_blueprint20" parent="structure/gravas/Node2D" unique_id=488629024 instance=ExtResource("3_k15l3")]
+position = Vector2(8317.897, -10.834719)
+rotation = 0.47647488
+
 [node name="pt_blueprint11" parent="structure/gravas" unique_id=1104471817 instance=ExtResource("3_k15l3")]
 position = Vector2(8391, 88.000244)
 rotation = 1.5707964
 
 [node name="pt_blueprint12" parent="structure/gravas" unique_id=1538676769 instance=ExtResource("3_k15l3")]
-position = Vector2(8550, 98)
+position = Vector2(8542.662, 98)
 
 [node name="pt_blueprint13" parent="structure/gravas" unique_id=633109287 instance=ExtResource("3_k15l3")]
 position = Vector2(8397, 7.999749)
 rotation = 0.28099802
 
 [node name="pt_blueprint2" parent="structure/gravas" unique_id=313282370 instance=ExtResource("3_k15l3")]
-position = Vector2(8029, 97)
+position = Vector2(8035.7793, 103.48999)
+rotation = -0.064577185
 
 [node name="pt_blueprint4" parent="structure/gravas" unique_id=2135357440 instance=ExtResource("3_k15l3")]
 position = Vector2(8215, 97)
 
 [node name="pt_blueprint3" parent="structure/gravas" unique_id=1141363969 instance=ExtResource("3_k15l3")]
-position = Vector2(8122, 87.000244)
+position = Vector2(8125.817, 87.42444)
 rotation = 0.42062435
 
 [node name="pt_blueprint5" parent="structure/gravas" unique_id=1403014265 instance=ExtResource("3_k15l3")]
@@ -258,18 +293,19 @@ position = Vector2(8314, 97)
 
 [node name="pt_blueprint6" parent="structure/gravas" unique_id=1055880706 instance=ExtResource("3_k15l3")]
 position = Vector2(8246, 42)
+rotation = -0.25830874
 
 [node name="pt_blueprint7" parent="structure/gravas" unique_id=2083884787 instance=ExtResource("3_k15l3")]
-position = Vector2(8319.999, 26)
-rotation = 1.1239921
+position = Vector2(8329.252, 28.313477)
+rotation = 0.6719518
 
 [node name="pt_blueprint8" parent="structure/gravas" unique_id=1877607451 instance=ExtResource("3_k15l3")]
 position = Vector2(8161, 26.999996)
 rotation = -0.5602507
 
 [node name="pt_blueprint9" parent="structure/gravas" unique_id=782067429 instance=ExtResource("3_k15l3")]
-position = Vector2(8337.001, -53.00007)
-rotation = -0.06981317
+position = Vector2(8321.733, -42.39753)
+rotation = 0.12391838
 
 [node name="pt_blueprint" parent="structure/gravas" unique_id=188554413 instance=ExtResource("3_k15l3")]
 position = Vector2(8470, 80.99979)
@@ -481,7 +517,7 @@ shape = SubResource("RectangleShape2D_at7t4")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=226148049]
 z_index = 16
-tile_map_data = PackedByteArray("AADfAsH/AAAzACAAAADjAr//AAA5ABsAAADTAsb/AAAuACMAAADIAr7/AAAzACAAAADNAsn/AAAuACMAAADBArn/AAAuACMAAAB8AN7/AAAzACAAAACqANT/AAAzACAAAAB1AAEAAAA5ABsAAAB3AO7/AAAuACMAAAB7AL7/AAAuACMAAACCALn/AAA5ABsAAAA=")
+tile_map_data = PackedByteArray("AADfAsH/AAAzACAAAADjAr//AAA5ABsAAADTAsb/AAAuACMAAADIAr7/AAAzACAAAADNAsn/AAAuACMAAADBArn/AAAuACMAAAB8AN7/AAAzACAAAACqANT/AAAzACAAAAB1AAEAAAA5ABsAAAB3AO7/AAAuACMAAAA=")
 tile_set = SubResource("TileSet_pka4r")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

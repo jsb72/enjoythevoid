@@ -732,6 +732,9 @@ size = Vector2(186.5, 178)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3grwt"]
 size = Vector2(23759.037, 5756.35)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fem0"]
+size = Vector2(423.54688, 1113.791)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wm35a"]
 size = Vector2(17935.105, 11505.603)
 
@@ -2722,7 +2725,7 @@ offset_left = 27848.0
 offset_top = 1134.0
 offset_right = 28198.0
 offset_bottom = 1408.0
-text = "« Si tu veux découvrir ce qu'est la matrice, tu devras l'explorer toi-même »"
+text = "Il existe un loophole dont certains initiés ont le secret"
 horizontal_alignment = 1
 
 [node name="AntialiasedPolygon2D" type="Polygon2D" parent="lvl5" unique_id=1825966902]
@@ -3090,12 +3093,17 @@ rotation = -0.082030475
 [node name="midlvl" parent="." unique_id=98324228 instance=ExtResource("55_lmpmd")]
 
 [node name="AMBIANCE_ZONE" type="Node2D" parent="." unique_id=456457801]
+z_index = -1
 
 [node name="surface" type="Area2D" parent="AMBIANCE_ZONE" unique_id=1255528348]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AMBIANCE_ZONE/surface" unique_id=1949339358]
 position = Vector2(9634.017, -2738.431)
 shape = SubResource("RectangleShape2D_3grwt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AMBIANCE_ZONE/surface" unique_id=778550057]
+position = Vector2(12830.914, 347.84473)
+shape = SubResource("RectangleShape2D_4fem0")
 
 [node name="matrice" type="Area2D" parent="AMBIANCE_ZONE" unique_id=543727214]
 
