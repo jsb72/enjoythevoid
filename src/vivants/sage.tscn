@@ -100,7 +100,7 @@ offset_top = -147.0
 offset_right = 68.0
 offset_bottom = -27.0
 theme_override_font_sizes/normal_font_size = 12
-text = "Méfie-toi de son puissant pouvoir d'hypnose. Moi, je me suis liberé de son emprise. Après un songe sans fin, je me réveille enfin."
+text = "Beware of its extreme power of hypnosis. Me? I did manage to free myself from it. After a long moment of reflection, I finaly emerge."
 horizontal_alignment = 3
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1786713614]

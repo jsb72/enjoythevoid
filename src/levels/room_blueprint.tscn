@@ -1101,7 +1101,7 @@ offset_right = 516.0
 offset_bottom = 517.0
 theme_override_font_sizes/normal_font_size = 26
 bbcode_enabled = true
-text = "La réalité est une conspiration Reality is FAKE Tout est faux Seul le néant dit la vérité La Voie du Vide est l'unique chemin Mais ce chemin est sans issue La réalité est une conspiration Reality is FAKE Tout est faux Seul le néant dit la vérité La Voie du Vide est l'unique chemin Mais ce chemin est sans issue La réalité est une conspiration Reality is FAKE Tout est faux Seul le néant dit la vérité La Voie du Vide est l'unique chemin Mais ce chemin est sans issue La réalité est une conspiration Reality is FAKE Tout est faux Seul le néant dit la vérité La Voie du Vide est l'unique chemin Mais ce chemin est sans issue La réalité est une conspiration Reality is FAKE Tout est faux Seul le néant dit la vérité La Voie du Vide est l'unique chemin Mais ce chemin est sans issue La réalité est une conspiration Reality is FAKE Tout est faux Seul le néant dit la vérité La Voie du Vide est l'unique chemin Mais ce chemin est sans issue La réalité est une conspiration Reality is FAKE Tout est faux Seul le néant dit la vérité La Voie du Vide est l'unique chemin Mais ce chemin est sans issue La réalité est une conspiration Reality is FAKE Tout est faux Seul le néant dit la vérité La Voie du Vide est l'unique chemin Mais ce chemin est sans issue La réalité est une conspiration Reality is FAKE Tout est faux Seul le néant dit la vérité La Voie du Vide est l'unique chemin Mais ce chemin est sans issue La réalité est une conspiration Reality is FAKE Tout est faux Seul le néant dit la vérité La Voie du Vide est l'unique chemin Mais ce chemin est sans issue La réalité est une conspiration Reality is FAKE Tout est faux Seul le néant dit la vérité La Voie du Vide est l'unique chemin Mais ce chemin est sans issue "
+text = "Reality is a conspiracy Everything is fake Only the void states the truth The road of emptiness is the only way However, it is but a dead end Reality is a conspiracy Everything is fake Only the void states the truth The road of emptiness is the only way However, it is but a dead end Reality is a conspiracy Everything is fake Only the void states the truth The road of emptiness is the only way However, it is but a dead end Reality is a conspiracy Everything is fake Only the void states the truth The road of emptiness is the only way However, it is but a dead end Reality is a conspiracy Everything is fake Only the void states the truth The road of emptiness is the only way However, it is but a dead end Reality is a conspiracy Everything is fake Only the void states the truth The road of emptiness is the only way However, it is but a dead end "
 scroll_active = false
 horizontal_alignment = 3
 
@@ -1565,13 +1565,13 @@ identifiant = 1
 
 [node name="ouvriront" type="RichTextLabel" parent="lvl1" unique_id=1013986313]
 z_index = 1
-offset_left = -1058.0
+offset_left = -1012.01996
 offset_top = 36.00006
-offset_right = -477.05994
+offset_right = -431.0799
 offset_bottom = 143.8786
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 18
-text = "Les pièces du fractal ouvriront la Voie"
+text = "The fractal patterns open the road"
 horizontal_alignment = 3
 
 [node name="cam_zones" type="Node2D" parent="lvl1" unique_id=1964456640]
@@ -1680,11 +1680,11 @@ position = Vector2(14878, -190)
 [node name="RichTextLabel3" type="RichTextLabel" parent="lvl1" unique_id=465555141]
 offset_left = 17183.234
 offset_top = -377.08325
-offset_right = 17794.602
+offset_right = 17820.54
 offset_bottom = 74.19824
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 72
-text = "Ceux qui savent se taisent"
+text = "Those who know, they stay silent"
 
 [node name="fly" parent="lvl1" unique_id=1079513456 instance=ExtResource("41_5ihcl")]
 position = Vector2(8175, 1638.7251)
@@ -2695,7 +2695,7 @@ offset_left = 27848.0
 offset_top = 1134.0
 offset_right = 28198.0
 offset_bottom = 1408.0
-text = "Il existe un loophole dont certains initiés ont le secret"
+text = "There is a loophole that only a few selected ones know of"
 horizontal_alignment = 1
 
 [node name="AntialiasedPolygon2D" type="Polygon2D" parent="lvl5" unique_id=1825966902]
@@ -3063,6 +3063,7 @@ rotation = -0.082030475
 [node name="midlvl" parent="." unique_id=98324228 instance=ExtResource("55_lmpmd")]
 
 [node name="AMBIANCE_ZONE" type="Node2D" parent="." unique_id=456457801]
+visible = false
 z_index = -1
 
 [node name="surface" type="Area2D" parent="AMBIANCE_ZONE" unique_id=1255528348]

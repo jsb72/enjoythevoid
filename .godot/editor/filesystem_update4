@@ -19,3 +19,7 @@ res://src/levels/room_blueprint.gd
 res://src/elements/cube.tscn
 res://src/elements/cube.gd
 res://src/bonus/bonus.tscn
+res://src/accueil.tscn
+res://src/accueil.gd
+res://src/levels/meta_room_piece.tscn
+res://src/vivants/sage.tscn

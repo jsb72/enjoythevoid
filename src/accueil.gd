@@ -7,7 +7,7 @@ extends Node2D
 
 func _ready() -> void:
 	if Global.first_cycle_done:
-		rich_text_label.text = "La Vérité est impénétrable"
+		rich_text_label.text = "Truth is impenetrable"
 
 var has_begun:bool=false
 func _process(delta: float) -> void:
@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 			await get_tree().create_timer(1).timeout
 			Fadetoblack.transition(5)
 			await Fadetoblack.on_transition_finished
-			rich_text_label.text = "Ton désir de savoir te tuera"
+			rich_text_label.text = "Your thirst for knowledge will kill you"
 			await get_tree().create_timer(1).timeout
 			start_game()
 	

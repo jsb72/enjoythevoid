@@ -388,10 +388,13 @@ position = Vector2(-725, 1139)
 [node name="pt_blueprint10" parent="first_bridge" unique_id=1973263679 instance=ExtResource("10_lory2")]
 position = Vector2(-645, 1139)
 
+[node name="pt_blueprint11" parent="first_bridge" unique_id=920875960 instance=ExtResource("10_lory2")]
+position = Vector2(-565, 1139)
+
 [node name="last_bridge" type="Node2D" parent="." unique_id=1706743143]
 position = Vector2(3821, 2477)
 
-[node name="pt_blueprint2" parent="last_bridge" unique_id=920875960 instance=ExtResource("10_lory2")]
+[node name="pt_blueprint2" parent="last_bridge" unique_id=428194835 instance=ExtResource("10_lory2")]
 position = Vector2(-1260, 1139)
 
 [node name="pt_blueprint3" parent="last_bridge" unique_id=251652674 instance=ExtResource("10_lory2")]
@@ -419,13 +422,13 @@ position = Vector2(-725, 1139)
 position = Vector2(-645, 1139)
 
 [node name="laser_trap" parent="." unique_id=853668133 instance=ExtResource("11_nvtr1")]
-position = Vector2(-834.99994, 1311)
+position = Vector2(-759.00006, 1308.0001)
 rotation = 0.9721484
 scale = Vector2(0.5, 0.5)
 is_rotatingg = false
 
 [node name="laser_trap2" parent="." unique_id=968078157 instance=ExtResource("11_nvtr1")]
-position = Vector2(-620.9999, 1570)
+position = Vector2(-632.0001, 1479)
 rotation = 0.6824237
 scale = Vector2(0.5, 0.5)
 is_rotatingg = false
@@ -437,11 +440,11 @@ position = Vector2(-4380, -1594)
 [node name="Label" type="RichTextLabel" parent="txt" unique_id=588666303]
 offset_left = 4373.0
 offset_top = 4395.0
-offset_right = 4712.0
+offset_right = 4580.0
 offset_bottom = 5019.0
 theme_override_colors/default_color = Color(0.118581556, 0.11858132, 0.11858139, 1)
 theme_override_font_sizes/normal_font_size = 16
-text = "première démonstration officielle d'ARPANET en 1972..."
+text = "First demonstration of ARPANET in 1972..."
 vertical_alignment = 1
 
 [node name="Label7" type="RichTextLabel" parent="txt" unique_id=1400485756]
@@ -451,7 +454,7 @@ offset_right = 6658.0
 offset_bottom = 3205.0
 theme_override_colors/default_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "invention du langage C en 1972..."
+text = "Invention of the C language in 1972..."
 vertical_alignment = 1
 
 [node name="Label8" type="RichTextLabel" parent="txt" unique_id=970376145]
@@ -461,7 +464,7 @@ offset_right = 6721.0
 offset_bottom = 4215.0
 theme_override_colors/default_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 theme_override_font_sizes/normal_font_size = 18
-text = "démonstration des 21 problèmes NP-complets de Karp en 1972..."
+text = "Karp's 21 NP-complete problems in 1972..."
 vertical_alignment = 1
 
 [node name="Label9" type="RichTextLabel" parent="txt" unique_id=833008860]
@@ -471,7 +474,7 @@ offset_right = 4674.0
 offset_bottom = 3027.0
 theme_override_colors/default_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "fin du programme MK-Ultra en 1972..."
+text = "End of the MK-Ultra program in 1972..."
 vertical_alignment = 1
 
 [node name="Label10" type="RichTextLabel" parent="txt" unique_id=2112262056]
@@ -481,7 +484,7 @@ offset_right = 4050.0
 offset_bottom = 4449.0
 theme_override_colors/default_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "The Blue Marble photographié en 1972..."
+text = "The Blue Marble photographed in 1972..."
 vertical_alignment = 1
 
 [node name="Label12" type="RichTextLabel" parent="txt" unique_id=1901477410]
@@ -491,7 +494,7 @@ offset_right = 6776.0
 offset_bottom = 5711.0
 theme_override_colors/default_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 theme_override_font_sizes/normal_font_size = 20
-text = "DXM retiré de la vente aux US en 1972..."
+text = "DXM recalled in the US in 1972..."
 vertical_alignment = 1
 
 [node name="Label13" type="RichTextLabel" parent="txt" unique_id=1666874227]
@@ -501,7 +504,7 @@ offset_right = 5128.0
 offset_bottom = 5306.0
 theme_override_colors/default_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 theme_override_font_sizes/normal_font_size = 21
-text = "Dernier homme sur la Lune en 1972..."
+text = "Last man on the moon in 1972..."
 vertical_alignment = 1
 
 [node name="Label11" type="RichTextLabel" parent="txt" unique_id=324337172]
@@ -511,7 +514,7 @@ offset_right = 7328.0
 offset_bottom = 3393.0
 theme_override_colors/default_color = Color(0.11764706, 0.11764706, 0.11764706, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "Rapport Meadows publié en 1972..."
+text = "Meadows report released in 1972..."
 vertical_alignment = 1
 
 [node name="T1" type="Node2D" parent="." unique_id=62797182]
@@ -779,7 +782,7 @@ metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="cordes/Rope" unique_id=1847793311]
 position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -18.99704, 142.22272, -18.993866, 163.37195, -18.990448, 184.42029, -18.986694, 205.3468, -18.982666, 226.13605, -18.978363, 246.7771, -18.973389, 267.26263, -18.968536, 287.5879, -18.963379, 307.7505, -18.95816, 327.7505)
+points = PackedVector2Array(-19, 121, -19, 142.22278, -19, 163.37207, -19, 184.42047, -19, 205.34705, -19, 226.13629, -19, 246.7774, -19, 267.26294, -19, 287.58826, -19, 307.75085, -19, 327.75085)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
@@ -795,7 +798,7 @@ metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="cordes/Rope8" unique_id=1043527243]
 position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -18.99704, 142.22272, -18.993866, 163.37195, -18.990448, 184.42029, -18.986694, 205.3468, -18.982666, 226.13605, -18.978363, 246.7771, -18.973389, 267.26263, -18.968536, 287.5879, -18.963379, 307.7505, -18.95816, 327.7505)
+points = PackedVector2Array(-19, 121, -19, 142.22241, -19, 163.3711, -19, 184.41919, -19, 205.34546, -19, 226.13428, -19, 246.77515, -19, 267.2605, -19, 287.58545, -19, 307.74805, -19, 327.74805)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
@@ -811,7 +814,7 @@ metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="cordes/Rope6" unique_id=363577348]
 position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -18.99704, 142.22272, -18.993866, 163.37195, -18.990448, 184.42029, -18.986694, 205.3468, -18.982666, 226.13605, -18.978363, 246.7771, -18.973389, 267.26263, -18.968536, 287.5879, -18.963379, 307.7505, -18.95816, 327.7505)
+points = PackedVector2Array(-19, 121, -19, 142.2229, -19, 163.3722, -19, 184.42065, -19, 205.34741, -19, 226.13672, -19, 246.77808, -19, 267.26367, -19, 287.5891, -19, 307.75195, -19, 327.75195)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
@@ -827,7 +830,7 @@ metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="cordes/Rope5" unique_id=1416743799]
 position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -18.99704, 142.22272, -18.993866, 163.37195, -18.990448, 184.42029, -18.986694, 205.3468, -18.982666, 226.13605, -18.978363, 246.7771, -18.973389, 267.26263, -18.968536, 287.5879, -18.963379, 307.7505, -18.95816, 327.7505)
+points = PackedVector2Array(-19, 121, -19, 142.2229, -19, 163.37231, -19, 184.4209, -19, 205.34766, -19, 226.1372, -19, 246.77856, -19, 267.26428, -19, 287.5896, -19, 307.75244, -19, 327.75244)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
@@ -842,7 +845,7 @@ metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="cordes/Rope2" unique_id=663327809]
 position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -18.99704, 142.22272, -18.993866, 163.37195, -18.990448, 184.42029, -18.986694, 205.3468, -18.982666, 226.13605, -18.978363, 246.7771, -18.973389, 267.26263, -18.968536, 287.5879, -18.963379, 307.7505, -18.95816, 327.7505)
+points = PackedVector2Array(-19, 121, -19, 132.22278, -19, 143.37207, -19, 154.42047, -19, 165.34705, -19, 176.13629, -19, 186.7774, -19, 197.26294, -19, 207.58826, -19, 217.75085, -19, 227.75085)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
@@ -857,7 +860,7 @@ metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="cordes/Rope3" unique_id=2121518083]
 position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -18.99704, 142.22272, -18.993866, 163.37195, -18.990448, 184.42029, -18.986694, 205.3468, -18.982666, 226.13605, -18.978363, 246.7771, -18.973389, 267.26263, -18.968536, 287.5879, -18.963379, 307.7505, -18.95816, 327.7505)
+points = PackedVector2Array(-19, 121, -19, 132.22278, -19, 143.37207, -19, 154.42047, -19, 165.34705, -19, 176.13629, -19, 186.7774, -19, 197.26294, -19, 207.58826, -19, 217.75085, -19, 227.75085)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
@@ -872,7 +875,7 @@ metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="cordes/Rope4" unique_id=448997073]
 position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -18.99704, 142.22272, -18.993866, 163.37195, -18.990448, 184.42029, -18.986694, 205.3468, -18.982666, 226.13605, -18.978363, 246.7771, -18.973389, 267.26263, -18.968536, 287.5879, -18.963379, 307.7505, -18.95816, 327.7505)
+points = PackedVector2Array(-19, 121, -19, 132.22278, -19, 143.37207, -19, 154.42047, -19, 165.34705, -19, 176.13629, -19, 186.7774, -19, 197.26294, -19, 207.58826, -19, 217.75085, -19, 227.75085)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
@@ -887,7 +890,7 @@ metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeRendererLine2D" type="Line2D" parent="cordes/Rope7" unique_id=918179201]
 position = Vector2(19, -121)
-points = PackedVector2Array(-19, 121, -18.99704, 142.22272, -18.993866, 163.37195, -18.990448, 184.42029, -18.986694, 205.3468, -18.982666, 226.13605, -18.978363, 246.7771, -18.973389, 267.26263, -18.968536, 287.5879, -18.963379, 307.7505, -18.95816, 327.7505)
+points = PackedVector2Array(-19, 121, -19, 132.22266, -19, 143.37183, -19, 154.42017, -19, 165.34668, -19, 176.13599, -19, 186.7771, -19, 197.2627, -19, 207.58789, -19, 217.75049, -19, 227.75049)
 width = 5.0
 default_color = Color(0, 0, 0, 1)
 script = ExtResource("14_lompd")
