@@ -139,30 +139,40 @@ func ambiance_logic():
 		tween.tween_property(canvas_modulate, "color", Color("9e9e9eff"), 3.0)
 		var tween2 = get_tree().create_tween()
 		tween2.tween_property(player.point_light_2d_2, "color", Color(0.0, 0.0, 0.0, 1.0), 1.0)
+		var tween3 = get_tree().create_tween()
+		tween3.tween_property(player.point_light_2d, "color", Color(1.0, 1.0, 1.0, 1.0), 1.0)
 		
 	if ambiance_zone_actuelle=="floral":		
 		var tween = get_tree().create_tween()
 		tween.tween_property(canvas_modulate, "color", Color("6459deff"), 3.0)#dbfff4ff
 		var tween2 = get_tree().create_tween()
 		tween2.tween_property(player.point_light_2d_2, "color", Color(0.0, 0.967, 1.0, 1.0), 1.0)
+		var tween3 = get_tree().create_tween()
+		tween3.tween_property(player.point_light_2d, "color", Color(1.0, 1.0, 1.0, 1.0), 1.0)
 		
 	if ambiance_zone_actuelle=="complot":		
 		var tween = get_tree().create_tween()
 		tween.tween_property(canvas_modulate, "color", Color("919191ff"), 3.0)#ffc7c7ff
 		var tween2 = get_tree().create_tween()
 		tween2.tween_property(player.point_light_2d_2, "color", Color("ffffffff"), 1.0)
+		var tween3 = get_tree().create_tween()
+		tween3.tween_property(player.point_light_2d, "color", Color(1.0, 1.0, 1.0, 1.0), 1.0)
 		
 	if ambiance_zone_actuelle=="matrice":	
 		var tween = get_tree().create_tween()
 		tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 3.0)
 		var tween2 = get_tree().create_tween()
 		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 0.0, 0.0, 1.0), 1.0)
+		var tween3 = get_tree().create_tween()
+		tween3.tween_property(player.point_light_2d, "color", Color(0.43, 0.43, 0.43, 1.0), 1.0)
 		
 	if ambiance_zone_actuelle=="vide":		
 		var tween = get_tree().create_tween()
 		tween.tween_property(canvas_modulate, "color", Color("ffffffff"), 3.0)
 		var tween2 = get_tree().create_tween()
 		tween2.tween_property(player.point_light_2d_2, "color", Color(1.0, 1.0, 1.0, 1.0), 1.0)
+		var tween3 = get_tree().create_tween()
+		tween3.tween_property(player.point_light_2d, "color", Color(0.77, 0.77, 0.77, 1.0), 1.0)
 		
 		
 		

@@ -16,3 +16,5 @@ res://src/levels/midlvl.tscn
 res://src/levels/room_blueprint.gd
 res://src/player/player.tscn
 res://src/levels/transition_rooms.tscn
+res://src/global.gd
+res://src/elements/fractale.tscn
