@@ -322,11 +322,13 @@ func _on_deathzone_body_entered(body: Node2D) -> void:
 @onready var trailplayer: Node2D = $trailplayer
 func _on_novisibleplayerzone_body_entered(body: Node2D) -> void:
 	if body is Player:
-		body.hide()
+		var tween = get_tree().create_tween()
+		tween.tween_property(body, "modulate:a", 0.0, 0.1)
 		trailplayer.hide()
 func _on_novisibleplayerzone_body_exited(body: Node2D) -> void:
 	if body is Player:
-		body.show()
+		var tween = get_tree().create_tween()
+		tween.tween_property(body, "modulate:a", 1.0, 0.1)
 		trailplayer.show()
 
 

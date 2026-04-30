@@ -144,21 +144,25 @@ script = ExtResource("1_k404d")
 
 [node name="sprintsprite" type="Sprite2D" parent="Node2D/sprites" unique_id=2083008858]
 visible = false
+modulate = Color(1.8247963, 1.8247963, 1.8247963, 1)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_ea6r3")
 
 [node name="dashsprite" type="Sprite2D" parent="Node2D/sprites" unique_id=447138727]
 visible = false
+modulate = Color(2.454227, 2.454227, 2.454227, 1)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_yyq72")
 
 [node name="doublejump" type="Sprite2D" parent="Node2D/sprites" unique_id=2089020610]
 visible = false
+modulate = Color(1.8247963, 1.8247963, 1.8247963, 1)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_whhxl")
 
 [node name="walljump" type="Sprite2D" parent="Node2D/sprites" unique_id=1293609352]
 visible = false
+modulate = Color(2.454227, 2.454227, 2.454227, 1)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_eb3bx")
 
