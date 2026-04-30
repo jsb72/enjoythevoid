@@ -271,7 +271,7 @@ position = Vector2(8391, 88.000244)
 rotation = 1.5707964
 
 [node name="pt_blueprint12" parent="structure/gravas" unique_id=1538676769 instance=ExtResource("3_k15l3")]
-position = Vector2(8542.662, 98)
+position = Vector2(8542.662, 103)
 
 [node name="pt_blueprint13" parent="structure/gravas" unique_id=633109287 instance=ExtResource("3_k15l3")]
 position = Vector2(8397, 7.999749)
