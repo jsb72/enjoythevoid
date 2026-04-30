@@ -45,7 +45,6 @@
 [ext_resource type="Texture2D" uid="uid://dcp7ouktirxcj" path="res://sprites/kindpng_17046.png" id="45_1nkay"]
 [ext_resource type="Texture2D" uid="uid://cphr0b1w3cwq8" path="res://sprites/un.png" id="45_1tqiw"]
 [ext_resource type="PackedScene" uid="uid://cuuupedh70x4h" path="res://src/elements/temps.tscn" id="45_lmpmd"]
-[ext_resource type="PackedScene" uid="uid://ca0qqvc5pjlky" path="res://src/elements/button.tscn" id="45_qgqoh"]
 [ext_resource type="PackedScene" uid="uid://bdd03axytgixu" path="res://src/platforms/damage_block.tscn" id="46_7f7j5"]
 [ext_resource type="Texture2D" uid="uid://dk52pj28ds5fn" path="res://sprites/zero.png" id="46_73yqq"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="53_1nkay"]
@@ -247,7 +246,7 @@ size = Vector2(66.5, 10084.096)
 size = Vector2(1591.0845, 806)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brhbg"]
-size = Vector2(1170.5, 892)
+size = Vector2(1207.4907, 892)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w6qp3"]
 size = Vector2(414.8506, 123.33862)
@@ -1319,8 +1318,8 @@ offset_left = -996.68896
 offset_top = -536.3861
 offset_right = -678.48267
 offset_bottom = -226.2909
-text = "if !button_logic :
-	print(\"please refer to your game dev\")"
+text = "if button fail :
+	please refer to your game dev"
 
 [node name="transition_rooms" parent="lvl1/Structure" unique_id=645547803 instance=ExtResource("13_h1car")]
 position = Vector2(4182, 2236)
@@ -1656,7 +1655,7 @@ position = Vector2(5735.458, 1840)
 shape = SubResource("RectangleShape2D_1nkay")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="lvl1/novisibleplayerzone" unique_id=1994931871]
-position = Vector2(2841.75, 1912)
+position = Vector2(2823.2546, 1912)
 shape = SubResource("RectangleShape2D_brhbg")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="lvl1/novisibleplayerzone" unique_id=1130217230]
@@ -1750,12 +1749,6 @@ energy = 0.36
 texture = SubResource("GradientTexture2D_tkwxf")
 texture_scale = 7.82
 
-[node name="PointLight2D3" type="PointLight2D" parent="lvl1" unique_id=1107516979]
-position = Vector2(1014, 2873)
-energy = 0.36
-texture = SubResource("GradientTexture2D_tkwxf")
-texture_scale = 22.1
-
 [node name="PointLight2D2" type="PointLight2D" parent="lvl1" unique_id=848351249]
 position = Vector2(16739, 78)
 energy = 0.35
@@ -1829,33 +1822,6 @@ process_mode = 4
 visible = false
 z_index = 1
 position = Vector2(9962, 1688)
-
-[node name="platform5" parent="lvl1" unique_id=943195073 instance=ExtResource("8_ltygr")]
-position = Vector2(1404, 2166)
-
-[node name="Line2D" type="Line2D" parent="lvl1" unique_id=381869024]
-position = Vector2(1327, 2166)
-points = PackedVector2Array(9, -12, -56, 6)
-default_color = Color(0, 0, 0, 1)
-
-[node name="platform6" parent="lvl1" unique_id=2067553282 instance=ExtResource("8_ltygr")]
-position = Vector2(1327, 2166)
-
-[node name="button" parent="lvl1/platform6" unique_id=1067572409 instance=ExtResource("45_qgqoh")]
-position = Vector2(39.31067, -18.539063)
-scale = Vector2(0.7, 0.7)
-
-[node name="laser_trap" parent="lvl1/platform6" unique_id=790521176 instance=ExtResource("13_f4kdv")]
-position = Vector2(-6, 237)
-rotation = 1.293289
-scale = Vector2(0.7, 0.7)
-is_rotatingg = false
-
-[node name="laser_trap2" parent="lvl1/platform6" unique_id=1790390210 instance=ExtResource("13_f4kdv")]
-position = Vector2(56, 467.59863)
-rotation = 1.5707964
-scale = Vector2(0.7, 0.7)
-is_rotatingg = false
 
 [node name="whiteparticle" type="Node2D" parent="lvl1" unique_id=800017337]
 

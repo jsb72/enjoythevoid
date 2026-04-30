@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://c07ghb70rt8ft"]
 
+[ext_resource type="Texture2D" uid="uid://nar13lsnduga" path="res://sprites/rooms/escalierblur.png" id="1_lr8qc"]
 [ext_resource type="Texture2D" uid="uid://bqk6rdvd68f2m" path="res://sprites/rooms/escalier.png" id="1_xoqhc"]
+[ext_resource type="PackedScene" uid="uid://c00nse01mwe63" path="res://src/platforms/laser_trap.tscn" id="2_dtt6n"]
+[ext_resource type="Script" uid="uid://b2shq2gjd4fvt" path="res://addons/ropesim/Rope.gd" id="2_x4p2d"]
+[ext_resource type="PackedScene" uid="uid://do35bbyy0qllr" path="res://src/platforms/platform.tscn" id="3_xoqhc"]
+[ext_resource type="PackedScene" uid="uid://ca0qqvc5pjlky" path="res://src/elements/button.tscn" id="4_x4p2d"]
+[ext_resource type="Script" uid="uid://1xluodkpnre3" path="res://addons/ropesim/RopeHandle.gd" id="6_lr8qc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4p2d"]
 size = Vector2(1254, 109.75)
@@ -10,7 +16,17 @@ size = Vector2(1252, 25)
 
 [node name="escalier_room" type="Node2D" unique_id=274503240]
 
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1934317368]
+scroll_scale = Vector2(0.9, 0.9)
+scroll_offset = Vector2(-517, -252)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1925447986]
+position = Vector2(-153.99998, 38)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_lr8qc")
+
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=801998414]
+position = Vector2(-36, 13)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_xoqhc")
 
@@ -18,13 +34,66 @@ texture = ExtResource("1_xoqhc")
 position = Vector2(-214, -174)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1867713593]
-polygon = PackedVector2Array(139, 690, 140, 633, 161, 633, 165, 609, 191, 607, 192, 576, 212, 574, 212, 550, 237, 548, 238, 516, 258, 509, 259, 480, 283, 477, 285, 449, 305, 449, 308, 409, 326, 409, 334, 382, 350, 376, 353, 352, 374, 345, 379, 319, 393, 314, 401, 288, 424, 278, 425, 255, 439, 248, 447, 222, 467, 219, 471, 185, 489, 185, 495, 155, 521, 153, 522, 123, 543, 120, 549, 89, 566, 85, 570, 56, 589, 52, 587, 23, 589, 13, 674, 13, 674, 699)
+position = Vector2(-36, 13)
+polygon = PackedVector2Array(139, 690, 140, 633, 161, 633, 165, 609, 191, 607, 192, 576, 212, 574, 212, 550, 237, 548, 238, 516, 258, 509, 259, 480, 283, 477, 285, 449, 305, 449, 308, 409, 326, 409, 334, 382, 350, 376, 353, 352, 374, 345, 379, 319, 393, 314, 401, 288, 424, 278, 425, 255, 439, 248, 447, 222, 467, 219, 471, 185, 489, 185, 495, 155, 521, 153, 522, 123, 543, 120, 549, 89, 566, 85, 570, 56, 589, 52, 601, 12, 674, 6, 674, 699)
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1082121651]
 z_index = 100
-position = Vector2(1216, 66.875)
+position = Vector2(1240, 66.875)
 shape = SubResource("RectangleShape2D_x4p2d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=483649387]
-position = Vector2(-426, 672.5)
+position = Vector2(-462, 685.5)
 shape = SubResource("RectangleShape2D_lr8qc")
+
+[node name="Rope" type="Node2D" parent="." unique_id=508993830]
+position = Vector2(-407, -173)
+script = ExtResource("2_x4p2d")
+num_segments = 50
+rope_length = 450.0
+color = Color(0, 0, 0, 1)
+enable_collisions = true
+metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
+
+[node name="RopeHandle" type="Marker2D" parent="." unique_id=806219849]
+position = Vector2(-504, 176)
+script = ExtResource("6_lr8qc")
+rope_path = NodePath("../Rope")
+metadata/_custom_type_script = "uid://1xluodkpnre3"
+
+[node name="laser_trap2" parent="." unique_id=853668133 instance=ExtResource("2_dtt6n")]
+position = Vector2(-506.99997, 334)
+rotation = 1.5707964
+scale = Vector2(0.47, 0.47)
+is_rotatingg = false
+
+[node name="platform6" parent="." unique_id=1968047125 instance=ExtResource("3_xoqhc")]
+position = Vector2(-449, -156)
+
+[node name="platform5" parent="platform6" unique_id=57212781 instance=ExtResource("3_xoqhc")]
+position = Vector2(77, 0)
+
+[node name="button" parent="platform6" unique_id=1067572409 instance=ExtResource("4_x4p2d")]
+position = Vector2(39.31067, -18.539063)
+scale = Vector2(0.7, 0.7)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=878297414]
+offset_left = -2204.0
+offset_top = -1411.0
+offset_right = -560.0
+offset_bottom = 1469.0
+color = Color(0.3019608, 0.3019608, 0.3019608, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1770298401]
+offset_left = -1360.0
+offset_top = -1578.0
+offset_right = 620.0
+offset_bottom = -440.0
+color = Color(0.3019608, 0.3019608, 0.3019608, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=396827462]
+offset_left = -1335.0
+offset_top = 536.0
+offset_right = 645.0
+offset_bottom = 1674.0
+color = Color(0.3019608, 0.3019608, 0.3019608, 1)

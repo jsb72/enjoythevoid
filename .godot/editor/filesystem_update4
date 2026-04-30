@@ -12,9 +12,5 @@ res://shaders/starfield.gdshader
 res://shaders/verticalwhiterain.gdshader
 res://shaders/vhs.gdshader
 res://shaders/blur.gdshader
-res://src/levels/midlvl.tscn
-res://src/levels/room_blueprint.gd
-res://src/player/player.tscn
-res://src/levels/transition_rooms.tscn
+res://src/levels/escalier_room.tscn
 res://src/global.gd
-res://src/elements/fractale.tscn
