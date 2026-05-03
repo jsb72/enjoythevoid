@@ -27,6 +27,4 @@ func _process(delta: float) -> void:
 	#get_tree().root.add_child(newSprite)
 	#player.add_sibling(newSprite)
 	trailplayer.add_child(newSprite)
-	print(newSprite.get_path())
-	print(sprite.get_path())
 	newSprite.startFading()

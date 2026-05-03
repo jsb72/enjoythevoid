@@ -95,6 +95,7 @@ func optimization_logic()->void:
 		hugetentacles.process_mode=Node.PROCESS_MODE_DISABLED
 	else:
 		hugetentacles.process_mode=Node.PROCESS_MODE_INHERIT
+		Engine.time_scale=0.7
 		
 	if player.global_position.x >-4600 and player.global_position.x < -2500:
 		tentacles_void.process_mode=Node.PROCESS_MODE_INHERIT

@@ -553,7 +553,7 @@ color_ramp = SubResource("Gradient_f3u0r")
 
 [sub_resource type="Gradient" id="Gradient_lmpmd"]
 offsets = PackedFloat32Array(0.525, 0.57)
-colors = PackedColorArray(0.44705883, 0, 0, 1, 0.60960835, 0.60960835, 0.60960835, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.66, 0.66, 0.66, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_brhbg"]
 
@@ -760,7 +760,7 @@ volume_db = -10.0
 environment = SubResource("Environment_vb8r4")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1364036370]
-color = Color(0.32, 0.32, 0.32, 1)
+color = Color(0.3465695, 0.34656927, 0.34656942, 1)
 
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
@@ -1564,6 +1564,7 @@ position = Vector2(9585, 1820)
 identifiant = 1
 
 [node name="ouvriront" type="RichTextLabel" parent="lvl1" unique_id=1013986313]
+visible = false
 z_index = 1
 offset_left = -1012.01996
 offset_top = 36.00006

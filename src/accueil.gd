@@ -20,7 +20,7 @@ func _process(delta: float) -> void:
 			Fadetoblack.transition(5)
 			await Fadetoblack.on_transition_finished
 			rich_text_label.text = "Your thirst for knowledge will kill you"
-			await get_tree().create_timer(1).timeout
+			await get_tree().create_timer(2).timeout
 			start_game()
 	
 var key_pressed:bool=false
