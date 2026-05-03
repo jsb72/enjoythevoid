@@ -18,31 +18,25 @@ extends Node2D
 var lvl_2_loaded:bool = false
 
 @onready var black_particule: Node2D = $"lvl1/black particule"
-
-@onready var fractale_ciel: RigidBody2D = $fractale_ciel
-
+@onready var sage_2: Node2D = $lvl1/sage2
 
 func _ready() -> void:
+	if !Global.first_cycle_done:
+		sage_2.hide()
+		
 	player.dead_ = true
-	
-	cam.noise.positional_noise= true
-	camoffesetbottom.noise.positional_noise= true
-	zoomcam.noise.positional_noise= true
-	
 	
 	display_list_cadavre()
 	
 	creer_ground()
 	
-	#-6703.236
-	
 	lvl_2.hide()
 	lvl_2.process_mode = Node.PROCESS_MODE_DISABLED
 	
-	if !Global.debug_mod:
-		player.process_mode = Node.PROCESS_MODE_DISABLED
-		await get_tree().create_timer(0.2).timeout
-		player.process_mode = Node.PROCESS_MODE_INHERIT
+	player.process_mode = Node.PROCESS_MODE_DISABLED
+	await get_tree().create_timer(6).timeout
+	player.process_mode = Node.PROCESS_MODE_INHERIT
+
 	
 @onready var color_rect_fog: ColorRect = $red_plafond/ColorRectFOG
 var first_time_on_floor:bool=true		
@@ -64,9 +58,6 @@ func _process(delta: float) -> void:
 		var tween2 = get_tree().create_tween()
 		tween2.tween_property(player.point_light_2d_2, "energy", 1.0, 10.0)
 	
-	"""if Input.is_action_just_pressed("start"):
-		spawn_fractal()"""
-	
 		
 	if player.global_position.y > 200:
 		cam.limit_right = 28350
@@ -80,8 +71,8 @@ func _process(delta: float) -> void:
 	
 	if player.global_position.y > 13000:
 		Global.first_cycle_done=true
-		get_tree().change_scene_to_file("res://src/accueil.tscn")
-		#get_tree().reload_current_scene()
+		#get_tree().change_scene_to_file("res://src/accueil.tscn")
+		get_tree().reload_current_scene()
 	
 
 
@@ -89,7 +80,6 @@ func _process(delta: float) -> void:
 @onready var hugetentacles: Node2D = $lvl5/hugetentacles
 @onready var tentacles_void: Node2D = $void/tentacles
 @onready var yog_sothoth: Node2D = $"Yog-Sothoth"
-
 func optimization_logic()->void:
 	if player.global_position.y < 8888:
 		hugetentacles.process_mode=Node.PROCESS_MODE_DISABLED
@@ -223,13 +213,6 @@ func slowvoid_logic():
 			diff = 0.9
 		Engine.time_scale = 1 - diff
 
-func spawn_fractal()->void:
-	var f_ = fractale_ciel.duplicate()
-	f_.global_position = player.global_position
-	f_.global_position.y -= 200
-	f_.process_mode = Node.PROCESS_MODE_INHERIT
-	f_.visible = true
-	$".".add_child(f_)  
 
 
 #CAMERA LOGIC#CAMERA LOGIC#CAMERA LOGIC#CAMERA LOGIC#CAMERA LOGIC#CAMERA LOGIC#CAMERA LOGIC#CAMERA LOGIC#CAMERA LOGIC

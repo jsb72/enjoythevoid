@@ -42,6 +42,7 @@
 [ext_resource type="Texture2D" uid="uid://x8hb077gci1e" path="res://sprites/Mossy Tileset/Mossy - Decorations&HazardsBLUR.png" id="41_k2shy"]
 [ext_resource type="Texture2D" uid="uid://sggt0ur5arfk" path="res://sprites/backgroundvein - Copy.png" id="41_tkwxf"]
 [ext_resource type="PackedScene" uid="uid://vw31d2odlcv6" path="res://src/particles/black_particule.tscn" id="42_j4o56"]
+[ext_resource type="PackedScene" uid="uid://bhvwpkxwupq77" path="res://src/vivants/sage2.tscn" id="43_gxno5"]
 [ext_resource type="PackedScene" uid="uid://n80ossa7y51v" path="res://src/levels/escalier_little_black_reverse.tscn" id="43_y6lma"]
 [ext_resource type="Texture2D" uid="uid://dcp7ouktirxcj" path="res://sprites/kindpng_17046.png" id="45_1nkay"]
 [ext_resource type="Texture2D" uid="uid://cphr0b1w3cwq8" path="res://sprites/un.png" id="45_1tqiw"]
@@ -54,6 +55,7 @@
 [ext_resource type="PackedScene" uid="uid://ufnf3lc7ewin" path="res://src/vivants/a_atentacle.tscn" id="56_brhbg"]
 [ext_resource type="PackedScene" uid="uid://dvio2nnm1fv8q" path="res://src/vivants/yog_sothoth.tscn" id="56_gxno5"]
 [ext_resource type="Texture2D" uid="uid://dmrsbbrarvw1n" path="res://sprites/bigvectorBLACK.png" id="56_qgqoh"]
+[ext_resource type="PackedScene" uid="uid://dbb8hs07i2gg2" path="res://src/cutscene.tscn" id="56_w6qp3"]
 [ext_resource type="Shader" uid="uid://b374xol4h6crb" path="res://shaders/godrays.gdshader" id="61_3grwt"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_qrlky"]
@@ -765,12 +767,12 @@ color = Color(0.3465695, 0.34656927, 0.34656942, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(0, -8500)
+position = Vector2(0, -9000)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -8660)
+position = Vector2(50, -9160)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -789,7 +791,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -8660)
+position = Vector2(-50, -9160)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -807,7 +809,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -8500)
+position = Vector2(50, -9000)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -824,7 +826,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -8500)
+position = Vector2(-50, -9000)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -841,7 +843,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(0, -8660)
+position = Vector2(0, -9160)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -858,7 +860,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(50, -8660)
+position = Vector2(50, -9160)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -1898,6 +1900,9 @@ offset_bottom = 218.58264
 [node name="damage_block" parent="lvl1" unique_id=1113825460 instance=ExtResource("46_7f7j5")]
 position = Vector2(13019.245, -22.353027)
 rotation = -1.5707964
+
+[node name="sage2" parent="lvl1" unique_id=1045607497 instance=ExtResource("43_gxno5")]
+position = Vector2(2215.8499, -1115.7622)
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
 visible = false
@@ -3096,6 +3101,10 @@ position = Vector2(-1151.0758, 1163.2922)
 shape = SubResource("RectangleShape2D_6wgec")
 
 [node name="trailplayer" type="Node2D" parent="." unique_id=589841280]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1652365696]
+
+[node name="cutscene" parent="CanvasLayer" unique_id=1348483193 instance=ExtResource("56_w6qp3")]
 
 [connection signal="body_entered" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_entered"]
 [connection signal="body_exited" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_exited"]

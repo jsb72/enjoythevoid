@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bb0qqmce8np5n" path="res://src/platforms/pt_blueprint.gd" id="1_t5hha"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2jnf2"]
-size = Vector2(83, 51)
+size = Vector2(83, 45.177742)
 
 [node name="pt_blueprint" type="StaticBody2D" unique_id=920875960]
 script = ExtResource("1_t5hha")
@@ -15,5 +15,5 @@ scale = Vector2(0.274, 0.274)
 texture = ExtResource("1_62cvp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=852608201]
-position = Vector2(0.5, 3.5)
+position = Vector2(0.5, 0.588871)
 shape = SubResource("RectangleShape2D_2jnf2")

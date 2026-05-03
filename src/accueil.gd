@@ -1,48 +1,33 @@
 extends Node2D
 
-@onready var timer: Timer = $Timer
-@onready var video_stream_player: VideoStreamPlayer = $VideoStreamPlayer
-@onready var rich_text_label: RichTextLabel = $RichTextLabel
 @onready var loading: Label = $CanvasLayer/loading
+@onready var damn: RichTextLabel = $CanvasLayer/damn
+@onready var pressbutton: RichTextLabel = $pressbutton
+
 
 func _ready() -> void:
-	if Global.first_cycle_done:
-		rich_text_label.text = "Truth is impenetrable"
+	damn.modulate.a=0
+	loading.modulate.a=0
 
-var has_begun:bool=false
 func _process(delta: float) -> void:
-	if !has_begun:
-		has_begun=true
-		if Global.debug_mod:
-			load_game()
-		if Global.first_cycle_done:
-			await get_tree().create_timer(1).timeout
-			Fadetoblack.transition(5)
-			await Fadetoblack.on_transition_finished
-			rich_text_label.text = "Your thirst for knowledge will kill you"
-			await get_tree().create_timer(2).timeout
-			start_game()
+	pass
 	
 var key_pressed:bool=false
 func _input(event: InputEvent) -> void:
-	if !key_pressed and !Global.first_cycle_done:
+	if !key_pressed:
 		if event is InputEventKey or event is InputEventJoypadButton or event is InputEventMouseButton:
 			key_pressed=true
-			start_game()
-
-func _on_timer_timeout() -> void:
-	loading.show()
-	Fadetoblack.transition(5)
-	await Fadetoblack.on_transition_finished
-	load_game()
-	
-func start_game()->void:
-	Fadetoblack.transition(5)
-	await Fadetoblack.on_transition_finished
-	rich_text_label.hide()	
-	video_stream_player.play()
-	timer.start()
-	
-func load_game()->void:
-	get_tree().change_scene_to_file("res://src/vhs.tscn")
-	#get_tree().change_scene_to_file("res://src/levels/room_blueprint.tscn")
+			
+			var tween = get_tree().create_tween()
+			tween.tween_property(pressbutton, "modulate:a", 0.0, 1.0)
+			
+			await get_tree().create_timer(1).timeout
+			
+			var tween2 = get_tree().create_tween()
+			tween2.tween_property(damn, "modulate:a", 1.0, 3.0)			
+			var tween3 = get_tree().create_tween()
+			tween3.tween_property(loading, "modulate:a", 1.0, 3.0)
+			
+			await get_tree().create_timer(3).timeout
+			
+			get_tree().change_scene_to_file("res://src/vhs.tscn")
