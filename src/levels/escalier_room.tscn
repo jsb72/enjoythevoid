@@ -14,13 +14,30 @@ size = Vector2(1254, 109.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lr8qc"]
 size = Vector2(1252, 25)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyuvr"]
+size = Vector2(39.5, 587.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1eobr"]
+size = Vector2(974, 124)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10ye1"]
+size = Vector2(35.5, 69)
+
 [node name="escalier_room" type="Node2D" unique_id=274503240]
+
+[node name="bg" type="ColorRect" parent="." unique_id=237138482]
+offset_left = -489.0
+offset_top = -379.0
+offset_right = 368.0
+offset_bottom = 476.0
+color = Color(0.18717614, 0.18717614, 0.18717614, 1)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1934317368]
 scroll_scale = Vector2(0.9, 0.9)
 scroll_offset = Vector2(-517, -252)
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1925447986]
+visible = false
 position = Vector2(-153.99998, 38)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_lr8qc")
@@ -46,36 +63,77 @@ shape = SubResource("RectangleShape2D_x4p2d")
 position = Vector2(-462, 685.5)
 shape = SubResource("RectangleShape2D_lr8qc")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1280999591]
+position = Vector2(-321.25, 63.875)
+shape = SubResource("RectangleShape2D_fyuvr")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=561346530]
+position = Vector2(121, -291)
+shape = SubResource("RectangleShape2D_1eobr")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1981980328]
+position = Vector2(626.25, -245)
+shape = SubResource("RectangleShape2D_10ye1")
+
 [node name="Rope" type="Node2D" parent="." unique_id=508993830]
-position = Vector2(-407, -173)
+position = Vector2(-512, 183)
 script = ExtResource("2_x4p2d")
-num_segments = 50
-rope_length = 450.0
+num_segments = 40
+rope_length = 300.0
 color = Color(0, 0, 0, 1)
 enable_collisions = true
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
-[node name="RopeHandle" type="Marker2D" parent="." unique_id=806219849]
-position = Vector2(-504, 176)
-script = ExtResource("6_lr8qc")
-rope_path = NodePath("../Rope")
-metadata/_custom_type_script = "uid://1xluodkpnre3"
+[node name="Rope2" type="Node2D" parent="." unique_id=860139711]
+position = Vector2(-403, 241)
+script = ExtResource("2_x4p2d")
+num_segments = 20
+color = Color(0, 0, 0, 1)
+metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
+
+[node name="Rope3" type="Node2D" parent="." unique_id=453752994]
+position = Vector2(-297, 242)
+script = ExtResource("2_x4p2d")
+num_segments = 20
+color = Color(0, 0, 0, 1)
+metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="laser_trap2" parent="." unique_id=853668133 instance=ExtResource("2_dtt6n")]
-position = Vector2(-506.99997, 334)
+position = Vector2(-515, 341)
 rotation = 1.5707964
 scale = Vector2(0.47, 0.47)
 is_rotatingg = false
 
 [node name="platform6" parent="." unique_id=1968047125 instance=ExtResource("3_xoqhc")]
-position = Vector2(-449, -156)
-
-[node name="platform5" parent="platform6" unique_id=57212781 instance=ExtResource("3_xoqhc")]
-position = Vector2(77, 0)
+position = Vector2(-352, 251)
 
 [node name="button" parent="platform6" unique_id=1067572409 instance=ExtResource("4_x4p2d")]
-position = Vector2(39.31067, -18.539063)
+position = Vector2(-0.9999962, -18.539063)
 scale = Vector2(0.7, 0.7)
+
+[node name="laser_trap3" parent="." unique_id=899924431 instance=ExtResource("2_dtt6n")]
+position = Vector2(-300, 85)
+rotation = 1.5707964
+scale = Vector2(0.47, 0.47)
+is_rotatingg = false
+
+[node name="laser_trap6" parent="." unique_id=826060003 instance=ExtResource("2_dtt6n")]
+position = Vector2(-300, -229)
+rotation = 1.5707964
+scale = Vector2(0.47, 0.47)
+is_rotatingg = false
+
+[node name="laser_trap4" parent="." unique_id=731706314 instance=ExtResource("2_dtt6n")]
+position = Vector2(-406, 85)
+rotation = 1.5707964
+scale = Vector2(0.47, 0.47)
+is_rotatingg = false
+
+[node name="laser_trap5" parent="." unique_id=1147340714 instance=ExtResource("2_dtt6n")]
+position = Vector2(-406, -229)
+rotation = 1.5707964
+scale = Vector2(0.47, 0.47)
+is_rotatingg = false
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=878297414]
 offset_left = -2204.0
@@ -97,3 +155,30 @@ offset_top = 536.0
 offset_right = 645.0
 offset_bottom = 1674.0
 color = Color(0.3019608, 0.3019608, 0.3019608, 1)
+
+[node name="RopeHandle2" type="Marker2D" parent="." unique_id=513902641]
+position = Vector2(-350, 232)
+script = ExtResource("6_lr8qc")
+rope_path = NodePath("../Rope2")
+metadata/_custom_type_script = "uid://1xluodkpnre3"
+
+[node name="RopeHandle3" type="Marker2D" parent="." unique_id=2116783361]
+position = Vector2(-351, 233)
+script = ExtResource("6_lr8qc")
+rope_path = NodePath("../Rope3")
+metadata/_custom_type_script = "uid://1xluodkpnre3"
+
+[node name="RopeHandle" type="Marker2D" parent="." unique_id=806219849]
+position = Vector2(-350, 233)
+script = ExtResource("6_lr8qc")
+strength = 1.0
+rope_path = NodePath("../Rope")
+metadata/_custom_type_script = "uid://1xluodkpnre3"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=833907795]
+offset_left = -1027.0
+offset_top = -282.0
+offset_right = -708.7937
+offset_bottom = 28.095215
+text = "if button doesn't work :
+	please call your game developer"

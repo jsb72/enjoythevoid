@@ -55,9 +55,51 @@ texture = ExtResource("12_8wre4")
 19:14/0 = 0
 25:32/size_in_atlas = Vector2i(21, 15)
 25:32/0 = 0
+25:27/size_in_atlas = Vector2i(6, 5)
+25:27/0 = 0
+32:27/size_in_atlas = Vector2i(5, 5)
+32:27/0 = 0
+37:27/size_in_atlas = Vector2i(6, 5)
+37:27/0 = 0
+44:27/size_in_atlas = Vector2i(6, 5)
+44:27/0 = 0
+50:27/size_in_atlas = Vector2i(7, 5)
+50:27/0 = 0
+1:8/size_in_atlas = Vector2i(8, 6)
+1:8/0 = 0
+1:15/size_in_atlas = Vector2i(9, 5)
+1:15/0 = 0
+10:14/size_in_atlas = Vector2i(8, 7)
+10:14/0 = 0
+26:14/size_in_atlas = Vector2i(9, 8)
+26:14/0 = 0
+29:9/size_in_atlas = Vector2i(5, 5)
+29:9/0 = 0
+21:8/size_in_atlas = Vector2i(6, 6)
+21:8/0 = 0
+15:9/size_in_atlas = Vector2i(5, 5)
+15:9/0 = 0
+9:9/size_in_atlas = Vector2i(6, 5)
+9:9/0 = 0
+9:3/size_in_atlas = Vector2i(6, 5)
+9:3/0 = 0
+2:2/size_in_atlas = Vector2i(7, 5)
+2:2/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_pka4r"]
 sources/0 = SubResource("TileSetAtlasSource_74080")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1vuti"]
+texture = ExtResource("12_8wre4")
+46:34/size_in_atlas = Vector2i(5, 10)
+46:34/0 = 0
+51:32/size_in_atlas = Vector2i(6, 12)
+51:32/0 = 0
+57:27/size_in_atlas = Vector2i(7, 18)
+57:27/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8wre4"]
+sources/0 = SubResource("TileSetAtlasSource_1vuti")
 
 [node name="midlvl" type="Node2D" unique_id=98324228]
 script = ExtResource("1_at7t4")
@@ -517,8 +559,14 @@ shape = SubResource("RectangleShape2D_at7t4")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=226148049]
 z_index = 16
-tile_map_data = PackedByteArray("AADfAsH/AAAzACAAAADjAr//AAA5ABsAAADTAsb/AAAuACMAAADIAr7/AAAzACAAAADNAsn/AAAuACMAAADBArn/AAAuACMAAAB8AN7/AAAzACAAAACqANT/AAAzACAAAAB1AAEAAAA5ABsAAAB3AO7/AAAuACMAAAA=")
+tile_map_data = PackedByteArray("AADfAsH/AAAzACAAAADjAr//AAA5ABsAAADTAsb/AAAuACMAAADIAr7/AAAzACAAAADNAsn/AAAuACMAAADBArn/AAAuACMAAAB8AN7/AAAzACAAAACqANT/AAAzACAAAAB1AAEAAAA5ABsAAAB3AO7/AAAuACMAAAC3AAMAAAAzACAAAAA=")
 tile_set = SubResource("TileSet_pka4r")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=79893774]
+z_index = 16
+scale = Vector2(0.5, 0.5)
+tile_map_data = PackedByteArray("AACbAQwAAAAzACAAAACdAQ0AAAAuACIAAAA=")
+tile_set = SubResource("TileSet_8wre4")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

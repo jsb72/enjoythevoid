@@ -762,7 +762,7 @@ volume_db = -10.0
 environment = SubResource("Environment_vb8r4")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1364036370]
-color = Color(0.3465695, 0.34656927, 0.34656942, 1)
+color = Color(0.35531357, 0.35531357, 0.3553135, 1)
 
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
@@ -1319,14 +1319,6 @@ position = Vector2(791, -914)
 [node name="escalier_room2" parent="lvl1/Structure" unique_id=1021733173 instance=ExtResource("12_7ls7j")]
 position = Vector2(1801, 2391)
 
-[node name="RichTextLabel" type="RichTextLabel" parent="lvl1/Structure/escalier_room2" unique_id=363674417]
-offset_left = -996.68896
-offset_top = -536.3861
-offset_right = -678.48267
-offset_bottom = -226.2909
-text = "if button fail :
-	please refer to your game dev"
-
 [node name="transition_rooms" parent="lvl1/Structure" unique_id=645547803 instance=ExtResource("13_h1car")]
 position = Vector2(4182, 2236)
 
@@ -1341,7 +1333,7 @@ default_color = Color(0, 0, 0, 1)
 position = Vector2(0, -93)
 
 [node name="bouche degout" parent="lvl1/Structure" unique_id=666465979 instance=ExtResource("19_hwdj1")]
-position = Vector2(3436.0002, 843.00006)
+position = Vector2(3436.0002, 845)
 scale = Vector2(0.3, 0.3)
 
 [node name="right_decor" type="StaticBody2D" parent="lvl1/Structure" unique_id=289688508]
