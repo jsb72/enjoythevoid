@@ -14,7 +14,7 @@ extends CharacterBody2D
 
 @onready var player: Player = %Player
 
-const SPEED = 100.0
+const SPEED = 200.0
 
 var directionx : int = 0
 var directiony : int = 0

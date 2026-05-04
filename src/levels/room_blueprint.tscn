@@ -1687,6 +1687,9 @@ position = Vector2(8175, 1638.7251)
 [node name="fly4" parent="lvl1" unique_id=1727515795 instance=ExtResource("41_5ihcl")]
 position = Vector2(9058, 1477.7251)
 
+[node name="fly6" parent="lvl1" unique_id=1205321896 instance=ExtResource("41_5ihcl")]
+position = Vector2(9755.358, 1346.5388)
+
 [node name="fly5" parent="lvl1" unique_id=1647404557 instance=ExtResource("41_5ihcl")]
 position = Vector2(11083, 583.7251)
 

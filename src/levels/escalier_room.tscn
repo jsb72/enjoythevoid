@@ -30,7 +30,7 @@ offset_left = -489.0
 offset_top = -379.0
 offset_right = 368.0
 offset_bottom = 476.0
-color = Color(0.18717614, 0.18717614, 0.18717614, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1934317368]
 scroll_scale = Vector2(0.9, 0.9)
@@ -80,7 +80,7 @@ position = Vector2(-512, 183)
 script = ExtResource("2_x4p2d")
 num_segments = 40
 rope_length = 300.0
-color = Color(0, 0, 0, 1)
+color = Color(0.8833333, 1, 0, 1)
 enable_collisions = true
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
@@ -88,14 +88,14 @@ metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 position = Vector2(-403, 241)
 script = ExtResource("2_x4p2d")
 num_segments = 20
-color = Color(0, 0, 0, 1)
+color = Color(0, 0.10000014, 1, 1)
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="Rope3" type="Node2D" parent="." unique_id=453752994]
 position = Vector2(-297, 242)
 script = ExtResource("2_x4p2d")
 num_segments = 20
-color = Color(0, 0, 0, 1)
+color = Color(1, 0, 0, 1)
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="laser_trap2" parent="." unique_id=853668133 instance=ExtResource("2_dtt6n")]
