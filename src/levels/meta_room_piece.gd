@@ -7,10 +7,6 @@ extends Node2D
 @onready var t2_2: Node2D = $"T2/2"
 @onready var t2_3: Node2D = $"T2/3"
 
-var btn1 : bool = false
-var btn2 : bool = false
-var btn3 : bool = false
-var btn4 : bool = false
 var zoom_true :bool=false
 @onready var zoomcamfixnbig: PhantomCamera2D = %zoomcamfixnbig
 
@@ -24,7 +20,6 @@ func _ready() -> void:
 	t2_3.hide()
 	
 func _process(delta: float) -> void:
-	"""if btn1 and btn2 and btn3 and btn4 and zoom_true:"""
 	if zoom_true:
 		zoomcamfixnbig.priority = 100
 	else :
@@ -33,22 +28,18 @@ func _process(delta: float) -> void:
 func _on_button_body_entered1(body: Node2D) -> void:
 	if body is Player : t1_1.show()
 	if body is Player : t1_3.show()
-	btn1 = true
 
 func _on_button_body_entered2(body: Node2D) -> void:
 	if body is Player : t1_1.show()
 	if body is Player : t1_2.show()
-	btn2 = true
 
 func _on_button_2_body_entered3(body: Node2D) -> void:
 	if body is Player : t2_1.show()
 	if body is Player : t2_2.show()
-	btn3 = true
 
 func _on_button_2_body_entered4(body: Node2D) -> void:
 	if body is Player : t2_1.show()
 	if body is Player : t2_3.show()
-	btn4=true
 
 
 func _on_cam_zone_body_entered(body: Node2D) -> void:

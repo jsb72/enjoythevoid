@@ -56,6 +56,7 @@
 [ext_resource type="PackedScene" uid="uid://dvio2nnm1fv8q" path="res://src/vivants/yog_sothoth.tscn" id="56_gxno5"]
 [ext_resource type="Texture2D" uid="uid://dmrsbbrarvw1n" path="res://sprites/bigvectorBLACK.png" id="56_qgqoh"]
 [ext_resource type="PackedScene" uid="uid://dbb8hs07i2gg2" path="res://src/cutscene.tscn" id="56_w6qp3"]
+[ext_resource type="PackedScene" uid="uid://hg8phxm3baoq" path="res://src/levels/chapitre_2_lvl_1.tscn" id="58_qgqoh"]
 [ext_resource type="Shader" uid="uid://b374xol4h6crb" path="res://shaders/godrays.gdshader" id="61_3grwt"]
 
 [sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_qrlky"]
@@ -259,6 +260,9 @@ size = Vector2(414.8506, 123.33862)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g62an"]
 size = Vector2(102.896484, 139.49652)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4aogc"]
+size = Vector2(1075.2739, 681.9691)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vb8r4"]
 shader = ExtResource("28_vb8r4")
@@ -537,7 +541,7 @@ fill_from = Vector2(0, 1)
 fill_to = Vector2(0, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppux1"]
-size = Vector2(29084.438, 3367.3008)
+size = Vector2(19191.674, 3367.3008)
 
 [sub_resource type="Gradient" id="Gradient_f3u0r"]
 offsets = PackedFloat32Array(0, 0.11111111, 0.22222222, 0.33333334, 0.44444445, 0.5555556, 0.6666667, 0.7777778, 0.8888889)
@@ -767,12 +771,12 @@ color = Color(0.35531357, 0.35531357, 0.3553135, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(0, -9000)
+position = Vector2(3831.5479, 1982.4575)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -9160)
+position = Vector2(3881.5479, 1822.4575)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -791,7 +795,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -9160)
+position = Vector2(3781.5479, 1822.4575)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -809,7 +813,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(50, -9000)
+position = Vector2(3881.5479, 1982.4575)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -826,7 +830,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(-50, -9000)
+position = Vector2(3781.5479, 1982.4575)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -843,7 +847,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(0, -9160)
+position = Vector2(3831.5479, 1822.4575)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -860,7 +864,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(50, -9160)
+position = Vector2(3881.5479, 1822.4575)
 process_callback = 0
 limit_left = -2712
 limit_right = 18722
@@ -1665,6 +1669,10 @@ shape = SubResource("RectangleShape2D_w6qp3")
 position = Vector2(16743.402, 103.028656)
 shape = SubResource("RectangleShape2D_g62an")
 
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="lvl1/novisibleplayerzone" unique_id=755107987]
+position = Vector2(715.7886, 2565.428)
+shape = SubResource("RectangleShape2D_4aogc")
+
 [node name="sprint_bonus" parent="lvl1" unique_id=1577787271 instance=ExtResource("15_fynux")]
 position = Vector2(4711, 1639)
 type_bonus = "sprint"
@@ -1898,6 +1906,9 @@ rotation = -1.5707964
 
 [node name="sage2" parent="lvl1" unique_id=1045607497 instance=ExtResource("43_gxno5")]
 position = Vector2(2215.8499, -1115.7622)
+
+[node name="chapitre2lvl1" parent="lvl1" unique_id=1622471704 instance=ExtResource("58_qgqoh")]
+position = Vector2(-1068.1892, 2728.305)
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
 visible = false
@@ -2814,7 +2825,7 @@ is_rotatingg = false
 [node name="DEATHZONE" type="Area2D" parent="." unique_id=265587749]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DEATHZONE" unique_id=1536129664]
-position = Vector2(114.781494, 6566.249)
+position = Vector2(5061.163, 6566.249)
 shape = SubResource("RectangleShape2D_ppux1")
 
 [node name="lvl7" type="Node2D" parent="." unique_id=1135323167]
@@ -3020,6 +3031,10 @@ shape = SubResource("RectangleShape2D_qgqoh")
 position = Vector2(12457.639, 16.42041)
 shape = SubResource("RectangleShape2D_qgqoh")
 
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1002777805]
+position = Vector2(12956.156, 517.3253)
+shape = SubResource("RectangleShape2D_qgqoh")
+
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1908838162]
 position = Vector2(9867.891, -3289.7598)
 shape = SubResource("RectangleShape2D_qgqoh")
@@ -3029,7 +3044,15 @@ position = Vector2(27604, 1217)
 shape = SubResource("RectangleShape2D_qgqoh")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=777037884]
-position = Vector2(3665.5005, 2123.8945)
+position = Vector2(3522.165, 2140.4236)
+shape = SubResource("RectangleShape2D_qgqoh")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=1241683777]
+position = Vector2(4846.0933, 2140.4233)
+shape = SubResource("RectangleShape2D_qgqoh")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=2100203311]
+position = Vector2(239.26788, 2783.9348)
 shape = SubResource("RectangleShape2D_qgqoh")
 
 [node name="lvl_reload_right" type="Node2D" parent="." unique_id=1833511117]

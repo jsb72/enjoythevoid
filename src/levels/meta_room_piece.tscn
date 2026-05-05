@@ -438,10 +438,10 @@ z_index = 4
 position = Vector2(-4380, -1594)
 
 [node name="Label" type="RichTextLabel" parent="txt" unique_id=588666303]
-offset_left = 4373.0
-offset_top = 4395.0
-offset_right = 4580.0
-offset_bottom = 5019.0
+offset_left = 4943.0
+offset_top = 3619.0
+offset_right = 5150.0
+offset_bottom = 4243.0
 theme_override_colors/default_color = Color(0.63648045, 0.63648045, 0.63648045, 1)
 theme_override_font_sizes/normal_font_size = 16
 text = "First demonstration of ARPANET in 1972..."

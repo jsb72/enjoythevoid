@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://hg8phxm3baoq"]
+
+[ext_resource type="PackedScene" uid="uid://do35bbyy0qllr" path="res://src/platforms/platform.tscn" id="1_owof1"]
+[ext_resource type="PackedScene" uid="uid://mtmitx3k0avp" path="res://src/platforms/3_platformblueprint.tscn" id="2_pxobb"]
+[ext_resource type="PackedScene" uid="uid://bdd03axytgixu" path="res://src/platforms/damage_block.tscn" id="3_gbywk"]
+[ext_resource type="PackedScene" uid="uid://c00nse01mwe63" path="res://src/platforms/laser_trap.tscn" id="4_r7ohb"]
+[ext_resource type="PackedScene" uid="uid://c0g2bfslm40qt" path="res://src/platforms/pt_blueprint.tscn" id="5_70ef4"]
+
+[node name="chapitre2lvl1" type="Node2D" unique_id=1622471704]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=278465942]
+offset_left = -3974.208
+offset_top = -938.6756
+offset_right = 1186.9536
+offset_bottom = 8151.6953
+color = Color(0, 0, 0, 1)
+
+[node name="platform" parent="." unique_id=1968047125 instance=ExtResource("1_owof1")]
+position = Vector2(-88.578125, 246.24701)
+
+[node name="3platformblueprint" parent="." unique_id=853668133 instance=ExtResource("2_pxobb")]
+position = Vector2(512.22217, 155.18481)
+
+[node name="damage_block" parent="." unique_id=1974418075 instance=ExtResource("3_gbywk")]
+position = Vector2(-154.12585, 426.94617)
+
+[node name="laser_trap" parent="." unique_id=787980519 instance=ExtResource("4_r7ohb")]
+
+[node name="pt_blueprint" parent="." unique_id=920875960 instance=ExtResource("5_70ef4")]
+position = Vector2(-362.40344, 210.10913)

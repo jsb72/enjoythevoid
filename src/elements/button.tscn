@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dqn5qfu82doyy" path="res://sprites/btn2gold.png" id="6_ewf5h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ab8rq"]
-size = Vector2(33, 25)
+size = Vector2(33, 13.081062)
 
 [sub_resource type="Animation" id="Animation_wl5o2"]
 length = 0.001
@@ -76,7 +76,7 @@ metadata/_snap_enabled = true
 script = ExtResource("1_ihcdu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=529146898]
-position = Vector2(3.5, -0.5)
+position = Vector2(3.5, -6.459469)
 shape = SubResource("RectangleShape2D_ab8rq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1845375758]

@@ -61,6 +61,7 @@ fill_to = Vector2(0.8, 0.2)
 metadata/_snap_enabled = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lodqg"]
+resource_local_to_scene = true
 shader = ExtResource("1_x0xp4")
 shader_parameter/beams = 3
 shader_parameter/energy = 6.0
@@ -138,7 +139,7 @@ offset_bottom = 34.000053
 scale = Vector2(0.8, 0.8)
 texture = SubResource("GradientTexture2D_nt2fc")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=85802366]
+[node name="ColorRectLASER" type="ColorRect" parent="." unique_id=85802366]
 material = SubResource("ShaderMaterial_lodqg")
 offset_left = -334.99994
 offset_top = -253.00006
