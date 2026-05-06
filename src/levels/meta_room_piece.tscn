@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dwehap5d7ves0" path="res://sprites/cave/Cave - SmallRocksBLACK.png" id="19_o6del"]
 [ext_resource type="Texture2D" uid="uid://cedl47qrbl21r" path="res://sprites/cave/Cave - RockCombinations1BLACK.png" id="20_cl0n7"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="21_sqkqu"]
+[ext_resource type="PackedScene" uid="uid://bhvwpkxwupq77" path="res://src/vivants/sage2.tscn" id="24_0a4x0"]
 [ext_resource type="Texture2D" uid="uid://fhacyvqvhyv7" path="res://sprites/cable_elec.png" id="24_b7nc7"]
 
 [sub_resource type="Resource" id="Resource_88ojq"]
@@ -444,7 +445,7 @@ offset_right = 5150.0
 offset_bottom = 4243.0
 theme_override_colors/default_color = Color(0.63648045, 0.63648045, 0.63648045, 1)
 theme_override_font_sizes/normal_font_size = 16
-text = "First demonstration of ARPANET in 1972..."
+text = "72_txt_8"
 vertical_alignment = 1
 
 [node name="Label7" type="RichTextLabel" parent="txt" unique_id=1400485756]
@@ -454,7 +455,7 @@ offset_right = 6658.0
 offset_bottom = 3205.0
 theme_override_colors/default_color = Color(0.63529414, 0.63529414, 0.63529414, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "Invention of the C language in 1972..."
+text = "72_txt_7"
 vertical_alignment = 1
 
 [node name="Label8" type="RichTextLabel" parent="txt" unique_id=970376145]
@@ -464,7 +465,7 @@ offset_right = 6721.0
 offset_bottom = 4215.0
 theme_override_colors/default_color = Color(0.63529414, 0.63529414, 0.63529414, 1)
 theme_override_font_sizes/normal_font_size = 18
-text = "Karp's 21 NP-complete problems in 1972..."
+text = "72_txt_6"
 vertical_alignment = 1
 
 [node name="Label9" type="RichTextLabel" parent="txt" unique_id=833008860]
@@ -474,7 +475,7 @@ offset_right = 4674.0
 offset_bottom = 3027.0
 theme_override_colors/default_color = Color(0.63529414, 0.63529414, 0.63529414, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "End of the MK-Ultra program in 1972..."
+text = "72_txt_5"
 vertical_alignment = 1
 
 [node name="Label10" type="RichTextLabel" parent="txt" unique_id=2112262056]
@@ -484,7 +485,7 @@ offset_right = 4050.0
 offset_bottom = 4449.0
 theme_override_colors/default_color = Color(0.63529414, 0.63529414, 0.63529414, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "The Blue Marble photographed in 1972..."
+text = "72_txt_4"
 vertical_alignment = 1
 
 [node name="Label12" type="RichTextLabel" parent="txt" unique_id=1901477410]
@@ -494,7 +495,7 @@ offset_right = 6776.0
 offset_bottom = 5711.0
 theme_override_colors/default_color = Color(0.63529414, 0.63529414, 0.63529414, 1)
 theme_override_font_sizes/normal_font_size = 20
-text = "DXM recalled in the US in 1972..."
+text = "72_txt_3"
 vertical_alignment = 1
 
 [node name="Label13" type="RichTextLabel" parent="txt" unique_id=1666874227]
@@ -504,7 +505,7 @@ offset_right = 5128.0
 offset_bottom = 5306.0
 theme_override_colors/default_color = Color(0.63529414, 0.63529414, 0.63529414, 1)
 theme_override_font_sizes/normal_font_size = 21
-text = "Last man on the moon in 1972..."
+text = "72_txt_2"
 vertical_alignment = 1
 
 [node name="Label11" type="RichTextLabel" parent="txt" unique_id=324337172]
@@ -514,7 +515,7 @@ offset_right = 7328.0
 offset_bottom = 3393.0
 theme_override_colors/default_color = Color(0.63529414, 0.63529414, 0.63529414, 1)
 theme_override_font_sizes/normal_font_size = 34
-text = "Meadows report released in 1972..."
+text = "72_txt_1"
 vertical_alignment = 1
 
 [node name="T1" type="Node2D" parent="." unique_id=62797182]
@@ -1150,6 +1151,9 @@ z_index = 16
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAA5AFUAAAAhABcAAAA=")
 tile_set = SubResource("TileSet_thuay")
+
+[node name="sage2" parent="." unique_id=242949502 instance=ExtResource("24_0a4x0")]
+position = Vector2(-302, 1089)
 
 [connection signal="body_entered" from="cam_zone" to="." method="_on_cam_zone_body_entered"]
 [connection signal="body_exited" from="cam_zone" to="." method="_on_cam_zone_body_exited"]

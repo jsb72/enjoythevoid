@@ -21,8 +21,6 @@ var lvl_2_loaded:bool = false
 @onready var sage_2: Node2D = $lvl1/sage2
 
 func _ready() -> void:
-	if !Global.first_cycle_done:
-		sage_2.hide()
 		
 	player.dead_ = true
 	
@@ -33,9 +31,10 @@ func _ready() -> void:
 	lvl_2.hide()
 	lvl_2.process_mode = Node.PROCESS_MODE_DISABLED
 	
-	player.process_mode = Node.PROCESS_MODE_DISABLED
-	await get_tree().create_timer(6).timeout
-	player.process_mode = Node.PROCESS_MODE_INHERIT
+	if !Global.debug_mod:
+		player.process_mode = Node.PROCESS_MODE_DISABLED
+		await get_tree().create_timer(6).timeout
+		player.process_mode = Node.PROCESS_MODE_INHERIT
 
 	
 @onready var color_rect_fog: ColorRect = $red_plafond/ColorRectFOG

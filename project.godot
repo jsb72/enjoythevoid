@@ -117,6 +117,10 @@ escape={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://enjoythevoid_translate.en.translation", "res://enjoythevoid_translate.fr.translation")
+
 [physics]
 
 common/physics_interpolation=true

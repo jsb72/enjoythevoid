@@ -13,14 +13,18 @@ func _ready() -> void:
 var start_playing:bool=false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	
-	if !start_playing:
-		Engine.time_scale=0.5
-		start_playing=true
-		timer.start()
-		var tween = get_tree().create_tween()
-		tween.tween_property(vignette.material, "shader_parameter/vignette_intensity", 2.0, 3.0)
-		video_stream_player.play()
+	if Global.debug_mod:
+		video_stream_player.hide()
+		blackbg.hide()
+		vignette.hide()
+	else:
+		if !start_playing :
+			Engine.time_scale=0.5
+			start_playing=true
+			timer.start()
+			var tween = get_tree().create_tween()
+			tween.tween_property(vignette.material, "shader_parameter/vignette_intensity", 2.0, 3.0)
+			video_stream_player.play()
 
 
 
