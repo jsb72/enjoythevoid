@@ -1,6 +1,6 @@
 extends Node
 
-var debug_mod:bool=false
+var debug_mod:bool=true
 
 var nb_fractal:int = 0
 

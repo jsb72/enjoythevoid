@@ -5,6 +5,7 @@ func _enter(_previous_state: State) -> void:
 	player.dash_allowed = true
 
 func _physics_update(delta: float) -> void:
+	player.velocity.x = player.get_last_wall_dir()
 	player.apply_wall_slide(delta)
 	player.try_wall_jump()
 	player.try_dash()

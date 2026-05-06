@@ -2,46 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://mtmitx3k0avp" path="res://src/platforms/3_platformblueprint.tscn" id="2_pxobb"]
 [ext_resource type="PackedScene" uid="uid://bdd03axytgixu" path="res://src/platforms/damage_block.tscn" id="3_gbywk"]
-[ext_resource type="PackedScene" uid="uid://c00nse01mwe63" path="res://src/platforms/laser_trap.tscn" id="4_r7ohb"]
-
-[sub_resource type="Animation" id="Animation_apds2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(290.40002, 2190.3193)]
-}
 
 [sub_resource type="Animation" id="Animation_kiv5b"]
-resource_name = "new_animation"
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(290.40002, 2190.3193), Vector2(290.40002, 467.03638)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_owof1"]
-_data = {
-&"RESET": SubResource("Animation_apds2"),
-&"new_animation": SubResource("Animation_kiv5b")
-}
-
-[sub_resource type="Animation" id="Animation_pxobb"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -53,7 +15,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(124.56116, 175.35077)]
+"values": [Vector2(1402.2758, 93.67209)]
 }
 
 [sub_resource type="Animation" id="Animation_gbywk"]
@@ -69,113 +31,188 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(124.56116, 175.35077), Vector2(124.56116, 1696.0623)]
+"values": [Vector2(1402.2758, 93.67209), Vector2(2128.6157, 93.67209)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_r7ohb"]
 _data = {
-&"RESET": SubResource("Animation_pxobb"),
+&"RESET": SubResource("Animation_kiv5b"),
 &"new_animation": SubResource("Animation_gbywk")
+}
+
+[sub_resource type="Animation" id="Animation_gf60i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1556.8818, 2387.0945)]
+}
+
+[sub_resource type="Animation" id="Animation_apds2"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1556.8818, 2387.0945), Vector2(-2367.5483, 2583.915)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kiv5b"]
+_data = {
+&"RESET": SubResource("Animation_gf60i"),
+&"new_animation": SubResource("Animation_apds2")
+}
+
+[sub_resource type="Animation" id="Animation_owof1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1556.8818, 2387.0945)]
+}
+
+[sub_resource type="Animation" id="Animation_pxobb"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1556.8818, 2387.0945), Vector2(-820.2666, 2207.8125)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gbywk"]
+_data = {
+&"RESET": SubResource("Animation_owof1"),
+&"new_animation": SubResource("Animation_pxobb")
 }
 
 [node name="chapitre2lvl1" type="Node2D" unique_id=1622471704]
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=278465942]
-offset_left = -3974.208
-offset_top = -938.6756
-offset_right = 1186.9536
-offset_bottom = 8151.6953
-color = Color(0, 0, 0, 1)
-
-[node name="3platformblueprint10" parent="." unique_id=853668133 instance=ExtResource("2_pxobb")]
-position = Vector2(-695.93884, 1739.0001)
+[node name="3platformblueprint10" parent="." unique_id=577603666 instance=ExtResource("2_pxobb")]
+position = Vector2(-863.0292, 1746.5951)
 scale = Vector2(1.5, 1.5)
 
 [node name="3platformblueprint2" parent="." unique_id=1450597556 instance=ExtResource("2_pxobb")]
-position = Vector2(93.06116, 172)
+position = Vector2(-74.029175, 179.59497)
 rotation = 1.5707964
 scale = Vector2(1.5, 1.5)
 
 [node name="3platformblueprint3" parent="." unique_id=778669642 instance=ExtResource("2_pxobb")]
-position = Vector2(93.06116, 966.00006)
+position = Vector2(-74.029175, 973.59503)
 rotation = 1.5707964
 scale = Vector2(1.5, 1.5)
 
 [node name="3platformblueprint4" parent="." unique_id=392147767 instance=ExtResource("2_pxobb")]
-position = Vector2(325, 1198.0001)
+position = Vector2(157.90967, 1205.5951)
 rotation = -1.5707964
 scale = Vector2(1.5, 1.5)
 
 [node name="3platformblueprint7" parent="." unique_id=799069211 instance=ExtResource("2_pxobb")]
-position = Vector2(325, 2060)
+position = Vector2(157.90967, 2067.5952)
 rotation = -1.5707964
 scale = Vector2(1.5, 1.5)
 
 [node name="3platformblueprint8" parent="." unique_id=1031939092 instance=ExtResource("2_pxobb")]
-position = Vector2(325, 2198)
+position = Vector2(157.90967, 2205.5952)
 rotation = -1.5707964
 scale = Vector2(1.5, 1.5)
 
 [node name="3platformblueprint5" parent="." unique_id=893089876 instance=ExtResource("2_pxobb")]
-position = Vector2(360.00003, 409)
+position = Vector2(192.90967, 416.59497)
 rotation = -0.23911011
 scale = Vector2(1.5, 1.5)
 
+[node name="3platformblueprint14" parent="." unique_id=853668133 instance=ExtResource("2_pxobb")]
+position = Vector2(555.9712, 328.04333)
+rotation = -0.23911011
+scale = Vector2(1.5, 1.5)
+
+[node name="3platformblueprint15" parent="." unique_id=777011194 instance=ExtResource("2_pxobb")]
+position = Vector2(1393.8859, 137.8987)
+scale = Vector2(1.5, 1.5)
+
 [node name="3platformblueprint6" parent="." unique_id=1518090513 instance=ExtResource("2_pxobb")]
-position = Vector2(-519.1406, 2225.8362)
+position = Vector2(-686.23096, 2233.4312)
 scale = Vector2(1.5, 1.5)
 
 [node name="3platformblueprint13" parent="." unique_id=128924274 instance=ExtResource("2_pxobb")]
-position = Vector2(-3073.8428, 2636.823)
+position = Vector2(-3240.933, 2644.418)
 scale = Vector2(1.5, 1.5)
 
 [node name="3platformblueprint11" parent="." unique_id=40814248 instance=ExtResource("2_pxobb")]
-position = Vector2(-1357.2568, 2416.0625)
+position = Vector2(-1524.3472, 2423.6575)
 rotation = -0.23911011
 scale = Vector2(1.5, 1.5)
 
 [node name="3platformblueprint12" parent="." unique_id=1638780273 instance=ExtResource("2_pxobb")]
-position = Vector2(-2199.1274, 2621.307)
+position = Vector2(-2366.2178, 2628.9019)
 rotation = -0.23911011
 scale = Vector2(1.5, 1.5)
 
 [node name="3platformblueprint9" parent="." unique_id=1430028825 instance=ExtResource("2_pxobb")]
-position = Vector2(126.06116, 117.99999)
+position = Vector2(-41.029175, 125.59497)
 rotation = -0.23911011
 scale = Vector2(1.4999999, 1.4999999)
 
-[node name="damage_block11" parent="." unique_id=191091829 instance=ExtResource("3_gbywk")]
-position = Vector2(290.40002, 2190.3193)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="damage_block11" unique_id=926205713]
-libraries/ = SubResource("AnimationLibrary_owof1")
-autoplay = &"new_animation"
-speed_scale = 0.3
+[node name="damage_block12" parent="." unique_id=1974418075 instance=ExtResource("3_gbywk")]
+position = Vector2(123.30969, 1210.5646)
 
 [node name="damage_block10" parent="." unique_id=1974633683 instance=ExtResource("3_gbywk")]
-position = Vector2(124.56116, 175.35077)
+position = Vector2(-42.529175, 779.15314)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="damage_block10" unique_id=1729755468]
+[node name="damage_block13" parent="." unique_id=2056052198 instance=ExtResource("3_gbywk")]
+position = Vector2(-42.529175, 1713.3381)
+
+[node name="damage_block16" parent="." unique_id=1579938865 instance=ExtResource("3_gbywk")]
+position = Vector2(1402.2758, 93.67209)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="damage_block16" unique_id=1245610461]
 libraries/ = SubResource("AnimationLibrary_r7ohb")
 autoplay = &"new_animation"
-speed_scale = 0.5
+speed_scale = 0.7
 
-[node name="laser_trap" parent="." unique_id=1742838861 instance=ExtResource("4_r7ohb")]
-position = Vector2(-1016.7019, 2015.7645)
-rotation = 4.4872417
-scale = Vector2(0.8, 0.8)
-speed_rotate = 0.5
+[node name="damage_block14" parent="." unique_id=1655922865 instance=ExtResource("3_gbywk")]
+position = Vector2(-1556.8818, 2387.0945)
+rotation = -0.23911011
 
-[node name="laser_trap2" parent="." unique_id=228784459 instance=ExtResource("4_r7ohb")]
-z_index = 4
-position = Vector2(-1603.6729, 2156.8503)
-rotation = 4.4872417
-scale = Vector2(0.8, 0.8)
-speed_rotate = 0.5
+[node name="AnimationPlayer" type="AnimationPlayer" parent="damage_block14" unique_id=2090263531]
+libraries/ = SubResource("AnimationLibrary_kiv5b")
+autoplay = &"new_animation"
+speed_scale = 0.7
 
-[node name="laser_trap3" parent="." unique_id=523943571 instance=ExtResource("4_r7ohb")]
-z_index = 4
-position = Vector2(-2124.7795, 2288.8953)
-rotation = 4.4872417
-scale = Vector2(0.8, 0.8)
-speed_rotate = 0.5
+[node name="damage_block15" parent="." unique_id=1956870725 instance=ExtResource("3_gbywk")]
+position = Vector2(-1556.8818, 2387.0945)
+rotation = -0.23911011
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="damage_block15" unique_id=635542681]
+libraries/ = SubResource("AnimationLibrary_gbywk")
+autoplay = &"new_animation"
+speed_scale = 0.7
