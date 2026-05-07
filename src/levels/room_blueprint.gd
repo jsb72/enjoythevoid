@@ -205,7 +205,7 @@ func creer_ground():
 	
 func slowvoid_logic():
 	var limit = - 5555
-	if player.global_position.x < limit:
+	if player.global_position.x < limit and player.global_position.y < 1000:
 		var diff = limit - player.global_position.x
 		diff = diff/1000
 		if diff >0.9:

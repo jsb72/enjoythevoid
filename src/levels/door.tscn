@@ -12,7 +12,7 @@
 size = Vector2(466.64352, 12342.096)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8tvrs"]
-size = Vector2(468.287, 421)
+size = Vector2(468.287, 450)
 
 [sub_resource type="Animation" id="Animation_t5y6n"]
 length = 0.001
@@ -98,7 +98,7 @@ position = Vector2(-2480.609, -6466.048)
 shape = SubResource("RectangleShape2D_bk5nf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1604532477]
-position = Vector2(-2481.574, -84.5)
+position = Vector2(-2481.574, -70)
 shape = SubResource("RectangleShape2D_8tvrs")
 
 [node name="sprite" type="Sprite2D" parent="." unique_id=2010635693]

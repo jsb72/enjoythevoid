@@ -243,9 +243,6 @@ size = Vector2(584, 718.48694)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmpmd"]
 size = Vector2(316.91455, 1264.5673)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbvwn"]
-size = Vector2(3847.6677, 3655.2427)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f4kdv"]
 size = Vector2(864, 954)
 
@@ -774,12 +771,12 @@ color = Color(0.35531357, 0.35531357, 0.3553135, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(451.0161, 2701.5503)
+position = Vector2(396.1604, 2808.3171)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(501.0161, 2541.5503)
+position = Vector2(446.1604, 2648.3171)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -790,7 +787,7 @@ follow_damping = true
 dead_zone_width = 0.5
 dead_zone_height = 0.5
 draw_limits = true
-limit_left = -2712
+limit_left = -2670
 limit_right = 18722
 noise = SubResource("Resource_514du")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
@@ -798,7 +795,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(401.0161, 2541.5503)
+position = Vector2(346.1604, 2648.3171)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -808,7 +805,7 @@ follow_damping = true
 dead_zone_width = 0.5
 dead_zone_height = 0.5
 draw_limits = true
-limit_left = -2712
+limit_left = -2670
 limit_right = 18722
 noise = SubResource("Resource_514du")
 metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
@@ -816,7 +813,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(501.0161, 2701.5503)
+position = Vector2(446.1604, 2808.3171)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -833,7 +830,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(401.0161, 2701.5503)
+position = Vector2(346.1604, 2808.3171)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -850,7 +847,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(451.0161, 2541.5503)
+position = Vector2(396.1604, 2648.3171)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -867,9 +864,9 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(501.0161, 2541.5503)
+position = Vector2(446.1604, 2648.3171)
 process_callback = 0
-limit_left = -2712
+limit_left = -2670
 limit_right = 18722
 editor_draw_limits = true
 
@@ -1522,7 +1519,7 @@ rotation = -0.21293017
 position = Vector2(12096, -1090)
 
 [node name="door" parent="lvl1/Structure" unique_id=1943067928 instance=ExtResource("20_c3xut")]
-position = Vector2(-2247, 0)
+position = Vector2(-2206.7935, -31.977753)
 
 [node name="pour_remonter_tout_adroite" type="Node2D" parent="lvl1/Structure" unique_id=160171587]
 z_index = 2
@@ -1599,11 +1596,6 @@ shape = SubResource("RectangleShape2D_lqu8a")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lvl1/cam_zones/no_bottom_offset_zone" unique_id=1906154737]
 position = Vector2(9269.617, -2959.4734)
 shape = SubResource("RectangleShape2D_lmpmd")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="lvl1/cam_zones/no_bottom_offset_zone" unique_id=635530083]
-z_index = 1
-position = Vector2(-1746.1755, 3694.8843)
-shape = SubResource("RectangleShape2D_xbvwn")
 
 [node name="cube" parent="lvl1" unique_id=1811157897 instance=ExtResource("30_f3u0r")]
 position = Vector2(16734, 73)
@@ -1925,9 +1917,10 @@ rotation = -1.5707964
 position = Vector2(2215.8499, -1115.7622)
 
 [node name="chapitre2lvl1" parent="lvl1" unique_id=1622471704 instance=ExtResource("58_qgqoh")]
-position = Vector2(-2298.4534, 2809.904)
+position = Vector2(-2407.5022, 4179.381)
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
+visible = false
 position = Vector2(132, 0)
 
 [node name="meta_room_piece" parent="lvl2" unique_id=1053535631 instance=ExtResource("30_lqu8a")]

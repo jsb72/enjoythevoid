@@ -300,9 +300,10 @@ func can_dash() -> bool:
 
 func try_dash() -> void:
 	if Input.is_action_just_pressed("dash") and can_dash() and Global.dash_unlock and !dead_:
-		state_machine.activate_state_by_name("DashState")
-		dash_sound.play()
-		is_sliding=false
+		if !inside_nojump_portal:
+			state_machine.activate_state_by_name("DashState")
+			dash_sound.play()
+			is_sliding=false
 
 func try_corner_correction(delta: float) -> void:
 	var v_motion: Vector2 = Vector2(0.0, velocity.y * delta)

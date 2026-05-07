@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://hg8phxm3baoq"]
 
 [ext_resource type="PackedScene" uid="uid://mtmitx3k0avp" path="res://src/platforms/3_platformblueprint.tscn" id="2_pxobb"]
+[ext_resource type="PackedScene" uid="uid://c0g2bfslm40qt" path="res://src/platforms/pt_blueprint.tscn" id="3_apds2"]
 [ext_resource type="PackedScene" uid="uid://bdd03axytgixu" path="res://src/platforms/damage_block.tscn" id="3_gbywk"]
+[ext_resource type="PackedScene" uid="uid://bhno22n7k5cmv" path="res://src/elements/portal.tscn" id="4_owof1"]
 
 [sub_resource type="Animation" id="Animation_kiv5b"]
 length = 0.001
@@ -116,103 +118,190 @@ _data = {
 
 [node name="chapitre2lvl1" type="Node2D" unique_id=1622471704]
 
-[node name="3platformblueprint10" parent="." unique_id=577603666 instance=ExtResource("2_pxobb")]
+[node name="part1" type="Node2D" parent="." unique_id=1123606208]
+position = Vector2(-1450.645, -3.7976074)
+
+[node name="pt_blueprint" parent="part1" unique_id=920875960 instance=ExtResource("3_apds2")]
+position = Vector2(3633.053, -1316.8888)
+rotation = 0.47822022
+scale = Vector2(3, 3)
+
+[node name="portal" parent="part1/pt_blueprint" unique_id=871669185 node_paths=PackedStringArray("portal_target") instance=ExtResource("4_owof1")]
+position = Vector2(1.6557617, -22.242554)
+rotation = 1.5707964
+scale = Vector2(0.33333334, 0.33333334)
+portal_target = NodePath("../../pt_blueprint2/portal")
+
+[node name="pt_blueprint2" parent="part1" unique_id=1926028510 instance=ExtResource("3_apds2")]
+position = Vector2(3273.444, -1627.3822)
+rotation = -0.35953784
+scale = Vector2(3, 3)
+
+[node name="portal" parent="part1/pt_blueprint2" unique_id=394189970 node_paths=PackedStringArray("portal_target") instance=ExtResource("4_owof1")]
+position = Vector2(1.6557617, -22.242554)
+rotation = 1.5707964
+scale = Vector2(0.33333334, 0.33333334)
+portal_target = NodePath("../../pt_blueprint/portal")
+
+[node name="pt_blueprint3" parent="part1" unique_id=1849089294 instance=ExtResource("3_apds2")]
+position = Vector2(2864.0808, -1067.2977)
+rotation = 0.95644045
+scale = Vector2(3, 3)
+
+[node name="portal" parent="part1/pt_blueprint3" unique_id=1569114874 node_paths=PackedStringArray("portal_target") instance=ExtResource("4_owof1")]
+position = Vector2(1.6557617, -22.242554)
+rotation = 1.5707964
+scale = Vector2(0.33333334, 0.33333334)
+portal_target = NodePath("../../pt_blueprint4/portal")
+
+[node name="pt_blueprint4" parent="part1" unique_id=1089630233 instance=ExtResource("3_apds2")]
+position = Vector2(2475.5513, -652.33575)
+rotation = -1.7959439
+scale = Vector2(3, 3)
+
+[node name="portal" parent="part1/pt_blueprint4" unique_id=1038334506 node_paths=PackedStringArray("portal_target") instance=ExtResource("4_owof1")]
+position = Vector2(1.6557617, -22.242554)
+rotation = 1.5707964
+scale = Vector2(0.33333334, 0.33333334)
+portal_target = NodePath("../../pt_blueprint3/portal")
+
+[node name="part2" type="Node2D" parent="." unique_id=820836233]
+
+[node name="3platformblueprint10" parent="part2" unique_id=577603666 instance=ExtResource("2_pxobb")]
 position = Vector2(-863.0292, 1746.5951)
 scale = Vector2(1.5, 1.5)
 
-[node name="3platformblueprint2" parent="." unique_id=1450597556 instance=ExtResource("2_pxobb")]
+[node name="3platformblueprint20" parent="part2" unique_id=1439806291 instance=ExtResource("2_pxobb")]
+position = Vector2(-889.89233, 911.2749)
+rotation = 1.5707964
+scale = Vector2(1.5, 1.5)
+
+[node name="3platformblueprint21" parent="part2" unique_id=682744287 instance=ExtResource("2_pxobb")]
+position = Vector2(-1659.7397, 887.13745)
+scale = Vector2(1.5, 1.5)
+
+[node name="3platformblueprint2" parent="part2" unique_id=1450597556 instance=ExtResource("2_pxobb")]
 position = Vector2(-74.029175, 179.59497)
 rotation = 1.5707964
 scale = Vector2(1.5, 1.5)
 
-[node name="3platformblueprint3" parent="." unique_id=778669642 instance=ExtResource("2_pxobb")]
+[node name="3platformblueprint3" parent="part2" unique_id=778669642 instance=ExtResource("2_pxobb")]
 position = Vector2(-74.029175, 973.59503)
 rotation = 1.5707964
 scale = Vector2(1.5, 1.5)
 
-[node name="3platformblueprint4" parent="." unique_id=392147767 instance=ExtResource("2_pxobb")]
+[node name="3platformblueprint4" parent="part2" unique_id=392147767 instance=ExtResource("2_pxobb")]
 position = Vector2(157.90967, 1205.5951)
 rotation = -1.5707964
 scale = Vector2(1.5, 1.5)
 
-[node name="3platformblueprint7" parent="." unique_id=799069211 instance=ExtResource("2_pxobb")]
+[node name="3platformblueprint7" parent="part2" unique_id=799069211 instance=ExtResource("2_pxobb")]
 position = Vector2(157.90967, 2067.5952)
 rotation = -1.5707964
 scale = Vector2(1.5, 1.5)
 
-[node name="3platformblueprint8" parent="." unique_id=1031939092 instance=ExtResource("2_pxobb")]
+[node name="3platformblueprint8" parent="part2" unique_id=1031939092 instance=ExtResource("2_pxobb")]
 position = Vector2(157.90967, 2205.5952)
 rotation = -1.5707964
 scale = Vector2(1.5, 1.5)
 
-[node name="3platformblueprint5" parent="." unique_id=893089876 instance=ExtResource("2_pxobb")]
+[node name="3platformblueprint5" parent="part2" unique_id=893089876 instance=ExtResource("2_pxobb")]
 position = Vector2(192.90967, 416.59497)
-rotation = -0.23911011
-scale = Vector2(1.5, 1.5)
-
-[node name="3platformblueprint14" parent="." unique_id=853668133 instance=ExtResource("2_pxobb")]
-position = Vector2(555.9712, 328.04333)
-rotation = -0.23911011
-scale = Vector2(1.5, 1.5)
-
-[node name="3platformblueprint15" parent="." unique_id=777011194 instance=ExtResource("2_pxobb")]
-position = Vector2(1393.8859, 137.8987)
-scale = Vector2(1.5, 1.5)
-
-[node name="3platformblueprint6" parent="." unique_id=1518090513 instance=ExtResource("2_pxobb")]
-position = Vector2(-686.23096, 2233.4312)
-scale = Vector2(1.5, 1.5)
-
-[node name="3platformblueprint13" parent="." unique_id=128924274 instance=ExtResource("2_pxobb")]
-position = Vector2(-3240.933, 2644.418)
-scale = Vector2(1.5, 1.5)
-
-[node name="3platformblueprint11" parent="." unique_id=40814248 instance=ExtResource("2_pxobb")]
-position = Vector2(-1524.3472, 2423.6575)
-rotation = -0.23911011
-scale = Vector2(1.5, 1.5)
-
-[node name="3platformblueprint12" parent="." unique_id=1638780273 instance=ExtResource("2_pxobb")]
-position = Vector2(-2366.2178, 2628.9019)
-rotation = -0.23911011
-scale = Vector2(1.5, 1.5)
-
-[node name="3platformblueprint9" parent="." unique_id=1430028825 instance=ExtResource("2_pxobb")]
-position = Vector2(-41.029175, 125.59497)
 rotation = -0.23911011
 scale = Vector2(1.4999999, 1.4999999)
 
-[node name="damage_block12" parent="." unique_id=1974418075 instance=ExtResource("3_gbywk")]
+[node name="3platformblueprint14" parent="part2" unique_id=625220385 instance=ExtResource("2_pxobb")]
+position = Vector2(555.9712, 328.04333)
+rotation = -0.23911011
+scale = Vector2(1.4999999, 1.4999999)
+
+[node name="3platformblueprint15" parent="part2" unique_id=777011194 instance=ExtResource("2_pxobb")]
+position = Vector2(1393.8859, 137.8987)
+scale = Vector2(1.5, 1.5)
+
+[node name="3platformblueprint6" parent="part2" unique_id=1518090513 instance=ExtResource("2_pxobb")]
+position = Vector2(-686.23096, 2233.4312)
+scale = Vector2(1.5, 1.5)
+
+[node name="3platformblueprint13" parent="part2" unique_id=128924274 instance=ExtResource("2_pxobb")]
+position = Vector2(-3240.933, 2644.418)
+scale = Vector2(1.5, 1.5)
+
+[node name="3platformblueprint11" parent="part2" unique_id=40814248 instance=ExtResource("2_pxobb")]
+position = Vector2(-1524.3472, 2423.6575)
+rotation = -0.23911011
+scale = Vector2(1.4999999, 1.4999999)
+
+[node name="3platformblueprint16" parent="part2" unique_id=2079835553 instance=ExtResource("2_pxobb")]
+position = Vector2(111.832466, 88.13437)
+rotation = -0.2391101
+scale = Vector2(1.4999999, 1.4999999)
+
+[node name="3platformblueprint17" parent="part2" unique_id=1996061186 instance=ExtResource("2_pxobb")]
+position = Vector2(843.4747, -179.90805)
+rotation = -1.8099065
+scale = Vector2(1.5, 1.5)
+
+[node name="3platformblueprint18" parent="part2" unique_id=646878513 instance=ExtResource("2_pxobb")]
+position = Vector2(654.9587, -1018.026)
+rotation = -1.5707964
+scale = Vector2(1.5, 1.5)
+
+[node name="3platformblueprint19" parent="part2" unique_id=254140923 instance=ExtResource("2_pxobb")]
+position = Vector2(680.03235, -1793.2517)
+scale = Vector2(1.5, 1.5)
+
+[node name="3platformblueprint12" parent="part2" unique_id=1638780273 instance=ExtResource("2_pxobb")]
+position = Vector2(-2366.2178, 2628.9019)
+rotation = -0.23911011
+scale = Vector2(1.4999999, 1.4999999)
+
+[node name="3platformblueprint9" parent="part2" unique_id=1430028825 instance=ExtResource("2_pxobb")]
+position = Vector2(-41.029175, 125.59497)
+rotation = -0.2391101
+scale = Vector2(1.4999999, 1.4999999)
+
+[node name="damage_block12" parent="part2" unique_id=1419514559 instance=ExtResource("3_gbywk")]
 position = Vector2(123.30969, 1210.5646)
 
-[node name="damage_block10" parent="." unique_id=1974633683 instance=ExtResource("3_gbywk")]
+[node name="damage_block10" parent="part2" unique_id=1974633683 instance=ExtResource("3_gbywk")]
 position = Vector2(-42.529175, 779.15314)
 
-[node name="damage_block13" parent="." unique_id=2056052198 instance=ExtResource("3_gbywk")]
+[node name="damage_block13" parent="part2" unique_id=2056052198 instance=ExtResource("3_gbywk")]
 position = Vector2(-42.529175, 1713.3381)
 
-[node name="damage_block16" parent="." unique_id=1579938865 instance=ExtResource("3_gbywk")]
+[node name="damage_block17" parent="part2" unique_id=1283776180 instance=ExtResource("3_gbywk")]
+position = Vector2(880.3087, -136.11823)
+rotation = 1.3316863
+
+[node name="damage_block18" parent="part2" unique_id=210652913 instance=ExtResource("3_gbywk")]
+position = Vector2(-857.44885, 1707.9634)
+rotation = 3.1415925
+
+[node name="damage_block16" parent="part2" unique_id=1579938865 instance=ExtResource("3_gbywk")]
 position = Vector2(1402.2758, 93.67209)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="damage_block16" unique_id=1245610461]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="part2/damage_block16" unique_id=1245610461]
 libraries/ = SubResource("AnimationLibrary_r7ohb")
 autoplay = &"new_animation"
 speed_scale = 0.7
 
-[node name="damage_block14" parent="." unique_id=1655922865 instance=ExtResource("3_gbywk")]
+[node name="damage_block14" parent="part2" unique_id=1655922865 instance=ExtResource("3_gbywk")]
 position = Vector2(-1556.8818, 2387.0945)
 rotation = -0.23911011
+scale = Vector2(0.99999994, 0.99999994)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="damage_block14" unique_id=2090263531]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="part2/damage_block14" unique_id=2090263531]
 libraries/ = SubResource("AnimationLibrary_kiv5b")
 autoplay = &"new_animation"
 speed_scale = 0.7
 
-[node name="damage_block15" parent="." unique_id=1956870725 instance=ExtResource("3_gbywk")]
+[node name="damage_block15" parent="part2" unique_id=1956870725 instance=ExtResource("3_gbywk")]
 position = Vector2(-1556.8818, 2387.0945)
 rotation = -0.23911011
+scale = Vector2(0.99999994, 0.99999994)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="damage_block15" unique_id=635542681]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="part2/damage_block15" unique_id=635542681]
 libraries/ = SubResource("AnimationLibrary_gbywk")
 autoplay = &"new_animation"
 speed_scale = 0.7

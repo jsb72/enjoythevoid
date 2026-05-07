@@ -11,6 +11,18 @@
 [ext_resource type="Script" uid="uid://b41ykkxmbi5q2" path="res://addons/antialiased_line2d/antialiased_line2d.gd" id="8_1eobr"]
 [ext_resource type="Texture2D" uid="uid://cyn6gjtrl8cj6" path="res://sprites/rooms/escalier_door_reverse.png" id="10_10ye1"]
 
+[sub_resource type="Gradient" id="Gradient_10ye1"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_10ye1"]
+frequency = 0.0012
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_10ye1"]
+width = 4096
+height = 4096
+noise = SubResource("FastNoiseLite_10ye1")
+color_ramp = SubResource("Gradient_10ye1")
+seamless = true
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x4p2d"]
 size = Vector2(1254, 109.75)
 
@@ -55,13 +67,22 @@ offset_bottom = 476.0
 color = Color(0, 0, 0, 1)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=1934317368]
-scroll_scale = Vector2(0.9, 0.9)
-scroll_offset = Vector2(-517, -252)
+scroll_scale = Vector2(0.7, 0.7)
 
-[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1925447986]
+[node name="ColorRect4" type="TextureRect" parent="Parallax2D" unique_id=962704956]
+offset_left = -6925.0
+offset_top = -1012.0
+offset_right = -1306.0
+offset_bottom = 5028.0
+texture = SubResource("NoiseTexture2D_10ye1")
+
+[node name="Parallax2D2" type="Parallax2D" parent="." unique_id=1348097294]
+scroll_scale = Vector2(0.9, 0.9)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2" unique_id=1925447986]
 visible = false
-position = Vector2(-153.99998, 38)
-scale = Vector2(0.4, 0.4)
+position = Vector2(-1433, 127)
+scale = Vector2(-1, -1)
 texture = ExtResource("1_lr8qc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=801998414]
@@ -139,10 +160,10 @@ scale = Vector2(0.47, 0.47)
 is_rotatingg = false
 
 [node name="platform6" parent="." unique_id=1968047125 instance=ExtResource("3_xoqhc")]
-position = Vector2(-352, 251)
+position = Vector2(-352, 265)
 
 [node name="button" parent="platform6" unique_id=1067572409 instance=ExtResource("4_x4p2d")]
-position = Vector2(-0.9999962, -18.539063)
+position = Vector2(-0.9999962, -20)
 scale = Vector2(0.7, 0.7)
 
 [node name="laser_trap3" parent="." unique_id=899924431 instance=ExtResource("2_dtt6n")]
@@ -191,19 +212,19 @@ offset_bottom = 1674.0
 color = Color(0.3019608, 0.3019608, 0.3019608, 1)
 
 [node name="RopeHandle2" type="Marker2D" parent="." unique_id=513902641]
-position = Vector2(-350, 232)
+position = Vector2(-350, 245)
 script = ExtResource("6_lr8qc")
 rope_path = NodePath("../Rope2")
 metadata/_custom_type_script = "uid://1xluodkpnre3"
 
 [node name="RopeHandle3" type="Marker2D" parent="." unique_id=2116783361]
-position = Vector2(-351, 233)
+position = Vector2(-351, 246)
 script = ExtResource("6_lr8qc")
 rope_path = NodePath("../Rope3")
 metadata/_custom_type_script = "uid://1xluodkpnre3"
 
 [node name="RopeHandle" type="Marker2D" parent="." unique_id=806219849]
-position = Vector2(-350, 233)
+position = Vector2(-350, 246)
 script = ExtResource("6_lr8qc")
 strength = 1.0
 rope_path = NodePath("../Rope")

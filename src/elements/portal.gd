@@ -16,10 +16,9 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is Player or body is Ball:
 		if !body.inside_portal:
 			body.global_position = portal_target.global_position 
-			#body.velocity.y = body.save_velocity.y * -1
-			#body.velocity = body.velocity.rotated(portal_target.rotation)   
-			#body.velocity = body.save_velocity.bounce(Vector2(-1,0).rotated(portal_target.rotation))
-			var magnitude = body.save_velocity.length()
+			
+			#var magnitude = body.save_velocity.length()
+			var magnitude = 1000
 			var vecteur_droit = Vector2(-magnitude,0)
 			var vecteur_rotated = vecteur_droit.rotated(portal_target.rotation)
 			body.velocity = vecteur_rotated
