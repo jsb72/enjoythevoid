@@ -220,11 +220,13 @@ func _on_zoom_zone_body_entered(body: Node2D) -> void:
 func _on_zoom_zone_body_exited(body: Node2D) -> void:
 	if body is Player : zoomcam.priority = 0
 func _on_no_bottom_offset_zone_body_entered(body: Node2D) -> void:
-	if body is Player : camoffesetbottom.priority = 10
+	if !lvl_2_loaded:
+		if body is Player : camoffesetbottom.priority = 10
 func _on_no_bottom_offset_zone_body_exited(body: Node2D) -> void:
-	if body is Player : 
-		camoffesetbottom.priority = 0
-		camoffesetbottom_2.priority = 0
+	if !lvl_2_loaded:
+		if body is Player : 
+			camoffesetbottom.priority = 0
+			camoffesetbottom_2.priority = 0
 
 func _on_no_offset_zone_lvl_2_body_entered(body: Node2D) -> void:
 	if body is Player : camoffesetbottom.priority = 10
@@ -300,7 +302,10 @@ func _on_loadchap_2_lvl_1_body_entered(body: Node2D) -> void:
 	if !lvl_2_loaded:
 		if body is Player:
 			chapitre_2_lvl_1.show()
-			chapitre_2_lvl_1.process_mode = Node.PROCESS_MODE_INHERIT
+			chapitre_2_lvl_1.process_mode = Node.PROCESS_MODE_INHERIT			
+			
+			cam.limit_left = -10000000
+			cam_2.limit_left = -10000000
 
 func _on_unloadchap_2_lvl_1_body_entered(body: Node2D) -> void:
 	if !lvl_2_loaded:

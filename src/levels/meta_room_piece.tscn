@@ -421,16 +421,9 @@ position = Vector2(-725, 1139)
 [node name="pt_blueprint10" parent="last_bridge" unique_id=1250192084 instance=ExtResource("10_lory2")]
 position = Vector2(-645, 1139)
 
-[node name="laser_trap" parent="." unique_id=853668133 instance=ExtResource("11_nvtr1")]
-position = Vector2(-759.00006, 1308.0001)
-rotation = 0.9721484
-scale = Vector2(0.5, 0.5)
-is_rotatingg = false
-
 [node name="laser_trap2" parent="." unique_id=968078157 instance=ExtResource("11_nvtr1")]
-position = Vector2(-632.0001, 1479)
-rotation = 0.6824237
-scale = Vector2(0.5, 0.5)
+position = Vector2(-697, 1416.0001)
+rotation = 0.93549645
 is_rotatingg = false
 
 [node name="txt" type="Node2D" parent="." unique_id=1188014602]

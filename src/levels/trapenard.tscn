@@ -128,7 +128,11 @@ rotation = 1.5707964
 scale = Vector2(1.5, 1.5)
 
 [node name="3platformblueprint21" parent="part2" unique_id=1638279245 instance=ExtResource("1_0pmqr")]
-position = Vector2(-1659.7397, 887.13745)
+position = Vector2(-1659.7397, 871.13745)
+scale = Vector2(1.5, 1.5)
+
+[node name="3platformblueprint22" parent="part2" unique_id=1834682238 instance=ExtResource("1_0pmqr")]
+position = Vector2(-909.4835, 871.13745)
 scale = Vector2(1.5, 1.5)
 
 [node name="3platformblueprint2" parent="part2" unique_id=2003366606 instance=ExtResource("1_0pmqr")]
@@ -208,7 +212,7 @@ rotation = -0.23911011
 scale = Vector2(1.4999999, 1.4999999)
 
 [node name="3platformblueprint9" parent="part2" unique_id=2117326313 instance=ExtResource("1_0pmqr")]
-position = Vector2(-41.029175, 125.59497)
+position = Vector2(-41.07605, 125.445045)
 rotation = -0.2391101
 scale = Vector2(1.4999999, 1.4999999)
 
@@ -219,15 +223,7 @@ position = Vector2(123.30969, 1210.5646)
 position = Vector2(-42.529175, 779.15314)
 
 [node name="damage_block13" parent="part2" unique_id=957641208 instance=ExtResource("2_ctu8g")]
-position = Vector2(-42.529175, 1713.3381)
-
-[node name="damage_block17" parent="part2" unique_id=1507254134 instance=ExtResource("2_ctu8g")]
-position = Vector2(880.3087, -136.11823)
-rotation = 1.3316863
-
-[node name="damage_block18" parent="part2" unique_id=34700321 instance=ExtResource("2_ctu8g")]
-position = Vector2(-857.44885, 1707.9634)
-rotation = 3.1415925
+position = Vector2(-42.529175, 1717.8539)
 
 [node name="damage_block16" parent="part2" unique_id=1448424075 instance=ExtResource("2_ctu8g")]
 position = Vector2(1402.2758, 93.67209)
