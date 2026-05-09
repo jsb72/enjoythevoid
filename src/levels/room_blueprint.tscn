@@ -3047,7 +3047,7 @@ position = Vector2(4846.0933, 2140.4233)
 shape = SubResource("RectangleShape2D_qgqoh")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=2100203311]
-position = Vector2(239.26788, 2783.9348)
+position = Vector2(-954.07635, 2783.9348)
 shape = SubResource("RectangleShape2D_qgqoh")
 
 [node name="lvl_reload_right" type="Node2D" parent="." unique_id=1833511117]
@@ -3110,7 +3110,6 @@ shape = SubResource("RectangleShape2D_pjh63")
 
 [node name="chapitre2lvl1" parent="." unique_id=1622471704 instance=ExtResource("58_qgqoh")]
 process_mode = 4
-visible = false
 position = Vector2(1092.8972, 2389.474)
 
 [node name="AMBIANCE_ZONE" type="Node2D" parent="." unique_id=456457801]

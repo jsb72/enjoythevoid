@@ -145,7 +145,10 @@ portal_target = NodePath("../portal3")
 [node name="pt_blueprint4" parent="part1" unique_id=1389148013 instance=ExtResource("3_apds2")]
 position = Vector2(4270.4478, -1117.2974)
 
-[node name="pt_blueprint9" parent="part1" unique_id=920875960 instance=ExtResource("3_apds2")]
+[node name="pt_blueprint7" parent="part1" unique_id=920875960 instance=ExtResource("3_apds2")]
+position = Vector2(4188.3115, -1117.2974)
+
+[node name="pt_blueprint9" parent="part1" unique_id=1739837583 instance=ExtResource("3_apds2")]
 position = Vector2(4009.5447, -2694.5317)
 rotation = 0.35953784
 
@@ -153,7 +156,7 @@ rotation = 0.35953784
 position = Vector2(-62.81006, 0)
 
 [node name="pt_blueprint11" parent="part1" unique_id=1012557622 instance=ExtResource("3_apds2")]
-position = Vector2(3721.784, -2839.1545)
+position = Vector2(3730.2542, -2791.9644)
 
 [node name="pt_blueprint5" parent="part1" unique_id=556294983 instance=ExtResource("3_apds2")]
 position = Vector2(4354.194, -1117.2974)
@@ -201,7 +204,7 @@ scale = Vector2(0.2, 0.2)
 is_rotatingg = false
 
 [node name="portal5" parent="part1" unique_id=1595916390 node_paths=PackedStringArray("portal_target") instance=ExtResource("4_owof1")]
-position = Vector2(3692.3564, -2905.943)
+position = Vector2(3700.8267, -2858.753)
 rotation = 1.3159783
 portal_target = NodePath("../portal6")
 
@@ -227,5 +230,14 @@ portal_target = NodePath("../portal10")
 
 [node name="portal10" parent="part1" unique_id=878512296 node_paths=PackedStringArray("portal_target") instance=ExtResource("4_owof1")]
 position = Vector2(3709.2659, -3650.7896)
-rotation = 5.386086
+rotation = -0.32637656
 portal_target = NodePath("../portal9")
+
+[node name="platform5" parent="part1" unique_id=958990891 instance=ExtResource("2_kiv5b")]
+position = Vector2(3596.1208, -3782.0203)
+
+[node name="platform6" parent="part1" unique_id=927908540 instance=ExtResource("2_kiv5b")]
+position = Vector2(3666.9834, -3782.0203)
+
+[node name="platform7" parent="part1" unique_id=30826673 instance=ExtResource("2_kiv5b")]
+position = Vector2(3707.246, -3782.0203)
