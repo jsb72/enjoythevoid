@@ -6,9 +6,12 @@ class_name Portal
 @export var black_portal:bool = false
 @onready var sound: AudioStreamPlayer2D = $sound
 
+@export var display_platformsprite:bool=true
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 func _ready() -> void:
-	pass
+	if !display_platformsprite:
+		sprite_2d.hide()
 func _process(delta: float) -> void:
 	pass
 
@@ -18,12 +21,16 @@ func _on_body_entered(body: Node2D) -> void:
 			body.global_position = portal_target.global_position 
 			
 			#var magnitude = body.save_velocity.length()
-			var magnitude = 1000
-			var vecteur_droit = Vector2(-magnitude,0)
+			"""var magnitude = 1000
+			var vecteur_droit = Vector2(0,-magnitude)
 			var vecteur_rotated = vecteur_droit.rotated(portal_target.rotation)
-			body.velocity = vecteur_rotated
+			body.velocity = vecteur_rotated"""
+			#body.velocity = Vector2(0,-2000)*portal_target.rotation
+			var dir_ = Vector2(0,-1).rotated(portal_target.rotation)
+			var normal_dir = dir_.normalized()
+			body.velocity=normal_dir*1250
 			
-			
+			body.can_double_jump = true
 			
 			body.inside_portal = true
 			
@@ -38,10 +45,3 @@ func _on_body_entered(body: Node2D) -> void:
 			body.inside_portal = false
 			
 	
-
-func _on_no_jump_body_entered(body: Node2D) -> void:
-	if body is Player :
-		
-		body.inside_nojump_portal = true
-		await get_tree().create_timer(0.5).timeout
-		body.inside_nojump_portal = false

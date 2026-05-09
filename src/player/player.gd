@@ -110,9 +110,10 @@ func _physics_process(_delta: float) -> void:
 	logic_spe()
 
 func try_double_jump() -> void:
-	if Input.is_action_just_pressed("jump") and can_double_jump and Global.doublejump_unlock and !dead_:
-		jump()
-		can_double_jump = false	
+	if jump_coyote_timer.is_stopped():
+		if Input.is_action_just_pressed("jump") and can_double_jump and Global.doublejump_unlock and !dead_:
+			jump()
+			can_double_jump = false	
 
 func get_facing_dir() -> float:
 	return -1.0 if flip_h else 1.0
@@ -162,7 +163,7 @@ func calculate_gravity() -> float:
 	return get_default_gravity() * (
 			jump_peak_gravity_ratio if not jump_peak_gravity_timer.is_stopped()
 			else after_dash_gravity_ratio if not after_dash_gravity_timer.is_stopped()
-			else jump_not_held_gravity_ratio if not Input.is_action_pressed("jump") or inside_nojump_portal
+			else jump_not_held_gravity_ratio if not Input.is_action_pressed("jump")
 			else down_held_gravity_ratio if Input.is_action_pressed("down") and velocity.y > 0
 			else 1.0
 	)
@@ -174,14 +175,13 @@ func calculate_gravity_limit() -> float:
 	)
 
 func jump() -> void:
-	if !inside_nojump_portal:
-		velocity.y = jump_velocity
-		apply_stretch()
-			
-		try_play_new_anim("jumpup")
-		jump_sound.play()
-		jump_particle.restart()
-		is_sliding=false
+	velocity.y = jump_velocity
+	apply_stretch()
+		
+	try_play_new_anim("jumpup")
+	jump_sound.play()
+	jump_particle.restart()
+	is_sliding=false
 
 func try_jump() -> void:
 	if Input.is_action_just_pressed("jump") and !dead_:
@@ -190,6 +190,7 @@ func try_jump() -> void:
 func try_coyote_jump() -> void:
 	if not jump_coyote_timer.is_stopped():
 		try_jump()
+		
 
 func try_jump_buffer_timer() -> void:
 	if Input.is_action_just_pressed("jump"):
@@ -300,10 +301,9 @@ func can_dash() -> bool:
 
 func try_dash() -> void:
 	if Input.is_action_just_pressed("dash") and can_dash() and Global.dash_unlock and !dead_:
-		if !inside_nojump_portal:
-			state_machine.activate_state_by_name("DashState")
-			dash_sound.play()
-			is_sliding=false
+		state_machine.activate_state_by_name("DashState")
+		dash_sound.play()
+		is_sliding=false
 
 func try_corner_correction(delta: float) -> void:
 	var v_motion: Vector2 = Vector2(0.0, velocity.y * delta)
@@ -404,15 +404,7 @@ func apply_stretch() -> void:
 @onready var animationdistorsion: AnimationPlayer = $CanvasLayer/distorsionrect/animationdistorsion
 @onready var glitch_rect: ColorRect = $CanvasLayer2/glitch_rect
 
-
-var inside_portal : bool = false
-var inside_nojump_portal : bool = false
-var save_velocity : Vector2
-func portal_logic():
-	if !is_on_floor() and !is_on_wall():
-		save_velocity = velocity
-	else :
-		if !inside_portal : save_velocity.y = -jump_velocity
+var inside_portal:bool = false
 
 func sprint_logic():
 	if Input.is_action_pressed("dash") and !(state_machine.active_state is DashState):
@@ -426,7 +418,6 @@ func logic_spe():
 	if Input.is_action_pressed("timeslow"):
 			Engine.time_scale = 0.1
 			
-	portal_logic()
 	
 	sprite_animation()
 	

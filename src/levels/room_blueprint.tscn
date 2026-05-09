@@ -243,26 +243,14 @@ size = Vector2(584, 718.48694)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmpmd"]
 size = Vector2(316.91455, 1264.5673)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbvwn"]
+size = Vector2(533.1067, 2767.122)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f4kdv"]
 size = Vector2(864, 954)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fynux"]
 size = Vector2(66.5, 10084.096)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1nkay"]
-size = Vector2(1591.0845, 806)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_brhbg"]
-size = Vector2(1207.4907, 892)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6qp3"]
-size = Vector2(414.8506, 123.33862)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g62an"]
-size = Vector2(102.896484, 139.49652)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4aogc"]
-size = Vector2(1075.2739, 681.9691)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vb8r4"]
 shader = ExtResource("28_vb8r4")
@@ -541,7 +529,7 @@ fill_from = Vector2(0, 1)
 fill_to = Vector2(0, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ppux1"]
-size = Vector2(16702.973, 3159.0562)
+size = Vector2(27190.326, 3159.0562)
 
 [sub_resource type="Gradient" id="Gradient_f3u0r"]
 offsets = PackedFloat32Array(0, 0.11111111, 0.22222222, 0.33333334, 0.44444445, 0.5555556, 0.6666667, 0.7777778, 0.8888889)
@@ -738,6 +726,9 @@ shader_parameter/speed = Vector2(0.02, 0.01)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qgqoh"]
 size = Vector2(186.5, 178)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjh63"]
+size = Vector2(69.06018, 461.99707)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3grwt"]
 size = Vector2(23895.305, 5756.35)
 
@@ -752,6 +743,21 @@ size = Vector2(6138.6875, 4372.849)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6wgec"]
 size = Vector2(2972.9485, 3965.463)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1nkay"]
+size = Vector2(1591.0845, 806)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brhbg"]
+size = Vector2(1207.4907, 892)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6qp3"]
+size = Vector2(414.8506, 123.33862)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g62an"]
+size = Vector2(102.896484, 139.49652)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4aogc"]
+size = Vector2(1782.0973, 681.9691)
 
 [node name="room_blueprint" type="Node2D" unique_id=1528742533]
 script = ExtResource("1_76snk")
@@ -771,12 +777,12 @@ color = Color(0.35531357, 0.35531357, 0.3553135, 1)
 [node name="Player" parent="." unique_id=2070335124 instance=ExtResource("3_4j1ba")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(396.1604, 2808.3171)
+position = Vector2(0, -8500)
 
 [node name="cam" type="Node2D" parent="." unique_id=1498018793 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(446.1604, 2648.3171)
+position = Vector2(50, -8660)
 script = ExtResource("4_mu531")
 priority = 1
 follow_mode = 2
@@ -795,7 +801,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="cam2" type="Node2D" parent="." unique_id=390199709 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(346.1604, 2648.3171)
+position = Vector2(-50, -8660)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -813,7 +819,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom" type="Node2D" parent="." unique_id=1643240695 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(446.1604, 2808.3171)
+position = Vector2(50, -8500)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -830,7 +836,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="camoffesetbottom2" type="Node2D" parent="." unique_id=277007732 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(346.1604, 2808.3171)
+position = Vector2(-50, -8500)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -847,7 +853,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="zoomcam" type="Node2D" parent="." unique_id=1299573748 node_paths=PackedStringArray("follow_target")]
 unique_name_in_owner = true
 top_level = true
-position = Vector2(396.1604, 2648.3171)
+position = Vector2(0, -8660)
 script = ExtResource("4_mu531")
 follow_mode = 2
 follow_target = NodePath("../Player")
@@ -864,7 +870,7 @@ metadata/_custom_type_script = "uid://bhexx6mj1xv3q"
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1039615960]
 physics_interpolation_mode = 1
 top_level = true
-position = Vector2(446.1604, 2648.3171)
+position = Vector2(50, -8660)
 process_callback = 0
 limit_left = -2670
 limit_right = 18722
@@ -1462,10 +1468,11 @@ rotation = -0.35430184
 scale = Vector2(3, 3)
 
 [node name="portalO" parent="lvl1/Structure/right_pt_zone" unique_id=871669185 node_paths=PackedStringArray("portal_target") instance=ExtResource("24_gxno5")]
-position = Vector2(11862, -955)
-rotation = 1.2164944
+position = Vector2(11861.21, -948.41675)
+rotation = -0.35953784
 portal_target = NodePath("../portalN")
 black_portal = true
+display_platformsprite = false
 
 [node name="pt_blueprint11" parent="lvl1/Structure/right_pt_zone" unique_id=1752475601 instance=ExtResource("16_nfd4m")]
 position = Vector2(12310.555, -887.99976)
@@ -1473,10 +1480,11 @@ rotation = 0.35430184
 scale = Vector2(3, 3)
 
 [node name="portalN" parent="lvl1/Structure/right_pt_zone" unique_id=922291286 node_paths=PackedStringArray("portal_target") instance=ExtResource("24_gxno5")]
-position = Vector2(12339.371, -950.46484)
-rotation = 1.9250982
+position = Vector2(12338.184, -944.72736)
+rotation = 0.35953784
 portal_target = NodePath("../portalO")
 black_portal = true
+display_platformsprite = false
 
 [node name="platform6" parent="lvl1/Structure/right_pt_zone" unique_id=115432474 instance=ExtResource("8_ltygr")]
 position = Vector2(12645, -1032)
@@ -1597,6 +1605,10 @@ shape = SubResource("RectangleShape2D_lqu8a")
 position = Vector2(9269.617, -2959.4734)
 shape = SubResource("RectangleShape2D_lmpmd")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="lvl1/cam_zones/no_bottom_offset_zone" unique_id=1008895650]
+position = Vector2(-3138.2573, 2123.8853)
+shape = SubResource("RectangleShape2D_xbvwn")
+
 [node name="cube" parent="lvl1" unique_id=1811157897 instance=ExtResource("30_f3u0r")]
 position = Vector2(16734, 73)
 
@@ -1650,29 +1662,6 @@ position = Vector2(10498, -1346)
 [node name="bonus2" parent="lvl1" unique_id=715804290 instance=ExtResource("15_fynux")]
 position = Vector2(12875.589, -244.31659)
 type_bonus = "dash"
-
-[node name="novisibleplayerzone" type="Area2D" parent="lvl1" unique_id=2061754216]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="lvl1/novisibleplayerzone" unique_id=127681846]
-z_index = 4096
-position = Vector2(5735.458, 1840)
-shape = SubResource("RectangleShape2D_1nkay")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="lvl1/novisibleplayerzone" unique_id=1994931871]
-position = Vector2(2823.2546, 1912)
-shape = SubResource("RectangleShape2D_brhbg")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="lvl1/novisibleplayerzone" unique_id=1130217230]
-position = Vector2(16855.574, 192.34497)
-shape = SubResource("RectangleShape2D_w6qp3")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="lvl1/novisibleplayerzone" unique_id=1519341291]
-position = Vector2(16743.402, 103.028656)
-shape = SubResource("RectangleShape2D_g62an")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="lvl1/novisibleplayerzone" unique_id=755107987]
-position = Vector2(715.7886, 2565.428)
-shape = SubResource("RectangleShape2D_4aogc")
 
 [node name="sprint_bonus" parent="lvl1" unique_id=1577787271 instance=ExtResource("15_fynux")]
 position = Vector2(4711, 1639)
@@ -1914,10 +1903,7 @@ position = Vector2(13019.245, -22.353027)
 rotation = -1.5707964
 
 [node name="sage2" parent="lvl1" unique_id=1045607497 instance=ExtResource("43_gxno5")]
-position = Vector2(2215.8499, -1115.7622)
-
-[node name="chapitre2lvl1" parent="lvl1" unique_id=1622471704 instance=ExtResource("58_qgqoh")]
-position = Vector2(-2407.5022, 4179.381)
+position = Vector2(385.1477, -192.37247)
 
 [node name="lvl2" type="Node2D" parent="." unique_id=2029691245]
 visible = false
@@ -1959,14 +1945,14 @@ position = Vector2(42, 0)
 offset_left = -50054.0
 offset_top = -4244.0
 offset_right = -3760.0
-offset_bottom = 3883.7485
+offset_bottom = 9109.139
 color = Color(0, 0, 0, 1)
 
 [node name="TextureRect" type="TextureRect" parent="void" unique_id=1721457541]
 offset_left = -3760.0
 offset_top = -12668.82
 offset_right = -2736.0
-offset_bottom = 2508.129
+offset_bottom = 9348.299
 texture = SubResource("GradientTexture2D_k4edk")
 
 [node name="Label" type="Label" parent="void" unique_id=79639115]
@@ -2834,7 +2820,7 @@ is_rotatingg = false
 [node name="DEATHZONE" type="Area2D" parent="." unique_id=265587749]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DEATHZONE" unique_id=1536129664]
-position = Vector2(6305.5137, 6670.371)
+position = Vector2(1061.8369, 6670.371)
 shape = SubResource("RectangleShape2D_ppux1")
 
 [node name="lvl7" type="Node2D" parent="." unique_id=1135323167]
@@ -3095,6 +3081,38 @@ rotation = -0.082030475
 
 [node name="midlvl" parent="." unique_id=98324228 instance=ExtResource("55_lmpmd")]
 
+[node name="loadingchap2lvl1" type="Node2D" parent="." unique_id=277914651]
+position = Vector2(1092.8972, 2389.474)
+
+[node name="loadchap2lvl1" type="Area2D" parent="loadingchap2lvl1" unique_id=2147329849]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="loadingchap2lvl1/loadchap2lvl1" unique_id=1819579198]
+position = Vector2(-289.77814, 255.23584)
+shape = SubResource("RectangleShape2D_pjh63")
+
+[node name="unloadchap2lvl1" type="Area2D" parent="loadingchap2lvl1" unique_id=169784927]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="loadingchap2lvl1/unloadchap2lvl1" unique_id=1397997407]
+position = Vector2(223.2915, 255.23584)
+shape = SubResource("RectangleShape2D_pjh63")
+
+[node name="unloadlvl1" type="Area2D" parent="loadingchap2lvl1" unique_id=118993361]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="loadingchap2lvl1/unloadlvl1" unique_id=2002533856]
+position = Vector2(-1691.3486, 255.23584)
+shape = SubResource("RectangleShape2D_pjh63")
+
+[node name="loadlvl1" type="Area2D" parent="loadingchap2lvl1" unique_id=2143011959]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="loadingchap2lvl1/loadlvl1" unique_id=1385217009]
+position = Vector2(-1189.126, 255.23584)
+shape = SubResource("RectangleShape2D_pjh63")
+
+[node name="chapitre2lvl1" parent="." unique_id=1622471704 instance=ExtResource("58_qgqoh")]
+process_mode = 4
+visible = false
+position = Vector2(1092.8972, 2389.474)
+
 [node name="AMBIANCE_ZONE" type="Node2D" parent="." unique_id=456457801]
 visible = false
 z_index = -1
@@ -3127,6 +3145,30 @@ shape = SubResource("RectangleShape2D_tuy4g")
 position = Vector2(-1151.0758, 1163.2922)
 shape = SubResource("RectangleShape2D_6wgec")
 
+[node name="novisibleplayerzone" type="Area2D" parent="." unique_id=2061754216]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="novisibleplayerzone" unique_id=127681846]
+z_index = 4096
+position = Vector2(5735.458, 1840)
+shape = SubResource("RectangleShape2D_1nkay")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="novisibleplayerzone" unique_id=1994931871]
+position = Vector2(2823.2546, 1912)
+shape = SubResource("RectangleShape2D_brhbg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="novisibleplayerzone" unique_id=1130217230]
+position = Vector2(16855.574, 192.34497)
+shape = SubResource("RectangleShape2D_w6qp3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="novisibleplayerzone" unique_id=1519341291]
+position = Vector2(16743.402, 103.028656)
+shape = SubResource("RectangleShape2D_g62an")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="novisibleplayerzone" unique_id=755107987]
+z_index = 1
+position = Vector2(362.37692, 2565.428)
+shape = SubResource("RectangleShape2D_4aogc")
+
 [node name="trailplayer" type="Node2D" parent="." unique_id=589841280]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1652365696]
@@ -3138,8 +3180,6 @@ shape = SubResource("RectangleShape2D_6wgec")
 [connection signal="body_entered" from="lvl1/cam_zones/no_bottom_offset_zone" to="." method="_on_no_bottom_offset_zone_body_entered"]
 [connection signal="body_exited" from="lvl1/cam_zones/no_bottom_offset_zone" to="." method="_on_no_bottom_offset_zone_body_exited"]
 [connection signal="body_entered" from="lvl1/change_scene_whenvoid" to="." method="_on_change_scene_whenvoid_body_entered"]
-[connection signal="body_entered" from="lvl1/novisibleplayerzone" to="." method="_on_novisibleplayerzone_body_entered"]
-[connection signal="body_exited" from="lvl1/novisibleplayerzone" to="." method="_on_novisibleplayerzone_body_exited"]
 [connection signal="body_entered" from="lvl2/cam_zone/no_offset_zone_lvl2" to="." method="_on_no_offset_zone_lvl_2_body_entered"]
 [connection signal="body_exited" from="lvl2/cam_zone/no_offset_zone_lvl2" to="." method="_on_no_offset_zone_lvl_2_body_exited"]
 [connection signal="body_entered" from="lvl3/change_scene_zone" to="." method="_on_change_scene_zone_body_entered"]
@@ -3148,3 +3188,9 @@ shape = SubResource("RectangleShape2D_6wgec")
 [connection signal="body_exited" from="lvl5/camzoneoffset_lvl5" to="." method="_on_camzoneoffset_lvl_5_body_exited"]
 [connection signal="body_entered" from="DEATHZONE" to="." method="_on_deathzone_body_entered"]
 [connection signal="body_entered" from="CHECKPOINTS" to="." method="_on_checkpoints_body_entered"]
+[connection signal="body_entered" from="loadingchap2lvl1/loadchap2lvl1" to="." method="_on_loadchap_2_lvl_1_body_entered"]
+[connection signal="body_entered" from="loadingchap2lvl1/unloadchap2lvl1" to="." method="_on_unloadchap_2_lvl_1_body_entered"]
+[connection signal="body_entered" from="loadingchap2lvl1/unloadlvl1" to="." method="_on_unloadlvl_1_body_entered"]
+[connection signal="body_entered" from="loadingchap2lvl1/loadlvl1" to="." method="_on_loadlvl_1_body_entered"]
+[connection signal="body_entered" from="novisibleplayerzone" to="." method="_on_novisibleplayerzone_body_entered"]
+[connection signal="body_exited" from="novisibleplayerzone" to="." method="_on_novisibleplayerzone_body_exited"]

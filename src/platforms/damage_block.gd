@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var black:bool= false
+@export var white:bool= false
 
 @onready var player: Player
 
@@ -9,9 +9,16 @@ extends Node2D
 
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
+
+@onready var blacksprite: Sprite2D = $blacksprite
+@onready var whitesprite: Sprite2D = $whitesprite
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	if white:
+		whitesprite.show()
+		blacksprite.hide()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

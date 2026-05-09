@@ -22,7 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://dwehap5d7ves0" path="res://sprites/cave/Cave - SmallRocksBLACK.png" id="19_o6del"]
 [ext_resource type="Texture2D" uid="uid://cedl47qrbl21r" path="res://sprites/cave/Cave - RockCombinations1BLACK.png" id="20_cl0n7"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="21_sqkqu"]
-[ext_resource type="PackedScene" uid="uid://bhvwpkxwupq77" path="res://src/vivants/sage2.tscn" id="24_0a4x0"]
 [ext_resource type="Texture2D" uid="uid://fhacyvqvhyv7" path="res://sprites/cable_elec.png" id="24_b7nc7"]
 
 [sub_resource type="Resource" id="Resource_88ojq"]
@@ -1151,9 +1150,6 @@ z_index = 16
 scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAA5AFUAAAAhABcAAAA=")
 tile_set = SubResource("TileSet_thuay")
-
-[node name="sage2" parent="." unique_id=242949502 instance=ExtResource("24_0a4x0")]
-position = Vector2(-302, 1089)
 
 [connection signal="body_entered" from="cam_zone" to="." method="_on_cam_zone_body_entered"]
 [connection signal="body_exited" from="cam_zone" to="." method="_on_cam_zone_body_exited"]

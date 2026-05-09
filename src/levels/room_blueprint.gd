@@ -243,6 +243,7 @@ func _on_camzoneoffset_lvl_5_body_exited(body: Node2D) -> void:
 		camoffesetbottom.priority = 0
 		camoffesetbottom_2.priority = 0
 		
+		
 
 #CHANGE SCENE#CHANGE SCENE#CHANGE SCENE#CHANGE SCENE#CHANGE SCENE#CHANGE SCENE#CHANGE SCENE
 func _on_change_scene_whenvoid_body_entered(body: Node2D) -> void:
@@ -293,7 +294,33 @@ func _on_change_scene_zone_2_lvl_3_body_entered(body: Node2D) -> void:
 			black_particule.layer3.show()
 			
 			lvl_2_loaded = false
-			
+
+@onready var chapitre_2_lvl_1: Node2D = $chapitre2lvl1
+func _on_loadchap_2_lvl_1_body_entered(body: Node2D) -> void:
+	if !lvl_2_loaded:
+		if body is Player:
+			chapitre_2_lvl_1.show()
+			chapitre_2_lvl_1.process_mode = Node.PROCESS_MODE_INHERIT
+
+func _on_unloadchap_2_lvl_1_body_entered(body: Node2D) -> void:
+	if !lvl_2_loaded:
+		if body is Player:
+			chapitre_2_lvl_1.hide()
+			chapitre_2_lvl_1.set_deferred("process_mode",Node.PROCESS_MODE_DISABLED)
+
+func _on_unloadlvl_1_body_entered(body: Node2D) -> void:
+	if !lvl_2_loaded:
+		if body is Player:
+			lvl_1.hide()
+			lvl_1.set_deferred("process_mode",Node.PROCESS_MODE_DISABLED)
+
+func _on_loadlvl_1_body_entered(body: Node2D) -> void:
+	if !lvl_2_loaded:
+		if body is Player:
+			lvl_1.show()
+			lvl_1.process_mode = Node.PROCESS_MODE_INHERIT
+
+
 
 #DEATHZONE#DEATHZONE#DEATHZONE#DEATHZONE#DEATHZONE#DEATHZONE#DEATHZONE#DEATHZONE#DEATHZONE#DEATHZONE#DEATHZONE
 func _on_deathzone_body_entered(body: Node2D) -> void:
@@ -301,20 +328,25 @@ func _on_deathzone_body_entered(body: Node2D) -> void:
 		player.respawn()
 		
 		
+		
 #HIDE PLAYER ZONE#HIDE PLAYER ZONE#HIDE PLAYER ZONE#HIDE PLAYER ZONE#HIDE PLAYER ZONE#HIDE PLAYER ZONE#HIDE PLAYER ZONE
 @onready var trailplayer: Node2D = $trailplayer
 func _on_novisibleplayerzone_body_entered(body: Node2D) -> void:
-	if body is Player:
-		var tween = get_tree().create_tween()
-		tween.tween_property(body, "modulate:a", 0.0, 0.1)
-		trailplayer.hide()
+	if !lvl_2_loaded:
+		if body is Player:
+			var tween = get_tree().create_tween()
+			tween.tween_property(body, "modulate:a", 0.0, 0.1)
+			trailplayer.hide()
 func _on_novisibleplayerzone_body_exited(body: Node2D) -> void:
-	if body is Player:
-		var tween = get_tree().create_tween()
-		tween.tween_property(body, "modulate:a", 1.0, 0.1)
-		trailplayer.show()
+	if !lvl_2_loaded:
+		if body is Player:
+			var tween = get_tree().create_tween()
+			tween.tween_property(body, "modulate:a", 1.0, 0.1)
+			trailplayer.show()
 
 
+
+#CHECKPOINTS
 func _on_checkpoints_body_entered(body: Node2D) -> void:
 	if body is Player:
 		body.last_floor_pos=body.global_position

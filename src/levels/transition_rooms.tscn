@@ -145,16 +145,17 @@ polygon = PackedVector2Array(-335, 663, -672, 666, -733, 729, -361, 726)
 
 [node name="portal" parent="." unique_id=871669185 node_paths=PackedStringArray("portal_target") instance=ExtResource("5_3s88y")]
 position = Vector2(531, 690)
-rotation = 1.5707964
 portal_target = NodePath("../portal2")
 black_portal = true
+display_platformsprite = false
 
 [node name="portal2" parent="." unique_id=1544228633 node_paths=PackedStringArray("portal_target") instance=ExtResource("5_3s88y")]
 position = Vector2(531, -703)
-rotation = -1.5707964
+rotation = 3.1415927
 portal_target = NodePath("../portal")
 portal_reverse_color = true
 black_portal = true
+display_platformsprite = false
 
 [node name="Polygon2D2" type="Polygon2D" parent="." unique_id=1628953267]
 color = Color(0, 0, 0, 1)

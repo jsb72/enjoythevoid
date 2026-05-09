@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bdd03axytgixu"]
 
 [ext_resource type="Script" uid="uid://dnmqc776jb15e" path="res://src/platforms/damage_block.gd" id="1_wnwu4"]
+[ext_resource type="Texture2D" uid="uid://bxtjm8lb0m0iu" path="res://sprites/rooms/dmg_block_white.png" id="3_4mlh0"]
 [ext_resource type="Texture2D" uid="uid://bqm44b58x2rq0" path="res://sprites/rooms/dmg_block_black.png" id="3_j5vdp"]
 [ext_resource type="AudioStream" uid="uid://bexul6uu4wqt6" path="res://sounds/dragon-studio-violent-sword-slice-2-393841.mp3" id="4_4mlh0"]
 [ext_resource type="Texture2D" uid="uid://bdkn38qhpynww" path="res://sprites/rooms/dmg_block_blackFAKEFRONT.png" id="5_4mlh0"]
@@ -18,9 +19,14 @@ size = Vector2(127.33998, 130.35704)
 [node name="damage_block" type="Node2D" unique_id=1974418075]
 script = ExtResource("1_wnwu4")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=929823176]
+[node name="blacksprite" type="Sprite2D" parent="." unique_id=929823176]
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_j5vdp")
+
+[node name="whitesprite" type="Sprite2D" parent="." unique_id=1379351807]
+visible = false
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_4mlh0")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=26063363]
 

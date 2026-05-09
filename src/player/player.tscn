@@ -729,7 +729,7 @@ one_shot = true
 [node name="JumpCoyote" type="Timer" parent="Timers" unique_id=246467915]
 unique_name_in_owner = true
 process_callback = 0
-wait_time = 0.1
+wait_time = 0.5
 one_shot = true
 
 [node name="JumpBuffer" type="Timer" parent="Timers" unique_id=648895945]
