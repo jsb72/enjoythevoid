@@ -1,6 +1,6 @@
 extends Node
 
-var debug_mod:bool=true
+var debug_mod:bool=false
 
 var nb_fractal:int = 0
 
@@ -20,6 +20,7 @@ var fractal_list: Array[bool] = [true, true, true]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Engine.max_fps=165
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	
 	var language = "automatic"

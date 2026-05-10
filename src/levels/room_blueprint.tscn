@@ -49,6 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://cuuupedh70x4h" path="res://src/elements/temps.tscn" id="45_lmpmd"]
 [ext_resource type="PackedScene" uid="uid://bdd03axytgixu" path="res://src/platforms/damage_block.tscn" id="46_7f7j5"]
 [ext_resource type="Texture2D" uid="uid://dk52pj28ds5fn" path="res://sprites/zero.png" id="46_73yqq"]
+[ext_resource type="PackedScene" uid="uid://3t2f2pn81x60" path="res://src/elements/univers.tscn" id="47_w6qp3"]
 [ext_resource type="Shader" uid="uid://dnc0olck3agla" path="res://shaders/fog.gdshader" id="53_1nkay"]
 [ext_resource type="Script" uid="uid://ddhu3qfummrc2" path="res://addons/antialiased_line2d/antialiased_polygon2d.gd" id="54_w6qp3"]
 [ext_resource type="PackedScene" uid="uid://wjb0iq8hpfjo" path="res://src/levels/midlvl.tscn" id="55_lmpmd"]
@@ -740,9 +741,6 @@ size = Vector2(584, 718.48694)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmpmd"]
 size = Vector2(316.91455, 1264.5673)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbvwn"]
-size = Vector2(786.40674, 2178.9734)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1nkay"]
 size = Vector2(1591.0845, 806)
@@ -1920,6 +1918,7 @@ rotation = -5.003859
 
 [node name="chapitre2lvl1" parent="." unique_id=1622471704 instance=ExtResource("58_qgqoh")]
 process_mode = 4
+visible = false
 position = Vector2(950.87085, 2389.474)
 
 [node name="void" type="Node2D" parent="." unique_id=1239576127]
@@ -1988,6 +1987,195 @@ target = NodePath("../../../Player")
 [node name="AAtentacle4" parent="void/tentacles" unique_id=1344962362 node_paths=PackedStringArray("target") instance=ExtResource("56_brhbg")]
 position = Vector2(-3531, 114)
 target = NodePath("../../../Player")
+
+[node name="yeux" type="Node2D" parent="void" unique_id=12984989]
+position = Vector2(-9516.561, -595.27686)
+
+[node name="univers" parent="void/yeux" unique_id=1936234233 instance=ExtResource("47_w6qp3")]
+position = Vector2(0, 4)
+scale = Vector2(0.34791666, 0.34791666)
+
+[node name="univers2" parent="void/yeux" unique_id=1965339287 instance=ExtResource("47_w6qp3")]
+position = Vector2(1.9999695, 481)
+scale = Vector2(0.07520833, 0.07520833)
+
+[node name="univers4" parent="void/yeux" unique_id=2143076101 instance=ExtResource("47_w6qp3")]
+position = Vector2(294.00003, 349.00003)
+scale = Vector2(0.055104177, 0.055104177)
+
+[node name="univers5" parent="void/yeux" unique_id=611103617 instance=ExtResource("47_w6qp3")]
+position = Vector2(-294, 349)
+scale = Vector2(0.055104177, 0.055104177)
+
+[node name="univers6" parent="void/yeux" unique_id=89830752 instance=ExtResource("47_w6qp3")]
+position = Vector2(-359, 416.00003)
+scale = Vector2(0.027552089, 0.027552089)
+
+[node name="univers10" parent="void/yeux" unique_id=143591475 instance=ExtResource("47_w6qp3")]
+position = Vector2(-207.00002, 357.00003)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers11" parent="void/yeux" unique_id=671027443 instance=ExtResource("47_w6qp3")]
+position = Vector2(207, 357)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers12" parent="void/yeux" unique_id=1669156530 instance=ExtResource("47_w6qp3")]
+position = Vector2(316.00003, 264)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers13" parent="void/yeux" unique_id=1766532511 instance=ExtResource("47_w6qp3")]
+position = Vector2(-316, 264)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers14" parent="void/yeux" unique_id=150570587 instance=ExtResource("47_w6qp3")]
+position = Vector2(-84.00003, 404)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers15" parent="void/yeux" unique_id=559256210 instance=ExtResource("47_w6qp3")]
+position = Vector2(84, 404)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers7" parent="void/yeux" unique_id=92433527 instance=ExtResource("47_w6qp3")]
+position = Vector2(358.00003, 415.00003)
+scale = Vector2(0.027552089, 0.027552089)
+
+[node name="univers3" parent="void/yeux" unique_id=226645034 instance=ExtResource("47_w6qp3")]
+position = Vector2(3.8146973e-06, 603)
+scale = Vector2(0.03302083, 0.03302083)
+
+[node name="univers8" parent="void/yeux" unique_id=1246372606 instance=ExtResource("47_w6qp3")]
+position = Vector2(-158.99998, 403)
+scale = Vector2(0.03302083, 0.03302083)
+
+[node name="univers9" parent="void/yeux" unique_id=1084849096 instance=ExtResource("47_w6qp3")]
+position = Vector2(158.99998, 403)
+scale = Vector2(0.03302083, 0.03302083)
+
+[node name="yeux2" type="Node2D" parent="void" unique_id=1581381411]
+position = Vector2(-10559.323, -595.27686)
+
+[node name="univers" parent="void/yeux2" unique_id=792223909 instance=ExtResource("47_w6qp3")]
+position = Vector2(0, 4)
+scale = Vector2(0.34791666, 0.34791666)
+
+[node name="univers2" parent="void/yeux2" unique_id=1512295660 instance=ExtResource("47_w6qp3")]
+position = Vector2(1.9999695, 481)
+scale = Vector2(0.07520833, 0.07520833)
+
+[node name="univers4" parent="void/yeux2" unique_id=1862809001 instance=ExtResource("47_w6qp3")]
+position = Vector2(294.00003, 349.00003)
+scale = Vector2(0.055104177, 0.055104177)
+
+[node name="univers5" parent="void/yeux2" unique_id=274485371 instance=ExtResource("47_w6qp3")]
+position = Vector2(-294, 349)
+scale = Vector2(0.055104177, 0.055104177)
+
+[node name="univers6" parent="void/yeux2" unique_id=820560761 instance=ExtResource("47_w6qp3")]
+position = Vector2(-359, 416.00003)
+scale = Vector2(0.027552089, 0.027552089)
+
+[node name="univers10" parent="void/yeux2" unique_id=246297719 instance=ExtResource("47_w6qp3")]
+position = Vector2(-207.00002, 357.00003)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers11" parent="void/yeux2" unique_id=1595622892 instance=ExtResource("47_w6qp3")]
+position = Vector2(207, 357)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers12" parent="void/yeux2" unique_id=99249669 instance=ExtResource("47_w6qp3")]
+position = Vector2(316.00003, 264)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers13" parent="void/yeux2" unique_id=755214611 instance=ExtResource("47_w6qp3")]
+position = Vector2(-316, 264)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers14" parent="void/yeux2" unique_id=889895393 instance=ExtResource("47_w6qp3")]
+position = Vector2(-84.00003, 404)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers15" parent="void/yeux2" unique_id=1438051325 instance=ExtResource("47_w6qp3")]
+position = Vector2(84, 404)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers7" parent="void/yeux2" unique_id=938897017 instance=ExtResource("47_w6qp3")]
+position = Vector2(358.00003, 415.00003)
+scale = Vector2(0.027552089, 0.027552089)
+
+[node name="univers3" parent="void/yeux2" unique_id=1178519758 instance=ExtResource("47_w6qp3")]
+position = Vector2(3.8146973e-06, 603)
+scale = Vector2(0.03302083, 0.03302083)
+
+[node name="univers8" parent="void/yeux2" unique_id=1745511885 instance=ExtResource("47_w6qp3")]
+position = Vector2(-158.99998, 403)
+scale = Vector2(0.03302083, 0.03302083)
+
+[node name="univers9" parent="void/yeux2" unique_id=759801095 instance=ExtResource("47_w6qp3")]
+position = Vector2(158.99998, 403)
+scale = Vector2(0.03302083, 0.03302083)
+
+[node name="yeux3" type="Node2D" parent="void" unique_id=687217736]
+position = Vector2(-10041.306, -312.72168)
+
+[node name="univers" parent="void/yeux3" unique_id=342099283 instance=ExtResource("47_w6qp3")]
+position = Vector2(0, 4)
+scale = Vector2(0.34791666, 0.34791666)
+
+[node name="univers2" parent="void/yeux3" unique_id=650982794 instance=ExtResource("47_w6qp3")]
+position = Vector2(1.9999695, 481)
+scale = Vector2(0.07520833, 0.07520833)
+
+[node name="univers4" parent="void/yeux3" unique_id=520189273 instance=ExtResource("47_w6qp3")]
+position = Vector2(294.00003, 349.00003)
+scale = Vector2(0.055104177, 0.055104177)
+
+[node name="univers5" parent="void/yeux3" unique_id=994030479 instance=ExtResource("47_w6qp3")]
+position = Vector2(-294, 349)
+scale = Vector2(0.055104177, 0.055104177)
+
+[node name="univers6" parent="void/yeux3" unique_id=1564919284 instance=ExtResource("47_w6qp3")]
+position = Vector2(-359, 416.00003)
+scale = Vector2(0.027552089, 0.027552089)
+
+[node name="univers10" parent="void/yeux3" unique_id=1905982080 instance=ExtResource("47_w6qp3")]
+position = Vector2(-207.00002, 357.00003)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers11" parent="void/yeux3" unique_id=90373951 instance=ExtResource("47_w6qp3")]
+position = Vector2(207, 357)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers12" parent="void/yeux3" unique_id=964386832 instance=ExtResource("47_w6qp3")]
+position = Vector2(316.00003, 264)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers13" parent="void/yeux3" unique_id=610871661 instance=ExtResource("47_w6qp3")]
+position = Vector2(-316, 264)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers14" parent="void/yeux3" unique_id=2131451956 instance=ExtResource("47_w6qp3")]
+position = Vector2(-84.00003, 404)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers15" parent="void/yeux3" unique_id=435990917 instance=ExtResource("47_w6qp3")]
+position = Vector2(84, 404)
+scale = Vector2(0.015110689, 0.015110689)
+
+[node name="univers7" parent="void/yeux3" unique_id=1635704781 instance=ExtResource("47_w6qp3")]
+position = Vector2(358.00003, 415.00003)
+scale = Vector2(0.027552089, 0.027552089)
+
+[node name="univers3" parent="void/yeux3" unique_id=1956607691 instance=ExtResource("47_w6qp3")]
+position = Vector2(3.8146973e-06, 603)
+scale = Vector2(0.03302083, 0.03302083)
+
+[node name="univers8" parent="void/yeux3" unique_id=1121222336 instance=ExtResource("47_w6qp3")]
+position = Vector2(-158.99998, 403)
+scale = Vector2(0.03302083, 0.03302083)
+
+[node name="univers9" parent="void/yeux3" unique_id=930456569 instance=ExtResource("47_w6qp3")]
+position = Vector2(158.99998, 403)
+scale = Vector2(0.03302083, 0.03302083)
 
 [node name="lvl3" type="Node2D" parent="." unique_id=1704687252]
 
@@ -3032,7 +3220,7 @@ position = Vector2(4846.0933, 2140.4233)
 shape = SubResource("RectangleShape2D_qgqoh")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="CHECKPOINTS" unique_id=2100203311]
-position = Vector2(-1090.8374, 2783.9348)
+position = Vector2(-570.57983, 2783.9348)
 shape = SubResource("RectangleShape2D_qgqoh")
 
 [node name="lvl_reload_right" type="Node2D" parent="." unique_id=1833511117]
@@ -3139,10 +3327,6 @@ shape = SubResource("RectangleShape2D_lqu8a")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="no_bottom_offset_zone" unique_id=1906154737]
 position = Vector2(9269.617, -2959.4734)
 shape = SubResource("RectangleShape2D_lmpmd")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="no_bottom_offset_zone" unique_id=1008895650]
-position = Vector2(-3313.7869, 2417.9595)
-shape = SubResource("RectangleShape2D_xbvwn")
 
 [node name="novisibleplayerzone" type="Area2D" parent="." unique_id=2061754216]
 

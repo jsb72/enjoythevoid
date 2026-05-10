@@ -886,7 +886,7 @@ target_position = Vector2(-20, 0)
 
 [node name="cadavre" parent="." unique_id=258405330 instance=ExtResource("34_h0enb")]
 visible = false
-z_index = 4
+z_index = 5
 scale = Vector2(0.55, 0.55)
 
 [connection signal="wall_entered" from="." to="." method="_on_wall_entered"]

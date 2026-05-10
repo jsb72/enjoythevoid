@@ -210,7 +210,11 @@ func slowvoid_logic():
 		diff = diff/1000
 		if diff >0.9:
 			diff = 0.9
-		Engine.time_scale = 1 - diff
+		#Engine.time_scale = 1 - diff
+		if chapitre_2_lvl_1.visible:
+			Engine.time_scale = 1 + (diff/2)
+		else:
+			Engine.time_scale = 1 - diff
 
 
 

@@ -53,6 +53,7 @@ wait_time = 3.0
 one_shot = true
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=784931399]
+visible = false
 z_index = 500
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_4mlh0")
