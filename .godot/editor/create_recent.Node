@@ -1,3 +1,6 @@
+Parallax2D
+CanvasLayer
+TileMapLayer
 Node2D
 RichTextLabel
 AnimationPlayer
@@ -6,9 +9,6 @@ CollisionShape2D
 AntialiasedLine2D
 TextureRect
 Sprite2D
-Parallax2D
 ColorRect
 StaticBody2D
 AntialiasedPolygon2D
-RopeHandle
-Rope
