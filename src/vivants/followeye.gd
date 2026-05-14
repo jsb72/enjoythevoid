@@ -3,7 +3,9 @@ extends Node2D
 @onready var eye : Sprite2D = get_node("eye")
 @onready var pupil : Sprite2D = get_node("eye/pupil")
 
-@onready var player: Player = $"../../../../Player"
+@onready var player: Player = get_node("/root/VHS/room_blueprint/Player")
+
+
 
 @onready var animation_player: AnimationPlayer = $TextureRect/AnimationPlayer
 
@@ -12,9 +14,8 @@ const skew_limit = 10
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
 	pass
-	
+
 func track_eye(eye : Node2D):
 	var center = eye.global_position
 	var pupil : Node2D = eye.get_child(0)

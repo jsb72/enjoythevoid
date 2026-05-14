@@ -27,8 +27,8 @@ extends Node2D
 func _ready() -> void:
 	if Global.door_opened:
 		position.y = -400.0
-		cam.limit_left = -10000000
-		cam_2.limit_left = -10000000
+		cam.limit_left = -922337203
+		cam_2.limit_left = -922337203
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

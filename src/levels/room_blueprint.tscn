@@ -452,8 +452,10 @@ width = 1024
 use_hdr = true
 fill_from = Vector2(0.16591929, 0)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w6qp3"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f3u0r"]
-size = Vector2(48060.367, 53)
+size = Vector2(2023.5762, 54.546143)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tpyur"]
 size = Vector2(2460.375, 1046.5)
@@ -757,6 +759,9 @@ size = Vector2(102.896484, 139.49652)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4aogc"]
 size = Vector2(1924.4255, 681.9691)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbvwn"]
+size = Vector2(1608.3486, 20)
+
 [node name="room_blueprint" type="Node2D" unique_id=1528742533]
 script = ExtResource("1_76snk")
 metadata/_edit_vertical_guides_ = [-3490.0, -231.0, 538.0, 1954.8828]
@@ -870,6 +875,7 @@ physics_interpolation_mode = 1
 top_level = true
 position = Vector2(50, -8660)
 process_callback = 0
+limit_enabled = false
 limit_left = -2670
 limit_right = 18722
 editor_draw_limits = true
@@ -1023,7 +1029,7 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="fond_decor_surface" type="ColorRect" parent="lvl1" unique_id=337598343]
 z_index = -200
 offset_left = -4123.0
-offset_top = -9061.0
+offset_top = -13168.592
 offset_right = 23343.0
 offset_bottom = 114.0
 color = Color(0.44705883, 0, 0, 1)
@@ -1155,6 +1161,7 @@ texture = ExtResource("1_p0cym")
 z_index = -1
 
 [node name="ColorRect" type="ColorRect" parent="lvl1/colors_ground" unique_id=1731573631]
+z_index = -2
 offset_left = -3776.0
 offset_top = 158.0
 offset_right = 14516.0
@@ -1948,10 +1955,17 @@ theme_override_font_sizes/font_size = 72
 text = "Enjoy the Void"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="void" unique_id=463877495]
+process_mode = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="void/StaticBody2D" unique_id=902229196]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="void/StaticBody2D" unique_id=296864557]
+position = Vector2(-3598.3335, 123.99053)
+shape = SubResource("WorldBoundaryShape2D_w6qp3")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="void" unique_id=471486096]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="void/StaticBody2D2" unique_id=786038047]
 z_index = 8
-position = Vector2(-27381.816, 150.5)
+position = Vector2(-4363.421, 151.27307)
 shape = SubResource("RectangleShape2D_f3u0r")
 
 [node name="tentacles" type="Node2D" parent="void" unique_id=709374036]
@@ -1992,190 +2006,11 @@ target = NodePath("../../../Player")
 position = Vector2(-9516.561, -595.27686)
 
 [node name="univers" parent="void/yeux" unique_id=1936234233 instance=ExtResource("47_w6qp3")]
-position = Vector2(0, 4)
-scale = Vector2(0.34791666, 0.34791666)
+z_index = 4
+position = Vector2(-1377.0205, -7559.5605)
 
-[node name="univers2" parent="void/yeux" unique_id=1965339287 instance=ExtResource("47_w6qp3")]
-position = Vector2(1.9999695, 481)
-scale = Vector2(0.07520833, 0.07520833)
-
-[node name="univers4" parent="void/yeux" unique_id=2143076101 instance=ExtResource("47_w6qp3")]
-position = Vector2(294.00003, 349.00003)
-scale = Vector2(0.055104177, 0.055104177)
-
-[node name="univers5" parent="void/yeux" unique_id=611103617 instance=ExtResource("47_w6qp3")]
-position = Vector2(-294, 349)
-scale = Vector2(0.055104177, 0.055104177)
-
-[node name="univers6" parent="void/yeux" unique_id=89830752 instance=ExtResource("47_w6qp3")]
-position = Vector2(-359, 416.00003)
-scale = Vector2(0.027552089, 0.027552089)
-
-[node name="univers10" parent="void/yeux" unique_id=143591475 instance=ExtResource("47_w6qp3")]
-position = Vector2(-207.00002, 357.00003)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers11" parent="void/yeux" unique_id=671027443 instance=ExtResource("47_w6qp3")]
-position = Vector2(207, 357)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers12" parent="void/yeux" unique_id=1669156530 instance=ExtResource("47_w6qp3")]
-position = Vector2(316.00003, 264)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers13" parent="void/yeux" unique_id=1766532511 instance=ExtResource("47_w6qp3")]
-position = Vector2(-316, 264)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers14" parent="void/yeux" unique_id=150570587 instance=ExtResource("47_w6qp3")]
-position = Vector2(-84.00003, 404)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers15" parent="void/yeux" unique_id=559256210 instance=ExtResource("47_w6qp3")]
-position = Vector2(84, 404)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers7" parent="void/yeux" unique_id=92433527 instance=ExtResource("47_w6qp3")]
-position = Vector2(358.00003, 415.00003)
-scale = Vector2(0.027552089, 0.027552089)
-
-[node name="univers3" parent="void/yeux" unique_id=226645034 instance=ExtResource("47_w6qp3")]
-position = Vector2(3.8146973e-06, 603)
-scale = Vector2(0.03302083, 0.03302083)
-
-[node name="univers8" parent="void/yeux" unique_id=1246372606 instance=ExtResource("47_w6qp3")]
-position = Vector2(-158.99998, 403)
-scale = Vector2(0.03302083, 0.03302083)
-
-[node name="univers9" parent="void/yeux" unique_id=1084849096 instance=ExtResource("47_w6qp3")]
-position = Vector2(158.99998, 403)
-scale = Vector2(0.03302083, 0.03302083)
-
-[node name="yeux2" type="Node2D" parent="void" unique_id=1581381411]
-position = Vector2(-10559.323, -595.27686)
-
-[node name="univers" parent="void/yeux2" unique_id=792223909 instance=ExtResource("47_w6qp3")]
-position = Vector2(0, 4)
-scale = Vector2(0.34791666, 0.34791666)
-
-[node name="univers2" parent="void/yeux2" unique_id=1512295660 instance=ExtResource("47_w6qp3")]
-position = Vector2(1.9999695, 481)
-scale = Vector2(0.07520833, 0.07520833)
-
-[node name="univers4" parent="void/yeux2" unique_id=1862809001 instance=ExtResource("47_w6qp3")]
-position = Vector2(294.00003, 349.00003)
-scale = Vector2(0.055104177, 0.055104177)
-
-[node name="univers5" parent="void/yeux2" unique_id=274485371 instance=ExtResource("47_w6qp3")]
-position = Vector2(-294, 349)
-scale = Vector2(0.055104177, 0.055104177)
-
-[node name="univers6" parent="void/yeux2" unique_id=820560761 instance=ExtResource("47_w6qp3")]
-position = Vector2(-359, 416.00003)
-scale = Vector2(0.027552089, 0.027552089)
-
-[node name="univers10" parent="void/yeux2" unique_id=246297719 instance=ExtResource("47_w6qp3")]
-position = Vector2(-207.00002, 357.00003)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers11" parent="void/yeux2" unique_id=1595622892 instance=ExtResource("47_w6qp3")]
-position = Vector2(207, 357)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers12" parent="void/yeux2" unique_id=99249669 instance=ExtResource("47_w6qp3")]
-position = Vector2(316.00003, 264)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers13" parent="void/yeux2" unique_id=755214611 instance=ExtResource("47_w6qp3")]
-position = Vector2(-316, 264)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers14" parent="void/yeux2" unique_id=889895393 instance=ExtResource("47_w6qp3")]
-position = Vector2(-84.00003, 404)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers15" parent="void/yeux2" unique_id=1438051325 instance=ExtResource("47_w6qp3")]
-position = Vector2(84, 404)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers7" parent="void/yeux2" unique_id=938897017 instance=ExtResource("47_w6qp3")]
-position = Vector2(358.00003, 415.00003)
-scale = Vector2(0.027552089, 0.027552089)
-
-[node name="univers3" parent="void/yeux2" unique_id=1178519758 instance=ExtResource("47_w6qp3")]
-position = Vector2(3.8146973e-06, 603)
-scale = Vector2(0.03302083, 0.03302083)
-
-[node name="univers8" parent="void/yeux2" unique_id=1745511885 instance=ExtResource("47_w6qp3")]
-position = Vector2(-158.99998, 403)
-scale = Vector2(0.03302083, 0.03302083)
-
-[node name="univers9" parent="void/yeux2" unique_id=759801095 instance=ExtResource("47_w6qp3")]
-position = Vector2(158.99998, 403)
-scale = Vector2(0.03302083, 0.03302083)
-
-[node name="yeux3" type="Node2D" parent="void" unique_id=687217736]
-position = Vector2(-10041.306, -312.72168)
-
-[node name="univers" parent="void/yeux3" unique_id=342099283 instance=ExtResource("47_w6qp3")]
-position = Vector2(0, 4)
-scale = Vector2(0.34791666, 0.34791666)
-
-[node name="univers2" parent="void/yeux3" unique_id=650982794 instance=ExtResource("47_w6qp3")]
-position = Vector2(1.9999695, 481)
-scale = Vector2(0.07520833, 0.07520833)
-
-[node name="univers4" parent="void/yeux3" unique_id=520189273 instance=ExtResource("47_w6qp3")]
-position = Vector2(294.00003, 349.00003)
-scale = Vector2(0.055104177, 0.055104177)
-
-[node name="univers5" parent="void/yeux3" unique_id=994030479 instance=ExtResource("47_w6qp3")]
-position = Vector2(-294, 349)
-scale = Vector2(0.055104177, 0.055104177)
-
-[node name="univers6" parent="void/yeux3" unique_id=1564919284 instance=ExtResource("47_w6qp3")]
-position = Vector2(-359, 416.00003)
-scale = Vector2(0.027552089, 0.027552089)
-
-[node name="univers10" parent="void/yeux3" unique_id=1905982080 instance=ExtResource("47_w6qp3")]
-position = Vector2(-207.00002, 357.00003)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers11" parent="void/yeux3" unique_id=90373951 instance=ExtResource("47_w6qp3")]
-position = Vector2(207, 357)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers12" parent="void/yeux3" unique_id=964386832 instance=ExtResource("47_w6qp3")]
-position = Vector2(316.00003, 264)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers13" parent="void/yeux3" unique_id=610871661 instance=ExtResource("47_w6qp3")]
-position = Vector2(-316, 264)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers14" parent="void/yeux3" unique_id=2131451956 instance=ExtResource("47_w6qp3")]
-position = Vector2(-84.00003, 404)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers15" parent="void/yeux3" unique_id=435990917 instance=ExtResource("47_w6qp3")]
-position = Vector2(84, 404)
-scale = Vector2(0.015110689, 0.015110689)
-
-[node name="univers7" parent="void/yeux3" unique_id=1635704781 instance=ExtResource("47_w6qp3")]
-position = Vector2(358.00003, 415.00003)
-scale = Vector2(0.027552089, 0.027552089)
-
-[node name="univers3" parent="void/yeux3" unique_id=1956607691 instance=ExtResource("47_w6qp3")]
-position = Vector2(3.8146973e-06, 603)
-scale = Vector2(0.03302083, 0.03302083)
-
-[node name="univers8" parent="void/yeux3" unique_id=1121222336 instance=ExtResource("47_w6qp3")]
-position = Vector2(-158.99998, 403)
-scale = Vector2(0.03302083, 0.03302083)
-
-[node name="univers9" parent="void/yeux3" unique_id=930456569 instance=ExtResource("47_w6qp3")]
-position = Vector2(158.99998, 403)
-scale = Vector2(0.03302083, 0.03302083)
+[node name="pop_eye_timer" type="Timer" parent="void" unique_id=1115584963]
+one_shot = true
 
 [node name="lvl3" type="Node2D" parent="." unique_id=1704687252]
 
@@ -3357,6 +3192,26 @@ shape = SubResource("RectangleShape2D_4aogc")
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1652365696]
 
 [node name="cutscene" parent="CanvasLayer" unique_id=1348483193 instance=ExtResource("56_w6qp3")]
+
+[node name="findumonde" type="Label" parent="." unique_id=183087620]
+offset_left = -651.6892
+offset_top = 2688.06
+offset_right = 1238.5125
+offset_bottom = 2784.3413
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 34
+text = "findumonde_xt"
+horizontal_alignment = 1
+
+[node name="PLAFOND" type="StaticBody2D" parent="." unique_id=2057679635]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PLAFOND" unique_id=1609936143]
+position = Vector2(-2389.0613, -8671.292)
+shape = SubResource("RectangleShape2D_xbvwn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PLAFOND" unique_id=1448379738]
+position = Vector2(18576.936, -8671.292)
+shape = SubResource("RectangleShape2D_xbvwn")
 
 [connection signal="body_entered" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_entered"]
 [connection signal="body_exited" from="lvl1/cam_zones/zoom_zone" to="." method="_on_zoom_zone_body_exited"]

@@ -7,8 +7,9 @@ signal wall_exited
 @export var flip_h: bool: set = set_flip_h
 
 @export_group("Horizontal Movement")
-@export var max_speed: float
-@export_range(1.0, 5.0) var max_h_velocity_ratio: float # Multiplied by max_speed
+@export var max_speed_init: float
+@onready var max_speed: float=max_speed_init
+@export_range(1.0, 15.0) var max_h_velocity_ratio: float # Multiplied by max_speed
 
 @export_subgroup("On Floor")
 @export_range(0.0, 1.0) var running_acc_time: float
@@ -409,6 +410,7 @@ var inside_portal:bool = false
 func sprint_logic():
 	if Input.is_action_pressed("dash") and !(state_machine.active_state is DashState):
 		max_speed = 389.0*1.5
+		#max_h_velocity = max_speed * max_h_velocity_ratio
 	else:
 		max_speed = 389
 

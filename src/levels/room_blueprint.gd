@@ -66,12 +66,15 @@ func _process(delta: float) -> void:
 		cam_2.limit_right = 18722
 
 	if !first_time_on_floor:ambiance_logic()
-	slowvoid_logic()
+	void_logic()
+	
 	
 	if player.global_position.y > 13000:
 		Global.first_cycle_done=true
 		#get_tree().change_scene_to_file("res://src/accueil.tscn")
 		get_tree().reload_current_scene()
+		
+	
 	
 
 
@@ -202,18 +205,40 @@ func creer_ground():
 	for i in range(1,12):
 		duplicate_surfaceblackparticle(-i*width)
 	
+@onready var static_body_2d: StaticBody2D = $void/StaticBody2D	
+@onready var univers: Sprite2D = $void/yeux/univers
+@onready var pop_eye_timer: Timer = $void/pop_eye_timer
+@onready var yeux: Node2D = $void/yeux
+
+func void_logic():
+	if player.global_position.x < -4318:
+		static_body_2d.set_deferred("process_mode",Node.PROCESS_MODE_INHERIT)
+	else:
+		static_body_2d.set_deferred("process_mode",Node.PROCESS_MODE_DISABLED)
 	
-func slowvoid_logic():
 	var limit = - 5555
 	if player.global_position.x < limit and player.global_position.y < 1000:
 		var diff = limit - player.global_position.x
 		diff = diff/1000
-		if diff >0.9:
-			diff = 0.9
-		#Engine.time_scale = 1 - diff
+		
 		if chapitre_2_lvl_1.visible:
-			Engine.time_scale = 1 + (diff/2)
+			if player.global_position.x < -909084864.0:
+				player.dead_=true
+			Engine.time_scale = 1 + diff
+			player.glitch_rect.visible=true
+			if pop_eye_timer.is_stopped():
+				
+				var new_uni = univers.duplicate()
+				var newscale=randf_range(0.005, 0.15)
+				new_uni.scale=Vector2(newscale,newscale)
+				new_uni.global_position = player.global_position + Vector2(randi_range(-640, 640),randi_range(-360-160, 360-160))
+				new_uni.global_position+=Vector2(9500,500)
+				yeux.add_child(new_uni)  
+				pop_eye_timer.start()
+				
 		else:
+			if diff >0.9:
+				diff = 0.9
 			Engine.time_scale = 1 - diff
 
 
@@ -252,6 +277,7 @@ func _on_camzoneoffset_lvl_5_body_exited(body: Node2D) -> void:
 		
 
 #CHANGE SCENE#CHANGE SCENE#CHANGE SCENE#CHANGE SCENE#CHANGE SCENE#CHANGE SCENE#CHANGE SCENE
+@onready var findumonde: Label = $findumonde
 func _on_change_scene_whenvoid_body_entered(body: Node2D) -> void:
 	if body is Player:
 		if !lvl_2_loaded:
@@ -266,6 +292,7 @@ func _on_change_scene_whenvoid_body_entered(body: Node2D) -> void:
 			black_particule.layer3.hide()
 			
 			lvl_2_loaded = true
+			findumonde.hide()
 			
 		body.glitch_rect.visible=true
 		await get_tree().create_timer(2).timeout
@@ -285,6 +312,7 @@ func _on_change_scene_zone_body_entered(body: Node2D) -> void:
 			black_particule.layer3.hide()
 			
 			lvl_2_loaded = true
+			findumonde.hide()
 func _on_change_scene_zone_2_lvl_3_body_entered(body: Node2D) -> void:
 	if body is Player:
 		if lvl_2_loaded:
@@ -300,6 +328,7 @@ func _on_change_scene_zone_2_lvl_3_body_entered(body: Node2D) -> void:
 			black_particule.layer3.show()
 			
 			lvl_2_loaded = false
+			findumonde.show()
 
 @onready var chapitre_2_lvl_1: Node2D = $chapitre2lvl1
 func _on_loadchap_2_lvl_1_body_entered(body: Node2D) -> void:
@@ -308,9 +337,10 @@ func _on_loadchap_2_lvl_1_body_entered(body: Node2D) -> void:
 			chapitre_2_lvl_1.show()
 			chapitre_2_lvl_1.process_mode = Node.PROCESS_MODE_INHERIT			
 			
-			cam.limit_left = -10000000
-			cam_2.limit_left = -10000000
-
+			cam.limit_left = -922337203
+			cam_2.limit_left = -922337203
+			cam.draw_limits=false
+			cam_2.draw_limits=false
 func _on_unloadchap_2_lvl_1_body_entered(body: Node2D) -> void:
 	if !lvl_2_loaded:
 		if body is Player:

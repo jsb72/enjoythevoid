@@ -422,8 +422,9 @@ position = Vector2(-725, 1139)
 position = Vector2(-645, 1139)
 
 [node name="laser_trap2" parent="." unique_id=968078157 instance=ExtResource("11_nvtr1")]
-position = Vector2(-697, 1416.0001)
-rotation = 0.93549645
+z_index = 1
+position = Vector2(-671, 1394.0001)
+rotation = 0.8190912
 is_rotatingg = false
 
 [node name="txt" type="Node2D" parent="." unique_id=1188014602]
