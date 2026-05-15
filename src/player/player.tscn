@@ -779,9 +779,8 @@ position = Vector2(0, -32)
 position = Vector2(0, -36)
 scale = Vector2(0.55, 0.55)
 sprite_frames = SubResource("SpriteFrames_j2873")
-animation = &"slide"
+animation = &"run"
 autoplay = "idle"
-frame_progress = 0.7761143
 script = ExtResource("14_5efpn")
 
 [node name="SpriteShader" type="AnimatedSprite2D" parent="." unique_id=576551087]
